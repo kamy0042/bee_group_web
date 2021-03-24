@@ -1,0 +1,403 @@
+@import 'common.scss';
+
+.mv {
+   height: 70vh;
+   min-height: 460px;
+   background-image: url('/img/bee_top_image-min.jpeg');
+   background-size:cover;
+   background-position: center;
+   position: relative;
+   border-top: solid 1px $color-sub;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   &::before{
+       content: '';
+       width: 100%;
+       height: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       background-color: $color-main;
+       opacity: 0.35;
+       z-index: 0;
+   }
+}
+
+.mv_text {
+    z-index: 10;
+    text-align: center;
+    font-size: $text-medium-sp;
+    position: relative;
+    margin-bottom:2rem ;
+    font-weight: bold;
+}
+
+.mv_logo {
+    width: 80vw;
+    height: auto;
+    z-index: 10;
+    position: relative;
+    &_text{
+        z-index: 10;
+        position: relative;
+        margin-bottom: 0.5rem;
+    }
+}
+
+
+.section {
+    &+&{
+        margin-top: 3.5rem;
+    }
+}
+
+.contents{
+    margin-top: 5rem;
+}
+
+.concept {
+    border-top: solid thin;
+    border-bottom: solid thin;
+    padding: 2rem 1rem;
+}
+
+.heading {
+    font-size: $text-largest-sp;
+    text-align: center;
+}
+
+.lead {
+    text-align: center;
+    margin-top: 0.25rem;
+    font-weight: 700;
+}
+
+.concept_text {
+    margin-top: 2rem;
+    &+& {
+        margin-top: 1rem;;
+    }
+}
+
+.merit {
+    margin-top: 5rem;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 20rem;
+        display: block;
+    }
+    &::after{
+        content: '';
+        width: 75%;
+        height: 4px;
+        background-color: $color-sub;
+        position: absolute;
+        top: calc(20rem - 4px);
+        left: 0;
+        z-index: 10;
+    }
+    &_title{
+        font-size: $text-medium-sp;
+        margin-top: 1.5rem;
+        display: inline-block;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        width: 100%;
+        &::after{
+            content: '';
+            width:4rem;
+            height: 1px;
+            background-color: #fff;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+        }
+    }
+    &_num{
+        font-size:4.75rem;
+        font-family: $font-mincho;
+        color: $color-sub;
+        position: absolute;
+        top: -3.75rem;
+        left: 50%;
+        font-weight: 500;
+        transform: translateX(-50%);
+    }
+    &_link{
+        text-align: right;
+        > a{
+            font-weight: 700;
+            font-size: 16px;
+            padding-right: 2.5rem;
+            text-decoration: underline ;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                border-left:solid 10px ;
+                border-top:solid 7px transparent;
+                border-bottom:solid 7px transparent;
+                right: 0.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &-01::before{
+       background: url('/img/bee_room_image-min.jpeg') no-repeat center 90% / cover;
+    }
+    &-02::before{
+        background: url('/img/bee_style-min.jpg') no-repeat center 0 / cover;
+     }
+    &-03::before{
+        background: url('/img/bee_man-min.jpg') no-repeat center 0 / cover;
+     }
+    &-04::before{
+        background: url('/img/bee_headspa-min.jpeg') no-repeat center / cover;
+     }
+     &-05::before{
+        background: url('/img/bee_removal-min.jpeg') no-repeat center 100% / cover;
+     }
+}
+
+.info{
+    margin-top: 3rem;
+    & > li + li {
+        margin-top: 4rem;
+    }
+}
+
+.linkBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    &::before{
+        content:'';
+        width:100%;
+        height: 18rem;
+        display: block;
+        border-bottom: solid 2px $color-sub;
+        margin-bottom: 1rem;
+    }
+    &-menu::before{
+        background: url('/img/bee_menu-min.jpg') no-repeat center / cover;
+    }
+    &-salon::before{
+        background: url('/img/bee_top_image-min.jpeg') no-repeat center / cover;
+    }
+    &-staff::before{
+        background: url('/img/bee_matsui-min.jpg') no-repeat center 15% / cover;
+    }
+    &-faq::before{
+        background: url('/img/bee_image_1-min.jpg') no-repeat center 70% / cover;
+    }
+    &_text{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 60%;
+    }
+    &_title{
+        font-size: $text-larger-sp;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    &_sub{
+        position: relative;
+        top: 0.3rem;
+    }
+    &_link{
+        width:40%;
+        padding: 0.5rem 1rem;
+        border-radius: 999px;
+        border:solid thin;
+        text-align: center;
+        position: relative;
+        font-weight: bold;
+        &::after{
+            content:'';
+            border-top: solid 6px transparent;
+            border-bottom: solid 6px transparent;
+            border-left: solid 6px;
+            position: absolute;
+            right: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+
+
+@include pc {
+    .mv{
+        border-top-width: 3px;
+        height: 620px;
+        &_text{
+            font-size: 3.6rem;
+            margin-bottom: 6rem;
+        }
+        &_logo_text{
+            font-size: 2.5rem;
+        }
+        &_logo{
+            width: 35%;
+        }
+    }
+
+    .contents{
+        width: $width-container;
+        margin: 6rem auto 0;
+    }
+
+    .section {
+        &+&{
+            margin-top: 7rem;
+        }
+    }
+
+    .heading{
+        font-size: $text-largest;
+    }
+
+    .lead{
+        font-size: $text-medium;
+    }
+
+    .concept {
+        padding: 3rem 0;
+        br:nth-child(1){
+            display: none;
+        }
+        &_text{
+            width: 65rem;
+            margin:4rem auto 0;
+        }
+    }
+
+    .merit{
+        margin-top: 6rem;
+        align-items: center;
+        display: flex;
+        &+&{
+            margin-top: 9rem;
+        }
+        &::after{
+            content: none;
+        }
+        &::before{
+            width: 55%;
+            height: 470px;
+        }
+        &_textArea{
+            width: 45%;
+            padding:2rem 4rem 4rem;
+            background-color: $color-main;
+            transform: translateX(-6rem);
+            position: relative;
+            &::before{
+                content: '';
+                width: 6px;
+                height: calc(100% - 5rem);
+                background-color: $color-sub;
+                position: absolute;
+                top: 5rem;
+                left: -6px;
+            }
+            &::after{
+                content: '';
+                height: 6px;
+                width: calc(70% - 5rem);
+                background-color: $color-sub;
+                position: absolute;
+                left: -6px;
+                bottom: -6px;
+            }
+        }
+        &_title {
+            font-size: $text-larger;
+            white-space: pre-wrap;
+            margin-bottom: 3rem;
+            padding-bottom: 3rem;
+            &::after{
+                left: 3rem;
+            }
+        }
+        &_num{
+            left: 6.5rem;
+            font-size: 60px;
+            top: -5rem;
+        }
+        &-02,
+        &-04{
+            flex-direction: row-reverse;
+            .merit_textArea{
+                transform: translateX(6rem);
+                &::before{
+                    left: auto;
+                    right: -6px;
+                }
+                &::after{
+                    left: auto;
+                    right: -6px;
+                }
+            }
+        }
+    }
+
+
+    .info{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        & > li + li {
+            margin-top: 0;
+        }
+        & > li {
+            width: 45%;
+        }
+        // & > li:nth-of-type(odd){
+        //     padding-right: 8rem;
+        // }
+        // & > li:nth-of-type(even){
+        //     padding-left: 8rem;
+        // }
+        & > li:nth-of-type(n+3){
+            margin-top: 8rem;
+        }
+        // & > li:nth-of-type(-n+2){
+        //     padding-bottom: 5rem;
+        // }
+    }
+
+    .linkBox{
+        &::before{
+            height: 250px;
+        }
+        &_title{
+            font-size: $text-largest;
+        }
+        &_link{
+            transition: .3s;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-size: $text-medium;
+            &:hover{
+                background-color: $color-sub;
+                color: #fff;
+                border: none;
+            }
+        }
+    }
+
+    .section + .information{
+        margin-top: 12rem;
+    }
+}

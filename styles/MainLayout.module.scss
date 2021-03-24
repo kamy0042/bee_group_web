@@ -1,0 +1,43 @@
+@import 'common.scss';
+
+
+.wrap {
+    background-color: $color-main;
+    min-height: 100vh;
+    display :flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    @include pc {
+        max-width: 1980px;
+    }
+
+}
+
+.isOpen {
+    position: fixed;
+}
+
+.inner {
+    padding:$padding-container-sp;
+    margin-bottom: 3rem;
+    @include pc {
+        padding: $padding-container;
+    }
+}
+
+.main {
+    margin-bottom: 3rem;
+}
+
+@include pc {
+    .wrap{
+        max-width: 1980px;
+    }
+    .headerArea{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+

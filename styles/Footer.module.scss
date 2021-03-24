@@ -1,0 +1,81 @@
+@import 'common.scss';
+
+
+.map {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+    opacity: 0.95;
+    & > iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+        border:0;
+    }
+}
+
+.info {
+    padding:$padding-container-sp;
+    text-align: center;
+}
+
+.openInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > div {
+        display: flex;
+        align-items: center;
+    }
+    dt {
+        font-weight: 400;
+    }
+    & > div + div{
+        margin-left: 1.5rem;
+    }
+}
+.address {
+    margin-top: 2rem;
+}
+.link {
+    margin: 0.25rem 0 2rem;
+    & > a {
+        display: block;
+    }
+    & > a + a{
+        margin-top: 0.25rem;
+    }
+}
+
+.btm{
+    background-color: $color-sub;
+    font-size: $text-smaller-sp;
+    text-align: center;
+    padding: 0.25rem;
+}
+
+
+@include pc {
+    .map{
+        padding-bottom:22%;
+    }
+    .btm{
+        font-size: $text-small;
+        padding: 0.75rem;
+    }
+    .info{
+        width:$width-container;
+        margin: auto;
+        padding: 5rem 0;
+    }
+    .btn{
+        width: 20rem;
+        margin: auto;
+        & > a{
+            font-size: $text-medium;
+        }
+    }
+}

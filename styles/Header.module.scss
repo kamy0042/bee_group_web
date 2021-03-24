@@ -1,0 +1,37 @@
+@import 'common.scss';
+
+.wrap {
+    padding: 0 0 1rem;
+    @include pc {
+        padding: 0 0 4rem;
+        display: flex;
+        align-items: center;
+    }
+}
+.logo {
+    width:60%;
+    @include pc {
+        width: auto;
+        & > a{
+            display: flex;
+        }
+    }
+}
+.info {
+    display:none;
+    @include pc {
+        display: block;
+        margin-left: 3rem;
+        & > div {
+            display: flex;
+            margin-top: 0.5rem;
+        }
+        dt{
+            margin-right: 1rem;
+            padding-right: 1rem;
+            border-right: solid thin;
+            min-width: 6rem;
+        }
+    }
+
+}
