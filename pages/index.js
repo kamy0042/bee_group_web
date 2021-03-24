@@ -109,9 +109,9 @@ const Test = () => (
                     <h2 className={styles.heading}>Infomation</h2>
                     <p className={styles.lead}>私たちのお店について</p>
                     <ul className={styles.info}>
-                        <li>
+                        {/* <li>
                             <LinkBox title="Menu" sub="メニュー一覧" link="/menu/" className="menu" />
-                        </li>
+                        </li> */}
                         {/* <li>
                             <LinkBox title="Salon" sub="店舗情報" link="/salon/" className="salon" />
                         </li>
