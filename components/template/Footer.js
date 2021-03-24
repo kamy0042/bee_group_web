@@ -30,12 +30,12 @@ const Footer = () => (
                 </div>
             </dl>
             <p className={styles.address}>{SHOP_INFO.ADDRESS}</p>
-            <div className={styles.link}>
+            {/* <div className={styles.link}>
                 <a href={`tel:${SHOP_INFO.TEL}`}>TEL:{SHOP_INFO.TEL}</a>
-            </div>
-            <div className={styles.btn}>
+            </div> */}
+            {/* <div className={styles.btn}>
                 <ReserveButton />
-            </div>
+            </div> */}
         </div>
 
         <p className={styles.btm}>Copyright 2021 ©︎Bee dandy All Rights Reserved</p>

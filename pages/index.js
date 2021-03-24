@@ -112,7 +112,7 @@ const Test = () => (
                         <li>
                             <LinkBox title="Menu" sub="メニュー一覧" link="/menu/" className="menu" />
                         </li>
-                        <li>
+                        {/* <li>
                             <LinkBox title="Salon" sub="店舗情報" link="/salon/" className="salon" />
                         </li>
                         <li>
@@ -120,7 +120,7 @@ const Test = () => (
                         </li>
                         <li>
                             <LinkBox title="FAQ" sub="よくある質問" link="/faq/" className="faq" />
-                        </li>
+                        </li> */}
                     </ul>
                 </section>
             </div>

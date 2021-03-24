@@ -361,7 +361,9 @@
             margin-top: 0;
         }
         & > li {
-            width: 45%;
+            // width: 45%;
+            width: 80%;
+            margin: auto;
         }
         // & > li:nth-of-type(odd){
         //     padding-right: 8rem;

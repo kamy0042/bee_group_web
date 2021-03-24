@@ -13,18 +13,16 @@ const Navigation = ({ isOpen, onClick }) => {
                     <li className={styles.nav_link}>
                         <Link href="/menu">Menu</Link>
                     </li>
-                    <li className={styles.nav_link}>
+                    {/* <li className={styles.nav_link}>
                         <Link href="/menu">Salon</Link>
-                    </li>
-                    <li className={styles.nav_link}>
+                    </li> */}
+                    {/* <li className={styles.nav_link}>
                         <Link href="/menu">Staff</Link>
-                    </li>
-                    <li className={styles.nav_link}>
+                    </li> */}
+                    {/* <li className={styles.nav_link}>
                         <Link href="/menu">FAQ</Link>
-                    </li>
-                    <li className="btn">
-                        <ReserveButton />
-                    </li>
+                    </li> */}
+                    <li className="btn">{/* <ReserveButton /> */}</li>
                 </ul>
                 <dl className={styles.info}>
                     <div>
