@@ -4,6 +4,9 @@ module.exports = {
             "/": {
                 page: "/",
             },
+            "/menu": {
+                page: "/menu",
+            },
         };
     },
 };
