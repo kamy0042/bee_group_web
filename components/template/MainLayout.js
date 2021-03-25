@@ -13,7 +13,7 @@ const MainLayout = ({ children }) => {
             <div className={styles.inner}>
                 <div className={styles.headerArea}>
                     <Header />
-                    {/* <Navigation isOpen={isOpen} onClick={handleClick} /> */}
+                    <Navigation isOpen={isOpen} onClick={handleClick} />
                 </div>
                 <main className={styles.main}>{children}</main>
             </div>
