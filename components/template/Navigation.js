@@ -22,7 +22,9 @@ const Navigation = ({ isOpen, onClick }) => {
                     {/* <li className={styles.nav_link}>
                         <Link href="/menu">FAQ</Link>
                     </li> */}
-                    <li className="btn">{/* <ReserveButton /> */}</li>
+                    <li className="btn">
+                        <ReserveButton />
+                    </li>
                 </ul>
                 <dl className={styles.info}>
                     <div>

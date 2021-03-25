@@ -149,10 +149,10 @@
         background: none;
         width: auto;
         height: auto;
-        transform: translateX(0);
         color: $color-text;
         box-shadow: none;
         position: relative;
+        right: 0;
     }
     .overlay{
         display: none;

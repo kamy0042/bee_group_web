@@ -6,4 +6,4 @@ export const SHOP_INFO = {
     TEL: "03-6452-9078",
 };
 
-export const RESERVE_URL = "/";
+export const RESERVE_URL = "https://v329c7.b-merit.jp/v485r2/web/";

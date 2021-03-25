@@ -37,9 +37,11 @@
         margin-left: 1.5rem;
     }
 }
+
 .address {
     margin-top: 2rem;
 }
+
 .link {
     margin: 0.25rem 0 2rem;
     & > a {
@@ -48,6 +50,10 @@
     & > a + a{
         margin-top: 0.25rem;
     }
+}
+
+.btn{
+    margin: 2rem 0;
 }
 
 .btm{
@@ -73,7 +79,7 @@
     }
     .btn{
         width: 20rem;
-        margin: auto;
+        margin: 4rem auto 0;
         & > a{
             font-size: $text-medium;
         }
