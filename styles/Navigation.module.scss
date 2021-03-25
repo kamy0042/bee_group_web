@@ -13,6 +13,7 @@
     box-shadow: $shadow-03;
     transform: translateX(100%);
     transition: .3s;
+
     a {
         color: $color-main;
     }
@@ -109,6 +110,7 @@
 
 .openedWrap {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .openedBtn{
