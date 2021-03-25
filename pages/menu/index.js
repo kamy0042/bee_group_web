@@ -46,10 +46,10 @@ const Menu = () => (
                                     <p>・オートシャンプー</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,050
+                                    <span>通常料金（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥5,500
+                                    <span>会員料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>30～45分
@@ -153,10 +153,10 @@ const Menu = () => (
                                     <p>・オートシャンプー</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,950
+                                    <span>通常料金（税込）</span>¥4,950
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥4,400
+                                    <span>会員料金（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>２週間以内に再来店されたお客様
@@ -169,10 +169,10 @@ const Menu = () => (
                                     <p>・ハンドシャンプー</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥5,500
+                                    <span>通常料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥4.950
+                                    <span>会員料金（税込）</span>¥4.950
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>２週間以内に再来店されたお客様
@@ -186,10 +186,10 @@ const Menu = () => (
                                     <p>・ヘッドスパ</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥5,500
+                                    <span>会員料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>3週間以内に再来店されたお客様
@@ -204,10 +204,10 @@ const Menu = () => (
                                     <p>・スカルプケア</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,700
+                                    <span>通常料金（税込）</span>¥7,700
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,600
+                                    <span>会員料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>3週間以内に再来店されたお客様
@@ -236,10 +236,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ポイントパーマ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,950~
+                                    <span>通常料金（税込）</span>¥4,950~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥4,400
+                                    <span>会員料金（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -248,10 +248,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>デザインパーマ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,150
+                                    <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,600
+                                    <span>会員料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -260,10 +260,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>スパイラルパーマ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥14,300
+                                    <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥12,650
+                                    <span>会員料金（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>180分前後
@@ -272,10 +272,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ツイストパーマ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥14,300
+                                    <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥12,650
+                                    <span>会員料金（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>180分前後
@@ -284,10 +284,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ポイントストレート</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,950~
+                                    <span>通常料金（税込）</span>¥4,950~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥4,400
+                                    <span>会員料金（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -296,10 +296,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>コスメストレート</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥11,000
+                                    <span>通常料金（税込）</span>¥11,000
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥9,900
+                                    <span>会員料金（税込）</span>¥9,900
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -308,10 +308,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>縮毛矯正</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥14,300
+                                    <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥12,650
+                                    <span>会員料金（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -338,10 +338,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ファッションカラー</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,150
+                                    <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,600
+                                    <span>会員料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -350,10 +350,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>白髪染め</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,150
+                                    <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,600
+                                    <span>会員料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -362,10 +362,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ハイライト</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥3,850~
+                                    <span>通常料金（税込）</span>¥3,850~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥3,300
+                                    <span>会員料金（税込）</span>¥3,300
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -374,10 +374,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ブリーチ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,050
+                                    <span>会員料金（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -386,10 +386,10 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ含む）</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥14,300
+                                    <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥12,100
+                                    <span>会員料金（税込）</span>¥12,100
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90分
@@ -418,73 +418,73 @@ const Menu = () => (
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ヘッドスパ</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥3,850
+                                    <span>通常料金（税込）</span>¥3,850
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥2,750
+                                    <span>会員料金（税込）</span>¥2,750
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ヘッドスパ＋スカルプケア</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥5,500
+                                    <span>通常料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥4,400
+                                    <span>会員料金（税込）</span>¥4,400
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>スタイリング</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,100
+                                    <span>通常料金（税込）</span>¥1,100
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥550
+                                    <span>会員料金（税込）</span>¥550
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>アイロンスタイリング</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥2,750
+                                    <span>通常料金（税込）</span>¥2,750
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥2,200
+                                    <span>会員料金（税込）</span>¥2,200
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>髭トリミング</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,650
+                                    <span>通常料金（税込）</span>¥1,650
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥1,100
+                                    <span>会員料金（税込）</span>¥1,100
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>眉毛デザインカット</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,100
+                                    <span>通常料金（税込）</span>¥1,100
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥550
+                                    <span>会員料金（税込）</span>¥550
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>オートシャンプー</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,650
+                                    <span>通常料金（税込）</span>¥1,650
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥1,100
+                                    <span>会員料金（税込）</span>¥1,100
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
                                 <dt className={styles.menuItem_title_long}>ハンドシャンプー</dt>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥2,200
+                                    <span>通常料金（税込）</span>¥2,200
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥1,650
+                                    <span>会員料金（税込）</span>¥1,650
                                 </dd>
                             </div>
                         </dl>
