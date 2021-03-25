@@ -8,6 +8,7 @@
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    overflow-x: hidden;
     @include pc {
         max-width: 1980px;
     }
