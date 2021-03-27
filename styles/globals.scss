@@ -32,6 +32,9 @@ body {
 	/* フォントレンダリング設定: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale */
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
+  @include pc{
+    overflow-x: auto;
+  };
 }
 @media only screen and
 (-webkit-min-device-pixel-ratio: 2),

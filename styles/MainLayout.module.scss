@@ -11,6 +11,9 @@
     overflow-x: hidden;
     @include pc {
         max-width: 1980px;
+        min-width: calc(1100px + 9rem);
+        margin: auto;
+        overflow-x: auto;
     }
 
 }
@@ -32,11 +35,9 @@
 }
 
 @include pc {
-    .wrap{
-        max-width: 1980px;
-    }
     .headerArea{
         display: flex;
+        min-width: $width-container;
         justify-content: space-between;
     }
 }

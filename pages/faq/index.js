@@ -3,15 +3,14 @@ import MainLayout from "../../components/template/MainLayout";
 import PageImage from "../../components/PageImage";
 import { SHOP_INFO } from "../../public/static";
 import styles from "../../styles/Salon.module.scss";
-import WebpImage from "../../components/WebpImage";
 
-const Salon = () => (
+const Faq = () => (
     <div>
         <Head>
-            <title>店舗情報 | 男性専門美容室 Bee dandy</title>
+            <title>よくある質問 | 男性専門美容室 Bee dandy</title>
             <meta
                 name="description"
-                content="新橋の男性専門美容室 Bee dandyの店舗情報です。営業時間や私たちの思いをご紹介します"
+                content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。コースやお支払い方法の詳細など、あなたの疑問にお答えします"
             ></meta>
             <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -24,7 +23,7 @@ const Salon = () => (
                     <dl className={styles.shopInfo}>
                         <dt className={styles.subHeading}>店舗情報</dt>
                         <dd className={styles.shopInfo_body}>
-                            <WebpImage src="bee_room_image-min" alt="店内の様子" />
+                            <img src="/img/bee_room_image-min.jpg" alt="店内の様子" />
                             <div className={styles.shopInfo_textArea}>
                                 <div className={styles.shopInfo_address}>
                                     <p>
@@ -109,4 +108,4 @@ const Salon = () => (
     </div>
 );
 
-export default Salon;
+export default Faq;

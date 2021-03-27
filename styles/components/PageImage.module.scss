@@ -25,14 +25,22 @@
     }
     @include pc{
         height: 40vh;
+        min-width: $width-container;
     };
 }
 
 .menu {
-    background-image: url('/img/bee_menu-min.jpg');
+    background-image: url('/img/webp/bee_menu-min.webp');
+    &_noWebp{
+        background-image: url('/img/bee_menu-min.jpg');
+    }
 }
 
+
 .salon {
-    background-image: url('/img/bee_top_image-min.jpeg');
+    background-image: url('/img/webp/bee_top_image-min.webp');
+    &_noWebp{
+        background-image: url('/img/bee_top_image-min.jpg');
+    }
 }
 
