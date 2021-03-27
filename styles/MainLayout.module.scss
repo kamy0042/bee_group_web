@@ -12,6 +12,9 @@
 
 .isOpen {
     position: fixed;
+    @include pc{
+        position:relative;
+    };
 }
 
 .inner {

@@ -134,7 +134,7 @@
 }
 
 .matsui,
-.matusi_noWebp,
+.matsui_noWebp,
 .sato,
 .sato_noWebp {
     &::before{
@@ -153,6 +153,7 @@
         }
     };
 }
+
 .matsui{
     &::before{
         background-image: url('/img/webp/bee_matsui-min.webp');

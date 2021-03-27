@@ -136,18 +136,18 @@ const Test = () => {
                             </li>
                             <li>
                                 <LinkBox
-                                    title="FAQ"
-                                    sub="よくある質問"
-                                    link="/faq/"
-                                    className={isSafari ? "faq_noWebp" : "faq"}
+                                    title="Staff"
+                                    sub="スタッフ一覧"
+                                    link="/staff/"
+                                    className={isSafari ? "staff_noWebp" : "staff"}
                                 />
                             </li>
                             <li>
                                 <LinkBox
-                                    title="Staff"
-                                    sub="スタッフ一覧"
-                                    link="/staff/"
-                                    className={isSafari ? "staf_noWebp" : "staff"}
+                                    title="FAQ"
+                                    sub="よくある質問"
+                                    link="/faq/"
+                                    className={isSafari ? "faq_noWebp" : "faq"}
                                 />
                             </li>
                         </ul>
