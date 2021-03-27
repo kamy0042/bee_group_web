@@ -134,13 +134,14 @@ const Test = () => {
                                     className={isSafari ? "salon_noWebp" : "salon"}
                                 />
                             </li>
+                            <li>
+                                <LinkBox title="FAQ" sub="よくある質問" link="/faq/" className="faq" />
+                            </li>
                             {/*
                         <li>
                             <LinkBox title="Staff" sub="スタッフ一覧" link="/staff/" className="staff" />
                         </li>
-                        <li>
-                            <LinkBox title="FAQ" sub="よくある質問" link="/faq/" className="faq" />
-                        </li> */}
+*/}
                         </ul>
                     </section>
                 </div>

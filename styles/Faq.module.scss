@@ -1,0 +1,53 @@
+@import 'common.scss';
+
+.heading {
+    font-size: $text-largest-sp;
+    text-align: center;
+    margin-top: 2rem;
+    @include pc {
+        font-size:$text-largest;
+    }
+}
+
+.faq {
+    margin-top: 4rem;
+    &_title{
+        font-size: $text-medium-sp;
+        font-weight: 700;
+        border-bottom: solid thin ;
+        padding-bottom: 0.25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items:center;
+    }
+    &_icon{
+        font-size: $text-largest-sp;
+        color: $color-sub;
+        font-family: $font-mincho;
+        margin-right: 1rem;
+    }
+    &_body{
+        &> p+p{
+            margin-top: 1.5rem;
+        } & + .faq_title {
+            margin-top: 4rem;
+        }
+    }
+    @include pc{
+        &_title{
+            font-size: $text-large;
+        }
+        &_icon{
+            font-size: $text-largest;
+        }
+    };
+}
+
+
+
+@include pc{
+    .contents{
+        width: $width-container;
+        margin:  auto ;
+    }
+};

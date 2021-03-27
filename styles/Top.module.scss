@@ -248,7 +248,6 @@
     }
     &_link{
         width:40%;
-        padding: 0.5rem;
         border-radius: 999px;
         border:solid thin;
         text-align: center;
@@ -263,6 +262,11 @@
             right: 0.5rem;
             top: 50%;
             transform: translateY(-50%);
+        }
+        & > a {
+            display: block;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
         }
     }
 }
@@ -422,13 +426,16 @@
         }
         &_link{
             transition: .3s;
-            padding-top: 1rem;
-            padding-bottom: 1rem;
             font-size: $text-medium;
             &:hover{
                 background-color: $color-sub;
                 color: #fff;
                 border: none;
+            }
+            & > a {
+                display: block;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
             }
         }
     }

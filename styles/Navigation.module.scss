@@ -16,6 +16,7 @@
     z-index: 9999;
     a {
         color: $color-main;
+        display: block;
     }
 }
 
@@ -111,6 +112,9 @@
 .openedWrap {
     transform: translateX(-100%);
     opacity: 1;
+    @include pc{
+        transform: translateX(0);
+    };
 }
 
 .openedBtn{

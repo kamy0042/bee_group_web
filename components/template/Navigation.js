@@ -10,18 +10,18 @@ const Navigation = ({ isOpen, onClick }) => {
             <nav className={`${styles.wrap} ${isOpen && styles.openedWrap}`}>
                 <button className={`${styles.button} ${isOpen && styles.openedBtn}`} onClick={onClick}></button>
                 <ul className={styles.nav}>
-                    <li className={styles.nav_link}>
+                    <li className={styles.nav_link} onClick={onClick}>
                         <Link href="/menu">Menu</Link>
                     </li>
-                    <li className={styles.nav_link}>
+                    <li className={styles.nav_link} onClick={onClick}>
                         <Link href="/salon">Salon</Link>
                     </li>
                     {/* <li className={styles.nav_link}>
-                        <Link href="/menu">Staff</Link>
+                        <Link href="/staff">Staff</Link>
                     </li> */}
-                    {/* <li className={styles.nav_link}>
-                        <Link href="/menu">FAQ</Link>
-                    </li> */}
+                    <li className={styles.nav_link}>
+                        <Link href="/faq">FAQ</Link>
+                    </li>
                     <li className="btn">
                         <ReserveButton />
                     </li>

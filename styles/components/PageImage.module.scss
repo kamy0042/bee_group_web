@@ -36,11 +36,17 @@
     }
 }
 
-
 .salon {
     background-image: url('/img/webp/bee_top_image-min.webp');
     &_noWebp{
         background-image: url('/img/bee_top_image-min.jpg');
+    }
+}
+
+.faq {
+    background-image: url('/img/webp/bee_image_1-min.webp');
+    &_noWebp{
+        background-image: url('/img/bee_image_1-min.jpg');
     }
 }
 
