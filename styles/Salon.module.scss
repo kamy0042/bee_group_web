@@ -1,0 +1,209 @@
+@import 'common.scss';
+
+.heading {
+    font-size: $text-largest-sp;
+    text-align: center;
+    margin-top: 2rem;
+    @include pc {
+        font-size:$text-largest;
+    }
+}
+
+.subHeading {
+    font-size: $text-large-sp;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: '';
+        width:2rem;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin-right: 1rem;
+    }
+    &::after{
+        content: '';
+        width:2rem;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin-left: 1rem;
+    }
+    @include pc{
+        font-size: $text-larger;
+    };
+}
+
+.info{
+    margin-top: 6rem;
+    &_contents{
+        margin-top: 2rem;
+        dt{
+            color: $color-sub;
+        }
+        dd{
+            margin-top: 0.75rem;
+        }
+        & > div + div {
+            margin-top: 2rem;
+        }
+    }
+    &_list{
+        &  >li {
+            display: flex;
+            align-items: flex-start;
+            padding-left: 1.5rem;
+            position: relative;
+            &::before{
+                content: '';
+                width: 0.5em;
+                height: 0.5em;
+                position: absolute;
+                border-radius: 50%;
+                background-color: $color-sub;
+                left: 0;
+                top: 0.5em;
+            }
+        }
+        & li + li {
+            margin-top: 0.5rem;
+        }
+    }
+    &_notice{
+        margin-top: 2rem;
+    }
+    @include pc{
+        &_contents{
+            & > div {
+                display: flex;
+            }
+            dt {
+                min-width: 8em;
+            }
+            dd {
+                margin:0 0 0 3rem;
+            }
+            & > div + div {
+                margin-top: 4rem;
+            }
+        }
+        &_list {
+            & li + li {
+                margin-top: 1rem;
+            }
+        }
+        &_notice{
+            margin-top: 2rem;
+        }
+    };
+}
+
+.lead {
+    margin-top: 2rem;
+    @include pc{
+        text-align: center;
+    };
+}
+
+.shopInfo{
+    margin-top: 3rem;
+    &_body{
+        & > img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &_address{
+        margin-top: 2rem;
+    }
+    &_attention{
+        margin-top: 1rem;
+        font-size: $text-small-sp;
+    }
+    &_data{
+        margin-top: 1.5rem;
+        & > div {
+            display: flex;
+            align-items: center;
+        }
+        dt {
+            color: $color-sub;
+            margin-right: 1rem;
+        }
+    }
+    @include pc{
+        &_body{
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            & > img {
+                width: 330px;
+            }
+        }
+        &_textArea{
+            width: calc(100% - 330px - 6rem);
+        }
+        &_address{
+            margin-top: 0;
+            & > p span{
+                display: block;
+            }
+        }
+        &_data{
+            margin-top: 3rem;
+            font-size: $text-medium;
+        }
+        &_attention{
+            font-size: $text-small;
+        }
+    };
+
+}
+
+.message {
+    margin-top: 4rem;
+    padding: 1.5rem;
+    border: solid thin ;
+    position: relative;
+    &_heading{
+        position: absolute;
+        background-color: $color-main;
+        display: inline-block;
+        padding: 0.5rem 1em;
+        top: -1em;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 11.1em;
+    }
+    &_copy{
+        font-size: $text-large-sp;
+        font-weight: 700;
+        margin: 1.5rem 0;
+    }
+    &_name{
+        text-align: right;
+        font-size: $text-small-sp;
+        margin-top: 1rem;
+    }
+    @include pc{
+        padding: 3rem;
+        &_copy{
+            font-size: $text-large;
+            text-align: center;
+            margin: 2.5rem 0;
+        }
+        &_name{
+            font-size: $text-small;
+        }
+    };
+}
+
+@include pc{
+    .contents{
+        width: $width-container;
+        margin:  auto ;
+    }
+};

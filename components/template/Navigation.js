@@ -13,9 +13,9 @@ const Navigation = ({ isOpen, onClick }) => {
                     <li className={styles.nav_link}>
                         <Link href="/menu">Menu</Link>
                     </li>
-                    {/* <li className={styles.nav_link}>
-                        <Link href="/menu">Salon</Link>
-                    </li> */}
+                    <li className={styles.nav_link}>
+                        <Link href="/salon">Salon</Link>
+                    </li>
                     {/* <li className={styles.nav_link}>
                         <Link href="/menu">Staff</Link>
                     </li> */}

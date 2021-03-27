@@ -1,4 +1,5 @@
 import Head from "next/head";
+import PageImage from "../../components/PageImage";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Menu.module.scss";
 
@@ -11,7 +12,7 @@ const Menu = () => (
         </Head>
 
         <MainLayout>
-            <div className={styles.mv}></div>
+            <PageImage page="menu" />
             <div className={styles.contents}>
                 <section className={`${styles.menu} ${styles.section}`}>
                     <h2 className={styles.heading}>Menu</h2>
