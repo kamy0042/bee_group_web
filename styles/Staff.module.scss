@@ -1,0 +1,183 @@
+@import 'common.scss';
+
+.heading {
+    font-size: $text-largest-sp;
+    text-align: center;
+    margin-top: 2rem;
+    @include pc {
+        font-size:$text-largest;
+    }
+}
+
+.staff{
+    margin-top: 3rem;
+    &+&{
+        margin-top: 7.5rem;
+    }
+    @include pc{
+        margin-top: 6rem;
+        &+&{
+            margin-top: 10rem;
+        }
+    };
+}
+
+.profile{
+    padding-top: 180px;
+    position: relative;
+    &_body{
+        margin-top: 1.5rem;
+    }
+    &_nameArea{
+        text-align: center;
+    }
+    &_position{
+        padding-right: 1.25rem;
+        margin-right: 1.25rem;
+        border-right:solid thin;
+        font-size: $text-medium-sp;
+    }
+    &_name{
+        font-size: $text-larger-sp;
+    }
+    &_text{
+        margin-top: 1.5rem;
+        white-space: pre-wrap;
+    }
+    &_message{
+        padding: 1.5rem;
+        border: solid thin;
+        margin-top: 2rem;
+        position: relative;
+        &  > h2 {
+            font-size: $text-medium-sp;
+            background-color: $color-main;
+            padding: 0.5rem 1.25rem;
+            position: absolute;
+            top: -1em;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 11.5em;
+        }
+        & > p{
+            margin-top: 1rem;
+        }
+    }
+    @include pc{
+        padding:0 0 0 40%;
+        &_body{
+            margin: 0 0 0 4rem;
+        }
+        &_nameArea{
+            text-align: left;
+        }
+        &_position{
+            font-size: $text-medium;
+        }
+        &_name{
+            font-size: $text-larger;
+        }
+        &_message{
+            margin-top: 3rem;
+            & > h2 {
+                left: 2rem;
+                transform: translateX(0);
+                font-size: $text-medium;
+
+            }
+        }
+    };
+}
+
+.voice {
+    margin-top: 3rem;
+    &_title{
+        font-size: $text-medium-sp;
+        color: $color-sub;
+        text-align: center;
+    }
+    &_body{
+        margin-top: 1rem;
+    }
+    &_list{
+        & > li + li {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: solid thin $color-sub;
+        }
+    }
+    @include pc{
+        margin-top: 3rem;
+        &_title{
+            font-size: $text-large;
+        }
+        &_body{
+            margin-top: 1.5rem;
+        }
+        &_list{
+            display: flex;
+            justify-content: center;
+            & > li {
+                width: 50%;
+            }
+            & > li:nth-of-type(odd){
+                margin-right: 3rem;
+            }
+            & > li + li{
+                padding: 0 0 0 3rem;
+                margin: 0;
+                border-top: 0;
+                border-left: solid thin $color-sub;
+            }
+        }
+    };
+}
+
+.matsui,
+.matusi_noWebp,
+.sato,
+.sato_noWebp {
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 180px;
+        top: 0;
+        left: 0;
+        background-size: cover;
+    }
+    @include pc{
+        &::before{
+            width:40%;
+            height: 100%;
+        }
+    };
+}
+.matsui{
+    &::before{
+        background-image: url('/img/webp/bee_matsui-min.webp');
+        background-position:center 15%;
+    }
+    &_noWebp::before{
+        background-image: url('/img/bee_matsui-min.jpg');
+        background-position:center 15%;
+    }
+}
+
+.sato{
+    &::before{
+        background-image: url('/img/webp/bee_sato-min.webp');
+        background-position:center 22.5%;
+    }
+    &_noWebp::before{
+        background-image: url('/img/bee_sato-min.jpg');
+        background-position:center 22.5%;
+    }
+}
+
+@include pc{
+    .contents{
+        width: $width-container;
+        margin:  auto ;
+    }
+};

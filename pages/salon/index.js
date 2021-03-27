@@ -6,7 +6,7 @@ import styles from "../../styles/Salon.module.scss";
 import WebpImage from "../../components/WebpImage";
 
 const Salon = () => (
-    <div>
+    <>
         <Head>
             <title>店舗情報 | 男性専門美容室 Bee dandy</title>
             <meta
@@ -106,7 +106,7 @@ const Salon = () => (
                 </section>
             </div>
         </MainLayout>
-    </div>
+    </>
 );
 
 export default Salon;

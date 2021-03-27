@@ -4,7 +4,7 @@ import PageImage from "../../components/PageImage";
 import styles from "../../styles/Faq.module.scss";
 
 const Faq = () => (
-    <div>
+    <>
         <Head>
             <title>よくある質問 | 男性専門美容室 Bee dandy</title>
             <meta
@@ -110,7 +110,7 @@ const Faq = () => (
                 </section>
             </div>
         </MainLayout>
-    </div>
+    </>
 );
 
 export default Faq;

@@ -50,3 +50,11 @@
     }
 }
 
+.staff {
+    background-image: url('/img/webp/bee_business-min.webp');
+    &_noWebp{
+        background-image: url('/img/bee_business-min.jpg');
+    }
+}
+
+

@@ -2,7 +2,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import Navigation from "./Navigation";
 import styles from "../../styles/MainLayout.module.scss";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const MainLayout = ({ children }) => {
     const [isOpen, setIsOpen] = useState(false);

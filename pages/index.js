@@ -41,7 +41,7 @@ const Test = () => {
     const isSafari = useIsSafari();
 
     return (
-        <div>
+        <>
             <Head>
                 <title>男性専門美容室 Bee dandy</title>
                 <meta
@@ -135,18 +135,26 @@ const Test = () => {
                                 />
                             </li>
                             <li>
-                                <LinkBox title="FAQ" sub="よくある質問" link="/faq/" className="faq" />
+                                <LinkBox
+                                    title="FAQ"
+                                    sub="よくある質問"
+                                    link="/faq/"
+                                    className={isSafari ? "faq_noWebp" : "faq"}
+                                />
                             </li>
-                            {/*
-                        <li>
-                            <LinkBox title="Staff" sub="スタッフ一覧" link="/staff/" className="staff" />
-                        </li>
-*/}
+                            <li>
+                                <LinkBox
+                                    title="Staff"
+                                    sub="スタッフ一覧"
+                                    link="/staff/"
+                                    className={isSafari ? "staf_noWebp" : "staff"}
+                                />
+                            </li>
                         </ul>
                     </section>
                 </div>
             </MainLayout>
-        </div>
+        </>
     );
 };
 

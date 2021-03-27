@@ -3,17 +3,9 @@
 
 .wrap {
     background-color: $color-main;
-    min-height: 100vh;
-    display :flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow-x: hidden;
     @include pc {
-        max-width: 1980px;
+        overflow-x: visible;
         min-width: calc(1100px + 9rem);
-        margin: auto;
-        overflow-x: auto;
     }
 
 }
@@ -25,7 +17,16 @@
 .inner {
     padding:$padding-container-sp;
     margin-bottom: 3rem;
+    min-height: 100vh;
+    display :flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: hidden;
     @include pc {
+        max-width: 1980px;
+        margin: auto;
+        overflow-x: auto;
         padding: $padding-container;
     }
 }

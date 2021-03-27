@@ -4,7 +4,7 @@ import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Menu.module.scss";
 
 const Menu = () => (
-    <div>
+    <>
         <Head>
             <title>メニュー一覧 | 男性専門美容室 Bee dandy</title>
             <meta name="description" content="新橋の男性専門美容室 Bee dandyのメニュー一覧です"></meta>
@@ -517,7 +517,7 @@ const Menu = () => (
                 </section>
             </div>
         </MainLayout>
-    </div>
+    </>
 );
 
 export default Menu;

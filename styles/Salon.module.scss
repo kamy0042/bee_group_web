@@ -191,9 +191,9 @@
     @include pc{
         padding: 3rem;
         &_copy{
-            font-size: $text-large;
+            font-size: $text-larger;
             text-align: center;
-            margin: 2.5rem 0;
+            margin: 1rem 0 2rem;
         }
         &_name{
             font-size: $text-small;
