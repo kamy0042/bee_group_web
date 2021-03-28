@@ -7,6 +7,15 @@ module.exports = {
             "/menu": {
                 page: "/menu",
             },
+            "/salon": {
+                page: "/salon",
+            },
+            "/staff": {
+                page: "/staff",
+            },
+            "/faq": {
+                page: "/faq",
+            },
         };
     },
 };
