@@ -63,10 +63,10 @@ const Menu = () => (
                                     <p>・ハンドシャンプー</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥6,050
+                                    <span>会員料金（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>30～45分
@@ -80,10 +80,10 @@ const Menu = () => (
                                     <p>・ヘッドスパ</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,700
+                                    <span>通常料金（税込）</span>¥7,700
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥7,150
+                                    <span>会員料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60～90分
@@ -98,10 +98,10 @@ const Menu = () => (
                                     <p>・スカルプケア</p>
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥9,350
+                                    <span>通常料金（税込）</span>¥9,350
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>通常料金（税込）</span>¥8,800
+                                    <span>会員料金（税込）</span>¥8,800
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60～110分
