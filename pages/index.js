@@ -115,7 +115,7 @@ const Test = () => {
                         />
                     </section>
                     <section className={`${styles.section} ${styles.information}`}>
-                        <h2 className={styles.heading}>Infomation</h2>
+                        <h2 className={styles.heading}>Information</h2>
                         <p className={styles.lead}>私たちのお店について</p>
                         <ul className={styles.info}>
                             <li>
