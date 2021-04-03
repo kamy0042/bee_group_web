@@ -17,7 +17,7 @@ const Menu = () => (
                 <section className={`${styles.menu} ${styles.section}`}>
                     <h2 className={styles.heading}>Menu</h2>
                     <p className={styles.lead}>
-                        ご希望と滞在時間に合うコースをお選びください。
+                        ご希望に合うコースをお選びください。
                         <br />
                         またオプションより必要なメニューを追加する事ができます。
                     </p>
@@ -36,7 +36,7 @@ const Menu = () => (
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>コース内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員料金（税込）</li>
+                            <li className={styles.table_category_pay2}>会員優待（税込）</li>
                             <li className={styles.table_category_time}>時間の目安</li>
                         </ul>
                         <dl className={styles.table_item}>
@@ -50,7 +50,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥5,500
+                                    <span>会員優待（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>30～45分
@@ -66,7 +66,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,050
+                                    <span>会員優待（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>30～45分
@@ -83,7 +83,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥7,700
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥7,150
+                                    <span>会員優待（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60～90分
@@ -101,7 +101,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥9,350
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥8,800
+                                    <span>会員優待（税込）</span>¥8,800
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60～110分
@@ -132,7 +132,7 @@ const Menu = () => (
                             </div>
                         </dl>
                         <p>
-                            ※シャンプーのみ、ヘッドスパのみ、スカルプケアのみ、スタイリングのみも可能です。料金はお問い合わせください。
+                            ※シャンプーのみ、ヘッドスパのみ、スカルプケアのみ、スタイリングのみも可能です。詳しくは単品・オプションメニューをご覧ください。
                         </p>
                     </section>
 
@@ -143,7 +143,7 @@ const Menu = () => (
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>コース内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員料金（税込）</li>
+                            <li className={styles.table_category_pay2}>会員（税込）</li>
                             <li className={styles.table_category_week}>ご利用可能なお客様</li>
                         </ul>
                         <dl className={styles.table_item_2}>
@@ -157,7 +157,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥4,950
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,400
+                                    <span>会員優待（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>２週間以内に再来店されたお客様
@@ -173,7 +173,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4.950
+                                    <span>会員優待（税込）</span>¥4.950
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>２週間以内に再来店されたお客様
@@ -190,7 +190,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥5,500
+                                    <span>会員優待（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>3週間以内に再来店されたお客様
@@ -208,7 +208,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥7,700
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>会員優待（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_week}>
                                     <span>対象</span>3週間以内に再来店されたお客様
@@ -230,7 +230,7 @@ const Menu = () => (
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>メニュー内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員料金（税込）</li>
+                            <li className={styles.table_category_pay2}>会員優待（税込）</li>
                             <li className={styles.table_category_time}>時間の目安</li>
                         </ul>
                         <dl className={styles.table_item}>
@@ -240,7 +240,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥4,950~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,400
+                                    <span>会員優待（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -252,7 +252,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>会員優待（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -264,7 +264,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥12,650
+                                    <span>会員優待（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>180分前後
@@ -276,7 +276,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥12,650
+                                    <span>会員優待（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>180分前後
@@ -288,7 +288,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥4,950~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,400
+                                    <span>会員優待（税込）</span>¥4,400
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -300,7 +300,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥11,000
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥9,900
+                                    <span>会員優待（税込）</span>¥9,900
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -312,7 +312,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥12,650
+                                    <span>会員優待（税込）</span>¥12,650
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90~120分
@@ -327,12 +327,12 @@ const Menu = () => (
                             <p>シャンプー、スタイリング込み、カット料金別途</p>
                         </div>
                         <p>
-                            ビビットカラー、アッシュカラー、ダブルカラー、しっかり白髪染め、部分染め、白髪を活かすグレーカラーなど、あなたのご要望をお聞かせください。カットとの同時施術をご希望の場合は、コースメニュー（ベーシック、レギュラー、プレミアム、ラグジュアリー）と組合せることができます。
+                            ビビッドカラー、アッシュカラー、ダブルカラー、しっかり白髪染め、部分染め、白髪を活かすグレーカラーなど、あなたのご要望をお聞かせください。カットとの同時施術をご希望の場合は、コースメニュー（ベーシック、レギュラー、プレミアム、ラグジュアリー）と組合せることができます。
                         </p>
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>メニュー内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員料金（税込）</li>
+                            <li className={styles.table_category_pay2}>会員優待（税込）</li>
                             <li className={styles.table_category_time}>時間の目安</li>
                         </ul>
                         <dl className={styles.table_item}>
@@ -342,7 +342,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>会員優待（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -354,7 +354,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥7,150
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,600
+                                    <span>会員優待（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -366,7 +366,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥3,850~
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥3,300
+                                    <span>会員優待（税込）</span>¥3,300
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -378,7 +378,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥6,050
+                                    <span>会員優待（税込）</span>¥6,050
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>60分
@@ -390,7 +390,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥14,300
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥12,100
+                                    <span>会員優待（税込）</span>¥12,100
                                 </dd>
                                 <dd className={styles.menuItem_time}>
                                     <span>所要時間</span>90分
@@ -409,7 +409,7 @@ const Menu = () => (
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>メニュー内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員料金（税込）</li>
+                            <li className={styles.table_category_pay2}>会員優待（税込）</li>
                         </ul>
                         <dl className={styles.table_item}>
                             <div className={styles.menuItem}>
@@ -418,7 +418,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥3,850
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥2,750
+                                    <span>会員優待（税込）</span>¥2,750
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -427,7 +427,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥4,400
+                                    <span>会員優待（税込）</span>¥4,400
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -436,7 +436,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥1,100
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥550
+                                    <span>会員優待（税込）</span>¥550
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -445,7 +445,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥2,750
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥2,200
+                                    <span>会員優待（税込）</span>¥2,200
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -454,7 +454,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥1,650
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,100
+                                    <span>会員優待（税込）</span>¥1,100
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -463,7 +463,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥1,100
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥550
+                                    <span>会員優待（税込）</span>¥550
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -472,7 +472,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥1,650
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,100
+                                    <span>会員優待（税込）</span>¥1,100
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -481,7 +481,7 @@ const Menu = () => (
                                     <span>通常料金（税込）</span>¥2,200
                                 </dd>
                                 <dd className={styles.menuItem_pay}>
-                                    <span>会員料金（税込）</span>¥1,650
+                                    <span>会員優待（税込）</span>¥1,650
                                 </dd>
                             </div>
                         </dl>
