@@ -143,7 +143,7 @@ const Menu = () => (
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>コース内容</li>
                             <li className={styles.table_category_pay1}>通常料金（税込）</li>
-                            <li className={styles.table_category_pay2}>会員（税込）</li>
+                            <li className={styles.table_category_pay2}>会員優待（税込）</li>
                             <li className={styles.table_category_week}>ご利用可能なお客様</li>
                         </ul>
                         <dl className={styles.table_item_2}>
