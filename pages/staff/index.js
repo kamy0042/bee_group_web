@@ -6,7 +6,6 @@ import useIsSafari from "../../hooks/useIsSafari";
 
 const Staff = () => {
     const isSafari = useIsSafari();
-
     const StaffProfile = ({ className, position, staffName, profile, message }) => (
         <dl className={`${styles.profile} ${isSafari ? styles[className + "_noWebp"] : styles[className]}`}>
             <div className={styles.profile_body}>
@@ -44,7 +43,7 @@ const Staff = () => {
                         <StaffProfile
                             className="matsui"
                             position="オーナー"
-                            staffName="松井 裕太"
+                            staffName="松井 祐太"
                             profile={`福岡県出身。30才で上京し、某美容室でマネージャーとして活躍後、2021年にBee Groupを立ち上げる。\n超ポジティブ思考でこの人が登場すると周囲が明るくなるという不思議なパワーの持ち主。抜群のセンスと高い技術で、お客様の様々なニーズに応え続けている。`}
                             message={`お一人おひとりに「今までで一番いいね！」と言っていただけるよう、その人に合ったヘアスタイル、いや、絶対に似合うヘアスタイルを作り出し、家族、恋人、あなたに関わる方々に満足をご提供します！そのため薄毛や白髪のカバー、多少の無理難題（笑）にも解決策をご提示提案しますので、僕のセンスと技術を信じて、あなたの「こうなりたい！」をぜひお気軽にご相談ください！`}
                         />
