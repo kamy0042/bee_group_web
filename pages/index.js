@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import MainLayout from "../components/template/MainLayout";
-import useIsSafari from "../hooks/useIsSafari";
+import useIsSafari from "../libs/useIsSafari";
 import styles from "../styles/Top.module.scss";
 
 const Merit = ({ num, title, text, img, link }) => (

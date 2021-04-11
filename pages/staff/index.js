@@ -2,7 +2,7 @@ import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
 import PageImage from "../../components/PageImage";
 import styles from "../../styles/Staff.module.scss";
-import useIsSafari from "../../hooks/useIsSafari";
+import useIsSafari from "../../libs/useIsSafari";
 
 const Staff = () => {
     const isSafari = useIsSafari();

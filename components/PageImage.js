@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import useIsSafari from "../hooks/useIsSafari";
+import useIsSafari from "../libs/useIsSafari";
 import styles from "../styles/components/PageImage.module.scss";
 
 const PageImage = ({ page }) => {
