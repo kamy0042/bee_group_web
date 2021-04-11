@@ -1,5 +1,5 @@
 import Document, { Head, Main, NextScript } from "next/document";
-import { existsGaId, GA_ID } from "../../libs/gtag";
+import { existsGaId, GA_ID } from "../libs/gtag";
 
 export default class MyDocument extends Document {
     render() {
