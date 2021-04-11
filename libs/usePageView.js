@@ -4,9 +4,9 @@ import { useRouter } from "next/router";
 import * as gtag from "./gtag";
 
 export default function usePageView() {
-    useEffect(() => {
-        const router = useRouter();
+    const router = useRouter();
 
+    useEffect(() => {
         if (!gtag.existsGaId) {
             return;
         }
