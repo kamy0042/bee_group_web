@@ -24,7 +24,7 @@ const Salon = () => (
                     <dl className={styles.shopInfo}>
                         <dt className={styles.subHeading}>店舗情報</dt>
                         <dd className={styles.shopInfo_body}>
-                            <WebpImage src="bee_room_image-min" alt="店内の様子" />
+                            <WebpImage src="bee_room_image-min" alt="お悩みを相談できるプライベートな空間" />
                             <div className={styles.shopInfo_textArea}>
                                 <div className={styles.shopInfo_address}>
                                     <p>
