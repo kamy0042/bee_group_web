@@ -62,6 +62,14 @@ const Test = () => {
                     <img src="/img/bee_logo_white.svg" className={styles.mv_logo} alt="bee_dandy" />
                 </div>
                 <div className={styles.contents}>
+                    <dl className={styles.news}>
+                        <dt>News</dt>
+                        <dd>
+                            <ul>
+                                <li>オープン記念！初めてのご利用でコース料金10%OFF！2021年6月30日まで</li>
+                            </ul>
+                        </dd>
+                    </dl>
                     <section className={`${styles.concept} ${styles.section}`}>
                         <h2 className={styles.heading}>Concept</h2>
                         <p className={styles.lead}>
