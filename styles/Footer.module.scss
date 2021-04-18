@@ -39,7 +39,7 @@
 }
 
 .address {
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .link {
@@ -63,6 +63,16 @@
     padding: 0.25rem;
 }
 
+.sns {
+    margin-top: 2rem;
+    & > a {
+        display: inline-block;
+    }
+    & > a + a {
+        margin-left: 2rem;
+    }
+}
+
 
 @include pc {
     .map{
@@ -79,7 +89,7 @@
     }
     .btn{
         width: 20rem;
-        margin: 4rem auto 0;
+        margin: 3rem auto 0;
         & > a{
             font-size: $text-medium;
         }

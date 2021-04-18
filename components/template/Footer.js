@@ -33,6 +33,14 @@ const Footer = () => (
             {/* <div className={styles.link}>
                 <a href={`tel:${SHOP_INFO.TEL}`}>TEL:{SHOP_INFO.TEL}</a>
             </div> */}
+            <div className={styles.sns}>
+                <a href="https://www.facebook.com/Beedandy.01/" target="_blank">
+                    <img src="/img/icon_fb.png" alt="bee_dandy facebook" width="40px" height="40px" />
+                </a>
+                <a href="https://www.instagram.com/bee_dandy/" target="_blank">
+                    <img src="/img/icon_ig.svg" alt="bee_dandy instagram" width="40px" height="40px" />
+                </a>
+            </div>
             <div className={styles.btn}>
                 <ReserveButton />
             </div>
