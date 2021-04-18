@@ -157,22 +157,22 @@
 .matsui{
     &::before{
         background-image: url('/img/webp/bee_matsui-min.webp');
-        background-position:center 15%;
+        background-position:center 9%;
     }
     &_noWebp::before{
         background-image: url('/img/bee_matsui-min.jpg');
-        background-position:center 15%;
+        background-position:center 9%;
     }
 }
 
 .sato{
     &::before{
         background-image: url('/img/webp/bee_sato-min.webp');
-        background-position:center 22.5%;
+        background-position:center 10.5%;
     }
     &_noWebp::before{
         background-image: url('/img/bee_sato-min.jpg');
-        background-position:center 22.5%;
+        background-position:center 10.5%;
     }
 }
 
