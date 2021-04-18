@@ -5,7 +5,7 @@
     background-color: $color-main;
     @include pc {
         overflow-x: visible;
-        min-width: calc(1100px + 9rem);
+        min-width: calc(1200px + 9rem);
     }
 
 }

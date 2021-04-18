@@ -1,6 +1,7 @@
 @import 'common.scss';
 
 .heading {
+    font-family: $font-mincho;
     font-size: $text-largest-sp;
     text-align: center;
     margin-top: 2rem;
@@ -12,6 +13,7 @@
 .faq {
     margin-top: 4rem;
     &_title{
+        font-family: $font-mincho;
         font-size: $text-medium-sp;
         font-weight: 700;
         border-bottom: solid thin ;
