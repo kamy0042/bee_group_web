@@ -23,12 +23,15 @@ const Merit = ({ num, title, text, img, link }) => (
     </section>
 );
 
-const LinkBox = ({ className, link, title, sub }) => (
+const LinkBox = ({ className, link, title, sub, description }) => (
     <div className={`${styles.linkBox} ${styles["linkBox_" + className]}`}>
-        <p className={styles.linkBox_text}>
-            <span className={styles.linkBox_title}>{title}</span>
-            <span className={styles.linkBox_sub}>{sub}</span>
-        </p>
+        <dl className={styles.linkBox_text}>
+            <dt>
+                <span className={styles.linkBox_title}>{title}</span>
+                <span className={styles.linkBox_sub}>{sub}</span>
+            </dt>
+            <dd className={styles.linkBox_subText}>{description}</dd>
+        </dl>
         <div className={styles.linkBox_link}>
             <Link href={link}>
                 <a>Read More</a>
@@ -60,6 +63,7 @@ const Test = () => {
                     </p>
                     <p className={styles.mv_logo_text}>男性専門美容室</p>
                     <img src="/img/bee_logo_white.svg" className={styles.mv_logo} alt="bee_dandy" />
+                    <p className={styles.mv_logo_sub}>ビーダンディー</p>
                 </div>
                 <div className={styles.contents}>
                     <dl className={styles.news}>
@@ -84,12 +88,12 @@ const Test = () => {
                         </p>
                         <p className={styles.concept_text}>
                             Bee
-                            dandyはお一人おひとりに合わせたベストな解決策と施術をご提供し、自分自身により愛着がわき、「魅力と自信」に満ち溢れたあなたの実現をサポートさせていただく、男性専門の美容室です。「オシャレをしたいけど、どうしたら良いのか分からない方」も、「より洗練されたオシャレを楽しみたい方」も、男美容に興味がある、気になっている、そんな大人の男性が安心して通える隠れサロンです。
+                            dandy（ビーダンディー）はお一人おひとりに合わせたベストな解決策と施術をご提供し、「魅力と自信」に満ち溢れたあなたの実現をサポートする男性専門の美容室です。「オシャレをしたいけど、どうしたら良いのか分からない方」も、「より洗練されたオシャレを楽しみたい方」も、男の美容やグルーミングに興味がある、気になっている、そんな大人の男性が安心して通える隠れ家サロンです。
                         </p>
                     </section>
                     <section className={`${styles.salon} ${styles.section}`}>
                         <h2 className={styles.heading}>Our Salon</h2>
-                        <p className={styles.lead}>Bee dandy がお届けする５つのメリット</p>
+                        <p className={styles.lead}>Bee dandy（ビーダンディー）がお届けする５つのメリット</p>
                         <Merit
                             img={isSafari ? "01_noWebp" : "01"}
                             num="01"
@@ -100,31 +104,34 @@ const Test = () => {
                             img={isSafari ? "02_noWebp" : "02"}
                             num="02"
                             title={`オンもオフもどちらもOKな\nヘアスタイル`}
-                            text="人はお顔に一番近いヘアスタイルを整えることで一番印象が変わると言われています。こだわりが特に無い、毎回オーダーは同じ…という方も、今よりカッコ良くなりたいはず。あなたのライフスタイルに合わせて、フォーマルもカジュアルも楽しめるヘア２wayスタイルをご提供します。もちろん、ご自身でセットできるようスタイリングのアドバイスもいたします。"
+                            text="人はお顔に一番近いヘアスタイルを整えることで一番印象が変わると言われています。こだわりが特に無い、毎回オーダーは同じ…という方も、今よりカッコ良くなりたいはず。あなたのライフスタイルに合わせて、ビジネスもカジュアルも楽しめる２wayメンズスタイルをご提供します。もちろん、ご自身でセットできるようスタイリングのアドバイスもいたします。"
                         />
                         <Merit
                             img={isSafari ? "03_noWebp" : "03"}
                             num="03"
                             title={`髪のボリュームアップや\n白髪をダンディーに演出`}
-                            text="髪をボリュームアップしたり、毛先を少しだけ曲げカールさせてセットしやすくするなど、あなたのお悩みを解決するための縁の下の力持ちとなるパーマやカラーを経験したことがない方も多いはず。お悩みが解決することで毎朝のスタイリングが楽しくなり、時間短縮にもつながります。魅力と自信に満ち溢れたより素敵なあなたになるための施術をご提案いたします。"
+                            text="髪をボリュームアップしたい、毛先を少しだけ曲げカールさせてセットしやすくしたい、白髪を目立たなくしたいなど、あなたのお悩みを解決するためのパーマやカラーを未経験の方も多いはず。お悩みが解決することで毎朝のスタイリングが楽しくなり、時間短縮にもつながります。フェードを利かせたバーバースタイルなどもお任せください。"
                         />
                         <Merit
                             img={isSafari ? "04_noWebp" : "04"}
                             num="04"
                             title={`頭皮環境と発毛促進を\nリラクゼーションとともに`}
-                            text="頭皮環境を良くしましょう！良質な食物は良い土からできるように、良い頭皮環境からは良質で元気な髪が生えてきます。髪のダメージや、抜け毛や薄毛が気になる方には定期的なスカルプケアをおすすめします。筋肉をほぐしたり、頭皮の汚れや毛穴の詰まりを解消し毛細血管を再生するので気持ちいいのは間違いなし。リフレッシュや発毛促進、さらにはリフトアップなど良いこと尽くしのリラクゼーションです。"
+                            text="良質な食物は良い土からできるように、良い頭皮環境からは良質で元気な髪が生えてきます。髪のダメージや、抜け毛や薄毛が気になる方には定期的なヘッドスパとスカルプケアをおすすめします。筋肉をほぐしたり、頭皮の汚れや毛穴の詰まりを解消し毛細血管を再生するので気持ちいいのは間違いなし。リフレッシュや発毛促進、さらにはリフトアップなど良いこと尽くしのリラクゼーションです。"
                         />
                         <Merit
                             img={isSafari ? "05_noWebp" : "05"}
                             num="05"
                             title={`ヘアカットのついでに\n脱毛も可能`}
-                            text="毎日のひげ剃りを楽にしたい、手や脚の毛を嫌がられない程度に薄くしたい・・・でも脱毛サロンへ通うのはハードルが高い、そもそも脱毛について聞くこと自体が恥ずかしいというのが本音ではないでしょうか。実はツルツルだけでなく、エチケット程度に毛量を減らしたり、毛の生え方をデザインすることもできるんです。Bee dandyでは「ヘアカットのついで」に脱毛もできますので、ぜひご希望をお伝えください。"
+                            text="毎日のひげ剃りを楽にしたい、手や脚の毛を嫌がられない程度に薄くしたい・・・でも脱毛サロンへ通うのはハードルが高い、そもそも脱毛について聞くこと自体が恥ずかしいというのが本音ではないでしょうか。男の身だしなみ、さりげないオシャレに必須となったメンズのグルーミング。ツルツルだけでなく、エチケット程度に毛量を減らしたり、毛の生え方をデザインすることもできるので、ぜひご希望をお伝えください。"
                             // link="/menu/removal/"
                         />
                     </section>
                     <section className={`${styles.section} ${styles.information}`}>
                         <h2 className={styles.heading}>Information</h2>
-                        <p className={styles.lead}>私たちのお店について</p>
+                        <p className={styles.lead}>
+                            <span className={styles.br}>私たちのお店</span>
+                            <span className={styles.br}>Bee dandy（ビーダンディー）について</span>
+                        </p>
                         <ul className={styles.info}>
                             <li>
                                 <LinkBox
@@ -132,6 +139,7 @@ const Test = () => {
                                     sub="メニュー一覧"
                                     link="/menu/"
                                     className={isSafari ? "menu_noWebp" : "menu"}
+                                    description="メンズカット、ヘッドスパ、パーマ、カラーなど詳細と料金"
                                 />
                             </li>
                             <li>
@@ -140,6 +148,7 @@ const Test = () => {
                                     sub="店舗情報"
                                     link="/salon/"
                                     className={isSafari ? "salon_noWebp" : "salon"}
+                                    description="新橋駅、汐留駅、御成門駅からいずれも徒歩６分とアクセスも便利"
                                 />
                             </li>
                             <li>
@@ -148,6 +157,7 @@ const Test = () => {
                                     sub="スタッフ一覧"
                                     link="/staff/"
                                     className={isSafari ? "staff_noWebp" : "staff"}
+                                    description="経験豊富なスタイリストが、あなたのカッコいいをプロデュース"
                                 />
                             </li>
                             <li>
@@ -156,6 +166,7 @@ const Test = () => {
                                     sub="よくある質問"
                                     link="/faq/"
                                     className={isSafari ? "faq_noWebp" : "faq"}
+                                    description="〈美容室〉と〈理容室〉の違いって何でしょうか？"
                                 />
                             </li>
                         </ul>

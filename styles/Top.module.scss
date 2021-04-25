@@ -50,6 +50,11 @@
         position: relative;
         margin-bottom: 0.5rem;
     }
+    &_sub {
+        font-size: $text-medium-sp;
+        color:#fff;
+        z-index: 10;
+    }
 }
 
 
@@ -76,6 +81,10 @@
     font-family: $font-mincho;
     margin-top: 0.25rem;
     font-weight: 700;
+}
+
+.br {
+    display: inline-block;
 }
 
 .news {
@@ -251,7 +260,11 @@
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        width: 55%;
+        width: calc(60% - 10px);
+        margin-right: 10px;
+    }
+    &_subText {
+        font-size: 12px;
     }
     &_title{
         font-family: $font-mincho;
@@ -264,7 +277,7 @@
         top: 0.3rem;
     }
     &_link{
-        width:45%;
+        width:40%;
         border-radius: 999px;
         border:solid thin;
         text-align: center;
@@ -284,6 +297,7 @@
             display: block;
             padding-top: 0.5rem;
             padding-bottom: 0.5rem;
+            font-size: 14px;
         }
     }
 }
