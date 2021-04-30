@@ -70,7 +70,16 @@ const Test = () => {
                         <dt>News</dt>
                         <dd>
                             <ul>
-                                <li>オープン記念！初めてのご利用でコース料金10%OFF！2021年6月30日まで</li>
+                                <li>
+                                    <span>2021.4.30</span>
+                                    <a href="/news/news_210430.pdf" target="_blank">
+                                        弊社Instagramアカウントについてのお詫びとご報告
+                                    </a>
+                                </li>
+                                <li>
+                                    <span>2021.4.3</span>
+                                    オープン記念！初めてのご利用でコース料金10%OFF！2021年6月30日まで
+                                </li>
                             </ul>
                         </dd>
                     </dl>

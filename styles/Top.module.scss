@@ -102,6 +102,24 @@
         padding-top: 1rem;
         border-top: dotted thin;
     }
+    li span {
+        min-width: 8rem;
+        display: block;
+        @include pc {
+            display: inline-block;
+        }
+    }
+    li a{
+        text-decoration: underline;
+        &::after{
+            content: '';
+            border-top: solid 0.5rem transparent;
+            border-bottom: solid 0.5rem transparent;
+            border-left: solid 0.5rem #fff;
+            display: inline-block;
+            margin-left: 0.75rem;
+        }
+    }
 }
 
 .concept_text {
