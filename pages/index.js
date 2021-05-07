@@ -71,8 +71,8 @@ const Test = () => {
                         <dd>
                             <ul>
                                 <li>
-                                    <span>2021.4.30</span>
-                                    <a href="/news/news_210430.pdf" target="_blank">
+                                    <span>2021.5.4</span>
+                                    <a href="/news/news_210504.pdf" target="_blank">
                                         弊社Instagramアカウントについてのお詫びとご報告
                                     </a>
                                 </li>
