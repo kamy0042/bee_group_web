@@ -49,7 +49,7 @@ const Test = () => {
                 <title>男性専門美容室 Bee dandy</title>
                 <meta
                     name="description"
-                    content=" 新橋の男性専門美容室 Bee dandyのWebサイトです。お一人おひとりの顔立ちと髪質を活かし、カッコいいをプロデュースします！"
+                    content="新橋、汐留、御成門のメンズ美容室Bee dandy（ビーダンディー）のWebサイトです。お一人おひとりの顔立ちと髪質を活かし、カッコいいをプロデュースします！"
                 ></meta>
                 <link rel="icon" href="/favicon.ico" />
             </Head>
@@ -71,11 +71,17 @@ const Test = () => {
                         <dd>
                             <ul>
                                 <li>
+                                    <span>2021.5.8</span>
+                                    <a href="/news/news_210508.pdf" target="_blank">
+                                        緊急事態宣言期間の営業について
+                                    </a>
+                                </li>
+                                {/* <li>
                                     <span>2021.5.4</span>
                                     <a href="/news/news_210504.pdf" target="_blank">
                                         弊社Instagramアカウントについてのお詫びとご報告
                                     </a>
-                                </li>
+                                </li> */}
                                 <li>
                                     <span>2021.4.3</span>
                                     オープン記念！初めてのご利用でコース料金10%OFF！2021年6月30日まで
