@@ -1,5 +1,6 @@
 @import 'common.scss';
 
+
 .mv {
    height: 70vh;
    min-height: 460px;
@@ -60,9 +61,7 @@
 
 .section {
     &+&{
-        padding-top: 2rem;
-        margin-top: 2rem;
-        border-top: solid thin;
+        margin-top: 4rem;
     }
 }
 
@@ -290,10 +289,6 @@
         font-weight: bold;
         margin-right: 1rem;
     }
-    &_sub{
-        position: relative;
-        top: 0.3rem;
-    }
     &_link{
         width:40%;
         border-radius: 999px;
@@ -339,19 +334,19 @@
     }
 
     .contents{
-        width: $width-container;
+        width: 85vw;
+        max-width: 1500px;
         margin: 4rem auto 0;
     }
 
     .section {
         &+&{
-            margin-top: 3rem;
-            padding-top: 3rem;
+            margin-top: 7rem;
         }
     }
 
     .section  + .information {
-        margin-top: 6rem;
+        margin-top: 14rem;
     }
 
     .heading{
@@ -363,6 +358,8 @@
     }
 
     .news {
+        margin:auto;
+        width:1200px;
         display: flex;
         padding: 1.5rem;
         margin-bottom: 4rem;
@@ -469,8 +466,13 @@
         }
     }
 
+    .information{
+        width:1200px;
+        margin:auto;
+    }
 
     .info{
+        margin-top: 5rem;
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -491,7 +493,7 @@
             height: 250px;
         }
         &_title{
-            font-size: $text-largest;
+            font-size: 4rem;
         }
         &_link{
             transition: .3s;
