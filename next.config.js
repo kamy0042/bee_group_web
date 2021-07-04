@@ -16,6 +16,9 @@ module.exports = {
             "/faq": {
                 page: "/faq",
             },
+            "/waxing": {
+                page: "/waxing",
+            },
         };
     },
 };

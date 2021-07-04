@@ -1,0 +1,345 @@
+@import 'common.scss';
+
+.section {
+    &+&{
+        margin-top: 4.5rem;
+    }
+    @include pc {
+        &+&{
+            margin-top: 9rem;
+        }
+    };
+}
+
+.subSection {
+    margin-top: 4.5rem;
+    @include pc {
+        margin-top: 6rem;
+    };
+}
+
+.heading {
+    font-family: $font-mincho;
+    font-size: $text-largest-sp;
+    text-align: center;
+    margin-top: 2rem;
+    @include pc {
+        font-size:$text-largest;
+    }
+}
+
+.subHeading {
+    font-family: $font-mincho;
+    font-size:2.2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &::before{
+        content: '';
+        width:2rem;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin-right: 1rem;
+    }
+    &::after{
+        content: '';
+        width:2rem;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin-left: 1rem;
+    }
+    @include pc{
+        font-size: $text-larger;
+    };
+}
+
+.lead {
+    margin-top: 2rem;
+    @include pc{
+        text-align: center;
+    };
+}
+.subLead {
+    @include pc{
+        text-align: center;
+        font-size: $text-medium;
+    };
+}
+
+.salesPoint {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    &_wrap{
+        margin-top: 5rem;
+        @include pc{
+            margin-top: 7.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        };
+    }
+    &_head{
+        font-size: $text-large-sp;
+        margin-top: 1.5rem;
+        order: 2;
+        @include pc{
+            font-size: $text-large;
+            min-height: 3em;
+        };
+    }
+    &_img{
+        order: 1;
+        height: 220px;
+        overflow: hidden;
+        img{
+            position: relative;
+            width: 100%;
+            @include pc{
+                top: -77px;
+            };
+        }
+    }
+    &_text{
+        margin-top: 1.5rem;
+        order: 3;
+    }
+    &+&{
+        margin-top: 3rem;
+        @include pc{
+            margin-top: 0;
+        };
+    }
+}
+
+.table{
+    margin-top: 3em;
+    border: solid thin #fff;
+    padding: 1rem;
+    position: relative;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_head{
+        padding: 0.5rem 2rem;
+        background-color: $color-main;
+        text-align: center;
+        position: absolute;
+        top: -2rem;
+        max-width: 90%;
+        margin: auto;
+        & > h4{
+            font-family: $font-mincho;
+            font-size: $text-large-sp;
+        }
+        & > p {
+            font-size: $text-small-sp;
+            span{
+                display: inline-block;
+            }
+        }
+        & + p {
+            margin-top: 2rem;
+        }
+        & + .table_lead {
+            margin-top: 0;
+        }
+    }
+    &_category{
+        display: none;
+    }
+    &_item{
+        width: 100%;
+        dt{
+            border-bottom: dotted thin #fff;
+            padding-bottom: 0.75rem;
+            margin:0 auto 0.75rem;
+            width: 95%;
+            font-size: 16px;
+            @include  pc {
+                width: 100%;
+                margin: 0;
+                padding:0;
+                border: 0;
+            };
+        }
+    }
+    @include pc{
+        margin-top: 8rem;
+        padding:4rem 10rem;
+        &_head{
+            width: auto;
+            & > h4{
+                font-size: $text-larger;
+            }
+            & > p {
+                font-size: $text-normal;
+                span{
+                    display: inline-block;
+                }
+            }
+            & + p {
+                width: 60em;
+                margin: auto;
+            }
+        }
+        &_category{
+            width: 100%;
+            display: block;
+            margin: 2rem 0 1.5rem;
+            padding-bottom: 1rem;
+            display: flex;
+            font-weight: 700;
+            color: $color-sub;
+            border-bottom: solid thin ;
+            padding-right: 1rem;
+            &_detail{
+                width: 60%;
+            }
+            &_pay1,
+            &_pay2{
+                width: 20%;
+            }
+        }
+        &_item {
+            margin-top: 0rem;
+        }
+    };
+}
+
+.menuItem{
+    & + & {
+        margin-top: 3rem;
+    }
+    &_detail{
+        margin-bottom: 1rem;
+    }
+    &_pay,
+    &_time,
+    &_week{
+        & > span {
+            color:$color-sub;
+            font-weight: 500;
+            margin-right: 1.5rem;
+            @include pc {
+                display: none;
+            };
+        }
+    }
+    @include pc{
+        display: flex;
+        dt{
+            width: 60%;
+        }
+        dt.menuItem_title_long{
+            width: 44.5%;
+        }
+        dt.menuItem_title_etc{
+            margin-right: 10rem;
+        }
+        dd{
+            padding-right: 1rem;
+        }
+        &_detail{
+            margin-bottom: 0;
+            width: 28%;
+        }
+        &_pay{
+            width: 20%;
+        }
+        &_week,
+        &_time{
+            width: 15%;
+        }
+        &_time{
+            justify-content: space-between;
+        }
+        &+& {
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: dotted thin;
+        }
+    };
+}
+
+.plan{
+    margin-top: 2rem;
+    @include pc {
+        display: flex;
+    };
+    &_head{
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
+        border-bottom: dotted thin;
+        @include pc {
+            width:12rem;
+            border-bottom: 0;
+            border-right: dotted thin;
+            padding: 0 2rem 0 0;
+            margin: 0 2rem 0 0;
+        };
+    }
+}
+
+.btnArea{
+    text-align: center;
+    margin-top: 3rem;
+    @include pc {
+        margin-top: 6rem;
+    };
+    & > a {
+        @include pc {
+            width: 300px;
+            font-size: 2rem;
+        };
+    }
+
+    & > p {
+        margin-top: 1rem;
+    }
+}
+
+.faq {
+    margin-top: 2.5rem;
+    &_title{
+        font-weight: 700;
+        border-bottom: solid thin ;
+        padding-bottom: 0.25rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        align-items:center;
+    }
+    &_icon{
+        font-size: $text-largest-sp;
+        color: $color-sub;
+        font-family: $font-mincho;
+        margin-right: 1rem;
+    }
+    &_body{
+        &> p+p{
+            margin-top: 1.5rem;
+        } & + .faq_title {
+            margin-top: 4rem;
+        }
+    }
+    @include pc{
+        &_title{
+            font-size: $text-large;
+        }
+        &_icon{
+            font-size:4rem;
+        }
+    };
+}
+
+
+@include pc{
+    .contents{
+        width: $width-container;
+        margin:  auto ;
+    }
+};
