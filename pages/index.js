@@ -115,7 +115,11 @@ const Test = () => {
                     </section>
                     <section className={`${styles.salon} ${styles.section}`}>
                         <h2 className={styles.heading}>Our Salon</h2>
-                        <p className={styles.lead}>Bee dandy（ビーダンディー）がお届けする５つのメリット</p>
+                        <p className={styles.lead}>
+                            Bee dandy（ビーダンディー）がお届けする
+                            <br />
+                            ５つのメリット
+                        </p>
                         <Merit
                             img={isSafari ? "01_noWebp" : "01"}
                             num="01"
