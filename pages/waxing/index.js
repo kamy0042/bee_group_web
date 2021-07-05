@@ -7,7 +7,7 @@ import ReserveButton from "../../components/ReserveButton";
 import WebpImage from "../../components/WebpImage";
 
 const renderTable = (title, data) => (
-    <section className={styles.table}>
+    <section key={title} className={styles.table}>
         <div className={styles.table_head}>
             <h4>{title}</h4>
         </div>
@@ -18,7 +18,7 @@ const renderTable = (title, data) => (
         </ul>
         <dl className={styles.table_item}>
             {data.map((item) => (
-                <div className={styles.menuItem}>
+                <div key={item.category} className={styles.menuItem}>
                     <dt>{item.category}</dt>
                     <dd className={styles.menuItem_pay}>
                         <span>通常料金（税込）</span>¥{item.price}
@@ -32,10 +32,10 @@ const renderTable = (title, data) => (
     </section>
 );
 
-const Menu = () => (
+const Waxing = () => (
     <>
         <Head>
-            <title>メンズ脱毛| 男性専門美容室 Bee dandy</title>
+            <title>メンズ脱毛 | 男性専門美容室 Bee dandy</title>
             <meta name="description" content="新橋の男性専門美容室 Bee dandyのメンズ脱毛のご紹介です"></meta>
             <link rel="icon" href="/favicon.ico" />
         </Head>
@@ -206,4 +206,4 @@ const Menu = () => (
     </>
 );
 
-export default Menu;
+export default Waxing;

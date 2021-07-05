@@ -72,7 +72,9 @@
 .salesPoint {
     display: flex;
     flex-direction: column;
-    width: 45%;
+    @include pc{
+        width: 45%;
+    };
     &_wrap{
         margin-top: 5rem;
         @include pc{
