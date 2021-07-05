@@ -2,7 +2,7 @@ import Head from "next/head";
 import PageImage from "../../components/PageImage";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Waxing.module.scss";
-import { waxingCollection } from "./data";
+import { waxingCollection } from "../../data/waxing.data";
 import ReserveButton from "../../components/ReserveButton";
 import WebpImage from "../../components/WebpImage";
 
