@@ -40,7 +40,7 @@ const LinkBox = ({ className, link, title, sub, description }) => (
     </div>
 );
 
-const Test = () => {
+const Index = () => {
     const isSafari = useIsSafari();
 
     return (
@@ -71,16 +71,16 @@ const Test = () => {
                         <dd>
                             <ul>
                                 <li>
+                                    <span>2021.7.12</span>
+                                    <a href="/news/news_210712.pdf" target="_blank">
+                                        緊急事態宣言期間の営業について
+                                    </a>
+                                </li>
+                                <li>
                                     <span>2021.6.6</span>
                                     <a href="/news/news_210606.pdf" target="_blank">
                                         【夏期間限定】毎日ジェット水流で頭皮の汚れを落とす「シャンプー放題
                                         」キャンペーン
-                                    </a>
-                                </li>
-                                <li>
-                                    <span>2021.5.8</span>
-                                    <a href="/news/news_210508.pdf" target="_blank">
-                                        緊急事態宣言期間の営業について
                                     </a>
                                 </li>
                                 {/* <li>
@@ -203,4 +203,4 @@ const Test = () => {
     );
 };
 
-export default Test;
+export default Index;
