@@ -521,7 +521,9 @@ const Menu = () => (
                     <p>
                         とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。
                     </p>
-                    <p className={styles.removal_notice}>脱毛のご提供開始は2021年7月ごろを予定しております。</p>
+                    <p className={styles.removal_notice}>
+                        脱毛のご提供は2021年度中に開始予定です。詳細は準備ができ次第お知らせ致します。
+                    </p>
                 </section>
             </div>
         </MainLayout>
