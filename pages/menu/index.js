@@ -193,7 +193,7 @@ const Menu = () => (
                                     <span>会員優待（税込）</span>¥5,500
                                 </dd>
                                 <dd className={styles.menuItem_week}>
-                                    <span>対象</span>3週間以内に再来店されたお客様
+                                    <span>対象</span>3週間以内に再来店されたお客様✳︎
                                 </dd>
                             </div>
                             <div className={styles.menuItem}>
@@ -211,10 +211,13 @@ const Menu = () => (
                                     <span>会員優待（税込）</span>¥6,600
                                 </dd>
                                 <dd className={styles.menuItem_week}>
-                                    <span>対象</span>3週間以内に再来店されたお客様
+                                    <span>対象</span>3週間以内に再来店されたお客様✳︎
                                 </dd>
                             </div>
                         </dl>
+                        <p style={{ marginTop: "25px" }}>
+                            ✳︎前回、プレミアムコース、またはラグジュアリーコースをご利用の方が対象です。
+                        </p>
                     </section>
 
                     <section className={styles.table}>
