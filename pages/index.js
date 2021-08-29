@@ -73,7 +73,7 @@ const Index = () => {
                                 <li>
                                     <span>2021.8.10</span>
                                     <a href="/news/news_210810.pdf" target="_blank">
-                                        【キャンペーン】ご紹介プログラム スタート記念特典
+                                        【お知らせ】Bee会員様からのご紹介で来店されるお客様へ
                                     </a>
                                 </li>
                                 <li>
