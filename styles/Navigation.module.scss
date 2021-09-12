@@ -25,6 +25,7 @@
     padding-left: 1rem;
     & > div {
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
     & > div + div {
@@ -69,6 +70,11 @@
             text-align: center;
         }
     }
+}
+
+.tel a{
+    font-size: 20px;
+    padding: 2px 5px 5px 0;
 }
 
 .button{

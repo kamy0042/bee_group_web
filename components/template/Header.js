@@ -23,6 +23,10 @@ const Header = () => (
                 <dt>定休日</dt>
                 <dd>{SHOP_INFO.HOLIDAY}</dd>
             </div>
+            <div>
+                <dt>お急ぎのご予約、お問合せ</dt>
+                <dd>{SHOP_INFO.TEL}</dd>
+            </div>
         </dl>
     </header>
 );

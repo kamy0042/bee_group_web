@@ -37,6 +37,13 @@ const Navigation = ({ isOpen, onClick }) => {
                         <dt>定休日</dt>
                         <dd>{SHOP_INFO.HOLIDAY}</dd>
                     </div>
+
+                    <div>
+                        <dt>お急ぎのご予約、お問合せ:</dt>
+                        <dd className={styles.tel}>
+                            <a href={`tel:${SHOP_INFO.TEL}`}>TEL:{SHOP_INFO.TEL}</a>
+                        </dd>
+                    </div>
                 </dl>
             </nav>
         </>
