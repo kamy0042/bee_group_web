@@ -22,6 +22,11 @@ const Navigation = ({ isOpen, onClick }) => {
                     <li className={styles.nav_link}>
                         <Link href="/faq/">FAQ</Link>
                     </li>
+                    <li className={`${styles.nav_link} ${styles.spOnly}`}>
+                        <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank">
+                            Bee dandy スタイルブック
+                        </a>
+                    </li>
                     <li className="btn">
                         <ReserveButton />
                     </li>

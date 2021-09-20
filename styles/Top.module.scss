@@ -178,12 +178,16 @@
     }
     &_link{
         text-align: right;
+        margin-top: 25px;
         > a{
+            background-color: #fff;
+            padding: 10px;
+            padding-right: 2.5rem;
             font-weight: 700;
             font-size: 16px;
-            padding-right: 2.5rem;
-            text-decoration: underline ;
             position: relative;
+            color: $color-main;
+            border-radius: 999px;
             &::before{
                 content: '';
                 position: absolute;

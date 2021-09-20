@@ -149,6 +149,9 @@
 
 
 @include pc {
+    .spOnly{
+        display: none;
+    }
     .button{
         display: none;
     }

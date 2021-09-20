@@ -4,7 +4,7 @@ import MainLayout from "../components/template/MainLayout";
 import useIsSafari from "../libs/useIsSafari";
 import styles from "../styles/Top.module.scss";
 
-const Merit = ({ num, title, text, img, link }) => (
+const Merit = ({ num, title, text, img, link, otherPageLink, linkTxt }) => (
     <section className={`${img ? styles["merit_" + img] : null} ${styles.merit}`}>
         <div className={styles.merit_textArea}>
             <h3>
@@ -14,9 +14,15 @@ const Merit = ({ num, title, text, img, link }) => (
             <p>{text}</p>
             {link && (
                 <div className={styles.merit_link}>
-                    <Link href={link}>
-                        <a>詳しく見る</a>
-                    </Link>
+                    <Link href={link}>{linkTxt || "詳しく見る"}</Link>
+                </div>
+            )}
+            <p>{text}</p>
+            {otherPageLink && (
+                <div className={styles.merit_link}>
+                    <a href={otherPageLink} target="_blank">
+                        {linkTxt || "詳しく見る"}
+                    </a>
                 </div>
             )}
         </div>
@@ -70,6 +76,15 @@ const Index = () => {
                         <dt>News</dt>
                         <dd>
                             <ul>
+                                <li>
+                                    <span>2021.9.20</span>
+                                    <a
+                                        href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091"
+                                        target="_blank"
+                                    >
+                                        Bee dandy スタイルブックを公開しました
+                                    </a>
+                                </li>
                                 <li>
                                     <span>2021.8.10</span>
                                     <a href="/news/news_210810.pdf" target="_blank">
@@ -127,6 +142,8 @@ const Index = () => {
                             num="02"
                             title={`オンもオフもどちらもOKな\nヘアスタイル`}
                             text="人はお顔に一番近いヘアスタイルを整えることで一番印象が変わると言われています。こだわりが特に無い、毎回オーダーは同じ…という方も、今よりカッコ良くなりたいはず。あなたのライフスタイルに合わせて、ビジネスもカジュアルも楽しめる２wayメンズスタイルをご提供します。もちろん、ご自身でセットできるようスタイリングのアドバイスもいたします。"
+                            otherPageLink="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091"
+                            linkTxt="スタイルブックを見る"
                         />
                         <Merit
                             img={isSafari ? "03_noWebp" : "03"}
