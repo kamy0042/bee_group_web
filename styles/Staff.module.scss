@@ -31,6 +31,12 @@
     }
     &_nameArea{
         text-align: center;
+        display: flex;
+        align-items: center;
+        flex-wrap:wrap;
+        & > a {
+            margin-left: 15px;
+        }
     }
     &_position{
         padding-right: 1.25rem;

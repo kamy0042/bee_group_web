@@ -37,9 +37,6 @@ const Footer = () => (
                 <a href="https://www.facebook.com/Beedandy.01/" target="_blank">
                     <img src="/img/icon_fb.png" alt="bee_dandy facebook" width="40px" height="40px" />
                 </a>
-                <a href="https://www.instagram.com/beedandy.01_official/" target="_blank">
-                    <img src="/img/icon_ig.svg" alt="bee_dandy instagram" width="40px" height="40px" />
-                </a>
             </div>
             <div className={styles.btn}>
                 <ReserveButton />
