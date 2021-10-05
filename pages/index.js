@@ -17,7 +17,6 @@ const Merit = ({ num, title, text, img, link, otherPageLink, linkTxt }) => (
                     <Link href={link}>{linkTxt || "詳しく見る"}</Link>
                 </div>
             )}
-            <p>{text}</p>
             {otherPageLink && (
                 <div className={styles.merit_link}>
                     <a href={otherPageLink} target="_blank">
