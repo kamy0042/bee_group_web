@@ -77,10 +77,7 @@ const Index = () => {
                             <ul>
                                 <li>
                                     <span>2021.9.20</span>
-                                    <a
-                                        href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091"
-                                        target="_blank"
-                                    >
+                                    <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank">
                                         Bee dandy スタイルブックを公開しました
                                     </a>
                                 </li>
@@ -94,13 +91,6 @@ const Index = () => {
                                     <span>2021.7.12</span>
                                     <a href="/news/news_210712.pdf" target="_blank">
                                         緊急事態宣言期間の営業について
-                                    </a>
-                                </li>
-                                <li>
-                                    <span>2021.6.6</span>
-                                    <a href="/news/news_210606.pdf" target="_blank">
-                                        【夏期間限定】毎日ジェット水流で頭皮の汚れを落とす「シャンプー放題
-                                        」キャンペーン
                                     </a>
                                 </li>
                             </ul>
