@@ -76,21 +76,21 @@ const Index = () => {
                         <dd>
                             <ul>
                                 <li>
-                                    <span>2021.9.20</span>
-                                    <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank">
-                                        Bee dandy スタイルブックを公開しました
+                                    <span>2021.10.31</span>
+                                    <a href="/news/news_211031_time.pdf" target="_blank">
+                                        営業時間変更のお知らせ
                                     </a>
                                 </li>
                                 <li>
-                                    <span>2021.8.10</span>
-                                    <a href="/news/news_210810.pdf" target="_blank">
+                                    <span>2021.10.31</span>
+                                    <a href="/news/news_211031_program.pdf" target="_blank">
                                         【お知らせ】Bee会員様からのご紹介で来店されるお客様へ
                                     </a>
                                 </li>
                                 <li>
-                                    <span>2021.7.12</span>
-                                    <a href="/news/news_210712.pdf" target="_blank">
-                                        緊急事態宣言期間の営業について
+                                    <span>2021.9.20</span>
+                                    <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank">
+                                        Bee dandy スタイルブックを公開しました
                                     </a>
                                 </li>
                             </ul>
