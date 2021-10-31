@@ -41,8 +41,10 @@
 @include pc {
     .headerArea{
         display: flex;
-        min-width: $width-container;
+        min-width: 1400px;
         justify-content: space-between;
+        align-items: center;
+        padding:  0 0 2rem;
     }
 }
 

@@ -3,7 +3,7 @@
 .wrap {
     padding: 0 0 1rem;
     @include pc {
-        padding: 0 0 4rem;
+        padding: 0;
         display: flex;
         align-items: center;
     }
@@ -34,5 +34,10 @@
             min-width: 6rem;
         }
     }
-
+}
+.comment{
+    @include pc {
+        margin-top:0.25rem;
+        font-size: 12px;
+    }
 }

@@ -35,7 +35,18 @@ const Navigation = ({ isOpen, onClick }) => {
                     <div>
                         <dt>OPEN</dt>
                         <dd>
-                            {SHOP_INFO.OPEN} - {SHOP_INFO.CLOSE}
+                            <p>
+                                平日：{SHOP_INFO.OPEN} - {SHOP_INFO.CLOSE}（{SHOP_INFO.RESERVE_LIMIT}）
+                            </p>
+                            <p>
+                                土祝：{SHOP_INFO.HOLIDAY_OPEN} - {SHOP_INFO.HOLIDAY_CLOSE}（{SHOP_INFO.HOLIDAY_RESERVE_LIMIT}）
+                            </p>
+                            <p>
+                                日曜：{SHOP_INFO.SUNDAY_OPEN} - {SHOP_INFO.SUNDAY_CLOSE}（{SHOP_INFO.SUNDAY_RESERVE_LIMIT}）
+                            </p>
+                            <p className={styles.comment}>
+                                ※（）はカットの最終受付時間 <br />※ 平日{SHOP_INFO.OPEN} - {SHOP_INFO.RESERVE_ONLY_TIME}は前日までの完全予約制です
+                            </p>
                         </dd>
                     </div>
                     <div>

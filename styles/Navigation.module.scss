@@ -147,6 +147,11 @@
     z-index: 9998;
 }
 
+.comment{
+    font-size: 12px;
+    margin-top:0.5rem;
+}
+
 
 @include pc {
     .spOnly{
