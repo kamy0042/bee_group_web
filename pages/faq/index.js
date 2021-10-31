@@ -7,10 +7,7 @@ const Faq = () => (
     <>
         <Head>
             <title>よくある質問 | 男性専門美容室 Bee dandy</title>
-            <meta
-                name="description"
-                content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。コースやお支払い方法の詳細など、あなたの疑問にお答えします"
-            ></meta>
+            <meta name="description" content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。コースやお支払い方法の詳細など、あなたの疑問にお答えします"></meta>
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
@@ -43,11 +40,11 @@ const Faq = () => (
                         </dt>
                         <dd className={styles.faq_body}>
                             <p>
-                                完全予約制ではございませんが、予約のお客様を優先させていただきます。
+                                完全予約制の一部時間帯を除き、予約なしでもご利用いただけます。
                                 <br />
-                                来店30分前までアプリから予約が可能ですが、ご予約で埋まってしまう場合もありますので、お早目のご予約をおすすめいたします。
+                                但し、予約のお客様を優先させていただきます。ご予約はホームページや会員アプリからご来店30分前まで可能です。
                                 <br />
-                                アプリをご使用いただけない場合には、お電話にて空き状況をご確認ください。
+                                お急ぎの場合には、お電話にて空き状況をご確認ください。
                             </p>
                         </dd>
                         <dt className={styles.faq_title}>
@@ -75,9 +72,7 @@ const Faq = () => (
                             <span>シェービング（顔剃り・髭剃り）はしてもらえますか？</span>
                         </dt>
                         <dd className={styles.faq_body}>
-                            <p>
-                                申し訳ございませんが、美容師法にて露出したかみそりを直接肌にあてることができないため対応することができません。{" "}
-                            </p>
+                            <p>申し訳ございませんが、美容師法にて露出したかみそりを直接肌にあてることができないため対応することができません。 </p>
                         </dd>
                         <dt className={styles.faq_title}>
                             <span className={styles.faq_icon}>Q</span>
@@ -95,9 +90,7 @@ const Faq = () => (
                             <span>男性専門とのことですが、女性や子どもも受け付けてもらえるのですか？</span>
                         </dt>
                         <dd className={styles.faq_body}>
-                            <p>
-                                申し訳ございませんが、女性、小学生以下のお子様連れや同伴はご遠慮いただいております。また、子ども料金や学割は設けておりませんのでご了承ください。
-                            </p>
+                            <p>申し訳ございませんが、女性、小学生以下のお子様連れや同伴はご遠慮いただいております。また、子ども料金や学割は設けておりませんのでご了承ください。</p>
                         </dd>
                         <dt className={styles.faq_title}>
                             <span className={styles.faq_icon}>Q</span>
