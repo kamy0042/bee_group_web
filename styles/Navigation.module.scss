@@ -23,11 +23,6 @@
 .info {
     margin-top: 0.75rem;
     padding-left: 1rem;
-    & > div {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
     & > div + div {
         margin-top: 0.5rem;
     }
