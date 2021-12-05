@@ -28,7 +28,7 @@ const Menu = () => (
                     <section className={styles.table}>
                         <div className={styles.table_head}>
                             <h3>コースメニュー</h3>
-                            <p>ヘアカット・眉カット＋シャンプー・ スタイリングの基本セット</p>
+                            <p>メンズヘアカット・眉毛カット＋シャンプー・ スタイリングのセット</p>
                         </div>
                         <p>
                             お客様一人ひとりの髪の特性や頭の形を活かしカットしていきます。あなたのなりたいイメージをお伝えください。フェードをきかせたおしゃれボウズ、スキンフェードやバーバースタイルの仕上がりもお任せください。
@@ -131,14 +131,13 @@ const Menu = () => (
                                 </dd>
                             </div>
                         </dl>
-                        <p>
-                            ※シャンプーのみ、ヘッドスパのみ、スカルプケアのみ、スタイリングのみも可能です。詳しくは単品・オプションメニューをご覧ください。
-                        </p>
+                        <p>※シャンプーのみ、ヘッドスパのみ、スカルプケアのみ、スタイリングのみも可能です。詳しくは単品・オプションメニューをご覧ください。</p>
                     </section>
 
                     <section className={styles.table}>
                         <div className={styles.table_head_2}>
                             <h3 className={styles.table_heading}>メンテナンス</h3>
+                            <p>メンズヘアカット・眉毛カット＋シャンプー・ スタイリングのセット</p>
                         </div>
                         <ul className={styles.table_category}>
                             <li className={styles.table_category_detail}>コース内容</li>
@@ -215,9 +214,7 @@ const Menu = () => (
                                 </dd>
                             </div>
                         </dl>
-                        <p style={{ marginTop: "25px" }}>
-                            ✳︎前回、プレミアムコース、またはラグジュアリーコースをご利用の方が対象です。
-                        </p>
+                        <p style={{ marginTop: "25px" }}>✳︎前回、プレミアムコース、またはラグジュアリーコースをご利用の方が対象です。</p>
                     </section>
 
                     <section className={styles.table}>
@@ -521,12 +518,8 @@ const Menu = () => (
 
                 <section className={`${styles.removal} ${styles.section}`}>
                     <h2 className={styles.subHeading}>メンズ脱毛</h2>
-                    <p>
-                        とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。
-                    </p>
-                    <p className={styles.removal_notice}>
-                        脱毛のご提供は2021年度中に開始予定です。詳細は準備ができ次第お知らせ致します。
-                    </p>
+                    <p>とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。</p>
+                    <p className={styles.removal_notice}>脱毛のご提供は2021年度中に開始予定です。詳細は準備ができ次第お知らせ致します。</p>
                 </section>
             </div>
         </MainLayout>
