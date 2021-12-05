@@ -105,6 +105,7 @@
         display: block;
         @include pc {
             display: inline-block;
+            margin-right: 1rem;
         }
     }
     li a{
