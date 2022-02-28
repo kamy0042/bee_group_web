@@ -76,6 +76,12 @@ const Index = () => {
                         <dd>
                             <ul>
                                 <li>
+                                    <span>2022.02.22</span>
+                                    <a href="/news/news_220222.pdf" target="_blank">
+                                        【新メニュー】ビジネスマンのための『男の眉毛 整え方実践レクチャー』
+                                    </a>
+                                </li>
+                                <li>
                                     <span>2022.01.11</span>
                                     <a href="/news/news_220111.pdf" target="_blank">
                                         まん延防止等重点措置実施期間中の営業について
