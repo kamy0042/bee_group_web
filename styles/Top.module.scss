@@ -34,7 +34,7 @@
 .mv_text {
     z-index: 10;
     text-align: center;
-    font-size: $text-medium-sp;
+    font-size: 2rem;
     position: relative;
     margin-bottom:2rem ;
     font-weight: bold;
@@ -226,10 +226,10 @@
         background: url('/img/bee_headspa-min.jpg') no-repeat center / cover;
     }
     &_05::before{
-        background: url('/img/webp/bee_removal-min.webp') no-repeat center 100% / cover;
+        background: url('/img/img_man_02.JPG') no-repeat center 100% / cover;
     }
     &_05_noWebp::before{
-        background: url('/img/bee_removal-min.jpg') no-repeat center 100% / cover;
+        background: url('/img/img_man_02.JPG') no-repeat center 100% / cover;
     }
 }
 
@@ -328,7 +328,7 @@
         padding-bottom: 6rem;
         background-position: 0 25%;
         &_text{
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             margin-bottom: 5rem;
         }
         &_logo_text{

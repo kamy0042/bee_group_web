@@ -519,7 +519,7 @@ const Menu = () => (
                 <section className={`${styles.removal} ${styles.section}`}>
                     <h2 className={styles.subHeading}>メンズ脱毛</h2>
                     <p>とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。</p>
-                    <p className={styles.removal_notice}>脱毛のご提供は2021年度中に開始予定です。詳細は準備ができ次第お知らせ致します。</p>
+                    <p className={styles.removal_notice}>脱毛のご提供は2022年度中に開始予定です。詳細は準備ができ次第お知らせ致します。</p>
                 </section>
             </div>
         </MainLayout>
