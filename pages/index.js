@@ -74,6 +74,13 @@ const Index = () => {
                         <dd>
                             <ul>
                                 <li>
+                                    <span>2022.04.01</span>
+                                    <a href="/news/news_220401.pdf" target="_blank">
+                                        【キャンペーン】1周年記念 スペシャルチケット贈呈！
+                                    </a>
+                                </li>
+
+                                <li>
                                     <span>2022.03.13</span>
                                     <a href="/news/news_220313.pdf" target="_blank">
                                         営業時間変更のお知らせ
@@ -91,18 +98,6 @@ const Index = () => {
                                         まん延防止等重点措置実施期間中の営業について
                                     </a>
                                 </li>
-                                <li>
-                                    <span>2021.12.05</span>
-                                    <a href="/news/news_211205.pdf" target="_blank">
-                                        年末年始休暇のお知らせ
-                                    </a>
-                                </li>
-                                {/*<li>*/}
-                                {/*    <span>2021.10.31</span>*/}
-                                {/*    <a href="/news/news_211031_program.pdf" target="_blank">*/}
-                                {/*        【お知らせ】Bee会員様からのご紹介で来店されるお客様へ*/}
-                                {/*    </a>*/}
-                                {/*</li>*/}
                             </ul>
                         </dd>
                     </dl>
