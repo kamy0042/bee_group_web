@@ -1,8 +1,8 @@
 export const SHOP_INFO = {
-    OPEN: "9:00",
+    OPEN: "10:00",
     RESERVE_ONLY_TIME: "13:00",
-    CLOSE: "23:00",
-    RESERVE_LIMIT: "22:00",
+    CLOSE: "22:00",
+    RESERVE_LIMIT: "21:00",
     HOLIDAY: "不定休",
     HOLIDAY_OPEN: "9:00",
     HOLIDAY_CLOSE: "21:00",
