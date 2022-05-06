@@ -73,13 +73,12 @@ const Index = () => {
                         <dt>News</dt>
                         <dd>
                             <ul>
-                                <li>
-                                    <span>2022.04.01</span>
-                                    <a href="/news/news_220401.pdf" target="_blank">
-                                        【キャンペーン】1周年記念 スペシャルチケット贈呈！
-                                    </a>
-                                </li>
-
+                                {/*<li>*/}
+                                {/*    <span>2022.04.01</span>*/}
+                                {/*    <a href="/news/news_220401.pdf" target="_blank">*/}
+                                {/*        【キャンペーン】1周年記念 スペシャルチケット贈呈！*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
                                 <li>
                                     <span>2022.03.13</span>
                                     <a href="/news/news_220313.pdf" target="_blank">
