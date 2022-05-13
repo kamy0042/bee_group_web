@@ -73,12 +73,12 @@ const Index = () => {
                         <dt>News</dt>
                         <dd>
                             <ul>
-                                {/*<li>*/}
-                                {/*    <span>2022.04.01</span>*/}
-                                {/*    <a href="/news/news_220401.pdf" target="_blank">*/}
-                                {/*        【キャンペーン】1周年記念 スペシャルチケット贈呈！*/}
-                                {/*    </a>*/}
-                                {/*</li>*/}
+                                <li>
+                                    <span>2022.05.13</span>
+                                    <a href="/news/news_220513.pdf" target="_blank">
+                                        【求人情報】スタイリスト、アシスタント 大至急募集！
+                                    </a>
+                                </li>
                                 <li>
                                     <span>2022.03.13</span>
                                     <a href="/news/news_220313.pdf" target="_blank">
@@ -91,12 +91,12 @@ const Index = () => {
                                         【新メニュー】ビジネスマンのための『男の眉毛 整え方実践レクチャー』
                                     </a>
                                 </li>
-                                <li>
-                                    <span>2022.01.11</span>
-                                    <a href="/news/news_220111.pdf" target="_blank">
-                                        まん延防止等重点措置実施期間中の営業について
-                                    </a>
-                                </li>
+                                {/*<li>*/}
+                                {/*    <span>2022.01.11</span>*/}
+                                {/*    <a href="/news/news_220111.pdf" target="_blank">*/}
+                                {/*        まん延防止等重点措置実施期間中の営業について*/}
+                                {/*    </a>*/}
+                                {/*</li>*/}
                             </ul>
                         </dd>
                     </dl>
