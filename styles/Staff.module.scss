@@ -143,7 +143,9 @@
 .matsui,
 .matsui_noWebp,
 .sato,
-.sato_noWebp {
+.sato_noWebp,
+.takahashi,
+.takahashi_noWebp {
     &::before{
         content: '';
         position: absolute;
@@ -182,6 +184,18 @@
         background-position:center 10.5%;
     }
 }
+
+.takahashi{
+    &::before{
+        background-image: url('/img/bee_takahashi.JPG');
+        background-position:center 10.5%;
+    }
+    &_noWebp::before{
+        background-image: url('/img/bee_takahashi.JPG');
+        background-position:center 10.5%;
+    }
+}
+
 
 @include pc{
     .contents{

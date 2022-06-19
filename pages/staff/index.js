@@ -12,9 +12,11 @@ const Staff = () => {
                 <dt className={styles.profile_nameArea}>
                     <span className={styles.profile_position}>{position}</span>
                     <span className={styles.profile_name}>{staffName}</span>
-                    <a href={url} target="_blank">
-                        <img src="/img/icon_ig.svg" alt="bee_dandy instagram" width="40px" height="40px" />
-                    </a>
+                    {url && (
+                        <a href={url} target="_blank">
+                            <img src="/img/icon_ig.svg" alt="bee_dandy instagram" width="40px" height="40px" />
+                        </a>
+                    )}
                 </dt>
                 <dd className={styles.profile_text}>
                     <p>{profile}</p>
@@ -97,6 +99,29 @@ const Staff = () => {
                             </div>
                         </section>
                     </div>
+                    <div className={styles.staff}>
+                        <StaffProfile
+                            className="takahashi"
+                            position="スタイリスト"
+                            staffName="高橋 凌"
+                            profile={`神奈川県出身。20代半ばにして、1,000人以上もの従業員が在籍する某有名サロンで、第一線のスタイリストとして活躍。一人のお客様を仕上げまで担当できる環境を求め、転職を決意。一流店で培った技術はさすがで、切った時だけでなく、長くキープできる持ちの良いヘアカット、スタイリングが楽に短時間でキマるヘアスタイルを創り上げる。`}
+                            message={`イメチェンはお任せください！絶対にカッコよくします！「似合う」だけでなく、「自分に魅力と自信が持てる」ヘアスタイルをご提供します。解消したいお悩みや、なりたいイメージがあれば、ぜひご相談ください！
+                            好印象のメンズショートカットや、オシャレこなれ感が漂う波巻き、セクシーなツイスパなどのメンズパーマなど、さりげなく流行を取り入れたヘアスタイルで、あなたの魅力を最高に引き立てます！
+                            `}
+                        />
+                        <section className={styles.voice}>
+                            <h2 className={styles.voice_title}>お客様VOICE</h2>
+                            <div className={styles.voice_body}>
+                                <ul className={styles.voice_list}>
+                                    <li>
+                                        <p>
+                                        初めて美容室を訪れたときに担当してくれたのが高橋さんでした。自分に似合う髪型が分からず、どうリクエストしていいかも分かりませんでした。おまかせでお願いしたところ、メンズショートで立ち上げる感じのヘアスタイルにしていただき、自分でもビックリするほど印象が変わりました。家族や友人からも喜んでもらえたのが嬉しくて、これからは少しオシャレに気を使ってみようと思っています。今後ともよろしくお願いします！（20代　大学院生）                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+
                 </div>
             </MainLayout>
         </>
