@@ -74,15 +74,13 @@ const Index = () => {
                         <dd>
                             <ul>
                                 <li>
+                                    <span>2022.07.03</span>
+                                    <span>【7月の店休日】7/10 (日)</span>
+                                </li>
+                                <li>
                                     <span>2022.05.13</span>
                                     <a href="/news/news_220513.pdf" target="_blank">
                                         【求人情報】スタイリスト、アシスタント 大至急募集！
-                                    </a>
-                                </li>
-                                <li>
-                                    <span>2022.03.13</span>
-                                    <a href="/news/news_220313.pdf" target="_blank">
-                                        営業時間変更のお知らせ
                                     </a>
                                 </li>
                                 <li>
