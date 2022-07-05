@@ -12,7 +12,7 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
-  plugins: ["react", "@typescript-eslint"],
+  plugins: ["react", "@typescript-eslint", "react-hooks"],
   rules: {
     // すべての props をデフォルトにするのはやりすぎなので OFF
     "react/require-default-props": "off",
@@ -33,6 +33,8 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
   },
   settings: {
     // import/resolver エラー対応
