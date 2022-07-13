@@ -1,10 +1,10 @@
 import Head from "next/head";
-import PageImage from "../../components/PageImage";
-import MainLayout from "../../components/template/MainLayout";
-import styles from "../../styles/Waxing.module.scss";
-import { waxingCollection } from "../../data/waxing.data";
-import ReserveButton from "../../components/ReserveButton";
-import WebpImage from "../../components/WebpImage";
+import PageImage from "../components/PageImage";
+import MainLayout from "../components/template/MainLayout";
+import styles from "../styles/Waxing.module.scss";
+import { waxingCollection } from "../data/waxing.data";
+import ReserveButton from "../components/ReserveButton";
+import WebpImage from "../components/WebpImage";
 
 const renderTable = (title, data) => (
   <section key={title} className={styles.table}>
@@ -37,11 +37,8 @@ function Waxing() {
     <>
       <Head>
         <title>メンズ脱毛 | 男性専門美容室 Bee dandy</title>
-        <meta
-          name="description"
-          content="新橋の男性専門美容室 Bee dandyのメンズ脱毛のご紹介です"
-        />
-        <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="新橋の男性専門美容室 Bee dandyのメンズ脱毛のご紹介です" />
+        <link rel="icon" href="/public/favicon.ico" />
       </Head>
 
       <MainLayout>
@@ -71,9 +68,7 @@ function Waxing() {
                 </dd>
               </div>
               <div className={styles.salesPoint}>
-                <dt className={styles.salesPoint_head}>
-                  国産マシーンで安全、安心の脱毛。
-                </dt>
+                <dt className={styles.salesPoint_head}>国産マシーンで安全、安心の脱毛。</dt>
                 <dd className={styles.salesPoint_img}>
                   <WebpImage alt="脱毛には国産器具を利用" src="bee_waxing" />
                 </dd>
@@ -86,11 +81,7 @@ function Waxing() {
             <section className={styles.subSection}>
               <h3 className={styles.subHeading}>主な脱毛エリア</h3>
               <div>
-                <WebpImage
-                  src="img_removal_illust-min"
-                  alt="各部位ごとのの脱毛可能エリア"
-                  isPng
-                />
+                <WebpImage src="img_removal_illust-min" alt="各部位ごとのの脱毛可能エリア" isPng />
               </div>
             </section>
 
@@ -102,9 +93,7 @@ function Waxing() {
                 自分が脱毛を止めたい時に止められ、始めたい時に始められます。
               </p>
 
-              {waxingCollection.map((item) =>
-                renderTable(item.title, item.data)
-              )}
+              {waxingCollection.map((item) => renderTable(item.title, item.data))}
 
               <dl className={styles.plan}>
                 <dt className={styles.plan_head}>年間プラン</dt>
@@ -119,9 +108,7 @@ function Waxing() {
                 </div>
                 <dl className={styles.table_item}>
                   <div className={styles.menuItem}>
-                    <dt className={styles.menuItem_title_etc}>
-                      会員費（有効期限：1年間）
-                    </dt>
+                    <dt className={styles.menuItem_title_etc}>会員費（有効期限：1年間）</dt>
                     <dd className={styles.menuItem_pay}>￥1,100</dd>
                   </div>
                   <div className={styles.menuItem}>
@@ -147,9 +134,7 @@ function Waxing() {
             <dl className={styles.faq}>
               <dt className={styles.faq_title}>
                 <span className={styles.faq_icon}>Q</span>
-                <span>
-                  クリニック（病院）と美容室の脱毛との違いは何ですか？
-                </span>
+                <span>クリニック（病院）と美容室の脱毛との違いは何ですか？</span>
               </dt>
               <dd className={styles.faq_body}>
                 <p>
