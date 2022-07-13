@@ -35,6 +35,7 @@ module.exports = {
     ],
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "react/function-component-definition": "off",
   },
   settings: {
     // import/resolver エラー対応
