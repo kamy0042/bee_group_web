@@ -1,11 +1,11 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import Footer from "./Footer";
 import Header from "./Header";
 import Navigation from "./Navigation";
 import styles from "../../styles/MainLayout.module.scss";
 
 // eslint-disable-next-line no-undef
-const MainLayout = ({ children }: { children: JSX.Element }) => {
+const MainLayout = ({ children }: { children: React.ReactNode }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
 
