@@ -91,8 +91,8 @@ const Index = () => {
             <dd>
               <ul>
                 <li>
-                  <span>2022.07.03</span>
-                  <span>【7月の店休日】7/10 (日)</span>
+                  <span>2022.07.25</span>
+                  <span>【8月の店休日】8/21 (日)</span>
                 </li>
                 <li>
                   <span>2022.05.13</span>
@@ -174,7 +174,24 @@ const Index = () => {
               // link="/menu/removal/"
             />
           </section>
-          <section className={`${styles.section} ${styles.information}`}>
+
+          <section className={`${styles.section}`}>
+            <h2 className={styles.heading}>Voice</h2>
+            <p className={styles.lead}>お客様の声</p>
+            <div className={styles.movie}>
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/i07ADpL9rlM"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </section>
+
+          <section className={`${styles.section} `}>
             <h2 className={styles.heading}>Information</h2>
             <p className={styles.lead}>
               <span className={styles.br}>私たちのお店</span>

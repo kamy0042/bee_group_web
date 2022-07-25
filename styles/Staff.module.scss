@@ -165,33 +165,33 @@
 
 .matsui{
     &::before{
-        background-image: url('/img/webp/bee_matsui-min.webp');
+        background-image: url('../public/img/webp/bee_matsui-min.webp');
         background-position:center 9%;
     }
     &_noWebp::before{
-        background-image: url('/img/bee_matsui-min.jpg');
+        background-image: url('../public/img/bee_matsui-min.jpg');
         background-position:center 9%;
     }
 }
 
 .sato{
     &::before{
-        background-image: url('/img/webp/bee_sato-min.webp');
+        background-image: url('../public/img/webp/bee_sato-min.webp');
         background-position:center 10.5%;
     }
     &_noWebp::before{
-        background-image: url('/img/bee_sato-min.jpg');
+        background-image: url('../public/img/bee_sato-min.jpg');
         background-position:center 10.5%;
     }
 }
 
 .takahashi{
     &::before{
-        background-image: url('/img/bee_takahashi.JPG');
+        background-image: url('../public/img/bee_takahashi.JPG');
         background-position:center 10.5%;
     }
     &_noWebp::before{
-        background-image: url('/img/bee_takahashi.JPG');
+        background-image: url('../public/img/bee_takahashi.JPG');
         background-position:center 10.5%;
     }
 }

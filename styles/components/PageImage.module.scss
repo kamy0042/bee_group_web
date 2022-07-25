@@ -30,38 +30,38 @@
 }
 
 .menu {
-    background-image: url('/img/webp/bee_menu-min.webp');
+    background-image: url('../public/img/webp/bee_menu-min.webp');
     &_noWebp{
-        background-image: url('/img/bee_menu-min.jpg');
+        background-image: url('../public/img/bee_menu-min.jpg');
     }
 }
 
 .salon {
-    background-image: url('/img/webp/bee_top_image-min.webp');
+    background-image: url('../public/img/webp/bee_top_image-min.webp');
     &_noWebp{
-        background-image: url('/img/bee_top_image-min.jpg');
+        background-image: url('../public/img/bee_top_image-min.jpg');
     }
 }
 
 .faq {
-    background-image: url('/img/webp/bee_image_1-min.webp');
+    background-image: url('../public/img/webp/bee_image_1-min.webp');
     &_noWebp{
-        background-image: url('/img/bee_image_1-min.jpg');
+        background-image: url('../public/img/bee_image_1-min.jpg');
     }
 }
 
 .staff {
-    background-image: url('/img/webp/bee_business-min.webp');
+    background-image: url('../public/img/webp/bee_business-min.webp');
     &_noWebp{
-        background-image: url('/img/bee_business-min.jpg');
+        background-image: url('../public/img/bee_business-min.jpg');
     }
 }
 
 .waxing {
-    background-image: url('/img/webp/bee_removal-min.webp');
+    background-image: url('../public/img/webp/bee_removal-min.webp');
     background-position: center 58%;
     &_noWebp{
-        background-image: url('/img/bee_removal-min.jpg');
+        background-image: url('../public/img/bee_removal-min.jpg');
     }
 }
 
