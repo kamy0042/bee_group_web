@@ -96,7 +96,7 @@ const Index = () => {
                 </li>
                 <li>
                   <span>2022.05.13</span>
-                  <a href="/news/news_220513.pdf" target="_blank">
+                  <a href="/news/news_recruit.pdf" target="_blank">
                     【求人情報】スタイリスト、アシスタント 大至急募集！
                   </a>
                 </li>
