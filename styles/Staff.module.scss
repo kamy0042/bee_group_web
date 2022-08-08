@@ -142,10 +142,8 @@
 
 .matsui,
 .matsui_noWebp,
-.sato,
-.sato_noWebp,
-.takahashi,
-.takahashi_noWebp {
+.hukazawa,
+.hukazawa_noWebp{
     &::before{
         content: '';
         position: absolute;
@@ -174,24 +172,13 @@
     }
 }
 
-.sato{
+.hukazawa{
     &::before{
-        background-image: url('../public/img/webp/bee_sato-min.webp');
+        background-image: url('../public/img/bee_hukazawa.jpg');
         background-position:center 10.5%;
     }
     &_noWebp::before{
-        background-image: url('../public/img/bee_sato-min.jpg');
-        background-position:center 10.5%;
-    }
-}
-
-.takahashi{
-    &::before{
-        background-image: url('../public/img/bee_takahashi.JPG');
-        background-position:center 10.5%;
-    }
-    &_noWebp::before{
-        background-image: url('../public/img/bee_takahashi.JPG');
+        background-image: url('../public/img/bee_hukazawa.jpg');
         background-position:center 10.5%;
     }
 }
