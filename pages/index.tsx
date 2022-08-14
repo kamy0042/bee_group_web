@@ -91,8 +91,8 @@ const Index = () => {
             <dd>
               <ul>
                 <li>
-                  <span>2022.07.25</span>
-                  <span>【8月の店休日】8/21 (日)</span>
+                  <span>2022.08.14</span>
+                  <span>【8月の店休日】8月の店休日はありません</span>
                 </li>
                 <li>
                   <span>2022.05.13</span>
