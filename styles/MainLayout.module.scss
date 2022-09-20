@@ -34,6 +34,22 @@
     }
 }
 
+.innerNoImg {
+    padding:$padding-container-sp;
+    margin-bottom: 3rem;
+    display :flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow-x: hidden;
+    @include pc {
+        max-width: 1980px;
+        margin: auto;
+        overflow-x: auto;
+        padding: $padding-container;
+    }
+}
+
 .main {
     margin-bottom: 3rem;
 }
