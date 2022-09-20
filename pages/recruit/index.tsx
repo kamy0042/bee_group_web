@@ -29,6 +29,7 @@ const Recruit = () => (
   <>
     <Head>
       <title>スタッフ募集 | 男性専門美容室 Bee dandy</title>
+      <meta name="robots" content="noindex" />
       <meta name="description" content="新橋の男性専門美容室 Bee dandyでは共に働いてくれるスタッフを募集しています" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
