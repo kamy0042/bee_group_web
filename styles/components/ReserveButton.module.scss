@@ -12,12 +12,29 @@
     display:inline-block;
 }
 
+.cta {
+    border-radius: 999px;
+    background-color: #baa487;
+    padding: 1.25rem 1rem;
+    font-size: $text-normal-sp;
+    width:100%;
+    font-weight: 700;
+    display:inline-block;
+    text-align: center;
+}
+
 @include pc {
     .btn{
         transition: .3s;
         &:hover{
             background-color: $color-sub;
             color: #fff;
+        }
+    }
+    .cta {
+        transition: .3s;
+        &:hover{
+            opacity: 0.8;
         }
     }
 }
