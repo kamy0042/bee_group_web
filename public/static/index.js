@@ -12,6 +12,7 @@ export const SHOP_INFO = {
     SUNDAY_RESERVE_LIMIT: "16:00",
     ADDRESS: "東京都港区新橋5－8－3　代市ビル　B１F",
     TEL: "03-6452-9078",
+    TEL_NO_HYPHEN: "0364529078",
 };
 
 export const RESERVE_URL = "https://v329c7.b-merit.jp/v485r2/web/";

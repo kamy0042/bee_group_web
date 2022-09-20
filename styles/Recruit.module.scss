@@ -42,11 +42,16 @@
   }
   @include pc{
     font-size: $text-larger;
+    margin-bottom: 3rem;
   };
 }
 
 .section {
   margin-top: 5rem;
+  @include pc{
+    margin: 7rem auto 0;
+    width: 850px;
+  }
 }
 
 
@@ -56,40 +61,70 @@
   font-weight: bold;
   & > p:first-of-type{
     color: $color-sub;
-
     text-decoration: underline;
     font-size: $text-large-sp;
+    @include pc {
+      font-size: $text-large;
+    }
   }
 }
 .headerCopyItem {
   position: relative;
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   text-align: left;
   padding-left: 1.5rem;
+  @include pc {
+    font-size: $text-large;
+    text-align: center;
+  }
   &::before{
-    content: '■';
-    color: $color-sub;
+    content: '';
     position: absolute;
     left: 0;
     top: 0;
+    width: 0.5rem;
+    height: 100%;
+    background: #FFF;
+    border-radius: 999px;
+    @include pc {
+      content: none;
+    }
   }
 }
 
 .message {
   margin-top: 3rem;
+  border:solid thin;
+  padding:1rem;
+  margin-top: 1rem;
+  @include pc {
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    padding: 0;
+     & > p {
+       width: 850px;
+       margin-top: 2rem;
+     }
+  }
   img {
     margin-bottom: 1rem;
-  }
-  p{
-    border:solid thin;
-    padding:1rem;
-    margin-top: 1rem;
+    width: 100%;
+    @include pc {
+      width: 850px;
+    }
   }
   p > span {
     display: inline-block;
     font-weight: bold;
     margin-top: 1rem;
     font-size: 1.15em;
+    @include pc {
+      display: block;
+    }
   }
   p > span:nth-of-type(2){
     margin-bottom: 1rem;
@@ -118,19 +153,81 @@
     padding-bottom: 0.75rem;
     border-bottom: solid thin;
   }
-  & > p + p {
+  .descriptionContent p + p {
     margin-top: 2rem;
   }
+  .descriptionContent > img {
+    margin-bottom: 1rem;
+  }
+  @include pc{
+    margin-top: 7rem;
+    .descriptionContent{
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1rem;
+      align-items: flex-start;
+    }
+    & > h3 {
+      font-size: 1.4em;
+    }
+    .descriptionContent > img {
+      width: 50%;
+      margin: 0;
+      order:2
+    }
+    .descriptionTextArea {
+      width: calc(50% - 3rem);
+      order:1;
+    }
+  }
 }
+
 
 .descriptionInner {
   & > dd + dt {
     margin-top: 1.5rem;
   }
+  & > .icon {
+    margin-right: 0.5rem;
+  }
+  .withIcon {
+    margin-top: 0.5rem;
+  }
+}
+
+.descriptionInnerHeading {
+  font-size: 1.4rem;
+  margin-top: 1.5rem;
+  position: relative;
+  padding-left: 1.2em;
+  &::before{
+    content: '■';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.icon {
+  color: #fff;
+  background-color: #d3b894;
+  font-weight: bold;
+  padding: 0.25rem 0.75rem;
+  border-radius: 50px;
+}
+
+.comment {
+  color:$color-sub;
+  font-weight: bold;
 }
 
 .btn {
   margin-top: 1.5rem;
+  @include pc {
+    width:350px;
+    margin: 4rem auto 0;
+  }
 }
 
 .checkedList {
@@ -153,5 +250,115 @@
   }
   & > li + li {
     margin-top: 0.25rem;
+  }
+  @include pc {
+    & > li + li {
+      margin-top: 0.5rem;
+    }
+  }
+}
+
+.itemList {
+  margin-top: 0.5rem;
+  li{
+    padding-left: 1em;
+    position: relative;
+  }
+  & > li::before{
+    content: '・';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  & > li + li {
+    margin-top: 0.25rem;
+  }
+
+}
+
+.recruitDetail {
+  & > dd + dt {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: dotted thin;
+  }
+  @include pc {
+    & > dd + dt {
+        margin-top: 1.25rem;
+        padding-top: 1.25rem;
+    }
+    }
+}
+
+.companyDetail {
+  & > div + div {
+    margin-top: 1rem;
+  }
+  dt {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  dt::before{
+    content: '■';
+    color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+.ctaBox {
+  border:solid thin;
+  padding: 1rem;
+  & > dt {
+    font-size: 1.4em;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  & > .btn {
+    margin: 3rem 0 0;
+  }
+  & > .tel {
+    border-top: solid thin;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    a {
+      text-decoration: underline;
+      font-size: 1.3em;
+      margin: 0.5rem 0;
+      display: inline-block;
+      font-weight: bold;
+    }
+  }
+  @include pc {
+    width: 850px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    .btn{
+      width: 350px;
+      margin:3rem auto 0;
+    }
+  }
+}
+
+.ctaBoxWrapper {
+  margin-top: 2rem;
+  @include pc {
+    margin-top: 3.5rem;
+  }
+}
+
+.spNone{
+  display: none;
+  @include pc{
+    display: block;
+  }
+}
+.pcNone{
+  display: block;
+  @include pc{
+    display: none;
   }
 }
