@@ -23,12 +23,12 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
         <li className={styles.nav_link}>
           <Link href="/faq/">FAQ</Link>
         </li>
-        <li className={`${styles.nav_link} ${styles.spOnly}`}>
+        <li className={`${styles.い} ${styles.spOnly}`}>
           <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank" rel="noreferrer">
             Bee dandy スタイルブック
           </a>
         </li>
-        <li className={`${styles.nav_link} ${styles.spOnly}`}>
+        <li className={`${styles.nav_link}`}>
           <Link href="/recruit/">スタッフ募集</Link>
         </li>
         <li className="btn">
