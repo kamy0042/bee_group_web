@@ -91,14 +91,12 @@ const Index = () => {
             <dd>
               <ul>
                 <li>
-                  <span>2022.08.14</span>
-                  <span>【9月の店休日】9/11 (日)</span>
+                  <span>2022.09.21</span>
+                  <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link>
                 </li>
                 <li>
-                  <span>2022.05.13</span>
-                  <a href="/news/news_recruit.pdf" target="_blank">
-                    【求人情報】スタイリスト、アシスタント 大至急募集！
-                  </a>
+                  <span>2022.08.14</span>
+                  <span>【9月の店休日】9/11 (日)</span>
                 </li>
                 <li>
                   <span>2022.02.22</span>

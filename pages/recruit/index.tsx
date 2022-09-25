@@ -2,34 +2,42 @@ import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Recruit.module.scss";
 import { CtaButton } from "../../components/CtaButton";
-import {SHOP_INFO} from '../../public/static/index'
+import { SHOP_INFO } from "../../public/static/index";
 
 const CtaBox = () => (
   <dl className={styles.ctaBox}>
-    <dt>少しでも興味があれば、<br className={styles.pcNone} />ご連絡ください！</dt>
+    <dt>
+      少しでも興味があれば、
+      <br className={styles.pcNone} />
+      ご連絡ください！
+    </dt>
     <dd>
-      <p>実際のお店を見たい、一度話だけでも聞きたいという方。<br className={styles.spNone} />
-        「見学を希望したい」とお伝えください。担当が 30 分ほどサロン内をご紹介します。<br className={styles.spNone} />
-        質問などがあれば遠慮なくどうぞ。日時や内容など折り返しご連絡します。</p>
+      <p>
+        実際のお店を見たい、一度話だけでも聞きたいという方。
+        <br className={styles.spNone} />
+        「見学を希望したい」とお伝えください。担当が 30 分ほどサロン内をご紹介します。
+        <br className={styles.spNone} />
+        質問などがあれば遠慮なくどうぞ。日時や内容など折り返しご連絡します。
+      </p>
     </dd>
     <dd className={styles.btn}>
-      <CtaButton
-        text="応募する・見学する・問い合わせする"
-        link="https://work.salonboard.com/slnH000530403/input/"
-      />
+      <CtaButton text="応募する・見学する・問い合わせする" link="https://work.salonboard.com/slnH000530403/input/" />
     </dd>
     <dd className={styles.tel}>
       <p>お急ぎの方、事情がある方はお電話でも対応しております</p>
-      <p><a href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>{SHOP_INFO.TEL}</a>（Bee dandy）<br className={styles.pcNone} />担当：松井 までご連絡ください。</p>
+      <p>
+        <a href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>{SHOP_INFO.TEL}</a>（Bee dandy）
+        <br className={styles.pcNone} />
+        担当：松井 までご連絡ください。
+      </p>
     </dd>
   </dl>
-)
+);
 
 const Recruit = () => (
   <>
     <Head>
       <title>スタッフ募集 | 男性専門美容室 Bee dandy</title>
-      <meta name="robots" content="noindex" />
       <meta name="description" content="新橋の男性専門美容室 Bee dandyでは共に働いてくれるスタッフを募集しています" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
@@ -133,13 +141,14 @@ const Recruit = () => (
             <div className={styles.descriptionContent}>
               <img src="/img/owner_cut_1.jpg" alt="真剣な表情でカットを行うオーナー" />
               <div className={styles.descriptionTextArea}>
+                <p>働く環境をしっかり考えています！ Bee dandy は高単価な顧客をがっちりつかんでいくサロンです。</p>
                 <p>
-                  働く環境をしっかり考えています！
-                  Bee dandy は高単価な顧客をがっちりつかんでいくサロンです。
+                  正社員の場合、働く時間は実質1日8時間程度。休憩時間をちゃんと確保します。
+                  月1回、日曜定休日があります。連休取得も可能です。プライベートも充実させてください。
                 </p>
-                <p>正社員の場合、働く時間は実質1日8時間程度。休憩時間をちゃんと確保します。
-                  月1回、日曜定休日があります。連休取得も可能です。プライベートも充実させてください。</p>
-                <p>ビジネススキルも身につけたいという方には、集客ノウハウやマーケティング、経営なども学べます。いつかお店を持ちたい！という方にも満足いただける環境です。</p>
+                <p>
+                  ビジネススキルも身につけたいという方には、集客ノウハウやマーケティング、経営なども学べます。いつかお店を持ちたい！という方にも満足いただける環境です。
+                </p>
               </div>
             </div>
             <div className={styles.btn}>
@@ -172,9 +181,15 @@ const Recruit = () => (
             <dl className={styles.descriptionInner}>
               <dt>スタイリストの場合</dt>
               <dd>日給10,000円×25日勤務の場合＝250,000円（勤務時間応相談）</dd>
-              <dd className={styles.withIcon}><span className={styles.icon}>＋歩合</span>（指名料1,000円×80名）の場合＝80,000円</dd>
-              <dd className={styles.withIcon}><span className={styles.icon}>＋技売</span>：50万～10％ 100万～20％</dd>
-              <dd className={styles.withIcon}><span className={styles.icon}>＋店販</span>：10％</dd>
+              <dd className={styles.withIcon}>
+                <span className={styles.icon}>＋歩合</span>（指名料1,000円×80名）の場合＝80,000円
+              </dd>
+              <dd className={styles.withIcon}>
+                <span className={styles.icon}>＋技売</span>：50万～10％ 100万～20％
+              </dd>
+              <dd className={styles.withIcon}>
+                <span className={styles.icon}>＋店販</span>：10％
+              </dd>
             </dl>
           </section>
 
@@ -184,12 +199,20 @@ const Recruit = () => (
               <img className={styles.spNone} src="/img/owner_full.jpg" alt="松井オーナー" />
               <img className={styles.pcNone} src="/img/owner_full_pc.jpg" alt="松井オーナー" />
               <div className={styles.descriptionTextArea}>
-                <p>僕と一緒に、Bee dandy を大きくしてくれませんか！
-                  たくさんの感動と自分への誇りを得られる美容室を作りたい。そんな想いで福岡から上京し、2021年、ビジネスマンの街、新橋に Bee dandy をオープンしました。
-                  月1回、日曜定休日があります。連休取得も可能です。プライベートも充実させてください。</p>
-                <p>この求人を見ていただいている「あなた」のセンスと、スキルを必要としているお客様が待っています！
-                  オシャレしたいけど、どうしていいか分からない、そんなお客様のお悩みを解決できる、救世主となってくれる、メンズ特化のスタイリスト、美容師を募集しています。</p>
-                <p>今後は店舗や新しいサービスの展開も考えています。地方から東京のサロンへ挑戦したいと思っている方がいらっしゃったら、できるだけサポートします。私も共感できるところが あるので、ぜひチャレンジしてほしい！そんなあなたを待っています！</p>
+                <p>
+                  僕と一緒に、Bee dandy を大きくしてくれませんか！
+                  たくさんの感動と自分への誇りを得られる美容室を作りたい。そんな想いで福岡から上京し、2021年、ビジネスマンの街、新橋に
+                  Bee dandy をオープンしました。
+                  月1回、日曜定休日があります。連休取得も可能です。プライベートも充実させてください。
+                </p>
+                <p>
+                  この求人を見ていただいている「あなた」のセンスと、スキルを必要としているお客様が待っています！
+                  オシャレしたいけど、どうしていいか分からない、そんなお客様のお悩みを解決できる、救世主となってくれる、メンズ特化のスタイリスト、美容師を募集しています。
+                </p>
+                <p>
+                  今後は店舗や新しいサービスの展開も考えています。地方から東京のサロンへ挑戦したいと思っている方がいらっしゃったら、できるだけサポートします。私も共感できるところが
+                  あるので、ぜひチャレンジしてほしい！そんなあなたを待っています！
+                </p>
               </div>
             </div>
             <div className={styles.btn}>
@@ -219,7 +242,10 @@ const Recruit = () => (
               </dd>
               <dt>勤務時間</dt>
               <dd>
-                <p>平日 10:00～22:00、土曜 9:00～21:00、日曜 9:00～17:00、祝日 9：00～21:00 の間で９時間のシフト制（実働 8h）</p>
+                <p>
+                  平日 10:00～22:00、土曜 9:00～21:00、日曜 9:00～17:00、祝日 9：00～21:00 の間で９時間のシフト制（実働
+                  8h）
+                </p>
                 <p>※ 休憩時間あり（自由に外出可能）</p>
                 <p>※ 1カ月単位変形労働時間制採用</p>
               </dd>
@@ -235,7 +261,9 @@ const Recruit = () => (
                   <li>各種手当 有</li>
                 </ul>
                 <p>※ 引越手当支給（上限 100,000 円／入社時のみ／対象者制限あり）</p>
-                <p className={styles.comment}>地方から東京のサロンへ挑戦したい方を応援します！ 不安や心配に思う事があれば相談してください。</p>
+                <p className={styles.comment}>
+                  地方から東京のサロンへ挑戦したい方を応援します！ 不安や心配に思う事があれば相談してください。
+                </p>
               </dd>
               <dt>教育・研修制度</dt>
               <dd>
@@ -286,12 +314,14 @@ const Recruit = () => (
               </div>
               <div>
                 <dt>ホームページ</dt>
-                <dd><a href='https://beegroup.tokyo/'>https://beegroup.tokyo/</a></dd>
+                <dd>
+                  <a href="https://beegroup.tokyo/">https://beegroup.tokyo/</a>
+                </dd>
               </div>
             </dl>
           </section>
 
-          <div className={styles.ctaBoxWrapper} >
+          <div className={styles.ctaBoxWrapper}>
             <CtaBox />
           </div>
         </div>
