@@ -28,6 +28,9 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
             Bee dandy スタイルブック
           </a>
         </li>
+        <li className={`${styles.nav_link} ${styles.spOnly}`}>
+          <Link href="/recruit/">スタッフ募集</Link>
+        </li>
         <li className="btn">
           <ReserveButton />
         </li>

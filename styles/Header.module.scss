@@ -17,24 +17,6 @@
         }
     }
 }
-.info {
-    display:none;
-    @include pc {
-        display: block;
-        margin-left: 3rem;
-        & > div {
-            display: flex;
-            margin-top: 0.5rem;
-            flex-wrap: wrap;
-        }
-        dt{
-            margin-right: 1rem;
-            padding-right: 1rem;
-            border-right: solid thin;
-            min-width: 6rem;
-        }
-    }
-}
 .comment{
     @include pc {
         margin-top:0.25rem;

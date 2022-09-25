@@ -56,12 +56,57 @@
 
 @include pc {
     .headerArea{
-        display: flex;
-        min-width: 1400px;
-        justify-content: space-between;
-        align-items: center;
         padding:  0 0 2rem;
     }
+
+    .headerAreaInner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+        border-bottom: solid thin;
+    }
+}
+
+.info {
+    display:none;
+    @include pc {
+        display: flex;
+        dt{
+            margin-right: 1rem;
+            padding-right: 1rem;
+            border-right: solid thin;
+            min-width: 6rem;
+        }
+        dd > p:not(:last-of-type) {
+            display: inline-block;
+        }
+        dd > p:nth-of-type(2),
+        dd > p:nth-of-type(3){
+            margin-left: 1rem;
+            padding-left: 2rem;
+            position: relative;
+        }
+        dd > p:nth-of-type(2)::before,
+        dd > p:nth-of-type(3)::after,{
+            content: '/';
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+    }
+}
+
+.infoItem {
+    display: flex;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.infoInner {
+    margin-left: 5rem;
 }
 
 

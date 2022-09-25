@@ -80,39 +80,45 @@ const Index = () => {
 
       <MainLayout>
         <div className={`${styles.mv} ${isSafari ? styles.mv_noWebp : styles.mv_webp}`}>
-          <p className={styles.mv_text}>あなたはここでもっとカッコよくなれる。</p>
+          <p className={styles.mv_text}>
+            あなたはここで
+            <br className={styles.pcNone} />
+            もっとカッコよくなれる。
+          </p>
           <p className={styles.mv_logo_text}>男性専門美容室</p>
           <img src="/img/bee_logo_white.svg" className={styles.mv_logo} alt="bee_dandy" />
           <p className={styles.mv_logo_sub}>ビーダンディー</p>
         </div>
+
+        <dl className={styles.news}>
+          <dt>News</dt>
+          <dd>
+            <ul>
+              <li>
+                <span>2022.09.25</span>
+                <span>【10月の店休日】10/23 (日)</span>
+              </li>
+              <li>
+                <span>2022.09.21</span>
+                <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link>
+              </li>
+              <li>
+                <span>2022.02.22</span>
+                <a href="/news/news_220222.pdf" target="_blank">
+                  【新メニュー】ビジネスマンのための『男の眉毛 整え方実践レクチャー』
+                </a>
+              </li>
+              {/* <li> */}
+              {/*    <span>2022.01.11</span> */}
+              {/*    <a href="/news/news_220111.pdf" target="_blank"> */}
+              {/*        まん延防止等重点措置実施期間中の営業について */}
+              {/*    </a> */}
+              {/* </li> */}
+            </ul>
+          </dd>
+        </dl>
+
         <div className={styles.contents}>
-          <dl className={styles.news}>
-            <dt>News</dt>
-            <dd>
-              <ul>
-                <li>
-                  <span>2022.09.25</span>
-                  <span>【10月の店休日】10/23 (日)</span>
-                </li>
-                <li>
-                  <span>2022.09.21</span>
-                  <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link>
-                </li>
-                <li>
-                  <span>2022.02.22</span>
-                  <a href="/news/news_220222.pdf" target="_blank">
-                    【新メニュー】ビジネスマンのための『男の眉毛 整え方実践レクチャー』
-                  </a>
-                </li>
-                {/* <li> */}
-                {/*    <span>2022.01.11</span> */}
-                {/*    <a href="/news/news_220111.pdf" target="_blank"> */}
-                {/*        まん延防止等重点措置実施期間中の営業について */}
-                {/*    </a> */}
-                {/* </li> */}
-              </ul>
-            </dd>
-          </dl>
           <section className={`${styles.concept} ${styles.section}`}>
             <h2 className={styles.heading}>Concept</h2>
             <p className={styles.lead}>

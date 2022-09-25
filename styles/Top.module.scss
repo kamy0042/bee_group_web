@@ -85,7 +85,14 @@
     display: inline-block;
 }
 
+.pcNone {
+    @include pc {
+        display: none;
+    }
+}
+
 .news {
+    margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 1rem;
     border: solid thin;
@@ -388,11 +395,10 @@
     }
 
     .news {
-        margin:auto;
-        width:1200px;
         display: flex;
         padding: 1.5rem;
-        margin-bottom: 4rem;
+        margin: 2rem auto 4rem;
+
         dt{
             line-height: 1;
             width: 10rem;
