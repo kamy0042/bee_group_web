@@ -96,7 +96,7 @@ const Index = () => {
             <ul>
               <li>
                 <span>2022.09.25</span>
-                <span>【10月の店休日】10/23 (日)</span>
+                <span>【11月の店休日】11/23 (水・祝)</span>
               </li>
               <li>
                 <span>2022.09.21</span>
