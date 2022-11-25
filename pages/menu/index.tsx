@@ -532,7 +532,7 @@ const Menu = () => (
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>指名料</dt>
-                <dd className={styles.menuItem_pay}>￥1,100〜（スタイリストにより異なります）</dd>
+                <dd className={`${styles.menuItem_pay} ${styles.full}`}>￥1,100〜（スタイリストにより異なります）</dd>
               </div>
             </dl>
           </section>

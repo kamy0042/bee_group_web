@@ -243,6 +243,9 @@
         }
         &_pay{
             width: 20%;
+            &.full {
+                width:69%;
+            }
         }
         &_week,
         &_time{
