@@ -532,7 +532,7 @@ const Menu = () => (
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>指名料</dt>
-                <dd className={styles.menuItem_pay}>￥1,100</dd>
+                <dd className={styles.menuItem_pay}>￥1,100〜（スタイリストにより異なります）</dd>
               </div>
             </dl>
           </section>
@@ -544,7 +544,7 @@ const Menu = () => (
             とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。
           </p>
           <p className={styles.removal_notice}>
-            脱毛のご提供は2022年度中に開始予定です。詳細は準備ができ次第お知らせ致します。
+            脱毛の詳細は準備ができ次第お知らせ致します。
           </p>
         </section>
       </div>
