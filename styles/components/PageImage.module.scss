@@ -45,8 +45,16 @@
 
 .faq {
     background-image: url('../../public/img/webp/bee_image_1-min.webp');
+    background-position-y: 310px;
+    @include pc {
+        background-position-y: 750px;
+    }
     &_noWebp{
         background-image: url('../../public/img/bee_image_1-min.jpg');
+        background-position-y: 310px;
+        @include pc {
+            background-position-y: 750px;
+        }
     }
 }
 
