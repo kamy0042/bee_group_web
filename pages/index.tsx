@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2022.11.27</span>
+                <a href='https://youtu.be/OAH_y70Xwuw' target="_blank" rel="noreferrer">【ニュース】-Kim Channel-【湘南美容クリニック】で松井が紹介されました</a>
+              </li>
+              <li>
                 <span>2022.10.30</span>
                 <a href="/news/news_221030.pdf" target="_blank">
                   【新メニュー】男の髪のダメージ補修に『メンズ トリートメント』
@@ -104,10 +108,10 @@ const Index = () => {
                 <span>2022.10.28</span>
                 <span>【11月の店休日】11/23 (水・祝)</span>
               </li>
-              <li>
-                <span>2022.09.21</span>
-                <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link>
-              </li>
+              {/* <li> */}
+              {/*   <span>2022.09.21</span> */}
+              {/*   <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link> */}
+              {/* </li> */}
               {/* <li> */}
               {/*    <span>2022.01.11</span> */}
               {/*    <a href="/news/news_220111.pdf" target="_blank"> */}
