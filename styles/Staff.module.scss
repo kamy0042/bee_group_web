@@ -122,19 +122,14 @@
             margin-top: 1.5rem;
         }
         &_list{
-            display: flex;
-            justify-content: center;
+            margin: auto;
             & > li {
-                width: 50%;
+                width: 570px;
+                margin: auto;
             }
-            & > li:nth-of-type(odd){
-                margin-right: 3rem;
-            }
-            & > li + li{
-                padding: 0 0 0 3rem;
-                margin: 0;
-                border-top: 0;
-                border-left: solid thin $color-sub;
+            & > li + li {
+                margin-top: 1.5rem;
+                padding-top: 1.5rem;
             }
         }
     };

@@ -48,6 +48,9 @@
         overflow-x: auto;
         padding: $padding-container;
     }
+    & .headerArea{
+        border-bottom: solid thin #fff;
+    }
 }
 
 .main {

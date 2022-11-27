@@ -19,6 +19,9 @@ module.exports = {
       "/recruit": {
         page: "/recruit",
       },
+      "/voice": {
+        page: "/voice",
+      },
     };
   },
 };
