@@ -38,8 +38,14 @@
 
 .salon {
     background-image: url('../../public/img/webp/bee_top_image-min.webp');
+    @include pc {
+        background-position-y: 810px;
+    }
     &_noWebp{
         background-image: url('../../public/img/bee_top_image-min.jpg');
+        @include pc {
+            background-position-y: 810px;
+        }
     }
 }
 
