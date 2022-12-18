@@ -77,6 +77,9 @@
     font-size: $text-large;
     text-align: center;
   }
+  & + p {
+    margin-top: 1.5rem;
+  }
   &::before{
     content: '';
     position: absolute;
@@ -251,6 +254,9 @@
   & > li + li {
     margin-top: 0.25rem;
   }
+  p + & {
+    margin-top: 1rem;
+  }
   @include pc {
     & > li + li {
       margin-top: 0.5rem;
@@ -361,4 +367,15 @@
   @include pc{
     display: none;
   }
+}
+
+.voice {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  @include pc{
+    font-size: 1.4em;
+    margin-bottom: 1.5rem;
+  }
+
+
 }
