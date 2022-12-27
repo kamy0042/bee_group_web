@@ -95,17 +95,21 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2022.12.27</span>
+                <span>【1月の店休日】1/15 (日)</span>
+              </li>
+              <li>
                 <span>2022.12.18</span>
-                <span>【年末年始休暇】12/30 (金) ~ 1/4 (水)</span>
+                <span>【年末年始休暇】12/31 (土) ~ 1/4 (水)</span>
               </li>
               <li>
                 <span>2022.12.05</span>
                 <span>【12月の店休日】12/11 (日)</span>
               </li>
-              <li>
-                <span>2022.11.27</span>
-                <a href='https://youtu.be/OAH_y70Xwuw' target="_blank" rel="noreferrer">【ニュース】-Kim Channel-【湘南美容クリニック】で松井が紹介されました</a>
-              </li>
+              {/* <li> */}
+              {/*   <span>2022.11.27</span> */}
+              {/*   <a href='https://youtu.be/OAH_y70Xwuw' target="_blank" rel="noreferrer">【ニュース】-Kim Channel-【湘南美容クリニック】で松井が紹介されました</a> */}
+              {/* </li> */}
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
               {/*   <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link> */}
