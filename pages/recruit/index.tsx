@@ -34,12 +34,96 @@ const CtaBox = () => (
   </dl>
 );
 
+const description = `<p>東京・新橋のメンズ専門美容室「Bee dandy」。
+指名料は100％還元、お客様満足がアナタの稼ぎに！</p>
+
+<p>●雇用形態は不問、まずはご相談ください。</p>
+正社員／契約社員／パート・アルバイト／業務委託／Wワーク／フリーランス
+
+<p>●あなたのファンをたくさん作ってください。</p>
+Bee dandyは高単価な顧客をがっちりつかんでいくサロンです。原則として、1人のお客様を最初から最後まで担当していただきます。
+
+<p>●安定した新規集客、月40人から80人</p>
+入社してもカットする機会がないとか、集客や営業のノルマを押し付けるようなことはありません。
+
+<p>●完全シフト、完全歩合で好きな日数と好きな休日 Wワークも可 </p>
+ ・日当10000円保証(実働８H)  ・指名料は100％還元
+
+＜給与の一例＞ 雇用形態は不問です。まずはご相談ください。
+スタイリスト＜日給月給＞の場合）
+・日給10,000円×25日勤務の場合＝250,000円（勤務時間応相談）
+＋歩合（指名料1,000円×80名の場合）＝80,000円
+＋技売：50万～10％ 100万～20％
+＋店販：10％
+
+<p>【当店のおすすめポイント】</p>
+★働く時間は実質1日8時間程度。休憩時間をちゃんと確保します。
+★月1回、日曜定休日があります。連休取得も可能です。プライベートも充実させてください。
+★ビジネススキルも身につけたい方には、集客・経営ノウハウやマーケティングも学べます。
+★いつかお店を持ちたい！一緒に店を大きくしてみたい！という方にも満足いただける環境です。
+
+<p>【こんな方を募集しています！】</p>
+●自分のやる仕事に誇りをもってる、それを共感してくれるお客様を相手にしたい
+●質の高いサービスをするサロンで働きたい、自分の技術の単価をあげたい
+●指名客をもっとつくりたい
+●将来自分のお店を持ちたい
+●しっかり働きながら自分のライフスタイルも大事にしたい
+●地方から東京のサロンへ挑戦したい`
+
+
+const scheme = {
+  "@context" : "https://schema.org/",
+  "@type" : "JobPosting",
+  "datePosted" : "2023-01-17",
+  "validThrough" : "2033-12-31",
+  "title" : "美容師、スタイリスト、アシスタント",
+  "employmentType" : "PART_TIME",
+  "description" : `${description}`,
+  "jobLocation" : {
+    "@type" : "Place",
+    "address" : {
+      "@type" : "PostalAddress",
+      "addressCountry" : "JP",
+      "postalCode" : "105-0004",
+      "addressRegion" : "東京都",
+      "addressLocality" : "港区",
+      "streetAddress" : "新橋５丁目８−３ 代市ビル B1"
+    }
+  },
+  "baseSalary" : {
+    "@type" : "MonetaryAmount",
+    "currency" : "JPY",
+    "value" : {
+      "@type" : "QuantitativeValue",
+      "value" : "10000",
+      "unitText" : "DAY"
+    }
+  },
+  "hiringOrganization" : {
+    "@type" : "Organization",
+    "name" : "Bee Group",
+    "sameAs" : "https://beegroup.tokyo/",
+    "logo": "https://beegroup.tokyo/img/logo.jpg"
+  },
+  "identifier" : {
+    "@type" : "PropertyValue",
+    "name" : "Bee Group",
+    "value" : "0001"
+  }
+}
+
+
 const Recruit = () => (
   <>
     <Head>
       <title>スタッフ募集 | 男性専門美容室 Bee dandy</title>
       <meta name="description" content="新橋の男性専門美容室 Bee dandyでは共に働いてくれるスタッフを募集しています" />
       <link rel="icon" href="/favicon.ico" />
+      <script
+        key="json-ld"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(scheme) }}
+      />
     </Head>
     <MainLayout noHeaderImg>
       <div className={styles.contents}>
