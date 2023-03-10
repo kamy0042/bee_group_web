@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2023.02.10</span>
+                <span>【3月の店休日】3/19 (日)</span>
+              </li>
+              <li>
                 <span>2023.01.22</span>
                 <span>【2月の店休日】2/19 (日)</span>
               </li>
@@ -102,10 +106,7 @@ const Index = () => {
                 <span>2022.12.27</span>
                 <span>【1月の店休日】1/15 (日)</span>
               </li>
-              <li>
-                <span>2022.12.18</span>
-                <span>【年末年始休暇】12/31 (土) ~ 1/4 (水)</span>
-              </li>
+
               {/* <li> */}
               {/*   <span>2022.11.27</span> */}
               {/*   <a href='https://youtu.be/OAH_y70Xwuw' target="_blank" rel="noreferrer">【ニュース】-Kim Channel-【湘南美容クリニック】で松井が紹介されました</a> */}
