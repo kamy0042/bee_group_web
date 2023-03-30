@@ -431,19 +431,19 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ヘッドスパ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥3,850
+                  <span>通常料金（税込）</span>¥4,400
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥2,750
+                  <span>会員優待（税込）</span>¥3,300
                 </dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ヘッドスパ＋スカルプケア</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥5,500
+                  <span>通常料金（税込）</span>¥6,600
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥4,400
+                  <span>会員優待（税込）</span>¥5,500
                 </dd>
               </div>
               <div className={styles.menuItem}>
@@ -458,19 +458,19 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>スタイリング</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥1,100
+                  <span>通常料金（税込）</span>¥2,200
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥550
+                  <span>会員優待（税込）</span>¥1,650
                 </dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>アイロンスタイリング</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥2,750
+                  <span>通常料金（税込）</span>¥3,300
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥2,200
+                  <span>会員優待（税込）</span>¥2,750
                 </dd>
               </div>
               <div className={styles.menuItem}>
@@ -528,7 +528,7 @@ const Menu = () => (
             <dl className={styles.table_item_2}>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>会員費（有効期限：1年間）</dt>
-                <dd className={styles.menuItem_pay}>￥1,100</dd>
+                <dd className={styles.menuItem_pay}>￥1,650</dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>指名料</dt>
