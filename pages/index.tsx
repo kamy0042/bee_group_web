@@ -95,6 +95,14 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2023.04.20</span>
+                <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
+              </li>
+              <li>
+                <span>2023.04.20</span>
+                <span>【5月の店休日】5/3 (水・祝), 5/21 (日)</span>
+              </li>
+              <li>
                 <span>2023.03.30</span>
                 <a href="/news/news_230329.pdf" target="_blank">一部メニュー料金改定のお知らせ</a>
               </li>
@@ -102,15 +110,6 @@ const Index = () => {
                 <span>2023.03.22</span>
                 <span>【4月の店休日】4/23 (日)</span>
               </li>
-              <li>
-                <span>2023.02.10</span>
-                <span>【3月の店休日】3/19 (日)</span>
-              </li>
-
-              {/* <li> */}
-              {/*   <span>2022.11.27</span> */}
-              {/*   <a href='https://youtu.be/OAH_y70Xwuw' target="_blank" rel="noreferrer">【ニュース】-Kim Channel-【湘南美容クリニック】で松井が紹介されました</a> */}
-              {/* </li> */}
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
               {/*   <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link> */}
