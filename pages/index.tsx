@@ -99,7 +99,7 @@ const Index = () => {
                 <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
               </li>
               <li>
-                <span>2023.04.20</span>
+                <span>2023.04.22</span>
                 <span>【5月の店休日】5/3 (水・祝), 5/21 (日)</span>
               </li>
               <li>
