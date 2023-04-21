@@ -95,7 +95,7 @@ const Index = () => {
           <dd>
             <ul>
               <li>
-                <span>2023.04.20</span>
+                <span>2023.04.22</span>
                 <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
               </li>
               <li>
