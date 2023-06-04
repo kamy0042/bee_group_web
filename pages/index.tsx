@@ -99,16 +99,12 @@ const Index = () => {
                 <span>【6月の店休日】6/11 (日)</span>
               </li>
               <li>
+                <span>2023.05.20</span>
+                <a href='/menu/'>【新メニュー】波巻きスパイラルパーマコースができました</a>
+              </li>
+              <li>
                 <span>2023.04.22</span>
                 <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
-              </li>
-              <li>
-                <span>2023.04.22</span>
-                <span>【5月の店休日】5/3 (水・祝), 5/21 (日)</span>
-              </li>
-              <li>
-                <span>2023.03.30</span>
-                <a href="/news/news_230329.pdf" target="_blank">一部メニュー料金改定のお知らせ</a>
               </li>
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
