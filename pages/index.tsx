@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2023.06.04</span>
+                <span>【6月の店休日】6/11 (日)</span>
+              </li>
+              <li>
                 <span>2023.04.22</span>
                 <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
               </li>
@@ -105,10 +109,6 @@ const Index = () => {
               <li>
                 <span>2023.03.30</span>
                 <a href="/news/news_230329.pdf" target="_blank">一部メニュー料金改定のお知らせ</a>
-              </li>
-              <li>
-                <span>2023.03.22</span>
-                <span>【4月の店休日】4/23 (日)</span>
               </li>
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
