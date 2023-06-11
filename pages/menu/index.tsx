@@ -263,6 +263,18 @@ const Menu = () => (
                 </dd>
               </div>
               <div className={styles.menuItem}>
+                <dt className={styles.menuItem_title_long}>ナチュラルパーマ</dt>
+                <dd className={styles.menuItem_pay}>
+                  <span>通常料金（税込）</span>¥7,150
+                </dd>
+                <dd className={styles.menuItem_pay}>
+                  <span>会員優待（税込）</span>¥6,600
+                </dd>
+                <dd className={styles.menuItem_time}>
+                  <span>所要時間</span>90~120分
+                </dd>
+              </div>
+              <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>スパイラルパーマ</dt>
                 <dd className={styles.menuItem_pay}>
                   <span>通常料金（税込）</span>¥14,300
