@@ -158,22 +158,22 @@
 
 .matsui{
     &::before{
-        background-image: url('../public/img/webp/bee_matsui-min.webp');
+        background-image: url('../public/img/staff/2306_matsui_1.jpg');
         background-position:center 9%;
     }
     &_noWebp::before{
-        background-image: url('../public/img/bee_matsui-min.jpg');
+        background-image: url('../public/img/staff/2306_matsui_1.jpg');
         background-position:center 9%;
     }
 }
 
 .hukazawa{
     &::before{
-        background-image: url('../public/img/bee_hukazawa.jpg');
+        background-image: url('../public/img/staff/2306_hukazawa_1.jpg');
         background-position:center 10.5%;
     }
     &_noWebp::before{
-        background-image: url('../public/img/bee_hukazawa.jpg');
+        background-image: url('../public/img/staff/2306_hukazawa_1.jpg');
         background-position:center 10.5%;
     }
 }
