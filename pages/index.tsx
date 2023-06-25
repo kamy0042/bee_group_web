@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2023.06.25</span>
+                <span>【7月の店休日】7/2 (日)</span>
+              </li>
+              <li>
                 <span>2023.06.04</span>
                 <span>【6月の店休日】6/11 (日)</span>
               </li>
@@ -102,10 +106,7 @@ const Index = () => {
                 <span>2023.05.20</span>
                 <a href='/menu/'>【新メニュー】波巻きスパイラルパーマコースができました</a>
               </li>
-              <li>
-                <span>2023.04.22</span>
-                <a href='https://relax-job.com/more/121192' target="_blank" rel="noreferrer">【ニュース】「モアリジョブ」で松井が紹介されました</a>
-              </li>
+
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
               {/*   <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link> */}
