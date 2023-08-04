@@ -516,15 +516,6 @@ const Menu = () => (
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>眉毛の整え方レクチャー</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥2,750
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥2,200
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>オートシャンプー</dt>
                 <dd className={styles.menuItem_pay}>
                   <span>通常料金（税込）</span>¥1,650
