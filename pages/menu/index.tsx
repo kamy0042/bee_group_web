@@ -403,10 +403,10 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ハイライト</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥3,850~
+                  <span>通常料金（税込）</span>¥6,600
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥3,300
+                  <span>会員優待（税込）</span>¥6,050
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>60分
