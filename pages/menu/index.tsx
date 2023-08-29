@@ -427,7 +427,7 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ含む）</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥14,300
+                  <span>通常料金（税込）</span>¥13,200
                 </dd>
                 <dd className={styles.menuItem_pay}>
                   <span>会員優待（税込）</span>¥12,100
