@@ -556,11 +556,11 @@ const Menu = () => (
         <section className={`${styles.removal} ${styles.section}`}>
           <h2 className={styles.subHeading}>メンズ脱毛</h2>
           <p>
-            とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。
+            とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。<br/>カウンセリング時にご希望をお伝えください。
           </p>
-          <p className={styles.removal_notice}>
-            脱毛の詳細は準備ができ次第お知らせ致します。
-          </p>
+            <a className={styles.linkButton} href='/waxing/'>
+              Read More
+            </a>
         </section>
       </div>
     </MainLayout>
