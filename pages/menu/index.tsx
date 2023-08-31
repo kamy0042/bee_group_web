@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import PageImage from "../../components/PageImage";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Menu.module.scss";
@@ -556,11 +557,11 @@ const Menu = () => (
         <section className={`${styles.removal} ${styles.section}`}>
           <h2 className={styles.subHeading}>メンズ脱毛</h2>
           <p>
-            とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。カウンセリング時にご希望をお伝えください。
+            とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。<br/>カウンセリング時にご希望をお伝えください。
           </p>
-          <p className={styles.removal_notice}>
-            脱毛の詳細は準備ができ次第お知らせ致します。
-          </p>
+          <div className={styles.linkButton}>
+            <Link href='/waxing/'>Read More</Link>
+          </div>
         </section>
       </div>
     </MainLayout>
