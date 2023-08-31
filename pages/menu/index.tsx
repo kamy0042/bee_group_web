@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 import PageImage from "../../components/PageImage";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Menu.module.scss";
@@ -558,9 +559,7 @@ const Menu = () => (
           <p>
             とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。<br/>カウンセリング時にご希望をお伝えください。
           </p>
-            <a className={styles.linkButton} href='/waxing/'>
-              Read More
-            </a>
+          <Link className={styles.linkButton} href='/waxing/'>Read More</Link>
         </section>
       </div>
     </MainLayout>
