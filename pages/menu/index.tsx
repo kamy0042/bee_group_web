@@ -559,7 +559,9 @@ const Menu = () => (
           <p>
             とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。<br/>カウンセリング時にご希望をお伝えください。
           </p>
-          <Link className={styles.linkButton} href='/waxing/'>Read More</Link>
+          <div className={styles.linkButton}>
+            <Link href='/waxing/'>Read More</Link>
+          </div>
         </section>
       </div>
     </MainLayout>
