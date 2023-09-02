@@ -129,11 +129,15 @@
         margin-top: 1.5rem;
         & > div {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
         }
         dt {
             color: $color-sub;
             margin-right: 1rem;
+            min-width: 72px;
+        }
+        dd > p > span{
+            display: inline-block;
         }
     }
     @include pc{
@@ -215,3 +219,18 @@
         margin:  auto ;
     }
 };
+
+.spNone{
+    display: none;
+}
+.pcNone{
+    display: initial;
+}
+@include pc {
+    .spNone{
+        display: initial;
+    }
+    .pcNone{
+        display: none;
+    }
+}

@@ -40,7 +40,18 @@ const Salon = () => (
                   <div>
                     <dt>営業時間</dt>
                     <dd>
-                      {SHOP_INFO.OPEN} - {SHOP_INFO.CLOSE}
+                      <p>
+                        <span>平日：{SHOP_INFO.OPEN} - {SHOP_INFO.CLOSE}</span>
+                        <span>（最終受付:{SHOP_INFO.RESERVE_LIMIT}）</span>
+                      </p>
+                      <p>
+                        <span>土祝：{SHOP_INFO.HOLIDAY_OPEN} - {SHOP_INFO.HOLIDAY_CLOSE}</span>
+                        <span>（最終受付:{SHOP_INFO.HOLIDAY_RESERVE_LIMIT}）</span>
+                      </p>
+                      <p>
+                        <span>日曜：{SHOP_INFO.SUNDAY_OPEN} - {SHOP_INFO.SUNDAY_CLOSE}</span>
+                        <span>（最終受付:{SHOP_INFO.SUNDAY_RESERVE_LIMIT}）</span>
+                      </p>
                     </dd>
                   </div>
                   <div>
