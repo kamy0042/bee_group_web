@@ -1,9 +1,11 @@
 import Head from "next/head";
+import Link from "next/link";
 import MainLayout from "../../components/template/MainLayout";
 import PageImage from "../../components/PageImage";
 import { SHOP_INFO } from "../../public/static";
 import styles from "../../styles/Salon.module.scss";
 import WebpImage from "../../components/WebpImage";
+import utilStyles from "../../styles/Util.module.scss";
 
 const Salon = () => (
   <>
@@ -71,6 +73,11 @@ const Salon = () => (
               “bee”とはよく知られている「蜂」という意味のほかに、「働く人、隣人や友人の寄り合い」という意味もあります。私たちは、忙しく働く男性お一人おひとりに「魅力と自信」に満ち溢れ、こころ豊かな日常を送っていただくことをコンセプトに、『今までで、１番』のサービスを、友人や隣人のような身近な存在として、お届けしてまいります。さらに、あなたの家族、友人、恋人にも「今までで１番、いいね」と認めてもらい、あなただけでなくあなたに関わるすべての方々のこころも豊かにするご提案をさせて頂きます。
             </p>
             <p className={styles.message_name}>オーナー 松井祐太</p>
+
+            <div className={utilStyles.linkButton}>
+              <Link href='/voice/'>お客様の声を見る</Link>
+            </div>
+
           </section>
 
         </section>

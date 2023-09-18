@@ -47,3 +47,43 @@
     }
   }
 }
+
+.section {
+  &+&{
+    margin-top: 4.5rem;
+  }
+  @include pc {
+    &+&{
+      margin-top: 9rem;
+    }
+  };
+}
+
+.subHeading {
+  font-family: $font-mincho;
+  font-size:$text-large-sp;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &::before{
+    content: '';
+    width:2rem;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-right: 1rem;
+  }
+  &::after{
+    content: '';
+    width:2rem;
+    height: 1px;
+    background-color: #fff;
+    display: block;
+    margin-left: 1rem;
+  }
+  @include pc{
+    font-size: $text-larger;
+  };
+}
+

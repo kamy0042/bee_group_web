@@ -185,3 +185,9 @@
         margin:  auto ;
     }
 };
+
+.linkSection {
+    @include pc {
+        text-align: center;
+    }
+}
