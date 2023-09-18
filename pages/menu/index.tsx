@@ -3,6 +3,7 @@ import Link from "next/link";
 import PageImage from "../../components/PageImage";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Menu.module.scss";
+import utilStyles from "../../styles/Util.module.scss"
 
 const Menu = () => (
   <>
@@ -559,7 +560,7 @@ const Menu = () => (
           <p>
             とことんツルツルにしたり、毛の量を減らしたり、毛の生える範囲をデザインすることができます。<br/>カウンセリング時にご希望をお伝えください。
           </p>
-          <div className={styles.linkButton}>
+          <div className={utilStyles.linkButton}>
             <Link href='/waxing/'>Read More</Link>
           </div>
         </section>
