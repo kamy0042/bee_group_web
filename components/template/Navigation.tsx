@@ -18,13 +18,13 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
           <Link href="/salon/">Salon</Link>
         </li>
         <li className={styles.nav_link}>
+          <Link href="/waxing/">脱毛</Link>
+        </li>
+        <li className={styles.nav_link}>
           <Link href="/staff/">Staff</Link>
         </li>
         <li className={styles.nav_link}>
           <Link href="/faq/">FAQ</Link>
-        </li>
-        <li className={styles.nav_link}>
-          <Link href="/voice/">Voice</Link>
         </li>
         <li className={`${styles.spOnly}`}>
           <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank" rel="noreferrer">
