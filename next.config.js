@@ -22,6 +22,9 @@ module.exports = {
       "/voice": {
         page: "/voice",
       },
+      "/waxing": {
+        page: "/waxing",
+      },
     };
   },
 };
