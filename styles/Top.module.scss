@@ -284,6 +284,13 @@
     &_faq_noWebp::before{
         background: url('../public/img/bee_image_1-min.jpg') no-repeat center 70% / cover;
     }
+    &_waxing::before{
+        background: url('../public/img/webp/bee_removal-min.webp') no-repeat center 70% / cover;
+    }
+    &_waxing_noWebp::before{
+        background: url('../public/img/bee_removal-min.jpg') no-repeat center 70% / cover;
+    }
+
     &_text{
         display: flex;
         align-items: center;
@@ -295,6 +302,12 @@
         font-size: 12px;
     }
     &_title{
+        font-family: $font-mincho;
+        font-size: $text-larger-sp;
+        font-weight: bold;
+        margin-right: 1rem;
+    }
+    &_jpTitle{
         font-family: $font-mincho;
         font-size: $text-larger-sp;
         font-weight: bold;
@@ -537,6 +550,9 @@
         }
         &_title{
             font-size: 4rem;
+        }
+        &_jpTitle {
+            font-size: 3.5rem;
         }
         &_link{
             transition: .3s;
