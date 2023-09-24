@@ -74,8 +74,13 @@ const Salon = () => (
             </p>
             <p className={styles.message_name}>オーナー 松井祐太</p>
 
-            <div className={utilStyles.linkButton}>
-              <Link href='/voice/'>お客様の声を見る</Link>
+            <div className={styles.linkWrapper}>
+              <div className={utilStyles.linkButton}>
+                <Link href='/voice/'>お客様の声を見る</Link>
+              </div>
+              <div className={utilStyles.linkButton}>
+                <a href='https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091' target='_blank' rel="noreferrer">Bee dandy スタイルブックを見る</a>
+              </div>
             </div>
 
           </section>
