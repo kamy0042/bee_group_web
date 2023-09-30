@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2023.09.30</span>
+                <span>【10月の店休日】10/9 (月・祝)</span>
+              </li>
+              <li>
                 <span>2023.08.31</span>
                 <Link href='/waxing/'>【お知らせ】メンズ脱毛オープンしました</Link>
               </li>
