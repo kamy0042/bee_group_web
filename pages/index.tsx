@@ -95,8 +95,8 @@ const Index = () => {
           <dd>
             <ul>
               <li>
-                <span>2023.09.30</span>
-                <span>【10月の店休日】10/9 (月・祝)</span>
+                <span>2023.10.03</span>
+                <span>【10月の店休日】10/22 (日)</span>
               </li>
               <li>
                 <span>2023.08.31</span>
