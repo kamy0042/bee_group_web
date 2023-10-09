@@ -1,3 +1,5 @@
+@import '/styles/common.scss';
+
 .list {
   margin-bottom: 40px;
 }
@@ -8,7 +10,6 @@
 }
 
 .image {
-  width: 240px;
   object-fit: cover;
 }
 
@@ -16,6 +17,24 @@
   font-size: 1.6rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+  width: 360px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+}
+
+.button {
+  padding: 0;
+  border: none;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.date {
+  color: #7d6547;
 }
 
 @media (max-width: 640px) {
@@ -23,7 +42,6 @@
     display: block;
   }
   .image {
-    width: 240px;
     object-fit: cover;
     margin-bottom: 1rem;
   }

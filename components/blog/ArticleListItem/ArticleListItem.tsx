@@ -11,7 +11,7 @@ type Props = {
 export const ArticleListItem = ({ article }: Props) => (
     <li className={styles.list}>
       <Link href={`/articles/${article.id}`} className={styles.link}>
-        <button type='button'>
+        <button className={styles.button} type='button'>
           {article.thumbnail ? (
             <picture>
               <source
@@ -27,8 +27,8 @@ export const ArticleListItem = ({ article }: Props) => (
                 src={article.thumbnail?.url || `/img/bee_image_1-min.jpg`}
                 alt=""
                 className={styles.image}
-                width={240}
-                height={126}
+                width={380}
+                height={180}
               />
             </picture>
           ) : (
@@ -36,8 +36,8 @@ export const ArticleListItem = ({ article }: Props) => (
                 className={styles.image}
                 src="/img/bee_business-min.jpg?fit=crop&w=240&h=126"
                 alt="画像が設定されていません"
-                width={240}
-                height={126} 
+                width={380}
+                height={180} 
               />
           )}
           <dl className={styles.content}>
