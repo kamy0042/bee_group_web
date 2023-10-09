@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import { Article } from "../../../libs/microcms";
 import styles from './index.module.scss';
 import { PublishedDate } from "../Date";
@@ -39,7 +39,10 @@ export const ArticleListItem = ({ article }: Props) => (
               alt="No Image"
               width={1200}
               height={630}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           )}
           <dl className={styles.content}>
             <dt className={styles.title}>{article.title}</dt>
