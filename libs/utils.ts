@@ -11,6 +11,10 @@ export const formatDate = (date: string) => {
 };
 
 export const formatRichText = (richText: string) => {
+  if(!richText){
+    return '本文がありません';
+  }
+  
   const $ = cheerio.load(richText);
   const highlight = (text: string, lang?: string) => {
     if (!lang) return hljs.highlightAuto(text);
