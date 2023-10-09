@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import { Article } from "../../../libs/microcms";
 import styles from './index.module.scss';
 import { PublishedDate } from "../Date";
@@ -8,6 +8,7 @@ type Props = {
   article: Article;
 };
 
+// eslint-disable-next-line import/prefer-default-export
 export const ArticleListItem = ({ article }: Props) => (
     <li className={styles.list}>
       <Link href={`/articles/${article.id}`} className={styles.link}>
