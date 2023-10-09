@@ -9,7 +9,7 @@
 
 .image {
   width: 240px;
-  height: auto;
+  object-fit: cover;
 }
 
 .title {
@@ -23,8 +23,8 @@
     display: block;
   }
   .image {
-    width: 100%;
-    height: auto;
+    width: 240px;
+    object-fit: cover;
     margin-bottom: 1rem;
   }
 

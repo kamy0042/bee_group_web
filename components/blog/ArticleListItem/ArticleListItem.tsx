@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from "next/image";
 import { Article } from "../../../libs/microcms";
 import styles from './index.module.scss';
 import { PublishedDate } from "../Date";
@@ -25,24 +24,21 @@ export const ArticleListItem = ({ article }: Props) => (
                 srcSet={`${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126 1x, ${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126&dpr=2 2x`}
               />
               <img
-                src={article.thumbnail?.url || `/noimage.png`}
+                src={article.thumbnail?.url || `/img/bee_image_1-min.jpg`}
                 alt=""
                 className={styles.image}
-                width={article.thumbnail?.width}
-                height={article.thumbnail?.height}
+                width={240}
+                height={126}
               />
             </picture>
           ) : (
-            <Image
-              className={styles.image}
-              src="/no-image.png"
-              alt="No Image"
-              width={1200}
-              height={630}
-              style={{
-                maxWidth: "100%",
-                height: "auto"
-              }} />
+              <img
+                className={styles.image}
+                src="/img/bee_business-min.jpg?fit=crop&w=240&h=126"
+                alt="画像が設定されていません"
+                width={240}
+                height={126} 
+              />
           )}
           <dl className={styles.content}>
             <dt className={styles.title}>{article.title}</dt>
