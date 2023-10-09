@@ -1,8 +1,10 @@
 // @ts-ignore
+import Link from "next/link";
 import { Article as ArticleType } from "../../../libs/microcms";
 import styles from './index.module.scss'
 import { PublishedDate } from "../Date";
 import { formatRichText } from "../../../libs/utils";
+import utilStyles from "../../../styles/Util.module.scss";
 
 type Props = {
   data: ArticleType;
@@ -65,5 +67,11 @@ export const Article = ({ data }: Props) => (
           __html: `${formatRichText(data.content)}`,
         }}
       />
+
+      <div className={utilStyles.linkButton}>
+        <Link href='/blog/'>
+          記事一覧に戻る
+        </Link>
+      </div>
     </main>
   )
