@@ -7,9 +7,9 @@ const Header = () => (
     <h1 className={styles.logo}>
       <Link href="/">
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a>
-          <img src="/img/bee_logo_white.svg" width="235px" height="36px" alt="bee_dandy" />
-        </a>
+
+        <img src="/img/bee_logo_white.svg" width="235px" height="36px" alt="bee_dandy" />
+
       </Link>
     </h1>
   </header>

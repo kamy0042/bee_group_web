@@ -1,0 +1,63 @@
+@import '/styles/common.scss';
+
+.link {
+  display: flex;
+  gap: 40px;
+}
+
+.image {
+  object-fit: cover;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  width: 360px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
+}
+
+.button {
+  padding: 0;
+  border: none;
+}
+
+.content {
+  padding: 1rem;
+}
+
+.date {
+  color: #7d6547;
+}
+
+@include sp {
+  .list {
+    width: 100%;
+  }
+  .button {
+    width:100%;
+  }
+  .title{
+    width:100%;
+    text-overflow: initial;
+    overflow: initial;
+    white-space: initial;
+  }
+}
+
+@media (max-width: 640px) {
+  .link {
+    display: block;
+  }
+  .image {
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+}

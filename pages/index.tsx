@@ -24,7 +24,7 @@ const Merit = ({ num, title, text, img, link, otherPageLink, linkTxt }: MeritPro
       <p>{text}</p>
       {link && (
         <div className={styles.merit_link}>
-          <Link href={link}>{linkTxt || "詳しく見る"}</Link>
+          <Link href={link} legacyBehavior>{linkTxt || "詳しく見る"}</Link>
         </div>
       )}
       {otherPageLink && (
@@ -58,7 +58,7 @@ const LinkBox = ({ className, link, title, sub, description }: LinkBoxProps) => 
     <div className={styles.linkBox_link}>
       <Link href={link}>
         {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a>Read More</a>
+        Read More
       </Link>
     </div>
   </div>
