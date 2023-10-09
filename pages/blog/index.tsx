@@ -13,6 +13,7 @@ export const getServerSideProps = (async () => {
 
 type Props = InferGetServerSidePropsType<typeof getServerSideProps>
 
+// ToDo 後でnoindexを消す
 const Blog = ({list}:Props) => (
   <>
     <Head>
@@ -21,6 +22,7 @@ const Blog = ({list}:Props) => (
         name="description"
         content="新橋の男性専門美容室 Bee dandyのブログです"
       />
+      <meta name="robots" content="noindex" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
