@@ -33,6 +33,21 @@
   color: #7d6547;
 }
 
+@include sp {
+  .list {
+    width: 100%;
+  }
+  .button {
+    width:100%;
+  }
+  .title{
+    width:100%;
+    text-overflow: initial;
+    overflow: initial;
+    white-space: initial;
+  }
+}
+
 @media (max-width: 640px) {
   .link {
     display: block;
