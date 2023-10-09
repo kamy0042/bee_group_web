@@ -12,7 +12,6 @@ type Props = {
 export const Article = ({ data }: Props) => (
     <main className={styles.main}>
       <h1 className={styles.title}>{data.title}</h1>
-      <p className={styles.description}>{data.description}</p>
       <div className={styles.meta}>
         {data.writer && (
           <div className={styles.writer}>
