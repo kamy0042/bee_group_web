@@ -10,7 +10,10 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
     <nav className={`${styles.wrap} ${isOpen && styles.openedWrap}`}>
       {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <button className={`${styles.button} ${isOpen && styles.openedBtn}`} onClick={onClick} type="button" />
-      <ul className={styles.nav}>
+      <ul className={`${styles.nav}`}>
+        <li className={`${styles.nav_link} ${styles.spOnly}`} onClick={onClick}>
+          <Link href="/">Top</Link>
+        </li>
         <li className={styles.nav_link} onClick={onClick}>
           <Link href="/menu/">Menu</Link>
         </li>
@@ -18,18 +21,13 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
           <Link href="/salon/">Salon</Link>
         </li>
         <li className={styles.nav_link}>
-          <Link href="/waxing/">脱毛</Link>
-        </li>
-        <li className={styles.nav_link}>
           <Link href="/staff/">Staff</Link>
         </li>
         <li className={styles.nav_link}>
           <Link href="/faq/">FAQ</Link>
         </li>
-        <li className={`${styles.spOnly}`}>
-          <a href="https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091" target="_blank" rel="noreferrer">
-            Bee dandy スタイルブック
-          </a>
+        <li className={styles.nav_link}>
+          <Link href="/waxing/">脱毛</Link>
         </li>
         <li className={`${styles.nav_link}`}>
           <Link href="/recruit/">スタッフ募集</Link>
