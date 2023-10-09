@@ -25,6 +25,10 @@ module.exports = {
       "/waxing": {
         page: "/waxing",
       },
+      "/blog": {
+        page: "/blog",
+      },
+
     };
   },
 };
