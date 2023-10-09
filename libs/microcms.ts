@@ -48,14 +48,12 @@ export const client = createClient({
 
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
-  console.log('getlist');
   const listData = await client
     .getList<Blog>({
       endpoint: 'blog',
       queries,
     })
     .catch(e => {
-      console.log(e);
       throw new Error(e);
     });
   return listData;
