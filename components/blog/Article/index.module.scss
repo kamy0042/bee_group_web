@@ -46,8 +46,9 @@
 
 .thumbnail {
   width: 960px;
-  height: auto;
+  height: 540px;
   margin-bottom: 64px;
+  object-fit: cover;
 }
 
 .content {

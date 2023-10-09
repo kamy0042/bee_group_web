@@ -24,7 +24,7 @@ export const ArticleListItem = ({ article }: Props) => (
                 srcSet={`${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126 1x, ${article.thumbnail?.url}?fm=webp&fit=crop&w=240&h=126&dpr=2 2x`}
               />
               <img
-                src={article.thumbnail?.url || `/img/bee_image_1-min.jpg`}
+                src={article.thumbnail?.url}
                 alt=""
                 className={styles.image}
                 width={380}

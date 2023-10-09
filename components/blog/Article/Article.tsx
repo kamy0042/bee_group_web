@@ -34,24 +34,32 @@ export const Article = ({ data }: Props) => (
         )}
         <PublishedDate date={data.publishedAt || data.createdAt} />
       </div>
-      <picture>
-        <source
-          type="image/webp"
-          media="(max-width: 640px)"
-          srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
-        />
-        <source
-          type="image/webp"
-          srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
-        />
+      {data.thumbnail?.url ? 
+          <picture>
+            <source
+              type="image/webp"
+              media="(max-width: 640px)"
+              srcSet={`${data.thumbnail?.url}?fm=webp&w=414 1x, ${data.thumbnail?.url}?fm=webp&w=414&dpr=2 2x`}
+            />
+            <source
+              type="image/webp"
+              srcSet={`${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504 1x, ${data.thumbnail?.url}?fm=webp&fit=crop&w=960&h=504&dpr=2 2x`}
+            />
+            <img
+              src={data.thumbnail?.url || '/img/bee_image_1-min.jpg'}
+              alt=""
+              className={styles.thumbnail}
+              width={data.thumbnail?.width}
+              height={data.thumbnail?.height}
+            />
+        </picture>  : 
         <img
-          src={data.thumbnail?.url}
+          src='/img/bee_business-min.jpg'
           alt=""
           className={styles.thumbnail}
           width={data.thumbnail?.width}
           height={data.thumbnail?.height}
-        />
-      </picture>
+        />}
       <div
         className={styles.content}
         dangerouslySetInnerHTML={{
