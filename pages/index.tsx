@@ -42,7 +42,7 @@ type LinkBoxProps = {
   className: string;
   link: string;
   title: string;
-  sub: string;
+  sub?: string;
   description: string;
 };
 
@@ -50,8 +50,8 @@ const LinkBox = ({ className, link, title, sub, description }: LinkBoxProps) => 
   <div className={`${styles.linkBox} ${styles[`linkBox_${className}`]}`}>
     <dl className={styles.linkBox_text}>
       <dt>
-        <span className={styles.linkBox_title}>{title}</span>
-        <span className={styles.linkBox_sub}>{sub}</span>
+        <span className={sub ? styles.linkBox_title : styles.linkBox_jpTitle}>{title}</span>
+        {sub && <span className={styles.linkBox_sub}>{sub}</span>}
       </dt>
       <dd className={styles.linkBox_subText}>{description}</dd>
     </dl>
@@ -94,6 +94,10 @@ const Index = () => {
           <dt>News</dt>
           <dd>
             <ul>
+              <li>
+                <span>2023.10.03</span>
+                <span>【10月の店休日】10/22 (日)</span>
+              </li>
               <li>
                 <span>2023.08.31</span>
                 <Link href='/waxing/'>【お知らせ】メンズ脱毛オープンしました</Link>
@@ -220,6 +224,14 @@ const Index = () => {
                   link="/faq/"
                   className={isSafari ? "faq_noWebp" : "faq"}
                   description="〈美容室〉と〈理容室〉の違いって何でしょうか？"
+                />
+              </li>
+              <li>
+                <LinkBox
+                  title="脱毛"
+                  link="/waxing/"
+                  className={isSafari ? "waxing_noWebp" : "waxing"}
+                  description="ビジネスマンの脱毛デビューは、Bee dandyが安心です"
                 />
               </li>
             </ul>
