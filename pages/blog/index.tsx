@@ -3,6 +3,7 @@ import { InferGetServerSidePropsType } from "next";
 import MainLayout from "../../components/template/MainLayout";
 import { getList } from "../../libs/microcms";
 import ArticleList from "../../components/blog/ArticleList/ArticleList";
+import styles from "../../styles/Waxing.module.scss";
 
 
 export const getServerSideProps = (async () => {
@@ -25,6 +26,7 @@ const Blog = ({list}:Props) => (
 
     <MainLayout>
       <div>
+        <h2 className={styles.heading}>Blog</h2>
         <ArticleList articles={list.contents} />
       </div>
     </MainLayout>
