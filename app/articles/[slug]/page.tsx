@@ -1,4 +1,4 @@
-import { getDetail } from "../../../libs/microcms";
+import { getDetail, getList } from "../../../libs/microcms";
 import { Article } from "../../../components/blog/Article/Article";
 
 type Props = {
@@ -28,6 +28,11 @@ export async function generateMetadata({ params, searchParams }: Props): Promise
       images: [data?.thumbnail?.url || ''],
     },
   };
+}
+
+export async function generateStaticParams() {
+  const posts = await getList();
+  return posts.contents.map(item => ({slug:item.id}))
 }
 
 export default async function Page({ params, searchParams }: Props) {
