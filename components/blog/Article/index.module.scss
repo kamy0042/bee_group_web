@@ -197,6 +197,13 @@
   padding: 1rem;
 }
 
+@include sp {
+  .main{
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+}
+
 @media (max-width: 640px) {
   .title {
     font-size: 2rem;
