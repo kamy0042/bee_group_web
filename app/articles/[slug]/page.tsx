@@ -5,18 +5,13 @@ type Props = {
   params: {
     slug: string;
   };
-  searchParams: {
-    dk: string;
-  };
 };
 
 export const revalidate = 60;
 
 // ToDo 後でnoindexを消す
-export async function generateMetadata({ params, searchParams }: Props): Promise<any> {
-  const data = await getDetail(params.slug, {
-    draftKey: searchParams.dk,
-  });
+export async function generateMetadata({ params }: Props): Promise<any> {
+  const data = await getDetail(params.slug);
 
   return {
     title: data.title,
@@ -35,10 +30,8 @@ export async function generateStaticParams() {
   return posts.contents.map(item => ({slug:item.id}))
 }
 
-export default async function Page({ params, searchParams }: Props) {
-  const data = await getDetail(params.slug, {
-    draftKey: searchParams.dk,
-  });
+export default async function Page({ params }: Props) {
+  const data = await getDetail(params.slug);
 
   return <Article data={data} />;
 }

@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "build": "next build && next export",
+        "build": "next build",
         "start": "next start",
         "lint": "eslint libs/** pages/** components/**",
         "lint --fix": "eslint libs/** pages/** components/** && prettier --write"
@@ -25,6 +25,7 @@
         "typescript": "^4.7.4"
     },
     "devDependencies": {
+        "@netlify/plugin-nextjs": "^4.40.3-rc.0",
         "@types/gtag.js": "^0.0.10",
         "@types/node": "^18.0.1",
         "@types/react": "^18.0.14",
