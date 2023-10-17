@@ -39,6 +39,11 @@ export const waxingCollection = [
                 price: "4,400",
                 discount: "3,850",
             },
+            {
+                category: "鼻毛（ワックス脱毛）",
+                price: "2,530",
+                discount: "1,980",
+            },
         ],
     },
     {
