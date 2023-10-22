@@ -6,6 +6,7 @@ import { waxingCollection } from "../../data/waxing.data";
 import WebpImage from "../../components/WebpImage";
 import { CtaButton } from "../../components/CtaButton";
 import { RESERVE_URL } from "../../public/static";
+import utilStyles from "../../styles/Util.module.scss";
 
 const renderTable = (title, data, subtitle) => (
   <section key={title} className={styles.table}>
@@ -56,6 +57,11 @@ function Waxing() {
             <div className={styles.concept_textArea}>
               <p>「毎日のひげ剃りを楽にしたい」「手や足の毛を嫌がられない程度に薄くしたい」「でも脱毛サロンへ通うのはハードルが高いし、そもそも脱毛について聞くこと自体が恥ずかしい」こんなお悩みを抱えていませんか？</p>
               <p>そこで、ビジネスマン比率90％以上、口コミ評価★4.9以上*の男性専門美容室に、メンズ脱毛サロンを併設しました。もう、毎朝のひげ剃り、髪のスタイリングに悩まなくていいんです！メンズは頭皮も髪の毛も、そしてお肌も繊細。だから、ヘアスタイル、白髪や毛量、眉毛の手入れ、そしてムダ毛処理まで、一人ひとりの個性に合わせて、あなたのお悩みをカッコよく解決します。</p>
+              <div>
+                <div className={utilStyles.linkButton}>
+                  <a href='https://instagram.com/beedandy_epilation_official?igshid=NTc4MTIwNjQ2YQ==' target='_blank' rel="noreferrer">Instagramを見る</a>
+                </div>
+              </div>
               <p className={styles.sub}>＊ Googleビジネスプロフィール、HotPepper Beautyのクチコミ評価</p>
             </div>
           </section>
