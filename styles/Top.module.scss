@@ -290,6 +290,12 @@
     &_waxing_noWebp::before{
         background: url('../public/img/bee_removal-min.jpg') no-repeat center 70% / cover;
     }
+    &_blog::before{
+        background: url('../public/img/webp/bee_business-min.webp') no-repeat center 70% / cover;
+    }
+    &_blog_noWebp::before{
+        background: url('../public/img/bee_business-min.jpg') no-repeat center 70% / cover;
+    }
 
     &_text{
         display: flex;
