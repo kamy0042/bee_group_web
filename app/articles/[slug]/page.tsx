@@ -9,14 +9,12 @@ type Props = {
 
 export const revalidate = 60;
 
-// ToDo 後でnoindexを消す
 export async function generateMetadata({ params }: Props): Promise<any> {
   const data = await getDetail(params.slug);
 
   return {
     title: data.title,
     description: data.description,
-    robots:'noindex',
     openGraph: {
       title: data.title,
       description: data.description,

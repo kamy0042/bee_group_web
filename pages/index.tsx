@@ -234,6 +234,15 @@ const Index = () => {
                   description="ビジネスマンの脱毛デビューは、Bee dandyが安心です"
                 />
               </li>
+              <li>
+                <LinkBox
+                  title="Blog"
+                  sub="ブログ"
+                  link="/blog/"
+                  className={isSafari ? "blog_noWebp" : "blog"}
+                  description="Bee dandyの最新情報をお届けします"
+                />
+              </li>
             </ul>
           </section>
         </div>

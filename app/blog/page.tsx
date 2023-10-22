@@ -5,12 +5,10 @@ import styles from "../../styles/Waxing.module.scss";
 
 export const revalidate = 60;
 
-// ToDo 後でnoindexを消す
 export async function generateMetadata(): Promise<any> {
   return {
     title: 'Blog | 男性専門美容室 Bee dandy',
     description: '新橋の男性専門美容室 Bee dandyのブログです',
-    robots:'noindex',
   };
 }
 
