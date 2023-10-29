@@ -106,10 +106,6 @@ const Index = () => {
                 <span>2023.08.31</span>
                 <Link href='/waxing/'>【お知らせ】メンズ脱毛オープンしました</Link>
               </li>
-              <li>
-                <span>2023.08.27</span>
-                <span>【9月の店休日】9/10 (日)</span>
-              </li>
               
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
