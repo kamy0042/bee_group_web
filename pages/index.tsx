@@ -95,6 +95,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2024.02.26</span>
+                <span>【3月の店休日】3/10 (日)</span>
+              </li>
+              <li>
                 <span>2024.01.31</span>
                 <span>【2月の店休日】2/18 (日)</span>
               </li>
@@ -102,10 +106,7 @@ const Index = () => {
                 <span>2023.12.21</span>
                 <span>【1月の店休日】1/28 (日)</span>
               </li>
-              <li>
-                <span>2023.12.03</span>
-                <Link target='_blank' href='https://beegroup.tokyo/articles/9ld59aa-ndjo'>年末年始休暇のお知らせ</Link>
-              </li>
+
 
     
 
