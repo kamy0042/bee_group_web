@@ -1,5 +1,5 @@
 import { AppProps } from "next/app";
-import usePageView from "../libs/usePageView";
+import { usePageView } from "../libs/usePageView";
 import "../styles/common.scss";
 import "../styles/globals.scss";
 

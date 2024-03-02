@@ -2,7 +2,8 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "./gtag";
 
-export default function usePageView() {
+// eslint-disable-next-line import/prefer-default-export
+export const usePageView = () => {
   const router = useRouter();
 
   useEffect(() => {
