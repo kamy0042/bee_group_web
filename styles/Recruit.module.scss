@@ -72,7 +72,6 @@
   position: relative;
   margin-top: 1.5rem;
   text-align: left;
-  padding-left: 1.5rem;
   @include pc {
     font-size: $text-large;
     text-align: center;
@@ -80,26 +79,14 @@
   & + p {
     margin-top: 1.5rem;
   }
-  &::before{
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 0.5rem;
-    height: 100%;
-    background: #FFF;
-    border-radius: 999px;
-    @include pc {
-      content: none;
-    }
-  }
 }
 
 .message {
   margin-top: 3rem;
-  border:solid thin;
   padding:1rem;
-  margin-top: 1rem;
+  p + p {
+    margin-top: 1rem;
+  }
   @include pc {
     margin-top: 6rem;
     display: flex;
@@ -144,6 +131,17 @@
   }
   & + .detail {
     margin-top: 5rem;
+  }
+}
+
+.messageText {
+  color:$color-sub;
+  font-size: 1.2em;
+  margin-bottom: 0.75rem;
+  margin-top: 3rem;
+  padding-bottom: 0.75rem;
+  @include pc {
+    font-size: 1.4em;
   }
 }
 
@@ -214,7 +212,7 @@
 
 .icon {
   color: #fff;
-  background-color: #d3b894;
+  background-color: #c0a47f;
   font-weight: bold;
   padding: 0.25rem 0.75rem;
   border-radius: 50px;
@@ -280,7 +278,16 @@
   & > li + li {
     margin-top: 0.25rem;
   }
+}
 
+.star {
+  position: relative;
+  color: $color-sub;
+  &::before{
+    content: '★';
+    display: inline-block;
+    margin-right: 5px;
+  }
 }
 
 .recruitDetail {
@@ -288,6 +295,12 @@
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: dotted thin;
+  }
+  & > dd > p + p {
+    margin-top: 1rem;
+  }
+  .comment {
+    margin-top: 1rem;
   }
   @include pc {
     & > dd + dt {
