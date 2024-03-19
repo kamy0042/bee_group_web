@@ -2,7 +2,9 @@ import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Recruit.module.scss";
 import { CtaButton } from "../../components/CtaButton";
-import { SHOP_INFO } from "../../public/static/index";
+import { SHOP_INFO } from "../../public/static";
+
+const jobPageURL = 'https://relax-job.com/job/B5729926/sid/763387?keywords=bee%20dandy'
 
 const CtaBox = ({isExtend}:{isExtend?:boolean}) => (
   <dl className={styles.ctaBox}>
@@ -21,7 +23,7 @@ const CtaBox = ({isExtend}:{isExtend?:boolean}) => (
       </p>
     </dd>
     <dd className={styles.btn}>
-      <CtaButton text="応募する・見学する・問い合わせする" link="https://work.salonboard.com/slnH000530403/input/" />
+      <CtaButton text="応募する・見学する・問い合わせする" link={jobPageURL} />
     </dd>
     {isExtend ?
       <dd className={styles.tel}>
@@ -207,7 +209,7 @@ const Recruit = () => (
             <div className={styles.btn}>
               <CtaButton
                 text="応募する・見学する・問い合わせする"
-                link="https://work.salonboard.com/slnH000530403/input/"
+                link={jobPageURL}
               />
             </div>
           </section>
@@ -263,7 +265,7 @@ const Recruit = () => (
             <div className={styles.btn}>
               <CtaButton
                 text="応募する・見学する・問い合わせする"
-                link="https://work.salonboard.com/slnH000530403/input/"
+                link={jobPageURL}
               />
             </div>
           </section>
@@ -379,7 +381,7 @@ const Recruit = () => (
             <div className={styles.btn}>
               <CtaButton
                 text="応募する・見学する・問い合わせする"
-                link="https://work.salonboard.com/slnH000530403/input/"
+                link={jobPageURL}
               />
             </div>
           </section>
