@@ -79,7 +79,7 @@ const Salon = () => (
                 <Link href='/voice/'>お客様の声を見る</Link>
               </div>
               <div className={utilStyles.linkButton}>
-                <a href='https://www.adjustbook.com/doc/Index/show/us/11750/bk/15091' target='_blank' rel="noreferrer">Bee dandy スタイルブックを見る</a>
+                <a href='https://www.adjustbook.com/doc/us/11750/bk/17160' target='_blank' rel="noreferrer">Bee dandy スタイルブックを見る</a>
               </div>
               <div className={utilStyles.linkButton}>
                 <Link href='/blog/'>ブログを見る</Link>
