@@ -42,21 +42,21 @@ const Info = () => (
 );
 
 // eslint-disable-next-line no-undef
-const MainLayout = ({ children, noHeaderImg }: { children: React.ReactNode; noHeaderImg?: boolean }) => {
+const MainLayout = ({ children, noHeaderImg, isLight }: { children: React.ReactNode; noHeaderImg?: boolean; isLight?:boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => setIsOpen(!isOpen);
 
   return (
     <div className={`${styles.wrap} ${isOpen && styles.isOpen}`}>
-      <div className={`${noHeaderImg ? styles.innerNoImg : styles.inner}`}>
-        <div className={styles.headerArea}>
+      <div className={`${noHeaderImg ? styles.innerNoImg : styles.inner} ${isLight && styles.lightInner}`}>
+        <div className={`${styles.headerArea} ${isLight && styles.lightHeader}`}>
           <div className={styles.headerAreaInner}>
             <Header />
             <Navigation isOpen={isOpen} onClick={handleClick} />
           </div>
           <Info />
         </div>
-        <main className={styles.main}>{children}</main>
+        <main className={`${styles.main} ${isLight && styles.light}`}>{children}</main>
       </div>
       <Footer />
     </div>

@@ -29,7 +29,7 @@ const CtaBox = ({isExtend}:{isExtend?:boolean}) => (
       <dd className={styles.tel}>
       <p>お急ぎの方、事情がある方はお電話でも対応しております</p>
       <p>
-        <a href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>{SHOP_INFO.TEL}</a>（Bee dandy）
+        <a className={styles.lightLink}  href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>{SHOP_INFO.TEL}</a>（Bee dandy）
         <br className={styles.pcNone} />
         担当：松井 までご連絡ください。
       </p>
@@ -128,12 +128,12 @@ const Recruit = () => (
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scheme) }}
       />
     </Head>
-    <MainLayout noHeaderImg>
+    <MainLayout noHeaderImg isLight>
       <div className={styles.contents}>
         <section>
           <h1 className={styles.heading}>スタイリスト急募！</h1>
           <div className={styles.headerCopy}>
-            <p className={styles.headerCopyItem}>家庭も仕事も頑張るパパ／ママ美容師さん大歓迎！</p>
+            <p className={`${styles.headerCopyItem}`}>家庭も仕事も頑張るパパ／ママ美容師さん大歓迎！</p>
             <p className={styles.star}>一緒に働く仲間の家族も大切にするサロン</p>
             <p className={styles.star}>毎月1回は日曜店休／1週間の連休取得もOK</p>
           </div>
@@ -408,7 +408,7 @@ const Recruit = () => (
               <div>
                 <dt>ホームページ</dt>
                 <dd>
-                  <a href="https://beegroup.tokyo/">https://beegroup.tokyo/</a>
+                  <a className={styles.lightLink} href="https://beegroup.tokyo/">https://beegroup.tokyo/</a>
                 </dd>
               </div>
             </dl>

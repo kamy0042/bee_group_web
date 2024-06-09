@@ -57,6 +57,27 @@
     margin-bottom: 3rem;
 }
 
+.light {
+    background-color: #fff;
+    color: $color-main;
+    padding: $padding-container-sp $padding-container-sp 3rem;
+    margin-bottom: 0;
+    @include pc {
+        padding: $padding-container $padding-container 2rem;
+    }
+}
+.lightInner {
+    padding: 0;
+    margin-bottom: 0;
+}
+.lightHeader {
+    padding: $padding-container-sp $padding-container-sp 0!important;
+    @include pc {
+        padding: $padding-container $padding-container 2rem!important;
+    }
+}
+
+
 @include pc {
     .headerArea{
         padding:  0 0 2rem;

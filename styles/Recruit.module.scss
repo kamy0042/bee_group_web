@@ -1,5 +1,6 @@
 @import 'common.scss';
 
+
 @include pc{
   .contents{
     width: $width-container;
@@ -28,7 +29,7 @@
     content: '';
     width:2rem;
     height: 1px;
-    background-color: #fff;
+    background-color: $color-main;
     display: block;
     margin-right: 1rem;
   }
@@ -36,7 +37,7 @@
     content: '';
     width:2rem;
     height: 1px;
-    background-color: #fff;
+    background-color: $color-main;
     display: block;
     margin-left: 1rem;
   }
@@ -60,7 +61,7 @@
   margin-top: 2rem;
   font-weight: bold;
   & > p:first-of-type{
-    color: $color-sub;
+    color: $color-sub-light;
     text-decoration: underline;
     font-size: $text-large-sp;
     @include pc {
@@ -68,6 +69,8 @@
     }
   }
 }
+
+
 .headerCopyItem {
   position: relative;
   margin-top: 1.5rem;
@@ -135,7 +138,7 @@
 }
 
 .messageText {
-  color:$color-sub;
+  color:$color-sub-light;
   font-size: 1.2em;
   margin-bottom: 0.75rem;
   margin-top: 3rem;
@@ -148,7 +151,7 @@
 .description{
   margin-top: 5rem;
   & > h3 {
-    color:$color-sub;
+    color:$color-sub-light;
     font-size: 1.2em;
     margin-bottom: 0.75rem;
     padding-bottom: 0.75rem;
@@ -203,7 +206,7 @@
   padding-left: 1.2em;
   &::before{
     content: '■';
-    color: #fff;
+    color: $color-main;
     position: absolute;
     left: 0;
     top: 0;
@@ -219,7 +222,7 @@
 }
 
 .comment {
-  color:$color-sub;
+  color:$color-sub-light;
   font-weight: bold;
 }
 
@@ -244,8 +247,8 @@
       left: 0;
       width: 12px;
       height: 7px;
-      border-left: 3px solid $color-sub;
-      border-bottom: 3px solid $color-sub;
+      border-left: 3px solid $color-sub-light;
+      border-bottom: 3px solid $color-sub-light;
       transform: rotate(-45deg);
     }
   }
@@ -270,7 +273,7 @@
   }
   & > li::before{
     content: '・';
-    color: #fff;
+    color: $color-main;
     position: absolute;
     left: 0;
     top: 0;
@@ -282,7 +285,7 @@
 
 .star {
   position: relative;
-  color: $color-sub;
+  color: $color-sub-light;
   &::before{
     content: '★';
     display: inline-block;
@@ -320,7 +323,7 @@
   }
   dt::before{
     content: '■';
-    color: #fff;
+    color: $color-main;
     position: absolute;
     left: 0;
     top: 0;
@@ -389,6 +392,9 @@
     font-size: 1.4em;
     margin-bottom: 1.5rem;
   }
+}
 
-
+.lightLink {
+  color: $color-main;
+  text-decoration: underline;
 }
