@@ -3,6 +3,7 @@ import Link from "next/link";
 import MainLayout from "../components/template/MainLayout";
 import useIsSafari from "../libs/useIsSafari";
 import styles from "../styles/Top.module.scss";
+import { SALON_NAME } from "../constants";
 
 type MeritProps = {
   num: string;
@@ -70,7 +71,7 @@ const Index = () => {
   return (
     <>
       <Head>
-        <title>男性専門美容室 Bee dandy</title>
+        <title>{SALON_NAME}</title>
         <meta
           name="description"
           content="Bee dandy（ビーダンディー）は大人ビジネスマンのための男性専門の美容室＆メンズ脱毛サロン。お一人おひとりに合わせたベストな解決策と施術をご提供し、「魅力と自信」に満ち溢れたあなたの実現をサポートします。"

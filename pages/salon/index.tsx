@@ -6,11 +6,12 @@ import { SHOP_INFO } from "../../public/static";
 import styles from "../../styles/Salon.module.scss";
 import WebpImage from "../../components/WebpImage";
 import utilStyles from "../../styles/Util.module.scss";
+import { SALON_NAME } from "../../constants";
 
 const Salon = () => (
   <>
     <Head>
-      <title>店舗情報 | 男性専門美容室 Bee dandy</title>
+      <title>店舗情報 | {SALON_NAME}</title>
       <meta
         name="description"
         content="新橋の男性専門美容室 Bee dandyの店舗情報です。営業時間や私たちの思いをご紹介します"

@@ -5,6 +5,7 @@ import PageImage from "../../components/PageImage";
 import styles from "../../styles/Staff.module.scss";
 import utilStyles from "../../styles/Util.module.scss"
 import useIsSafari from "../../libs/useIsSafari";
+import { SALON_NAME } from "../../constants";
 
 type StaffProfileProps = {
   className: string;
@@ -45,7 +46,7 @@ function Staff() {
   return (
     <>
       <Head>
-        <title>スタッフ一覧 | 男性専門美容室 Bee dandy</title>
+        <title>スタッフ一覧 | {SALON_NAME}</title>
         <meta
           name="description"
           content="新橋の男性専門美容室 Bee dandyで働くスタッフ一覧です。スタッフのプロフィールやお客様へのメッセージ、これまで手がけてきた事例をご紹介します。"

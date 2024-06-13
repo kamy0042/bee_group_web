@@ -2,11 +2,12 @@ import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
 import PageImage from "../../components/PageImage";
 import styles from "../../styles/Faq.module.scss";
+import { SALON_NAME } from "../../constants";
 
 const Faq = () => (
   <>
     <Head>
-      <title>よくある質問 | 男性専門美容室 Bee dandy</title>
+      <title>よくある質問 | {SALON_NAME}</title>
       <meta
         name="description"
         content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。コースやお支払い方法の詳細など、あなたの疑問にお答えします"

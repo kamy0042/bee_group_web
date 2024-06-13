@@ -2,11 +2,12 @@ import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Top.module.scss";
 import voiceStyle from "../../styles/Staff.module.scss";
+import { SALON_NAME } from "../../constants";
 
 const Voice = () => (
   <>
     <Head>
-      <title>お客様の声 | 男性専門美容室 Bee dandy</title>
+      <title>お客様の声 | {SALON_NAME}</title>
       <meta name="description" content="新橋の男性専門美容室 Bee dandyに寄せられたお客様の声をご紹介します" />
       <link rel="icon" href="/favicon.ico" />
     </Head>

@@ -7,6 +7,7 @@ import WebpImage from "../../components/WebpImage";
 import { CtaButton } from "../../components/CtaButton";
 import { RESERVE_URL } from "../../public/static";
 import utilStyles from "../../styles/Util.module.scss";
+import { SALON_NAME } from "../../constants";
 
 const renderTable = (title, data, subtitle) => (
   <section key={title} className={styles.table}>
@@ -39,7 +40,7 @@ function Waxing() {
   return (
     <>
       <Head>
-        <title>メンズ脱毛 | 男性専門美容室 Bee dandy</title>
+        <title>メンズ脱毛 | {SALON_NAME}</title>
         <meta name="description" content="大人ビジネスマンのためのメンズ脱毛サロン。男性専門美容室に併設。男のおしゃれ・身だしなみに必須のヒゲ脱毛・全身脱毛・VIO脱毛。初めての脱毛デビューならBee dandy（ビーダンディー）が安心。痛みの少ない国産の光脱毛マシンで安心。" />
         <link rel="icon" href="/public/favicon.ico" />
       </Head>

@@ -3,6 +3,7 @@ import MainLayout from "../../components/template/MainLayout";
 import styles from "../../styles/Recruit.module.scss";
 import { CtaButton } from "../../components/CtaButton";
 import { SHOP_INFO } from "../../public/static";
+import { SALON_NAME } from "../../constants";
 
 const jobPageURL = 'https://relax-job.com/job/B5729926/sid/763387?keywords=bee%20dandy'
 
@@ -119,7 +120,7 @@ const scheme = {
 const Recruit = () => (
   <>
     <Head>
-      <title>スタッフ募集 | 男性専門美容室 Bee dandy</title>
+      <title>スタッフ募集 | {SALON_NAME}</title>
       <meta name="description" content="新橋の男性専門美容室 Bee dandyでは共に働いてくれるスタッフを募集しています" />
       <link rel="icon" href="/favicon.ico" />
       <script
