@@ -186,7 +186,8 @@ const Recruit = () => (
           <section className={styles.description}>
             <h3>求める人物像</h3>
             <div className={styles.descriptionContent}>
-              <div>
+              <img src="/img/recruit/staff_cut_01.jpg" alt="カット風景" />
+              <div className={styles.descriptionTextArea}>
                 <p>家庭も仕事も頑張るパパ／ママ美容師さん、自分のアイディアを活かして、どんどん稼ぎたいスタイリストさん、美容の仕事が好きな方、スキル向上を目指す方、稼ぎたい方は副業もOKです。<br/> 
                   ぜひお待ちしております！
                 </p>
@@ -197,7 +198,7 @@ const Recruit = () => (
           <section className={styles.description}>
             <h3>スタッフの声</h3>
             <div className={styles.descriptionContent}>
-              <img src="/img/recruit/staff_cut_01.jpg" alt="カット風景" />
+              <img style={{objectFit: 'cover', aspectRatio:'3/2', objectPosition:'0 14%'}} src='/img/staff/2405_uchiyama_02.jpg' alt='脱毛スタッフ' />
               <div className={styles.descriptionTextArea}>
                 <dl className={styles.descriptionInner}>
                   <dt>・ スタイリスト</dt>
