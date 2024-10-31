@@ -96,6 +96,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2024.10.31</span>
+                <span>【11月の店休日】11/10 (日)</span>
+              </li>
+              <li>
                 <span>2024.10.01</span>
                 <a href="https://beegroup.tokyo/articles/sm_hyxby9omf" target="_blank" rel="noreferrer">
                   【お知らせ】スタイリスト指名なしのご予約について
@@ -105,10 +109,7 @@ const Index = () => {
                 <span>2024.09.26</span>
                 <span>【10月の店休日】10/13 (日)</span>
               </li>
-              <li>
-                <span>2024.08.25</span>
-                <span>【9月の店休日】9/15 (日)</span>
-              </li>
+
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
               {/*   <Link href="/recruit/">【求人情報】スタイリスト、アシスタント 大至急募集！</Link> */}
