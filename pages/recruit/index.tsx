@@ -5,7 +5,7 @@ import { CtaButton } from "../../components/CtaButton";
 import { SHOP_INFO } from "../../public/static";
 import { SALON_NAME } from "../../constants";
 
-const jobPageURL = 'https://relax-job.com/job/B5729926/sid/763387?keywords=bee%20dandy'
+const jobPageURL = 'https://work.beauty.hotpepper.jp/WC00004323/WS0000011338/'
 
 const CtaBox = ({isExtend}:{isExtend?:boolean}) => (
   <dl className={styles.ctaBox}>
