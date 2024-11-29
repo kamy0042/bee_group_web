@@ -96,18 +96,16 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2024.11.30</span>
+                <span>【年末年始休業】12/30 (月) 〜 1/5 (日)</span>
+              </li>
+              <li>
+                <span>2024.11.30</span>
+                <span>【12月の店休日】12/15 (日)</span>
+              </li>
+              <li>
                 <span>2024.10.31</span>
                 <span>【11月の店休日】11/10 (日)</span>
-              </li>
-              <li>
-                <span>2024.10.01</span>
-                <a href="https://beegroup.tokyo/articles/sm_hyxby9omf" target="_blank" rel="noreferrer">
-                  【お知らせ】スタイリスト指名なしのご予約について
-                </a>
-              </li>
-              <li>
-                <span>2024.09.26</span>
-                <span>【10月の店休日】10/13 (日)</span>
               </li>
 
               {/* <li> */}
