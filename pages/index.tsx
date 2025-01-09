@@ -96,16 +96,16 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2025.1.10</span>
+                <Link href="/articles/vwvgoty05">【松井】新年のご挨拶</Link>
+              </li>
+              <li>
+                <span>2025.1.10</span>
+                <span>【1月の店休日】1/19 (日)</span>
+              </li>
+              <li>
                 <span>2024.11.30</span>
                 <span>【年末年始休業】12/30 (月) 〜 1/5 (日)</span>
-              </li>
-              <li>
-                <span>2024.11.30</span>
-                <span>【12月の店休日】12/15 (日)</span>
-              </li>
-              <li>
-                <span>2024.10.31</span>
-                <span>【11月の店休日】11/10 (日)</span>
               </li>
 
               {/* <li> */}
