@@ -91,6 +91,15 @@ function Staff() {
                 url='https://www.instagram.com/beedandy_epilation_official/'
               />
             </div>
+            <div className={styles.staff}>
+              <StaffProfile
+                className="takuma"
+                position="アシスタント"
+                staffName="宅間 公誠"
+                profile="埼玉県出身。メンズの「カッコいい」を創り出すことに情熱を注ぎ、100種類以上のヘアワックスを研究した経験を持つ。スタイリング剤の特性を知り尽くし、髪質に合ったアイテム選びから再現性の高いスタイリングテクニックまで的確に提案することができる。2025年から仲間入りしたBee dandy 期待の星！"
+                message="くせ毛や髪質、頭の形などのお悩みがあればぜひご相談ください。お客様一人ひとりの個性を丁寧に見極め、ヘアスタイルのアレンジでコンプレックスを解消し、理想のスタイルと自信を手に入れるお手伝いをいたします。その変化を一緒に楽しみましょう。あなた史上最高のメンズスタイルを全力でサポートします！"
+              />
+            </div>
           </section>
 
           <section className={`${utilStyles.section} ${styles.linkSection}`}>

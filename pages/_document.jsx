@@ -1,10 +1,10 @@
-import Document, { Head, Main, NextScript } from "next/document";
+import Document, {Html, Head, Main, NextScript } from "next/document";
 import { GA_ID } from "../libs/gtag";
 
 export default class MyDocument extends Document {
   render() {
     return (
-      <html lang="ja">
+      <Html lang="ja">
         <Head>
           <>
             <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
@@ -25,7 +25,7 @@ export default class MyDocument extends Document {
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }
