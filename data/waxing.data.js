@@ -5,6 +5,21 @@ export const waxingCollection = [
         subtitle:'顔・ヒゲ',
         data: [
             {
+                category: "全顔美容脱毛セット",
+                price: "11,000",
+                discount: "9,900",
+            },
+            {
+                category: "ヒゲ広範囲セット",
+                price: "8,800",
+                discount: "8,250",
+            },
+            {
+                category: "ヒゲ全体セット",
+                price: "8,800",
+                discount: "8,250",
+            },
+            {
                 category: "ヒゲ（唇下）",
                 price: "1,500",
                 discount: "1,100",
@@ -15,29 +30,19 @@ export const waxingCollection = [
                 discount: "1,650",
             },
             {
-                category: "ヒゲ（あご）／あご裏／両頬（各パーツ）",
+                category: "ヒゲ（あご）／両頬（各パーツ）",
                 price: "4,400",
                 discount: "3,850",
+            },         
+            {
+                category: "ヒゲ（あご裏～首ヒゲ）",
+                price: "4,950",
+                discount: "4,400",
             },
             {
                 category: "もみ上げ／眉／おでこ（各パーツ）",
                 price: "3,300",
                 discount: "2,750",
-            },
-            {
-                category: "顔全体セット",
-                price: "11,000",
-                discount: "9,900",
-            },
-            {
-                category: "えりあし",
-                price: "3,850",
-                discount: "3,300",
-            },
-            {
-                category: "首",
-                price: "4,400",
-                discount: "3,850",
             },
             {
                 category: "鼻毛（ワックス脱毛）",
@@ -50,6 +55,11 @@ export const waxingCollection = [
         title: "Body",
         subtitle: "上半身",
         data: [
+            {
+                category: "えりあし",
+                price: "3,850",
+                discount: "3,300",
+            },
             {
                 category: "両手の指／甲／ワキ（各パーツ）",
                 price: "3,850",
@@ -76,12 +86,12 @@ export const waxingCollection = [
                 discount: "9,900",
             },
             {
-                category: "腰",
+                category: "背中（下）～腰周り",
                 price: "8,800",
                 discount: "8,250",
             },
             {
-                category: "背中",
+                category: "背中（上）",
                 price: "7,700",
                 discount: "7,150",
             },
@@ -91,7 +101,7 @@ export const waxingCollection = [
                 discount: "4,400",
             },
             {
-                category: "両腕（手指含む）セット",
+                category: "両腕セット",
                 price: "12,100",
                 discount: "11,000",
             },
@@ -127,11 +137,6 @@ export const waxingCollection = [
                 discount: "2,750",
             },
             {
-                category: "ビキニライン",
-                price: "6,600",
-                discount: "6,050",
-            },
-            {
                 category: "お尻／V／I／O（各パーツ）",
                 price: "8,800",
                 discount: "8,250",
@@ -142,7 +147,7 @@ export const waxingCollection = [
                 discount: "4,400",
             },
             {
-                category: "両脚セット［足指含む］",
+                category: "両脚セット",
                 price: "16,500",
                 discount: "15,400",
             },
