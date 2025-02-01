@@ -15,11 +15,6 @@ export const waxingCollection = [
                 discount: "8,250",
             },
             {
-                category: "ヒゲ全体セット",
-                price: "8,800",
-                discount: "8,250",
-            },
-            {
                 category: "ヒゲ（唇下）",
                 price: "1,500",
                 discount: "1,100",
