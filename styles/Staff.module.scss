@@ -142,7 +142,9 @@
 .uchiyama,
 .uchiyama_noWebp,
 .takuma,
-.takuma_noWebp {
+.takuma_noWebp,
+.ikoma,
+.ikoma_noWebp{
     &::before{
         content: '';
         position: absolute;
@@ -178,6 +180,17 @@
     }
     &_noWebp::before{
         background-image: url('../public/img/staff/staff_hukazawa.jpg');
+        background-position:center 10.5%;
+    }
+}
+
+.ikoma{
+    &::before{
+        background-image: url('../public/img/staff/staff_ikoma.jpg');
+        background-position:center 10.5%;
+    }
+    &_noWebp::before{
+        background-image: url('../public/img/staff/staff_ikoma.jpg');
         background-position:center 10.5%;
     }
 }
