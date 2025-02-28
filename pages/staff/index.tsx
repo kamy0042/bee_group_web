@@ -83,6 +83,15 @@ function Staff() {
             </div>
             <div className={styles.staff}>
               <StaffProfile
+                className="ikoma"
+                position="スタイリスト"
+                staffName="生駒 明子"
+                profile="神奈川県出身。訪問美容など多様な経験を積み、2025年にBee dandyに加入。幅広い年代のお客様に寄り添う接客と、清潔感・好印象を兼ね備えたカット技術に定評がある。特に、ヘッドスパやシャンプーの心地よさは高く評価されている。持ち前の明るさで、仲間やお客様から親しまれる存在。"
+                message="自分に似合う髪型が見つかると、鏡を見るのが楽しくなりますよね。優しい雰囲気のメンズウルフ、ビジネスシーンで決まる洗練スタイル、特別な日のイメージチェンジなど、女性目線で好感度抜群のヘアスタイルをご提案します。カットだけでなく、日々の疲れをリフレッシュできる時間もご提供します。ぜひお気軽にご相談ください！"
+              />
+            </div>
+            <div className={styles.staff}>
+              <StaffProfile
                 className="uchiyama"
                 position="認定脱毛士"
                 staffName="内山 絵美"
