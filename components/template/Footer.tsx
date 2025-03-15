@@ -31,9 +31,7 @@ const Footer = () => (
               日曜：{SHOP_INFO.SUNDAY_OPEN} - {SHOP_INFO.SUNDAY_CLOSE}（{SHOP_INFO.SUNDAY_RESERVE_LIMIT}）
             </p>
             <p className={styles.comment}>
-              ※（）はカットの最終受付時間 <br className={styles.pcNone} />
-              <span className={styles.spNone}>/</span>※平日{SHOP_INFO.OPEN} - {SHOP_INFO.RESERVE_ONLY_TIME}
-              は前日までの完全予約制です
+              ※（）はカットの最終受付時間
             </p>
             <p className={styles.holiday}>定休日：{SHOP_INFO.HOLIDAY}</p>
           </dd>

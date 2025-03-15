@@ -23,8 +23,7 @@ const Info = () => (
           {SHOP_INFO.SUNDAY_OPEN} - {SHOP_INFO.SUNDAY_CLOSE}（{SHOP_INFO.SUNDAY_RESERVE_LIMIT}）
         </p>
         <p className={styles.comment}>
-          ※（）はカットの最終受付時間 ※平日{SHOP_INFO.OPEN} - {SHOP_INFO.RESERVE_ONLY_TIME}
-          は前日までの完全予約制です
+          ※（）はカットの最終受付時間
         </p>
       </dd>
     </div>
