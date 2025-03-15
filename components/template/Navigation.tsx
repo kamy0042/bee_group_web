@@ -50,7 +50,7 @@ const Navigation = ({ isOpen, onClick }: { isOpen: boolean; onClick: () => void 
               日曜：{SHOP_INFO.SUNDAY_OPEN} - {SHOP_INFO.SUNDAY_CLOSE}（{SHOP_INFO.SUNDAY_RESERVE_LIMIT}）
             </p>
             <p className={styles.comment}>
-              ※（）はカットの最終受付時間Ï
+              ※（）はカットの最終受付時間
             </p>
           </dd>
         </div>
