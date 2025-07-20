@@ -27,7 +27,6 @@ export const ArticleListItem = ({ article }: Props) => (
                 src={article.thumbnail?.url}
                 alt=""
                 className={styles.image}
-                width={380}
                 height={180}
               />
             </picture>
@@ -36,7 +35,6 @@ export const ArticleListItem = ({ article }: Props) => (
                 className={styles.image}
                 src="/img/bee_business-min.jpg?fit=crop&w=240&h=126"
                 alt="画像が設定されていません"
-                width={380}
                 height={180} 
               />
           )}

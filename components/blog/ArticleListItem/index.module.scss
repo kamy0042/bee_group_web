@@ -7,6 +7,7 @@
 
 .image {
   object-fit: cover;
+  width: 100%;
 }
 
 .title {
@@ -31,6 +32,11 @@
 
 .date {
   color: #7d6547;
+}
+
+
+.button {
+  width:100%;
 }
 
 @include sp {
