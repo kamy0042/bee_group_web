@@ -96,6 +96,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2025.9.1</span>
+                <span>【9月の店休日】9/21 (日)</span>
+              </li>
+              <li>
                 <span>2025.7.16</span>
                 <span>【8月の店休日】8/13(水).14(木).15(金)</span>
               </li>
@@ -103,13 +107,6 @@ const Index = () => {
                 <span>2025.7.9</span>
                 <span><Link href="/articles/n8u1ahla2v3">【ブログ】30代必見！大人の余裕感漂うフェザーパーマが人気！</Link></span>
               </li>
-              <li>
-                <span>2025.7.2</span>
-                <span>【7月の店休日】7/13 (日)</span>
-              </li>
-
-
-          
 
 
               {/* <li> */}
