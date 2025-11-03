@@ -96,19 +96,18 @@ const Index = () => {
           <dd>
             <ul>
               <li>
-                <span>2025.10.2</span>
-                <span>【10月の店休日】10/19 (日)</span>
+                <span>2025.11.3</span>
+                <span>【11月の店休日】11/16(日)</span>
               </li>
               <li>
-                <span>2025.9.1</span>
-                <span>【9月の店休日】9/21 (日)</span>
+                <span>2025.10.15</span>
+                <Link href='/articles/bpwf-rv40kn2'>【メンズ脱毛】髪と肌のトータルケアで大人の身だしなみをサポート</Link>
               </li>
               <li>
-                <span>2025.7.16</span>
-                <span>【8月の店休日】8/13(水).14(木).15(金)</span>
+                <span>2025.09.24</span>
+                <Link href="/articles/dgflh1pfp">【メンズ脱毛】40代50代から脱毛を始めるメリット</Link>
               </li>
- 
-
+              
 
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
