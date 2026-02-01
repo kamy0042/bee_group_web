@@ -96,16 +96,16 @@ const Index = () => {
           <dd>
             <ul>
               <li>
-                <span>2025.12.30</span>
-                <span>【1月の店休日】1/18(日)</span>
+                <span>2026.2.1</span>
+                <span>【2月の店休日】2/15(日)</span>
               </li>
               <li>
-                <span>2025.12.30</span>
-                <Link href='/articles/wtqivbhop'>【ビジネスマン必見】フォーマルシーンで差がつくオールバックスタイル3選</Link>
+                <span>2026.1.30</span>
+                <Link href='/articles/jpuyl_oitrh'>【就活生必見】就活ヘア、どうすればいい？</Link>
               </li>
               <li>
-                <span>2025.11.27</span>
-                <span>【年末年始の店休日】12/31(水) 〜 1/3(土)</span>
+                <span>2026.1.13</span>
+                <Link href='/articles/ygv6m-90phxs'>【できごと】彼女さん・奥さまが予約するメンズ美容室</Link>
               </li>
               
               {/* <li> */}
