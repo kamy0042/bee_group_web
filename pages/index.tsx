@@ -96,6 +96,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2026.2.24</span>
+                <span>【3月の店休日】3/15(日)、3/22(日)</span>
+              </li>
+              <li>
                 <span>2026.2.1</span>
                 <span>【2月の店休日】2/15(日)</span>
               </li>
@@ -103,10 +107,7 @@ const Index = () => {
                 <span>2026.1.30</span>
                 <Link href='/articles/jpuyl_oitrh'>【就活生必見】就活ヘア、どうすればいい？</Link>
               </li>
-              <li>
-                <span>2026.1.13</span>
-                <Link href='/articles/ygv6m-90phxs'>【できごと】彼女さん・奥さまが予約するメンズ美容室</Link>
-              </li>
+     
               
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
