@@ -96,12 +96,12 @@ const Index = () => {
           <dd>
             <ul>
               <li>
-                <span>2026.2.24</span>
-                <span>【3月の店休日】3/15(日)、3/22(日)</span>
+                <span>2026.4.5</span>
+                <span>【4月の店休日】4/5(日)、4/19(日)</span>
               </li>
               <li>
-                <span>2026.2.1</span>
-                <span>【2月の店休日】2/15(日)</span>
+                <span>2026.4.5</span>
+                <Link href='/articles/g3tlq9dqo'>Bee dandyはおかげさまで5周年</Link>
               </li>
               <li>
                 <span>2026.1.30</span>
