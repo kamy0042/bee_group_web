@@ -154,7 +154,7 @@ const Menu = () => (
                   <span>会員優待（税込）</span>¥4,950
                 </dd>
                 <dd className={styles.menuItem_week}>
-                  <span>対象</span>２週間以内に再来店されたお客様
+                  <span>対象</span>2週間以内に再来店されたお客様
                 </dd>
               </div>
               <div className={styles.menuItem}>
@@ -173,7 +173,7 @@ const Menu = () => (
                   <span>会員優待（税込）</span>¥5,500
                 </dd>
                 <dd className={styles.menuItem_week}>
-                  <span>対象</span>3週間以内に再来店されたお客様✳︎
+                  <span>対象</span>3週間以内に再来店されたお客様
                 </dd>
               </div>
               <div className={styles.menuItem}>
@@ -193,7 +193,7 @@ const Menu = () => (
                   <span>会員優待（税込）</span>¥7,700
                 </dd>
                 <dd className={styles.menuItem_week}>
-                  <span>対象</span>3週間以内に再来店されたお客様✳︎
+                  <span>対象</span>3週間以内に再来店されたお客様
                 </dd>
               </div>
             </dl>
