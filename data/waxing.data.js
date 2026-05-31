@@ -104,6 +104,41 @@ export const waxingCollection = [
             }
         ],
     },
+    {
+        title: "手足・ワキ",
+        data: [
+            {
+                category: "脇（両脇）",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
+            },
+            {
+                category: "腕（両腕）",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
+            },
+            {
+                category: "手の指＋甲（両手）",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
+            },
+            {
+                category: "脚（両脚）",
+                size:'LL',
+                price: "9,350",
+                discount: "8,800",
+            },
+            {
+                category: "足の指+甲（両足）",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
+            }
+        ],
+    },
   
     {
         title: "Body",
