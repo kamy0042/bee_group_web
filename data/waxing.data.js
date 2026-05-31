@@ -1,48 +1,36 @@
 // eslint-disable-next-line import/prefer-default-export
 export const waxingCollection = [
     {
-        title: "Face",
-        subtitle:'顔・ヒゲ',
+        title: "ヒゲ",
         data: [
             {
-                category: "全顔美容脱毛セット",
-                price: "11,000",
-                discount: "9,900",
+                category: "ヒゲ全体セット",
+                size:'セット',
+                price: "7,150",
+                discount: "5,500",
             },
             {
-                category: "ヒゲ広範囲セット",
-                price: "8,800",
-                discount: "8,250",
+                category: "ヒゲ（鼻下＋唇下）",
+                size:'SS',
+                price: "2,750",
+                discount: "2,200",
             },
             {
-                category: "ヒゲ（唇下）",
-                price: "1,500",
-                discount: "1,100",
+                category: "ヒゲ（あご）",
+                size:'SS',
+                price: "2,750",
+                discount: "2,200",
             },
-            {
-                category: "ヒゲ（鼻下）",
-                price: "2,200",
-                discount: "1,650",
-            },
-            {
-                category: "ヒゲ（あご）／両頬（各パーツ）",
-                price: "4,400",
-                discount: "3,850",
-            },         
             {
                 category: "ヒゲ（あご裏～首ヒゲ）",
-                price: "4,950",
-                discount: "4,400",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
             },
             {
-                category: "もみ上げ／眉／おでこ（各パーツ）",
-                price: "3,300",
-                discount: "2,750",
-            },
-            {
-                category: "鼻毛（ワックス脱毛）",
-                price: "2,530",
-                discount: "1,980",
+                category: "ヒゲ（両頬）",
+                price: "3,850",
+                discount: "3,300",
             },
         ],
     },

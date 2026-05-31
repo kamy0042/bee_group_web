@@ -9,21 +9,20 @@ import { RESERVE_URL } from "../../public/static";
 import utilStyles from "../../styles/Util.module.scss";
 import { SALON_NAME } from "../../constants";
 
-const renderTable = (title, data, subtitle) => (
+const renderTable = (title, data) => (
   <section key={title} className={styles.table}>
     <div className={styles.table_head}>
       <h4>{title}</h4>
     </div>
-    <p className={styles.table_subtitle}>{subtitle}</p>
     <ul className={styles.table_category}>
-      <li className={styles.table_category_detail}>コース内容</li>
+      <li className={styles.table_category_detail}>コース内容：カテゴリ</li>
       <li className={styles.table_category_pay1}>通常料金（税込）</li>
       <li className={styles.table_category_pay2}>会員優待（税込）</li>
     </ul>
     <dl className={styles.table_item}>
       {data.map((item) => (
         <div key={item.category} className={styles.menuItem}>
-          <dt>{item.category}</dt>
+          <dt>{item.category}：{item.size}</dt>
           <dd className={styles.menuItem_pay}>
             <span>通常料金（税込）</span>¥{item.price}
           </dd>
@@ -166,7 +165,7 @@ function Waxing() {
               <p>年会費をお支払いいただくことで、一般料金よりお得な会員料金で施術を受けられます。</p>
             </div>
             
-            {waxingCollection.map((item) => renderTable(item.title, item.data, item.subtitle))}
+            {waxingCollection.map((item) => renderTable(item.title, item.data))}
             
             <section className={styles.table}>
               <div className={styles.table_head}>
