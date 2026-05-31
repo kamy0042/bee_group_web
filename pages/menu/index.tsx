@@ -30,7 +30,7 @@ const Menu = () => (
 
           <section className={styles.table}>
             <div className={styles.table_head}>
-              <h3>コースメニュー</h3>
+              <h3>メンズカットコース</h3>
               <p>メンズヘアカット・眉毛カット＋シャンプー・ スタイリングのセット</p>
             </div>
             <p>
@@ -127,10 +127,11 @@ const Menu = () => (
           </section>
 
           <section className={styles.table}>
-            <div className={styles.table_head_2}>
-              <h3 className={styles.table_heading}>メンテナンス</h3>
+            <div className={styles.table_head}>
+              <h3 className={styles.table_heading}>メンテナンスコース</h3>
               <p>メンズヘアカット・眉毛カット＋シャンプー・ スタイリングのセット</p>
             </div>
+            <p>前回の施術から2～3週間以内にご利用される方のための特別料金。スキンフェードやバーバースタイルのメンテナンスもお任せください。</p>
             <ul className={styles.table_category}>
               <li className={styles.table_category_detail}>コース内容</li>
               <li className={styles.table_category_pay1}>通常料金（税込）</li>
@@ -139,46 +140,34 @@ const Menu = () => (
             </ul>
             <dl className={styles.table_item_2}>
               <div className={styles.menuItem}>
-                <dt>ベーシックコース</dt>
+                <dt>メンテナンス<br/>ベーシックコース</dt>
                 <dd className={styles.menuItem_detail}>
                   <p>・カット</p>
                   <p>・オートシャンプー</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥4,950
+                  <span>通常料金（税込）</span>¥6,050
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥4,400
+                  <span>会員優待（税込）</span>¥4,950
                 </dd>
                 <dd className={styles.menuItem_week}>
                   <span>対象</span>２週間以内に再来店されたお客様
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt>レギュラーコース</dt>
-                <dd className={styles.menuItem_detail}>
-                  <p>・カット</p>
-                  <p>・ハンドシャンプー</p>
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥5,500
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥4.950
-                </dd>
-                <dd className={styles.menuItem_week}>
-                  <span>対象</span>２週間以内に再来店されたお客様
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt>プレミアムコース</dt>
+                <dt>メンテナンス<br/>プレミアムコース</dt>
                 <dd className={styles.menuItem_detail}>
                   <p>・カット</p>
                   <p>・ハンドシャンプー</p>
                   <p>・ヘッドスパ</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,600
+                  <span>通常料金（税込）</span>¥7,150
                 </dd>
                 <dd className={styles.menuItem_pay}>
                   <span>会員優待（税込）</span>¥5,500
@@ -188,27 +177,26 @@ const Menu = () => (
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt>ラグジュアリーコース</dt>
+                <dt>メンテナンス<br/>ラグジュアリーコース</dt>
                 <dd className={styles.menuItem_detail}>
                   <p>・カット</p>
                   <p>・ハンドシャンプー</p>
                   <p>・ヘッドスパ</p>
                   <p>・スカルプケア</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,700
+                  <span>通常料金（税込）</span>¥9,350
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,600
+                  <span>会員優待（税込）</span>¥7,700
                 </dd>
                 <dd className={styles.menuItem_week}>
                   <span>対象</span>3週間以内に再来店されたお客様✳︎
                 </dd>
               </div>
             </dl>
-            <p style={{ marginTop: "25px" }}>
-              ✳︎前回、プレミアムコース、またはラグジュアリーコースをご利用の方が対象です。
-            </p>
           </section>
 
           <section className={styles.table}>
