@@ -305,10 +305,10 @@ const Menu = () => (
           <section className={styles.table}>
             <div className={styles.table_head}>
               <h3>メンズカラー</h3>
-              <p>シャンプー、スタイリング込み、カット料金別途</p>
+              <p>スタイリング込み、カット料金別途</p>
             </div>
             <p>
-              ビビッドカラー、アッシュカラー、ダブルカラー、しっかり白髪染め、部分染め、白髪を活かすグレーカラーなど、あなたのご要望をお聞かせください。カットとの同時施術をご希望の場合は、コースメニュー（ベーシック、レギュラー、プレミアム、ラグジュアリー）と組合せることができます。
+              ビビッドカラー、アッシュカラー、部分染め、白髪を活かすグレーカラーなど、あなたのご要望をお聞かせください。ヘアカットとの同時施術は、コースメニュー（ベーシック・プレミアム・ラグジュアリー）と組み合わせることができます。
             </p>
             <ul className={styles.table_category}>
               <li className={styles.table_category_detail}>メニュー内容</li>
@@ -318,24 +318,36 @@ const Menu = () => (
             </ul>
             <dl className={styles.table_item}>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ファッションカラー</dt>
+                <dt className={styles.menuItem_title_long}>ポイントカラー</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,150
+                  <span>通常料金（税込）</span>¥4,950
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,600
+                  <span>会員優待（税込）</span>¥4,400
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>60分
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>白髪染め</dt>
+                <dt className={styles.menuItem_title_long}>単色カラー／ブリーチ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,150
+                  <span>通常料金（税込）</span>¥8,250
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,600
+                  <span>会員優待（税込）</span>¥7,700
+                </dd>
+                <dd className={styles.menuItem_time}>
+                  <span>所要時間</span>60分
+                </dd>
+              </div>
+              <div className={styles.menuItem}>
+                <dt className={styles.menuItem_title_long}>白髪染め／白髪ぼかし</dt>
+                <dd className={styles.menuItem_pay}>
+                  <span>通常料金（税込）</span>¥8,250
+                </dd>
+                <dd className={styles.menuItem_pay}>
+                  <span>会員優待（税込）</span>¥7,700
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>60分
@@ -344,39 +356,91 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ハイライト</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,600
+                  <span>通常料金（税込）</span>¥9,350
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,050
+                  <span>会員優待（税込）</span>¥8,800
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>60分
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ブリーチ</dt>
+                <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ＆カラー）</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,600
+                  <span>通常料金（税込）</span>¥14,300
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,050
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>60分
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ含む）</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥13,200
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥12,100
+                  <span>会員優待（税込）</span>¥13,200
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90分
                 </dd>
               </div>
+              
+              
+              
+              
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ファッションカラー</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥7,150 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥6,600 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>60分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>白髪染め</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥7,150 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥6,600 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>60分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ハイライト</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥6,600 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥6,050 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>60分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ブリーチ</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥6,600 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥6,050 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>60分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ含む）</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥13,200 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥12,100 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>90分 */}
+              {/*   </dd> */}
+              {/* </div> */}
             </dl>
           </section>
 
