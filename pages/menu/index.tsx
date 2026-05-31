@@ -382,10 +382,10 @@ const Menu = () => (
 
           <section className={styles.table}>
             <div className={styles.table_head_2}>
-              <h3>単品・ オプションメニュー</h3>
+              <h3>ヘアケア・頭皮ケア・リラクゼーション</h3>
             </div>
             <p>
-              パーティーや結婚式にスタイリングのみ、髭デザインや眉のお手入れだけでもご利用いただけます。アイロンでカールをつけると、1日だけパーマ風にイメージチェンジすることができます。直毛の方はかなり雰囲気を変えることができます。
+              パーティーや結婚式にスタイリングだけでもご利用いただけます。アイロンでカールをつけると、1日だけパーマ風にイメージチェンジしたり、雰囲気を変えることができます。
             </p>
             <ul className={styles.table_category}>
               <li className={styles.table_category_detail}>メニュー内容</li>
@@ -396,46 +396,46 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ヘッドスパ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥4,400
+                  <span>通常料金（税込）</span>¥5,500
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥3,300
+                  <span>会員優待（税込）</span>¥4,400
                 </dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ヘッドスパ＋スカルプケア</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,600
+                  <span>通常料金（税込）</span>¥7,700
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥5,500
+                  <span>会員優待（税込）</span>¥6,600
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>メンズ トリートメント</dt>
+                <dt className={styles.menuItem_title_long}>トリートメント</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥3,850
+                  <span>通常料金（税込）</span>¥4,950
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥3,300
+                  <span>会員優待（税込）</span>¥3,850
                 </dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>スタイリング</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥2,200
+                  <span>通常料金（税込）</span>¥3,300
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥1,650
+                  <span>会員優待（税込）</span>¥2,750
                 </dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>アイロンスタイリング</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥3,300
+                  <span>通常料金（税込）</span>¥4,950
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥2,750
+                  <span>会員優待（税込）</span>¥4,400
                 </dd>
               </div>
               <div className={styles.menuItem}>
@@ -459,10 +459,10 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ハンドシャンプー</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥2,200
+                  <span>通常料金（税込）</span>¥3,850
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥1,650
+                  <span>会員優待（税込）</span>¥2,750
                 </dd>
               </div>
             </dl>
