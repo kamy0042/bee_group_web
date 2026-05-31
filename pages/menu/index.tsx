@@ -304,7 +304,7 @@ const Menu = () => (
 
           <section className={styles.table}>
             <div className={styles.table_head}>
-              <h3>メンズカラー</h3>
+              <h3>カラー</h3>
               <p>スタイリング込み、カット料金別途</p>
             </div>
             <p>
@@ -377,70 +377,6 @@ const Menu = () => (
                   <span>所要時間</span>90分
                 </dd>
               </div>
-              
-              
-              
-              
-              {/* <div className={styles.menuItem}> */}
-              {/*   <dt className={styles.menuItem_title_long}>ファッションカラー</dt> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>通常料金（税込）</span>¥7,150 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>会員優待（税込）</span>¥6,600 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_time}> */}
-              {/*     <span>所要時間</span>60分 */}
-              {/*   </dd> */}
-              {/* </div> */}
-              {/* <div className={styles.menuItem}> */}
-              {/*   <dt className={styles.menuItem_title_long}>白髪染め</dt> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>通常料金（税込）</span>¥7,150 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>会員優待（税込）</span>¥6,600 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_time}> */}
-              {/*     <span>所要時間</span>60分 */}
-              {/*   </dd> */}
-              {/* </div> */}
-              {/* <div className={styles.menuItem}> */}
-              {/*   <dt className={styles.menuItem_title_long}>ハイライト</dt> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>通常料金（税込）</span>¥6,600 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>会員優待（税込）</span>¥6,050 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_time}> */}
-              {/*     <span>所要時間</span>60分 */}
-              {/*   </dd> */}
-              {/* </div> */}
-              {/* <div className={styles.menuItem}> */}
-              {/*   <dt className={styles.menuItem_title_long}>ブリーチ</dt> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>通常料金（税込）</span>¥6,600 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>会員優待（税込）</span>¥6,050 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_time}> */}
-              {/*     <span>所要時間</span>60分 */}
-              {/*   </dd> */}
-              {/* </div> */}
-              {/* <div className={styles.menuItem}> */}
-              {/*   <dt className={styles.menuItem_title_long}>ダブルカラー（ブリーチ含む）</dt> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>通常料金（税込）</span>¥13,200 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_pay}> */}
-              {/*     <span>会員優待（税込）</span>¥12,100 */}
-              {/*   </dd> */}
-              {/*   <dd className={styles.menuItem_time}> */}
-              {/*     <span>所要時間</span>90分 */}
-              {/*   </dd> */}
-              {/* </div> */}
             </dl>
           </section>
 
