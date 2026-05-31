@@ -174,16 +174,12 @@ function Waxing() {
               </div>
               <dl className={styles.table_item}>
                 <div className={styles.menuItem}>
-                  <dt className={styles.menuItem_title_etc}>【オプション】剃毛</dt>
-                  <dd className={styles.menuItem_pay_etc}>￥2,200～3,300（部位による）</dd>
-                </div>
-                <div className={styles.menuItem}>
                   <dt className={styles.menuItem_title_etc}>会員費（有効期限：1年間）</dt>
                   <dd className={styles.menuItem_pay_etc}>￥2,200(年間)</dd>
                 </div>
                 <div className={styles.menuItem}>
-                  <dt className={styles.menuItem_title_etc}>指名料</dt>
-                  <dd className={styles.menuItem_pay_etc}>￥1,100～（スタイリスト・スタッフにより異なります）</dd>
+                  <p><span style={{fontWeight:'bold'}}>※剃毛割引あり</span><br />事前にご自身で施術箇所を剃毛してご来店いただいた場合、
+                    SS・S・M：500円引き／L：1,000円引き／LL：1,500円引き</p>
                 </div>
               </dl>
             </section>
