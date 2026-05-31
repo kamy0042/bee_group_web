@@ -202,12 +202,11 @@ const Menu = () => (
           <section className={styles.table}>
             <div className={styles.table_head}>
               <h3>メンズパーマ・縮毛矯正</h3>
-              <p>シャンプー、スタイリング込み、カット料金別途</p>
+              <p>スタイリング込み、カット料金別途</p>
             </div>
             <p className={styles.table_lead}>
-              巻く方向や間隔を調整することで、ボリュームアップや様々なヘアデザインが可能で、毎日のスタイリングが楽になります。また、縮毛矯正はクセ毛をサラサラのストレートにしたり、ヘアデザインの邪魔になるクセ部分だけをピンポイントで矯正することができます。
-              <br />
-              カットとの同時施術をご希望の場合は、コースメニュー（ベーシック、レギュラー、プレミアム、ラグジュアリー）と組合せることができます。
+              トレンド感のあるスタイルからボリュームアップ・ダウン、パーマ落としまで、幅広いヘアデザインやお悩みに対応。毎日のスタイリングも楽になります。
+              ヘアカットとの同時施術は、コースメニュー（ベーシック・プレミアム・ラグジュアリー）と組み合わせることができます。
             </p>
             <ul className={styles.table_category}>
               <li className={styles.table_category_detail}>メニュー内容</li>
@@ -219,106 +218,46 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ポイントパーマ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥4,950~
+                  <span>通常料金（税込）</span>¥6,050~
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥4,400
+                  <span>会員優待（税込）</span>¥5,500
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90~120分
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>デザインパーマ</dt>
+                <dt className={styles.menuItem_title_long}>ニュアンスパーマ／デザインパーマ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,150
+                  <span>通常料金（税込）</span>¥8,250
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,600
+                  <span>会員優待（税込）</span>¥7,700
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90~120分
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ナチュラルパーマ</dt>
+                <dt className={styles.menuItem_title_long}>ストレートパーマ／ダウンパーマ</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,150
+                  <span>通常料金（税込）</span>¥12,100
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥6,600
+                  <span>会員優待（税込）</span>¥11,000
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90~120分
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>スパイラルパーマ</dt>
+                <dt className={styles.menuItem_title_long}>曲がるストレート／曲がる縮毛矯正</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥14,300
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥12,650
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>180分前後
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ツイストパーマ</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥14,300
+                  <span>通常料金（税込）</span>¥13,200
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥12,650
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>180分前後
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ツイストスパイラルパーマ</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥19,800
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥18,150
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>180分前後
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt id='wave' className={styles.menuItem_title_long}>波巻きスパイラルパーマ</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥19,800
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥18,150
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>180分前後
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>ポイントストレート</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥4,950~
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥4,400
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>90~120分
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>コスメストレート</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥11,000
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥9,900
+                  <span>会員優待（税込）</span>¥12,100
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90~120分
@@ -327,15 +266,117 @@ const Menu = () => (
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>縮毛矯正</dt>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥14,300
+                  <span>通常料金（税込）</span>¥15,400
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥12,650
+                  <span>会員優待（税込）</span>¥13,750
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>90~120分
                 </dd>
               </div>
+              <div className={styles.menuItem}>
+                <dt className={styles.menuItem_title_long}>スパイラル／ツイスト／スペインカール</dt>
+                <dd className={styles.menuItem_pay}>
+                  <span>通常料金（税込）</span>¥15,400
+                </dd>
+                <dd className={styles.menuItem_pay}>
+                  <span>会員優待（税込）</span>¥13,750
+                </dd>
+                <dd className={styles.menuItem_time}>
+                  <span>所要時間</span>180分前後
+                </dd>
+              </div>
+              <div className={styles.menuItem}>
+                <dt className={styles.menuItem_title_long}>ツイストスパイラル／波巻きスパイラル</dt>
+                <dd className={styles.menuItem_pay}>
+                  <span>通常料金（税込）</span>¥20,350
+                </dd>
+                <dd className={styles.menuItem_pay}>
+                  <span>会員優待（税込）</span>¥18,700
+                </dd>
+                <dd className={styles.menuItem_time}>
+                  <span>所要時間</span>180分前後
+                </dd>
+              </div>
+              
+              
+              
+              
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ナチュラルパーマ</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥7,150 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥6,600 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>90~120分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>スパイラルパーマ</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥14,300 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥12,650 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>180分前後 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ツイストパーマ</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥14,300 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥12,650 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>180分前後 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt id='wave' className={styles.menuItem_title_long}>波巻きスパイラルパーマ</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥19,800 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥18,150 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>180分前後 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>ポイントストレート</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥4,950~ */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥4,400 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>90~120分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+              {/* <div className={styles.menuItem}> */}
+              {/*   <dt className={styles.menuItem_title_long}>コスメストレート</dt> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>通常料金（税込）</span>¥11,000 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_pay}> */}
+              {/*     <span>会員優待（税込）</span>¥9,900 */}
+              {/*   </dd> */}
+              {/*   <dd className={styles.menuItem_time}> */}
+              {/*     <span>所要時間</span>90~120分 */}
+              {/*   </dd> */}
+              {/* </div> */}
+
             </dl>
           </section>
 
