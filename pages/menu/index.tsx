@@ -439,24 +439,6 @@ const Menu = () => (
                 </dd>
               </div>
               <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>眉毛デザインカット</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥1,100
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥550
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt className={styles.menuItem_title_long}>オートシャンプー</dt>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥1,650
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥1,100
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_long}>ハンドシャンプー</dt>
                 <dd className={styles.menuItem_pay}>
                   <span>通常料金（税込）</span>¥3,850
