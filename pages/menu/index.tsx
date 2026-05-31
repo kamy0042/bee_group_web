@@ -34,7 +34,7 @@ const Menu = () => (
               <p>メンズヘアカット・眉毛カット＋シャンプー・ スタイリングのセット</p>
             </div>
             <p>
-              お客様一人ひとりの髪の特性や頭の形を活かしカットしていきます。あなたのなりたいイメージをお伝えください。フェードをきかせたおしゃれボウズ、スキンフェードやバーバースタイルの仕上がりもお任せください。
+              お客様一人ひとりの髪質や骨格、ライフスタイルに合わせてカットいたします。なりたいイメージや挑戦してみたいスタイルもお気軽にご相談ください。
             </p>
             <ul className={styles.table_category}>
               <li className={styles.table_category_detail}>コース内容</li>
@@ -48,25 +48,11 @@ const Menu = () => (
                 <dd className={styles.menuItem_detail}>
                   <p>・カット</p>
                   <p>・オートシャンプー</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,050
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥5,500
-                </dd>
-                <dd className={styles.menuItem_time}>
-                  <span>所要時間</span>30～45分
-                </dd>
-              </div>
-              <div className={styles.menuItem}>
-                <dt>レギュラーコース</dt>
-                <dd className={styles.menuItem_detail}>
-                  <p>・カット</p>
-                  <p>・ハンドシャンプー</p>
-                </dd>
-                <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥6,600
+                  <span>通常料金（税込）</span>¥7,150
                 </dd>
                 <dd className={styles.menuItem_pay}>
                   <span>会員優待（税込）</span>¥6,050
@@ -81,9 +67,11 @@ const Menu = () => (
                   <p>・カット</p>
                   <p>・ハンドシャンプー</p>
                   <p>・ヘッドスパ</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥7,700
+                  <span>通常料金（税込）</span>¥8,250
                 </dd>
                 <dd className={styles.menuItem_pay}>
                   <span>会員優待（税込）</span>¥7,150
@@ -99,12 +87,14 @@ const Menu = () => (
                   <p>・ハンドシャンプー</p>
                   <p>・ヘッドスパ</p>
                   <p>・スカルプケア</p>
+                  <p>・眉毛カット</p>
+                  <p>・スタイリング</p>
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>通常料金（税込）</span>¥9,350
+                  <span>通常料金（税込）</span>¥11,000
                 </dd>
                 <dd className={styles.menuItem_pay}>
-                  <span>会員優待（税込）</span>¥8,800
+                  <span>会員優待（税込）</span>¥9,900
                 </dd>
                 <dd className={styles.menuItem_time}>
                   <span>所要時間</span>60～110分
@@ -134,9 +124,6 @@ const Menu = () => (
                 </dd>
               </div>
             </dl>
-            <p>
-              ※シャンプーのみ、ヘッドスパのみ、スカルプケアのみ、スタイリングのみも可能です。詳しくは単品・オプションメニューをご覧ください。
-            </p>
           </section>
 
           <section className={styles.table}>
