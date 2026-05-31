@@ -139,6 +139,35 @@ export const waxingCollection = [
             }
         ],
     },
+    {
+        title: "VIO",
+        data: [
+            {
+                category: "◎ VIOセット",
+                size:'★',
+                price: "17,150",
+                discount: "15,500",
+            },
+            {
+                category: "Vゾーン［ビキニライン］",
+                size:'L',
+                price: "8,250",
+                discount: "7,700",
+            },
+            {
+                category: "Iゾーン［陰茎・陰嚢］",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
+            },
+            {
+                category: "Oゾーン［肛門周り］",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
+            },
+        ],
+    },
   
     {
         title: "Body",
