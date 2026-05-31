@@ -457,7 +457,7 @@ const Menu = () => (
             <dl className={styles.table_item_2}>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>会員費（有効期限：1年間）</dt>
-                <dd className={styles.menuItem_pay}>￥1,650</dd>
+                <dd className={styles.menuItem_pay}>￥2,200(年間)</dd>
               </div>
               <div className={styles.menuItem}>
                 <dt className={styles.menuItem_title_etc}>指名料</dt>
