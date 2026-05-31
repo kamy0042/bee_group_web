@@ -5,7 +5,7 @@ export const waxingCollection = [
         data: [
             {
                 category: "ヒゲ全体セット",
-                size:'セット',
+                size:'★',
                 price: "7,150",
                 discount: "5,500",
             },
@@ -29,11 +29,82 @@ export const waxingCollection = [
             },
             {
                 category: "ヒゲ（両頬）",
+                size:'S',
                 price: "3,850",
                 discount: "3,300",
             },
         ],
     },
+    {
+        title: "顔・首",
+        data: [
+            {
+                category: "もみあげ（左右）",
+                size:'SS',
+                price: "2,750",
+                discount: "2,200",
+            },
+            {
+                category: "えりあし",
+                size:'SS',
+                price: "2,750",
+                discount: "2,200",
+            }
+        ],
+    },
+    {
+        title: "背面",
+        data: [
+            {
+                category: "肩 （両肩）",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
+            },
+            {
+                category: "背中＋腰周り",
+                size:'L',
+                price: "8,250",
+                discount: "7,700",
+            },
+            {
+                category: "お尻",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
+            }
+        ],
+    },
+    {
+        title: "前面",
+        data: [
+            {
+                category: "胸元",
+                size:'M',
+                price: "8,250",
+                discount: "7,700",
+            },
+            {
+                category: "乳輪周り",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
+            },
+            {
+                category: "へそ周り",
+                size:'S',
+                price: "3,850",
+                discount: "3,300",
+            },
+            {
+                category: "お腹",
+                size:'M',
+                price: "8,250",
+                discount: "7,700",
+            }
+        ],
+    },
+  
     {
         title: "Body",
         subtitle: "上半身",
