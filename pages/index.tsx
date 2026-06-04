@@ -96,6 +96,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2026.6.5</span>
+                <span>【6月の店休日】6/7(日)、6/21(日)</span>
+              </li>
+              <li>
                 <span>2026.5.17</span>
                 <Link href='/articles/x8l2g78tl'>【お知らせ】料金改定・メニュー変更について</Link>
               </li>
@@ -103,10 +107,7 @@ const Index = () => {
                 <span>2026.5.2</span>
                 <span>【5月の店休日】5/3(日・祝)、5/17(日)</span>
               </li>
-              <li>
-                <span>2026.4.5</span>
-                <Link href='/articles/g3tlq9dqo'>Bee dandyはおかげさまで5周年</Link>
-              </li>
+     
 
      
               
