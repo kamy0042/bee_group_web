@@ -81,8 +81,8 @@ export const waxingCollection = [
             {
                 category: "胸元",
                 size:'M',
-                price: "8,250",
-                discount: "7,700",
+                price: "6,050",
+                discount: "5,500",
             },
             {
                 category: "乳輪周り",
@@ -99,8 +99,8 @@ export const waxingCollection = [
             {
                 category: "お腹",
                 size:'M',
-                price: "8,250",
-                discount: "7,700",
+                price: "6,050",
+                discount: "5,500",
             }
         ],
     },
@@ -150,9 +150,9 @@ export const waxingCollection = [
             },
             {
                 category: "Vゾーン［ビキニライン］",
-                size:'L',
-                price: "8,250",
-                discount: "7,700",
+                size:'M',
+                price: "6,050",
+                discount: "5,500",
             },
             {
                 category: "Iゾーン［陰茎・陰嚢］",
