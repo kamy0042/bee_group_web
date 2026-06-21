@@ -74,7 +74,7 @@
 .headerCopyItem {
   position: relative;
   margin-top: 1.5rem;
-  text-align: left;
+  text-align: center;
   @include pc {
     font-size: $text-large;
     text-align: center;
@@ -154,19 +154,20 @@
     color:$color-sub-light;
     font-size: 1.2em;
     margin-bottom: 0.75rem;
-    padding-bottom: 0.75rem;
-    border-bottom: solid thin;
+    //padding-bottom: 0.75rem;
+    //border-bottom: solid thin;
   }
   .descriptionContent p + p {
     margin-top: 2rem;
   }
   .descriptionContent > img {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
   }
   @include pc{
     margin-top: 7rem;
     .descriptionContent{
       display: flex;
+      gap: 2rem;
       justify-content: space-between;
       margin-top: 1rem;
       align-items: flex-start;
@@ -175,13 +176,95 @@
       font-size: 1.4em;
     }
     .descriptionContent > img {
-      width: 50%;
+      width: 55%;
+      order:2;
+      object-fit: cover;
+      height: 100%;
       margin: 0;
-      order:2
     }
     .descriptionTextArea {
       width: calc(50% - 3rem);
       order:1;
+    }
+  }
+}
+
+.contentImg {
+  margin-top: 2rem;
+  width: 100%;
+  object-fit: cover;
+  object-position:center right;
+  height: auto;
+  @include pc {
+    height: 430px;
+  }
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+  gap: 0.5rem;
+  @include pc {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  h3 {
+    color:$color-sub-light;
+    font-size: 1.2em;
+  }
+}
+
+.feature,.owner {
+  dt {
+    margin-bottom: 0.5rem;
+    font-size: 1em;
+    @include pc {
+      font-size: 1.25em;
+    }
+  }
+  img {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+}
+
+.owner {
+  p + p {
+    margin-top: 2rem;
+  }
+  img{
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: 0 23%;
+    @include pc {
+      height: 430px;
+    }
+  }
+}
+
+.staffVoice {
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  dt {
+    margin-bottom: 0.5rem;
+    @include pc {
+      font-size: 1.25em;
+    }
+  }
+  dd + dt {
+    margin-top: 1.5rem;
+  } 
+  @include pc {
+    flex-direction: row;
+
+    img {
+      width: 50%;
     }
   }
 }
@@ -286,31 +369,49 @@
 .star {
   position: relative;
   color: $color-sub-light;
-  &::before{
-    content: '★';
-    display: inline-block;
-    margin-right: 5px;
-  }
 }
 
 .recruitDetail {
-  & > dd + dt {
+  div  {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  div + div {
     margin-top: 1rem;
     padding-top: 1rem;
     border-top: dotted thin;
   }
-  & > dd > p + p {
-    margin-top: 1rem;
+  dt {
+    width: 10rem;
+    margin-right: 1rem;
+  }
+  dd {
+    width: calc(100% - 11rem);
+    & > p + p {
+      margin-top: 1rem;
+    }
   }
   .comment {
     margin-top: 1rem;
   }
   @include pc {
-    & > dd + dt {
+    div + div {
         margin-top: 1.25rem;
         padding-top: 1.25rem;
     }
     }
+}
+.large {
+  dt {
+    width: 11rem;
+    margin-right: 2rem;
+    @include pc {
+      width: 14rem;
+    }
+  }
+  dd {
+    width: calc(100% - 16rem);
+  }
 }
 
 .companyDetail {
@@ -364,6 +465,7 @@
     }
   }
 }
+
 
 .ctaBoxWrapper {
   margin-top: 2rem;
