@@ -96,6 +96,10 @@ const Index = () => {
           <dd>
             <ul>
               <li>
+                <span>2026.10.1</span>
+                <span>【10月の店休日】10/4(日)、10/18(日)</span>
+              </li>
+              <li>
                 <span>2026.8.27</span>
                 <span>【9月の店休日】9/6(日)、9/20(日)</span>
               </li>
@@ -103,10 +107,7 @@ const Index = () => {
                 <span>2026.8.20</span>
                 <Link href='/articles/3n9brmsclio'>【できごと】お客様の声（4-2）～ありがとうの記録</Link>
               </li>
-              <li>
-                <span>2026.7.10</span>
-                <Link href='/articles/l898w6lbp58'>【ビフォーアフター】爽快なスキンフェードのビジネスマンバン</Link>
-              </li>
+ 
               
               {/* <li> */}
               {/*   <span>2022.09.21</span> */}
