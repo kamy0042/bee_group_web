@@ -28,10 +28,16 @@ export const HAIR_MENUS: HairMenu[] = [
     ],
     popular: {
       title: "人気のスタイル",
-      items: ["七三オールバック", "ツーブロックショート", "センターパート", "ビジネスマッシュ", "フェード・バーバースタイル"],
+      items: [
+        "七三オールバック",
+        "ツーブロックショート",
+        "センターパート",
+        "ビジネスマッシュ",
+        "フェード・バーバースタイル",
+      ],
     },
-    photo: { src: "/img/owner_cut_1.jpg", width: 1700, height: 1133, position: "62% 30%" },
-    alt: "メンズカットの施術風景",
+    photo: { src: "/img/model/model-4.jpg", width: 2000, height: 1333, position: "20% 50%" },
+    alt: "メンズカットで整えたスーツ姿の男性",
   },
   {
     id: "perm",
@@ -51,7 +57,7 @@ export const HAIR_MENUS: HairMenu[] = [
       title: "人気のメンズパーマ",
       items: ["ニュアンスパーマ", "フェザーパーマ", "デザインカール", "ソフトツイストスパイラル", "曲がるストレート"],
     },
-    photo: { src: "/img/styles/12.jpg", width: 615, height: 872, position: "50% 20%" },
+    photo: { src: "/img/model/model-5.jpg", width: 1722, height: 1369, position: "75% 15%" },
     alt: "メンズパーマのスタイル例",
   },
   {
@@ -79,12 +85,12 @@ export const HAIR_MENUS: HairMenu[] = [
       ],
     },
     photo: {
-      src: "/img/bee_man-min.jpg",
-      width: 1280,
-      height: 853,
-      position: "42% 30%",
+      src: "/img/model/model-6.jpg",
+      width: 1934,
+      height: 1450,
+      position: "45% 30%",
     },
-    alt: "落ち着いたヘアカラーの男性",
+    alt: "ブラウンカラーのヘアスタイルの男性",
   },
   {
     id: "headspa",
@@ -101,10 +107,10 @@ export const HAIR_MENUS: HairMenu[] = [
       "カットと一緒にリラックスする時間を取りたい",
     ],
     photo: {
-      src: "/img/bee_headspa-min.jpg",
-      width: 1280,
-      height: 852,
-      position: "45% 50%",
+      src: "/img/spa/spa-image-1.png",
+      width: 1448,
+      height: 1086,
+      position: "55% 30%",
     },
     alt: "ヘッドスパの施術風景",
   },
@@ -122,8 +128,8 @@ export const HAIR_MENUS: HairMenu[] = [
       "頭皮環境を整えたい",
       "将来も自分の髪を楽しみたい",
     ],
-    photo: { src: "/img/recruit/staff_1.jpg", width: 1700, height: 1133, position: "50% 40%" },
-    alt: "髪と頭皮の状態を確認する様子",
+    photo: { src: "/img/scalp/scalp-image-2.png", width: 1448, height: 1086, position: "60% 10%" },
+    alt: "頭皮に美容液をつけるスカルプケアの様子",
   },
 ];
 
