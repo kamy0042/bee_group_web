@@ -1,3 +1,4 @@
+import { notFound } from "next/navigation";
 import styles from "../../../styles/Waxing.module.scss";
 import { getList } from "../../../libs/microcms";
 import ArticleList from "../../../components/blog/ArticleList/ArticleList";
@@ -15,14 +16,18 @@ export async function generateMetadata(): Promise<any> {
 }
 
 type Props = {
-  params: {
+  params: Promise<{
     current: string;
-  };
+  }>;
 };
 
 export default async function Page ({ params }: Props){
-  const current = parseInt(params.current as string, 10);
+  const { current: currentParam } = await params;
+  // 正の整数以外・極端に大きいページ番号で microCMS にリクエストしない
+  if (!/^[1-9]\d{0,3}$/.test(currentParam)) notFound();
+  const current = Number(currentParam);
   const list = await getList({limit:LIMIT,offset: LIMIT * (current - 1),});
+  if (list.contents.length === 0) notFound();
   
   return (
     <div>

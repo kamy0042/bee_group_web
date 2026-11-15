@@ -1,16 +1,28 @@
-import { getDetail, getList } from "../../../libs/microcms";
+import { notFound } from "next/navigation";
+import { getDetail, getList, isNotFoundError, isValidContentId } from "../../../libs/microcms";
 import { Article } from "../../../components/blog/Article/Article";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export const revalidate = 60;
 
+const getArticle = async (slug: string) => {
+  if (!isValidContentId(slug)) notFound();
+  try {
+    return await getDetail(slug);
+  } catch (e) {
+    if (isNotFoundError(e)) notFound();
+    throw e;
+  }
+};
+
 export async function generateMetadata({ params }: Props): Promise<any> {
-  const data = await getDetail(params.slug);
+  const { slug } = await params;
+  const data = await getArticle(slug);
 
   return {
     title: data.title,
@@ -29,7 +41,8 @@ export async function generateStaticParams() {
 }
 
 export default async function Page({ params }: Props) {
-  const data = await getDetail(params.slug);
+  const { slug } = await params;
+  const data = await getArticle(slug);
 
   return <Article data={data} />;
 }

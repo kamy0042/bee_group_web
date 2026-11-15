@@ -1,0 +1,6 @@
+allowBuilds:
+  '@parcel/watcher': false
+
+overrides:
+  # next@15 が固定している postcss 8.4.31 の既知脆弱性回避（next@16 は 8.5 系を使用）
+  'next>postcss': ^8.5.33
