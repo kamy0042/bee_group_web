@@ -36,9 +36,10 @@
 
 .primary {
     background-color: $color-sub;
-    color: $color-main;
+    color: $color-text-on-sub;
     @include hover {
         background-color: #fff;
+        color: $color-main;
     }
 }
 

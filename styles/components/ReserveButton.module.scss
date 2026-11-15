@@ -6,7 +6,7 @@
     justify-content: center;
     border-radius: 999px;
     background-color: $color-sub;
-    color: $color-main;
+    color: $color-text-on-sub;
     padding: 0.9rem 2.4rem;
     font-size: $text-normal-sp;
     font-weight: 700;
@@ -27,7 +27,7 @@
     width: 100%;
     border-radius: 999px;
     background-color: $color-sub;
-    color: $color-main;
+    color: $color-text-on-sub;
     padding: 1.6rem 2.4rem;
     font-size: 1.6rem;
     font-weight: 700;
@@ -36,7 +36,7 @@
     word-break: keep-all;
     overflow-wrap: anywhere;
     text-wrap: balance;
-    transition: background-color 0.3s, transform 0.3s $ease-out;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s $ease-out;
     &::after {
         content: '';
         flex-shrink: 0;
@@ -47,6 +47,7 @@
         transform: rotate(45deg);
     }
     @include hover {
-        background-color: $color-sub-strong;
+        background-color: #fff;
+        color: $color-main;
     }
 }

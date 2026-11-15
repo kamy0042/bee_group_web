@@ -50,14 +50,16 @@ $color-sub:#d9be9b;
 $color-sub-strong:#c4a57c;
 $color-sub-light:#8a6e4b;
 $color-text:#fff;
-$color-text-muted:rgba(255,255,255,0.74);
+$color-text-muted:rgba(255,255,255,0.9);
+$color-text-on-sub:#291f18;
 $color-line:rgba(255,255,255,0.14);
 $color-line-sub:rgba(217,190,155,0.45);
 $color-border:#fff;
 $color-bg:#f1f1f1;
 
+$font-base: "Helvetica Neue", "Helvetica", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
 $font-mincho: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
-$font-display: "Didot", "Bodoni 72", "Bodoni MT", "Times New Roman", serif;
+$font-display: "Times New Roman", "YuMincho", "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif;
 
 $ease-out: cubic-bezier(0.22, 1, 0.36, 1);
 

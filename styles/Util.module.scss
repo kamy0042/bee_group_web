@@ -17,7 +17,7 @@
 
 .linkButton {
   border-radius: 999px;
-  background-color: #fff;
+  background-color: $color-sub;
   font-size: $text-normal-sp;
   width:100%;
   font-weight: 700;
@@ -27,7 +27,7 @@
     display: block;
     text-align: center;
     padding: 1.2rem 1rem;
-    color: $color-main;
+    color: $color-text-on-sub;
     @include pc {
       padding: 0.75rem 1rem;
     }
@@ -37,12 +37,12 @@
     max-width: 300px;
 
     &:hover{
-      background-color: $color-sub;
-      color: #fff;
+      background-color: #fff;
+      color: $color-main;
     }
     &:hover {
       > a {
-        color: #fff;
+        color: $color-main;
       }
     }
   }
