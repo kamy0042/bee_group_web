@@ -30,7 +30,7 @@ export const HAIR_MENUS: HairMenu[] = [
       title: "人気のスタイル",
       items: ["七三オールバック", "ツーブロックショート", "センターパート", "ビジネスマッシュ", "フェード・バーバースタイル"],
     },
-    photo: { src: "/img/owner_cut_1.jpg", width: 2400, height: 1600, position: "62% 30%" },
+    photo: { src: "/img/owner_cut_1.jpg", width: 1700, height: 1133, position: "62% 30%" },
     alt: "メンズカットの施術風景",
   },
   {
@@ -122,7 +122,7 @@ export const HAIR_MENUS: HairMenu[] = [
       "頭皮環境を整えたい",
       "将来も自分の髪を楽しみたい",
     ],
-    photo: { src: "/img/recruit/staff_1.jpg", width: 2000, height: 1333, position: "50% 40%" },
+    photo: { src: "/img/recruit/staff_1.jpg", width: 1700, height: 1133, position: "50% 40%" },
     alt: "髪と頭皮の状態を確認する様子",
   },
 ];
@@ -139,7 +139,7 @@ export type HairStylist = {
 
 export const HAIR_STYLISTS: HairStylist[] = [
   {
-    photo: { src: "/img/staff/staff_matsui.jpg", width: 2026, height: 1520, position: "50% 20%" },
+    photo: { src: "/img/staff/staff_matsui.jpg", width: 1500, height: 1125, position: "50% 20%" },
     alt: "オーナー 松井 祐太",
     position: "オーナー",
     name: "松井 祐太",
@@ -160,7 +160,7 @@ export const HAIR_STYLISTS: HairStylist[] = [
       "「モテる男になりたい」永遠のテーマですよね。自分に似合うヘアスタイルを手に入れることで、若々しさや大人の色気を上手にアピールできます。解消したいお悩みや、なりたいイメージがあれば、ぜひご相談ください！最新トレンドをいち早くキャッチし、さりげなく流行を取り入れた、一人ひとりの魅力を最高に引き立てるヘアスタイルをご提供します！",
   },
   {
-    photo: { src: "/img/staff/staff_ikoma.jpg", width: 2129, height: 1597, position: "50% 20%" },
+    photo: { src: "/img/staff/staff_ikoma.jpg", width: 1500, height: 1125, position: "50% 20%" },
     alt: "スタイリスト・エステティシャン（認定脱毛士） 生駒 明子",
     position: "スタイリスト・エステティシャン（認定脱毛士）",
     name: "生駒 明子",

@@ -45,7 +45,7 @@ const SALES_POINTS: SalesPoint[] = [
   {
     title: "明朗会計",
     text: "その日に受けた施術分の料金をお支払いいただくシステムです。1回ごとのお支払いなので、止めたい時も、また始めたい時も、タイミングは自分で決められます。ローンや分割払いのコースはありません。ご希望の方には、前払い制で回数制限のない、年間フリーパスポートもご用意しています。",
-    photo: { src: "/img/waxing/payment.jpg", width: 1920, height: 1281 },
+    photo: { src: "/img/waxing/payment.jpg", width: 1500, height: 1001 },
     alt: "1回ごとのお支払い",
   },
 ];
@@ -199,7 +199,7 @@ const Waxing = () => (
         <div className={pageStyles.container}>
           <SectionHeading en="STAFF" />
           <StaffProfile
-            photo={{ src: "/img/staff/staff_ikoma.jpg", width: 2129, height: 1597, position: "50% 20%" }}
+            photo={{ src: "/img/staff/staff_ikoma.jpg", width: 1500, height: 1125, position: "50% 20%" }}
             alt="認定脱毛士 生駒 明子"
             position="認定脱毛士"
             name="生駒 明子"

@@ -81,7 +81,7 @@ const MERITS: Merit[] = [
       "髪型が整うと、次に気になってくるのがヒゲや体毛。「毎日のひげ剃りを楽にしたい」「手や脚の毛を自然に薄くしたい」「脱毛の相談をするのが恥ずかしい」そんな男性も多いはずです。",
       "Bee dandyのメンズ脱毛はツルツルにするだけでなく、毛量を減らしたり生え方を整えるなど、希望に合わせた仕上がりも可能。ヘアカットとあわせて相談・施術できるため、初めての方にも始めやすい環境です。",
     ],
-    photo: { src: "/img/img_man_02.JPG", width: 2626, height: 1968, position: "62% 35%" },
+    photo: { src: "/img/img_man_02.JPG", width: 1500, height: 1124, position: "62% 35%" },
     alt: "ヒゲを整えたビジネスマン",
     link: "/waxing",
   },
@@ -238,8 +238,8 @@ const Index = () => (
             <div className={styles.conceptPhoto}>
               <Photo
                 src="/img/owner_cut_2.jpg"
-                width={2400}
-                height={1600}
+                width={1700}
+                height={1133}
                 position="38% 50%"
                 alt="鏡越しにお客様と会話するスタイリスト"
                 className={styles.conceptImage}
@@ -296,8 +296,8 @@ const Index = () => (
             <div className={styles.locationPhoto}>
               <Photo
                 src="/img/recruit/salon_img_4576.jpg"
-                width={2400}
-                height={1600}
+                width={2000}
+                height={1333}
                 alt="Bee dandyの店内"
                 className={styles.locationImage}
               />
