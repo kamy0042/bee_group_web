@@ -24,6 +24,7 @@
         "typescript": "^5.9.3"
     },
     "devDependencies": {
+        "@netlify/plugin-nextjs": "^5.16.7",
         "@types/gtag.js": "^0.0.10",
         "@types/node": "^18.0.1",
         "@types/react": "^19.3.0",

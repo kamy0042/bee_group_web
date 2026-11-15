@@ -203,6 +203,9 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
     devDependencies:
+      '@netlify/plugin-nextjs':
+        specifier: ^5.16.7
+        version: 5.16.7
       '@types/gtag.js':
         specifier: ^0.0.10
         version: 0.0.10
@@ -450,6 +453,10 @@ packages:
     engines: {node: '>=20.9.0'}
     cpu: [x64]
     os: [win32]
+
+  '@netlify/plugin-nextjs@5.16.7':
+    resolution: {integrity: sha512-3cP/P2rx5yIGWsFegfgWH03HjZi8gTwk9MkX1jwuyLfNm5hEF1AV1Pk0OO4SzFK6/UqcuZyXG/7MXh1anIJCgQ==}
+    engines: {node: '>=18.0.0'}
 
   '@next/env@15.5.29':
     resolution: {integrity: sha512-9SrTiTsgORa+KfhlXXAGC1eSs847E+d2MQTPUX+n7R5XA8g/B6ZitfL6GoYHNMLwG3Hzs1wjDH0/ME5WrGMqBQ==}
@@ -2157,6 +2164,8 @@ snapshots:
 
   '@img/sharp-win32-x64@0.35.5':
     optional: true
+
+  '@netlify/plugin-nextjs@5.16.7': {}
 
   '@next/env@15.5.29': {}
 
