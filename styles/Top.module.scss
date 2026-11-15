@@ -51,10 +51,10 @@
 
 @keyframes heroZoom {
     from {
-        transform: scale(1.08);
+        scale: 1.08;
     }
     to {
-        transform: scale(1);
+        scale: 1;
     }
 }
 
@@ -272,9 +272,9 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 1.2s $ease-out;
+    transition: scale 1.2s $ease-out;
     .merit:hover & {
-        transform: scale(1.04);
+        scale: 1.04;
     }
 }
 
@@ -489,7 +489,7 @@
         border-color: $color-line-sub;
         transform: translateY(-4px);
         .cardImage {
-            transform: scale(1.05);
+            scale: 1.05;
         }
         .cardMore::after {
             transform: translateX(0.4rem) rotate(45deg);
@@ -506,7 +506,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.8s $ease-out;
+    transition: scale 0.8s $ease-out;
 }
 
 .cardBody {
