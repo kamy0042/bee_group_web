@@ -1,222 +1,167 @@
-@import 'common.scss';
+@use 'common' as *;
 
-.wrap {
-    background-color: $color-bg;
-    color: $color-main;
-    padding: 2rem;
-    width:75vw;
-    height: 100vh;
-    z-index: -1;
-    position: absolute;
-    top: 0;
-    right: -75%;
-    box-shadow: $shadow-03;
-    transform: translateX(0);
-    transition: .3s;
-    z-index: 9999;
-    a {
-        color: $color-main;
-        display: block;
-    }
+.en {
+    font-family: $font-display;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
 }
 
-.info {
-    margin-top: 0.75rem;
-    padding-left: 1rem;
-    & > div + div {
-        margin-top: 0.5rem;
-    }
-    dt {
-        margin-right: 0.5rem;
-        font-size: 16px;
-    }
+.ja {
+    letter-spacing: 0.1em;
+    white-space: nowrap;
 }
 
-.nav {
-    position: relative;
-    & > li {
-        font-size: 16px;
-        font-weight: 700;
-        position: relative;
-        padding-bottom: 0.5rem;
-        border-bottom: dotted thin #b9b9b9;
-        &::after{
-            content: '';
-            display: block;
-            border-top: solid 8px transparent;
-            border-left: solid 10px;
-            border-bottom: solid 8px transparent;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            right: 0;
-        }
+@include narrow {
+    .overlay {
+        position: fixed;
+        inset: 0;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0.6);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s, visibility 0s 0.35s;
     }
-    & > li + li {
-        margin-top: 1.25rem;
-    }
-    & > li:last-of-type {
-        margin-top: 1.5rem;
-        border-bottom: none;
-        &::after{
-            content: none;
-        }
-        a {
-            text-align: center;
-        }
-    }
-}
 
-.tel a{
-    font-size: 20px;
-    padding: 2px 5px 5px 0;
-}
-
-.button{
-    border: 0;
-    background: #fff;
-    position: absolute;
-    top: 4rem;
-    left: -5rem;
-    width:3rem;
-    height: 2px;
-    &::after{
-        content: '';
-        width:3rem;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        left: 0;
-        top: 0.75rem;
-        transition: .3s;
+    .overlayOpen {
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.35s;
     }
-    &::before{
-        content: '';
-        width:3rem;
-        height: 2px;
-        background: #fff;
-        position: absolute;
-        left: 0;
-        top: -0.75rem;
-        transition: .3s;
-    }
-    .isOpen & {
-        &::after{
-            transform: rotate(45deg);
-        }
-        &::before{
-            transform: rotate(-45deg);
-        }
-    }
-}
 
-.openedWrap {
-    transform: translateX(-100%);
-    opacity: 1;
-    @include pc{
-        transform: translateX(0);
-    };
-}
-
-.openedBtn{
-    background: none;
-    &::after{
-        transform:translateY(-0.8rem) rotate(45deg);
-    }
-    &::before{
-        transform:translateY(0.6rem) rotate(-45deg);
-    }
-}
-
-.overlay {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: -1;
-}
-
-.openedOverlay {
-    background-color: rgba(0,0,0,0.8);
-    z-index: 9998;
-}
-
-.comment{
-    font-size: 12px;
-    margin-top:0.5rem;
-}
-
-
-@include pc {
-    .spOnly{
-        display: none;
-    }
-    .button{
-        display: none;
-    }
-    .info{
-        display: none;
-    }
-    .wrap{
-        background: none;
-        width: auto;
-        height: auto;
-        color: $color-text;
-        box-shadow: none;
-        position: relative;
+    .nav {
+        position: fixed;
+        top: 0;
         right: 0;
+        bottom: 0;
+        z-index: 2;
+        width: min(100%, 42rem);
+        padding: calc(#{$header-height-sp} + 2rem) 2.8rem 4rem;
+        background-color: $color-main-deep;
+        overflow-y: auto;
+        overscroll-behavior: contain;
+        transform: translateX(100%);
+        visibility: hidden;
+        transition: transform 0.45s $ease-out, visibility 0s 0.45s;
     }
-    .overlay{
+
+    .navOpen {
+        transform: none;
+        visibility: visible;
+        transition: transform 0.45s $ease-out;
+    }
+
+    .item {
+        border-bottom: 1px solid $color-line;
+        a {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1rem;
+            padding: 1.5rem 0;
+        }
+        a[aria-current='page'] .en {
+            color: $color-sub;
+        }
+    }
+
+    .en {
+        font-size: 2.2rem;
+    }
+
+    .ja {
+        font-size: 1.2rem;
+        color: $color-sub;
+    }
+
+    .drawerInfo {
+        margin-top: 3.2rem;
+    }
+
+    .drawerReserve {
+        width: 100%;
+        padding: 1.4rem;
+        font-size: 1.6rem;
+    }
+
+    .info {
+        margin-top: 2.8rem;
+        font-size: 1.3rem;
+        color: $color-text-muted;
+        & > div + div {
+            margin-top: 1.6rem;
+        }
+        dt {
+            margin-bottom: 0.4rem;
+            color: $color-sub;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+    }
+
+    .comment {
+        margin-top: 0.4rem;
+        font-size: 1.1rem;
+    }
+
+    .tel {
+        font-size: 2rem;
+        color: $color-text;
+        letter-spacing: 0.04em;
+    }
+}
+
+@include wide {
+    .overlay,
+    .drawerOnly,
+    .drawerInfo {
         display: none;
     }
-    .nav{
+
+    .nav {
+        margin-left: auto;
+        margin-right: 2.4rem;
+    }
+
+    .list {
         display: flex;
         align-items: center;
-        &_link{
-            & > a {
-                color: $color-text;
-            }
-        }
-        & > li {
-            font-size: $text-large;
-            transition: .3s;
-            border-bottom: 0;
-            position: relative;
-            height: 100%;
-            padding-bottom: 0;
-            &::after{
-                content: '';
-                display: block;
-                width: 100%;
-                height: 2px;
-                background-color: #fff;
-                border: 0;
-                position: absolute;
-                top: auto;
-                bottom: 0;
-                transform: translateY(0) scaleX(0);
-                transition: .3s;
-                transform-origin: left;
-            }
-            & > a {
-                padding: 0.75rem 1rem;
-            }
-            &:hover{
-                &::after{
-                    transform: translateY(0) scaleX(1);
-                }
-            }
-        }
-        & > li + li {
-            margin:0 0 0 3rem;
-        }
-        & > li:last-of-type {
-            margin-top:0;
-            a{
-                padding: 0.5rem 4rem;
-            }
-        }
+        gap: 2.6rem;
+    }
 
+    .item a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+        padding: 0.6rem 0;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -0.2rem;
+            height: 1px;
+            background-color: $color-sub;
+            transform: scaleX(0);
+            transition: transform 0.35s $ease-out;
+        }
+        @include hover {
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+        &[aria-current='page']::after {
+            transform: scaleX(1);
+        }
+    }
+
+    .en {
+        font-size: 1.5rem;
+    }
+
+    .ja {
+        font-size: 1rem;
+        color: $color-text-muted;
     }
 }

@@ -1,0 +1,32 @@
+@use '../common' as *;
+
+.visual {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    overflow: hidden;
+    background:
+        radial-gradient(120% 80% at 50% 0%, #272b40 0%, rgba($color-main, 0) 70%),
+        $color-main;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('../../public/img/smp-dots.svg') center top / 480px auto repeat-x;
+    }
+}
+
+.label {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 8%;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    letter-spacing: 0.24em;
+    color: $color-sub;
+    text-align: center;
+    @include pc {
+        font-size: 1.6rem;
+    }
+}

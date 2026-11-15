@@ -1,4 +1,4 @@
-@import 'common.scss';
+@use 'common' as *;
 
 *,
 *::before,
@@ -12,6 +12,21 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   font-size: 10px;
+  scroll-padding-top: calc(#{$header-height-sp} + 1.6rem);
+  @include wide {
+    scroll-padding-top: calc(#{$header-height-pc} + 2rem);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid $color-sub;
+  outline-offset: 3px;
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
@@ -27,14 +42,11 @@ body {
   line-height: 1.6;
   color:$color-text;
   text-align: left;
-  background-color: #fff;
+  background-color: $color-main;
 	font-feature-settings: "pkna";
 	/* フォントレンダリング設定: 1x解像度ではsubpixel、2x以上の解像度ではgrayscale */
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: unset;
-  @include pc{
-    overflow-x: auto;
-  };
 }
 @media only screen and
 (-webkit-min-device-pixel-ratio: 2),
@@ -58,11 +70,18 @@ hr {
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
   margin-bottom: 0;
+  word-break: auto-phrase;
+  text-wrap: pretty;
+  // 文節区切りのないブラウザで balance を使うと、語の途中での改行が増えるため
+  @supports (word-break: auto-phrase) {
+    text-wrap: balance;
+  }
 }
 
 p {
   margin-top: 0;
   margin-bottom: 0;
+  text-wrap: pretty;
 }
 
 abbr[title],
@@ -166,10 +185,9 @@ figure {
 img {
   vertical-align: middle;
   border-style: none;
+  max-width: 100%;
+  height: auto;
 }
-@include sp {
-  img{max-width: 100%;height: auto;}
-};
 
 svg {
   overflow: hidden;

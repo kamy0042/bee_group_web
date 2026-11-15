@@ -3,7 +3,7 @@ export const SHOP_INFO = {
     RESERVE_ONLY_TIME: "13:00",
     CLOSE: "21:30",
     RESERVE_LIMIT: "20:30",
-    HOLIDAY: "不定休",
+    HOLIDAY: "毎月第1・第3日曜、年末年始",
     HOLIDAY_OPEN: "9:00",
     HOLIDAY_CLOSE: "20:30",
     HOLIDAY_RESERVE_LIMIT: "19:30",

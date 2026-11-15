@@ -1,0 +1,50 @@
+@use '../common' as *;
+
+.svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.head {
+    fill: #23273a;
+    stroke: rgba($color-sub, 0.7);
+    stroke-width: 1.2;
+}
+
+.line {
+    fill: none;
+    stroke: rgba($color-sub, 0.7);
+    stroke-width: 1.2;
+    stroke-linejoin: round;
+}
+
+.hair {
+    fill: #3a3f58;
+}
+
+.dots {
+    fill: $color-sub;
+}
+
+.guide {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.55);
+    stroke-width: 1;
+    stroke-dasharray: 3 3;
+}
+
+.face {
+    fill: none;
+    stroke: rgba($color-sub, 0.55);
+    stroke-width: 1.2;
+    stroke-linecap: round;
+}
+
+.scar {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.65);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}

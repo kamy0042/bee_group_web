@@ -24,7 +24,7 @@ const CtaBox = ({ isExtend }: { isExtend?: boolean }) => (
       </p>
     </dd>
     <dd className={styles.btn}>
-      <CtaButton text="応募する・見学する・問い合わせする" link={jobPageURL} />
+      <CtaButton text={<>応募する・<wbr />見学する・<wbr />問い合わせする</>} link={jobPageURL} />
     </dd>
     {isExtend ? (
       <dd className={styles.tel}>
@@ -128,7 +128,7 @@ const scheme = {
 const Recruit = () => (
   <>
     <Head>
-      <title>スタイリスト募集【2名限定】 | {SALON_NAME}</title>
+      <title>{`スタイリスト募集【2名限定】 | ${SALON_NAME}`}</title>
       <meta
         name="description"
         content="新橋・汐留のビジネスマンに支持されるメンズ専門サロン Bee dandy では、マンツーマン施術 × 高単価で働けるスタイリストを2名限定で募集しています"
@@ -140,7 +140,7 @@ const Recruit = () => (
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scheme) }}
       />
     </Head>
-    <MainLayout noHeaderImg isLight>
+    <MainLayout isLight>
       <div className={styles.contents}>
         <section>
           <h1 className={styles.heading}>スタイリスト募集<br className={styles.pcNone}/>【2名限定】</h1>

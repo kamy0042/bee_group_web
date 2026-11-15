@@ -1,9 +1,9 @@
-@import 'common.scss';
+@use 'common' as *;
 
 
 @include pc{
   .contents{
-    width: $width-container;
+    max-width: $width-container;
     margin:  auto ;
   }
 };
@@ -51,7 +51,7 @@
   margin-top: 5rem;
   @include pc{
     margin: 7rem auto 0;
-    width: 850px;
+    max-width: 850px;
   }
 }
 
@@ -99,7 +99,8 @@
     border:none;
     padding: 0;
      & > p {
-       width: 850px;
+       width: 100%;
+       max-width: 850px;
        margin-top: 2rem;
      }
   }
@@ -107,7 +108,7 @@
     margin-bottom: 1rem;
     width: 100%;
     @include pc {
-      width: 850px;
+      max-width: 850px;
     }
   }
   p > span {
@@ -312,7 +313,7 @@
 .btn {
   margin-top: 1.5rem;
   @include pc {
-    width:350px;
+    width:420px;
     margin: 4rem auto 0;
   }
 }
@@ -455,12 +456,12 @@
     }
   }
   @include pc {
-    width: 850px;
+    max-width: 850px;
     margin: auto;
     padding: 2rem;
     text-align: center;
     .btn{
-      width: 350px;
+      width: 420px;
       margin:3rem auto 0;
     }
   }

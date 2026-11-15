@@ -14,6 +14,13 @@ const nextConfig = {
   async headers() {
     return [{ source: '/:path*', headers: securityHeaders }]
   },
+  async redirects() {
+    return [
+      { source: '/menu', destination: '/hairstyle#price', permanent: true },
+      { source: '/staff', destination: '/hairstyle#stylist', permanent: true },
+      { source: '/salon', destination: '/#location', permanent: true },
+    ]
+  },
 }
 
 module.exports = nextConfig

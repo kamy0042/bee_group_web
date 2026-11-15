@@ -1,134 +1,32 @@
-@import 'common.scss';
-
+@use 'common' as *;
 
 .wrap {
-    background-color: $color-main;
-    @include pc {
-        overflow-x: visible;
-        min-width: calc(1200px + 9rem);
-    }
-
-}
-
-.isOpen {
-    position: fixed;
-    @include pc{
-        position:relative;
-    };
-}
-
-.inner {
-    padding:$padding-container-sp;
-    margin-bottom: 3rem;
     min-height: 100vh;
-    display :flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow-x: hidden;
-    @include pc {
-        max-width: 1980px;
-        margin: auto;
-        overflow-x: auto;
-        padding: $padding-container;
-    }
-}
-
-.innerNoImg {
-    padding:$padding-container-sp;
-    margin-bottom: 3rem;
-    display :flex;
-    flex-direction: column;
-    justify-content: space-between;
-    position: relative;
-    overflow-x: hidden;
-    @include pc {
-        max-width: 1980px;
-        margin: auto;
-        overflow-x: auto;
-        padding: $padding-container;
-    }
-    & .headerArea{
-        border-bottom: solid thin #fff;
-    }
+    background-color: $color-main;
+    color: $color-text;
 }
 
 .main {
-    margin-bottom: 3rem;
+    flex: 1 0 auto;
+}
+
+.contained {
+    @include container;
+    padding-top: 4rem;
+    padding-bottom: 8rem;
+    @include pc {
+        padding-top: 6rem;
+        padding-bottom: 12rem;
+    }
 }
 
 .light {
     background-color: #fff;
     color: $color-main;
     padding: $padding-container-sp $padding-container-sp 3rem;
-    margin-bottom: 0;
     @include pc {
         padding: $padding-container $padding-container 2rem;
     }
 }
-.lightInner {
-    padding: 0;
-    margin-bottom: 0;
-}
-.lightHeader {
-    padding: $padding-container-sp $padding-container-sp 0!important;
-    @include pc {
-        padding: $padding-container $padding-container 2rem!important;
-    }
-}
-
-
-@include pc {
-    .headerArea{
-        padding:  0 0 2rem;
-    }
-
-    .headerAreaInner{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1.5rem;
-    }
-}
-
-.info {
-    display:none;
-    @include pc {
-        display: flex;
-        dt{
-            margin-right: 1rem;
-            padding-right: 1rem;
-            border-right: solid thin;
-            min-width: 6rem;
-        }
-        dd > p:not(:last-of-type) {
-            display: inline-block;
-        }
-        dd > p:nth-of-type(2),
-        dd > p:nth-of-type(3){
-            margin-left: 1rem;
-            padding-left: 2rem;
-            position: relative;
-        }
-        dd > p:nth-of-type(2)::before,
-        dd > p:nth-of-type(3)::after,{
-            content: '/';
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
-
-    }
-}
-
-.infoItem {
-    display: flex;
-    margin-top: 0.5rem;
-    flex-wrap: wrap;
-}
-
-.infoInner {
-    margin-left: 5rem;
-}
-
-
