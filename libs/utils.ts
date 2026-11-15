@@ -1,8 +1,9 @@
 import { format } from 'date-fns';
 import { utcToZonedTime } from 'date-fns-tz';
-import cheerio from 'cheerio';
+import * as cheerio from 'cheerio';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/hybrid.css';
+import { sanitizeRichText } from './sanitize';
 
 export const formatDate = (date: string) => {
   const utcDate = new Date(date);
@@ -29,5 +30,6 @@ export const formatRichText = (richText: string) => {
     const res = highlight($(elm).text(), lang);
     $(elm).html(res.value);
   });
-  return $.html();
+  // CMS 由来の HTML は dangerouslySetInnerHTML で描画されるため、出力直前に必ずサニタイズする
+  return sanitizeRichText($.html());
 };

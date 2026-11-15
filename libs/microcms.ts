@@ -46,6 +46,13 @@ export const client = createClient({
   apiKey: process.env.MICROCMS_API_KEY,
 });
 
+// microCMS のコンテンツIDとして有効な形式か
+// （SDK は contentId をエンコードせず API の URL に連結するため、URL 由来の値は必ず検証する）
+export const isValidContentId = (id: string) => /^[\w-]+$/.test(id);
+
+// 存在しないコンテンツを取得しようとした時のエラーか
+export const isNotFoundError = (e: unknown) => e instanceof Error && e.message.includes('status: 404');
+
 // ブログ一覧を取得
 export const getList = async (queries?: MicroCMSQueries) => {
   const listData = await client
