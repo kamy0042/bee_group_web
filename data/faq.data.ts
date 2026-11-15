@@ -123,7 +123,7 @@ export const FAQ_CATEGORIES: FaqCategory[] = [
   },
   {
     id: "scalp-ink",
-    title: "頭皮アート／スカルプインクについて",
+    title: "スカルプインクについて",
     items: [
       {
         q: "初めてなので、よくわからないのですが",

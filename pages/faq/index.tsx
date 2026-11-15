@@ -13,7 +13,7 @@ const Faq = () => (
       <title>{`よくある質問 | ${SALON_NAME}`}</title>
       <meta
         name="description"
-        content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。ヘアカット、頭皮アート、メンズ脱毛、予約・お支払いなど、あなたの疑問にお答えします"
+        content="新橋の男性専門美容室 Bee dandyのよくある質問をまとめました。ヘアカット、スカルプインク、メンズ脱毛、予約・お支払いなど、あなたの疑問にお答えします"
       />
       <link rel="icon" href="/favicon.ico" />
     </Head>

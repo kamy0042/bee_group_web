@@ -42,7 +42,7 @@ const splitLabel = (text: string) => {
 const ScalpInk = () => (
   <>
     <Head>
-      <title>{`スカルプインク（頭皮アート） | ${SALON_NAME}`}</title>
+      <title>{`スカルプインク | ${SALON_NAME}`}</title>
       <meta
         name="description"
         content="新橋の男性専門美容室 Bee dandyのスカルプインク（SMP）。薄毛や生え際が気になる方へ、スカルプインクという新しい選択肢。頭皮に細かな陰影を加え、気になる地肌の目立ちを抑える美容施術です。"
