@@ -24,7 +24,6 @@ const Faq = () => (
         ja="よくある質問"
         image={{
           src: "/img/bee_image_1-min.jpg",
-          webp: "/img/webp/bee_image_1-min.webp",
           width: 1066,
           height: 1600,
           position: "50% 70%",

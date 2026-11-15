@@ -34,7 +34,6 @@ const MERITS: Merit[] = [
     ],
     photo: {
       src: "/img/bee_room_image-min.jpg",
-      webp: "/img/webp/bee_room_image-min.webp",
       width: 1280,
       height: 960,
       position: "62% 60%",
@@ -48,7 +47,6 @@ const MERITS: Merit[] = [
     ],
     photo: {
       src: "/img/bee_style-min.jpg",
-      webp: "/img/webp/bee_style-min.webp",
       width: 1280,
       height: 853,
       position: "66% 30%",
@@ -63,7 +61,6 @@ const MERITS: Merit[] = [
     ],
     photo: {
       src: "/img/bee_man-min.jpg",
-      webp: "/img/webp/bee_man-min.webp",
       width: 1280,
       height: 853,
       position: "40% 30%",
@@ -105,7 +102,7 @@ const INFO_CARDS: InfoCard[] = [
     en: "Hair Style",
     ja: "ヘアスタイル",
     description: "メンズカット、パーマ、カラー、ヘッドスパなど、Bee dandyのヘアメニューをご紹介",
-    photo: { src: "/img/bee_menu-min.jpg", webp: "/img/webp/bee_menu-min.webp", width: 1600, height: 1067 },
+    photo: { src: "/img/bee_menu-min.jpg", width: 1600, height: 1067 },
     alt: "ハサミとコーム",
   },
   {
@@ -121,7 +118,6 @@ const INFO_CARDS: InfoCard[] = [
     description: "ヒゲや体毛のお悩みに。大人の男性の身だしなみをサポート",
     photo: {
       src: "/img/bee_removal-min.jpg",
-      webp: "/img/webp/bee_removal-min.webp",
       width: 1280,
       height: 960,
       position: "50% 70%",
@@ -135,7 +131,6 @@ const INFO_CARDS: InfoCard[] = [
     description: "ヘアカット、スカルプインク、メンズ脱毛についてよくいただくご質問",
     photo: {
       src: "/img/bee_image_1-min.jpg",
-      webp: "/img/webp/bee_image_1-min.webp",
       width: 1066,
       height: 1600,
       position: "50% 70%",
@@ -149,7 +144,6 @@ const INFO_CARDS: InfoCard[] = [
     description: "Bee dandyの最新情報やヘアスタイル、お客様の声をご紹介",
     photo: {
       src: "/img/bee_business-min.jpg",
-      webp: "/img/webp/bee_business-min.webp",
       width: 1280,
       height: 853,
       position: "50% 70%",
@@ -182,7 +176,6 @@ const Index = () => (
         <div className={styles.heroBg} aria-hidden="true">
           <Photo
             src="/img/bee_top_image-min.jpg"
-            webp="/img/webp/bee_top_image-min.webp"
             width={1600}
             height={1200}
             position="28% 40%"

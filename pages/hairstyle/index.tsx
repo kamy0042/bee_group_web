@@ -47,7 +47,6 @@ const HairStyle = () => (
         ja="ヘアスタイル"
         image={{
           src: "/img/bee_menu-min.jpg",
-          webp: "/img/webp/bee_menu-min.webp",
           width: 1600,
           height: 1067,
           position: "50% 60%",

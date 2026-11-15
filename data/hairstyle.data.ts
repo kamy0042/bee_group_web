@@ -80,7 +80,6 @@ export const HAIR_MENUS: HairMenu[] = [
     },
     photo: {
       src: "/img/bee_man-min.jpg",
-      webp: "/img/webp/bee_man-min.webp",
       width: 1280,
       height: 853,
       position: "42% 30%",
@@ -103,7 +102,6 @@ export const HAIR_MENUS: HairMenu[] = [
     ],
     photo: {
       src: "/img/bee_headspa-min.jpg",
-      webp: "/img/webp/bee_headspa-min.webp",
       width: 1280,
       height: 852,
       position: "45% 50%",

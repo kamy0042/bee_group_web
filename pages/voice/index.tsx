@@ -26,7 +26,6 @@ const Voice = () => (
         ja="お客様の声"
         image={{
           src: "/img/bee_business-min.jpg",
-          webp: "/img/webp/bee_business-min.webp",
           width: 1280,
           height: 853,
           position: "50% 70%",

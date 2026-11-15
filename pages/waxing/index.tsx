@@ -27,7 +27,7 @@ const SALES_POINTS: SalesPoint[] = [
   {
     title: "隠れ家的サロン",
     text: "男の身だしなみ、さりげないオシャレに必須となったメンズ脱毛。ビジネスマンが通うメンズ美容室の脱毛サロンだから、お店に入る時も恥ずかしくない！高級感漂う落ち着きの個室空間、人目を気にせず相談や施術が受けられます。",
-    photo: { src: "/img/bee_room_image-min.jpg", webp: "/img/webp/bee_room_image-min.webp", width: 1280, height: 960 },
+    photo: { src: "/img/bee_room_image-min.jpg", width: 1280, height: 960 },
     alt: "個室で安心施術",
   },
   {
@@ -39,7 +39,7 @@ const SALES_POINTS: SalesPoint[] = [
   {
     title: "安全の国産マシン",
     text: "日本エステティック振興協議会の認定機種で、男性のヒゲ、ワキ、VIOのような太くて濃い毛を得意とする機種でありながら、痛みが少ないと評判です。施術時にジェルが必要ないので時間が短縮できるうえ、光の作用と瞬間的冷却美容で毛穴が引き締まり、美肌効果も得られます。",
-    photo: { src: "/img/bee_waxing.jpg", webp: "/img/webp/bee_waxing.webp", width: 640, height: 480 },
+    photo: { src: "/img/bee_waxing.jpg", width: 640, height: 480 },
     alt: "脱毛には国産器具を利用",
   },
   {
@@ -108,7 +108,6 @@ const Waxing = () => (
         ja="メンズ脱毛"
         image={{
           src: "/img/bee_removal-min.jpg",
-          webp: "/img/webp/bee_removal-min.webp",
           width: 1280,
           height: 960,
           position: "50% 58%",
