@@ -199,7 +199,7 @@ const Waxing = () => (
         <div className={pageStyles.container}>
           <SectionHeading en="STAFF" />
           <StaffProfile
-            photo={{ src: "/img/staff/staff_ikoma.jpg", width: 1500, height: 1125, position: "50% 20%" }}
+            photo={{ src: "/img/staff/staff_ikoma_202611.jpg", width: 1400, height: 2097, position: "50% 15%" }}
             alt="認定脱毛士 生駒 明子"
             position="認定脱毛士"
             name="生駒 明子"
