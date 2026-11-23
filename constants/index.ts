@@ -7,6 +7,7 @@ export type NavItem = {
   en: string;
   ja: string;
   activePaths?: string[];
+  footerOnly?: boolean;
 };
 
 export const NAV_ITEMS: NavItem[] = [
@@ -14,7 +15,13 @@ export const NAV_ITEMS: NavItem[] = [
   { href: '/scalp-ink', en: 'Scalp Ink', ja: 'スカルプインク' },
   { href: '/waxing', en: 'Hair Removal', ja: 'メンズ脱毛' },
   { href: '/faq', en: 'FAQ', ja: 'よくある質問' },
-  { href: '/blog', en: 'Blog & Voice', ja: 'ブログ・お客様の声', activePaths: ['/blog', '/articles', '/voice'] },
+  {
+    href: '/blog',
+    en: 'Blog & Voice',
+    ja: 'ブログ・お客様の声',
+    activePaths: ['/blog', '/articles', '/voice'],
+    footerOnly: true,
+  },
   { href: '/recruit', en: 'Recruit', ja: 'スタイリスト募集' },
 ];
 

@@ -7,12 +7,11 @@ import styles from "../../styles/MainLayout.module.scss";
 
 type Props = {
   children: React.ReactNode;
-  isLight?: boolean;
   contained?: boolean;
 };
 
-const MainLayout = ({ children, isLight, contained }: Props) => {
-  const mainClassName = [styles.main, isLight && styles.light, contained && styles.contained]
+const MainLayout = ({ children, contained }: Props) => {
+  const mainClassName = [styles.main, contained && styles.contained]
     .filter(Boolean)
     .join(" ");
 

@@ -29,7 +29,7 @@ const Navigation = ({ isOpen, onNavigate }: Props) => {
               <span className={styles.en}>Top</span>
             </Link>
           </li>
-          {NAV_ITEMS.map((item) => (
+          {NAV_ITEMS.filter((item) => !item.footerOnly).map((item) => (
             <li key={item.href} className={styles.item}>
               <Link
                 href={item.href}
