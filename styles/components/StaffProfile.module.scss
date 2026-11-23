@@ -32,6 +32,12 @@
     }
 }
 
+.square {
+    @include pc {
+        aspect-ratio: 1 / 1;
+    }
+}
+
 .photoImg {
     width: 100%;
     height: 100%;

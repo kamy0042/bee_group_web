@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+import Photo, { PhotoAsset } from "./Photo";
 import styles from "../styles/components/PriceTable.module.scss";
 
 export type PriceColumn = {
@@ -20,6 +21,7 @@ export type PriceTableData = {
   subtitle?: string;
   description?: string[];
   notes?: string[];
+  photo?: PhotoAsset & { alt: string };
   nameLabel?: string;
   columns: PriceColumn[];
   rows: PriceRow[];
@@ -35,6 +37,7 @@ const PriceTable = ({
   subtitle,
   description,
   notes,
+  photo,
   nameLabel = "",
   columns,
   rows,
@@ -60,6 +63,11 @@ const PriceTable = ({
         {notes.map((text) => (
           <p key={text}>{text}</p>
         ))}
+      </div>
+    )}
+    {photo && (
+      <div className={styles.photo}>
+        <Photo {...photo} className={styles.photoImage} />
       </div>
     )}
     <table className={`${styles.table} ${hideHead ? styles.noHead : ""}`}>

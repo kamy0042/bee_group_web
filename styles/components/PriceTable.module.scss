@@ -50,6 +50,19 @@
     color: $color-sub;
 }
 
+.photo {
+    max-width: 40rem;
+    margin: 2.4rem auto 0;
+    @include pc {
+        margin-top: 3.2rem;
+    }
+}
+
+.photoImage {
+    display: block;
+    width: 100%;
+}
+
 .table {
     width: 100%;
     margin-top: 2.4rem;

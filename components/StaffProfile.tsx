@@ -4,6 +4,7 @@ import styles from "../styles/components/StaffProfile.module.scss";
 
 type Props = {
   photo: PhotoAsset;
+  squarePhoto?: boolean;
   alt: string;
   position: string;
   name: string;
@@ -13,9 +14,9 @@ type Props = {
   children?: ReactNode;
 };
 
-const StaffProfile = ({ photo, alt, position, name, instagram, profile, message, children }: Props) => (
+const StaffProfile = ({ photo, squarePhoto, alt, position, name, instagram, profile, message, children }: Props) => (
   <article className={styles.profile}>
-    <div className={styles.photo}>
+    <div className={`${styles.photo} ${squarePhoto ? styles.square : ""}`}>
       <Photo {...photo} alt={alt} className={styles.photoImg} />
     </div>
     <div className={styles.body}>

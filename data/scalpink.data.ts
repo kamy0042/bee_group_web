@@ -1,4 +1,4 @@
-import { Concern } from "../components/ConcernIllustration";
+import { PhotoAsset } from "../components/Photo";
 import { PriceColumn, PriceTableData } from "../components/PriceTable";
 
 type TitledText = {
@@ -33,16 +33,18 @@ export const SCALP_INK_MERITS: TitledText[] = [
 ];
 
 export type ScalpInkCase = {
-  type: Concern;
   title: string;
+  photo: PhotoAsset;
+  alt: string;
   description: string[];
   estimates: string[];
 };
 
 export const SCALP_INK_CASES: ScalpInkCase[] = [
   {
-    type: "crown",
     title: "頭頂部のつむじ・分け目の透け",
+    photo: { src: "/img/scalp/skalp_user_01.jpg", width: 1024, height: 1280 },
+    alt: "頭頂部のつむじ・分け目の透けへのスカルプインク施術前後（50,000発）",
     description: [
       "髪が細くなったり、本数が減ったりすると、髪の間から地肌が見えやすくなります。",
       "頭皮に細かな陰影を加えることで、髪と地肌のコントラストを弱め、透け感を目立ちにくくします。",
@@ -50,8 +52,9 @@ export const SCALP_INK_CASES: ScalpInkCase[] = [
     estimates: ["累計ショット数：約3万〜10万発", "施術回数：2〜3回"],
   },
   {
-    type: "hairline",
     title: "生え際・M字の後退",
+    photo: { src: "/img/scalp/skalp_user_02.jpg", width: 1080, height: 1350 },
+    alt: "生え際・M字の後退へのスカルプインク施術前後（200,000発）",
     description: [
       "生え際が後退すると、額が広く見えたり、ヘアラインの印象が変わったりします。",
       "細かなドットで陰影を加えることで、後退した生え際の見え方を整え、自然なヘアラインに近づけます。",
@@ -59,8 +62,9 @@ export const SCALP_INK_CASES: ScalpInkCase[] = [
     estimates: ["累計ショット数：約10万〜30万発", "施術回数：2〜3回"],
   },
   {
-    type: "full",
     title: "頭頂部全体・短髪・坊主スタイル",
+    photo: { src: "/img/scalp/skalp_user_03.jpg", width: 1080, height: 1350 },
+    alt: "頭頂部全体へのスカルプインク施術前後（300,000発）",
     description: [
       "短髪や坊主スタイルでは、頭皮に見える毛根の密度が全体の印象を大きく左右します。",
       "細かなドットを重ねることで、短く刈った髪があるような陰影をつくり、自然な密度感を演出します。",
@@ -68,8 +72,9 @@ export const SCALP_INK_CASES: ScalpInkCase[] = [
     estimates: ["累計ショット数：約30万〜70万発", "施術回数：3～5回"],
   },
   {
-    type: "scar",
     title: "傷跡・部分的な薄毛",
+    photo: { src: "/img/scalp/skalp_user_04.jpg", width: 1080, height: 1350 },
+    alt: "部分的な薄毛へのスカルプインク施術前後（60,000発）",
     description: [
       "傷跡や部分的に髪が少ない箇所は、周囲との色や密度の差によって目立つことがあります。",
       "周囲の髪や頭皮になじむよう陰影を加えることで、傷跡や部分的な薄毛を目立ちにくくします。",
@@ -100,6 +105,12 @@ export const SCALP_INK_TRIAL_TABLE: PriceTableData = {
   description: [
     "初めての方に向けた、カウンセリングと体験施術のセットプランをご用意しています。無料カウンセリングのみのご利用も可能です。まずはお気軽にご相談ください。",
   ],
+  photo: {
+    src: "/img/scalp/skalp_TRIAL.png",
+    width: 1254,
+    height: 1254,
+    alt: "初回セット　カウンセリング・体験施術（SS）",
+  },
   nameLabel: "コース内容",
   columns: COLUMNS,
   rows: [{ name: "初回カウンセリング＋お試し施術（最大10,000発）", values: ["60分", "¥25,300", "¥19,800"] }],

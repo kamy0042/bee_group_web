@@ -3,8 +3,7 @@ import MainLayout from "../../components/template/MainLayout";
 import PageHeader from "../../components/PageHeader";
 import InPageNav from "../../components/InPageNav";
 import SectionHeading from "../../components/SectionHeading";
-import SmpVisual from "../../components/SmpVisual";
-import ConcernIllustration from "../../components/ConcernIllustration";
+import Photo from "../../components/Photo";
 import StaffProfile from "../../components/StaffProfile";
 import FaqList from "../../components/FaqList";
 import PriceTable from "../../components/PriceTable";
@@ -51,7 +50,11 @@ const ScalpInk = () => (
     </Head>
 
     <MainLayout>
-      <PageHeader en="SCALP INK" ja="スカルプインク">
+      <PageHeader
+        en="SCALP INK"
+        ja="スカルプインク"
+        image={{ src: "/img/scalp/scalp-img-1.png", width: 1672, height: 941, position: "60% 40%" }}
+      >
         <p className={styles.heroLead}>
           薄毛・生え際に、
           <br className={styles.spOnly} />
@@ -78,7 +81,13 @@ const ScalpInk = () => (
           <SectionHeading en="WHAT IS SMP?" lead="スカルプインク（SMP）とは？" />
           <div className={styles.about}>
             <div className={styles.aboutVisual}>
-              <SmpVisual className={styles.aboutVisualInner} label="Scalp Micropigmentation" />
+              <Photo
+                src="/img/scalp/scalp-image-2.png"
+                width={1448}
+                height={1086}
+                alt="頭皮の施術を受ける男性"
+                className={styles.aboutImage}
+              />
             </div>
             <div className={pageStyles.text}>
               {ABOUT_TEXT.map((text) => (
@@ -140,9 +149,9 @@ const ScalpInk = () => (
           </div>
           <div className={styles.cases}>
             {SCALP_INK_CASES.map((item) => (
-              <article key={item.type} className={styles.case}>
+              <article key={item.title} className={styles.case}>
                 <div className={styles.caseVisual}>
-                  <ConcernIllustration type={item.type} />
+                  <Photo {...item.photo} alt={item.alt} className={styles.caseImage} />
                 </div>
                 <div>
                   <h3 className={styles.caseTitle}>{item.title}</h3>
@@ -174,7 +183,8 @@ const ScalpInk = () => (
         <div className={pageStyles.container}>
           <SectionHeading en="STAFF" />
           <StaffProfile
-            photo={{ src: "/img/staff/2306_matsui_2.jpg", width: 1600, height: 2400, position: "50% 25%" }}
+            photo={{ src: "/img/staff/staff_matsui_skalp_202611.jpg", width: 1400, height: 2100, position: "50% 15%" }}
+            squarePhoto
             alt="スカルプインク認定アーティスト 松井 祐太"
             position="スカルプインク認定アーティスト"
             name="松井 祐太"
