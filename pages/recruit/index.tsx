@@ -12,8 +12,8 @@ import {
   ASSISTANT_SUPPORT,
   ATMOSPHERE,
   CAREER_INTRO,
-  CAREER_PATH_GOALS,
-  CAREER_PATH_STEPS,
+  // CAREER_PATH_GOALS,
+  // CAREER_PATH_STEPS,
   COMPANY_ROWS,
   ENTRY_FORM_URL,
   EVALUATIONS,
@@ -42,7 +42,10 @@ import { SHOP_INFO } from "../../public/static";
 import pageStyles from "../../styles/Page.module.scss";
 import styles from "../../styles/Recruit.module.scss";
 
-const JOB_POSTINGS: Record<string, { title: string; datePosted: string; minValue: number; maxValue: number; id: string }> = {
+const JOB_POSTINGS: Record<
+  string,
+  { title: string; datePosted: string; minValue: number; maxValue: number; id: string }
+> = {
   "job-stylist": { title: "スタイリスト", datePosted: "2026-06-15", minValue: 230000, maxValue: 300000, id: "0001" },
   "job-assistant": { title: "アシスタント", datePosted: "2026-11-23", minValue: 220000, maxValue: 230000, id: "0002" },
 };
@@ -94,8 +97,8 @@ const toJobPosting = (job: Job) => {
 
 const num = (i: number) => String(i + 1).padStart(2, "0");
 
-const Pending = ({ text }: { text: string }) =>
-  text.startsWith("【要確認") ? <span className={styles.pending}>{text}</span> : text;
+// const Pending = ({ text }: { text: string }) =>
+//   text.startsWith("【要確認") ? <span className={styles.pending}>{text}</span> : text;
 
 const TelLink = ({ inline }: { inline?: boolean }) => (
   <a className={inline ? styles.telInline : styles.telLink} href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>
@@ -122,8 +125,10 @@ const EntryCta = ({ children }: { children?: ReactNode }) => (
       <CtaButton
         text={
           <>
-            応募する・<wbr />
-            見学する・<wbr />
+            応募する・
+            <wbr />
+            見学する・
+            <wbr />
             問い合わせる
           </>
         }
@@ -379,7 +384,7 @@ const Recruit = () => (
               <p key={text}>{text}</p>
             ))}
           </div>
-          <figure className={styles.path}>
+          {/* <figure className={styles.path}>
             <figcaption className={styles.pathTitle}>キャリアパス</figcaption>
             <ol className={styles.pathSteps}>
               {CAREER_PATH_STEPS.map((step) => (
@@ -395,7 +400,7 @@ const Recruit = () => (
                 </ul>
               </li>
             </ol>
-          </figure>
+          </figure> */}
           <div className={styles.block}>
             <h3 className={pageStyles.subHeading}>成長を収入につなげる評価制度</h3>
             <ul className={styles.evaluations}>
@@ -433,7 +438,7 @@ const Recruit = () => (
                     <p key={text}>{text}</p>
                   ))}
                 </div>
-                <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.stepsTitle}</h4>
+                {/* <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.stepsTitle}</h4>
                 <table className={styles.stepTable}>
                   <thead>
                     <tr>
@@ -470,7 +475,7 @@ const Recruit = () => (
                       </dd>
                     </div>
                   ))}
-                </dl>
+                </dl> */}
               </div>
             </article>
 
