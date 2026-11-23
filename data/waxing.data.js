@@ -56,7 +56,7 @@ export const waxingCollection = [
         title: "背面",
         data: [
             {
-                category: "肩 （両肩）",
+                category: "肩（両肩）",
                 size:'M',
                 price: "6,050",
                 discount: "5,500",
@@ -132,7 +132,7 @@ export const waxingCollection = [
                 discount: "8,800",
             },
             {
-                category: "足の指+甲（両足）",
+                category: "足の指＋甲（両足）",
                 size:'S',
                 price: "3,850",
                 discount: "3,300",

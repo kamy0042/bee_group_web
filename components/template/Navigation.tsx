@@ -65,7 +65,7 @@ const Navigation = ({ isOpen, onNavigate }: Props) => {
               <dd>{SHOP_INFO.HOLIDAY}</dd>
             </div>
             <div>
-              <dt>お急ぎのご予約、お問合せ</dt>
+              <dt>お急ぎのご予約、お問い合わせ</dt>
               <dd>
                 <a className={styles.tel} href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>
                   TEL:{SHOP_INFO.TEL}

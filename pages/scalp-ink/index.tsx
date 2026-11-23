@@ -68,7 +68,7 @@ const ScalpInk = () => (
       <InPageNav
         items={[
           { id: "about", label: "WHAT IS SMP?" },
-          { id: "before-after", label: "BEFORE ＆ AFTER" },
+          { id: "before-after", label: "BEFORE & AFTER" },
           { id: "staff", label: "STAFF" },
           { id: "flow", label: "FLOW" },
           { id: "faq", label: "FAQ" },
@@ -140,7 +140,7 @@ const ScalpInk = () => (
 
       <section id="before-after" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
         <div className={pageStyles.container}>
-          <SectionHeading en="BEFORE ＆ AFTER" lead="お悩み別｜スカルプインクでどう変わる？" />
+          <SectionHeading en="BEFORE & AFTER" lead="お悩み別｜スカルプインクでどう変わる？" />
           <div className={styles.casesIntro}>
             <p>薄毛の状態によって、スカルプインクの役割は異なります。気になる部分に合わせて、見え方を自然に整えていきます。</p>
             <p className={styles.casesNote}>

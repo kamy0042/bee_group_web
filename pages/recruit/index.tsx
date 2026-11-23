@@ -563,7 +563,7 @@ const Recruit = () => (
                 width={980}
                 height={653}
                 position="60% 40%"
-                alt="株式会社 Bee Group 代表 松井祐太"
+                alt="株式会社Bee Group 代表 松井祐太"
                 className={styles.photoImage}
               />
             </div>
@@ -667,7 +667,7 @@ const Recruit = () => (
           <div className={styles.inviteEntry}>
             <EntryCta>
               <div className={styles.phone}>
-                <p className={styles.phoneTitle}>お電話でのお問合せも受け付けています。</p>
+                <p className={styles.phoneTitle}>お電話でのお問い合わせも受け付けています。</p>
                 <p className={styles.phoneNumber}>
                   <TelLink />
                   （Bee dandy）担当：松井
