@@ -266,11 +266,11 @@ const Recruit = () => (
           <div className={styles.split}>
             <div className={styles.splitPhoto}>
               <Photo
-                src="/img/recruit/staff_1.jpg"
-                width={1700}
-                height={1133}
-                position="30% 50%"
-                alt="ビジネスマンのお客様を担当するスタッフ"
+                src="/img/recruit/staff_cut_02.jpg"
+                width={1500}
+                height={844}
+                position="55% 40%"
+                alt="鏡越しにお客様と笑顔で話すスタイリスト"
                 className={styles.photoImage}
               />
             </div>
@@ -493,11 +493,10 @@ const Recruit = () => (
                   </div>
                   <div className={styles.trackPhoto}>
                     <Photo
-                      src="/img/recruit/staff_cut_01.jpg"
+                      src="/img/recruit/staff_1.jpg"
                       width={1700}
                       height={1133}
-                      position="40% 40%"
-                      alt="カットを担当するスタイリスト"
+                      alt="お客様のヘアカットを担当するスタイリスト"
                       className={styles.photoImage}
                     />
                   </div>
