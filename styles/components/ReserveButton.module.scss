@@ -47,7 +47,7 @@
         transform: rotate(45deg);
     }
     @include hover {
-        background-color: #fff;
-        color: $color-main;
+        background-color: var(--theme-hover-bg, #fff);
+        color: var(--theme-hover-text, #{$color-main});
     }
 }

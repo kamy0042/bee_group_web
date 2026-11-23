@@ -38,25 +38,25 @@
     background-color: $color-sub;
     color: $color-text-on-sub;
     @include hover {
-        background-color: #fff;
-        color: $color-main;
+        background-color: var(--theme-hover-bg, #fff);
+        color: var(--theme-hover-text, #{$color-main});
     }
 }
 
 .outline {
-    border: 1px solid rgba(255, 255, 255, 0.55);
-    color: $color-text;
+    border: 1px solid var(--theme-outline, rgba(255, 255, 255, 0.55));
+    color: var(--theme-text, #{$color-text});
     @include hover {
-        background-color: #fff;
-        border-color: #fff;
-        color: $color-main;
+        background-color: var(--theme-hover-bg, #fff);
+        border-color: var(--theme-hover-bg, #fff);
+        color: var(--theme-hover-text, #{$color-main});
     }
 }
 
 .text {
     position: relative;
     padding-bottom: 0.4rem;
-    color: $color-sub;
+    color: var(--theme-accent, #{$color-sub});
     font-size: 1.5rem;
     &::after {
         content: '';

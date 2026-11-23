@@ -22,11 +22,18 @@
     }
 }
 
+// 共通コンポーネントは --theme-* が未定義なら暗い背景向けの色になる
 .light {
-    background-color: #fff;
-    color: $color-main;
-    padding: $padding-container-sp $padding-container-sp 3rem;
-    @include pc {
-        padding: $padding-container $padding-container 2rem;
-    }
+    --theme-text: #{$color-light-text};
+    --theme-text-muted: #{$color-light-text-muted};
+    --theme-text-faint: #{rgba($color-light-text, 0.4)};
+    --theme-line: #{$color-light-line};
+    --theme-accent: #{$color-light-accent};
+    --theme-ornament: #{$color-sub-strong};
+    --theme-bg-alt: #{$color-light-bg-alt};
+    --theme-outline: #{rgba($color-light-text, 0.4)};
+    --theme-hover-bg: #{$color-main};
+    --theme-hover-text: #{$color-text};
+    background-color: $color-light-bg;
+    color: $color-light-text;
 }

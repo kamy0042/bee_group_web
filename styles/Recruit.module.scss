@@ -1,503 +1,1359 @@
 @use 'common' as *;
 
-
-@include pc{
-  .contents{
-    max-width: $width-container;
-    margin:  auto ;
-  }
-};
-
-.heading {
-  font-family: $font-mincho;
-  font-size: $text-largest-sp;
-  text-align: center;
-  margin-top: 2rem;
-  @include pc {
-    font-size:$text-largest;
-  }
-}
-
-.subHeading {
-  font-family: $font-mincho;
-  font-size:$text-large-sp;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &::before{
-    content: '';
-    width:2rem;
-    height: 1px;
-    background-color: $color-main;
-    display: block;
-    margin-right: 1rem;
-  }
-  &::after{
-    content: '';
-    width:2rem;
-    height: 1px;
-    background-color: $color-main;
-    display: block;
-    margin-left: 1rem;
-  }
-  @include pc{
-    font-size: $text-larger;
-    margin-bottom: 3rem;
-  };
-}
-
-.section {
-  margin-top: 5rem;
-  @include pc{
-    margin: 7rem auto 0;
-    max-width: 850px;
-  }
-}
-
-
-.headerCopy {
-  text-align: center;
-  margin-top: 2rem;
-  font-weight: bold;
-  & > p:first-of-type{
-    color: $color-sub-light;
-    text-decoration: underline;
-    font-size: $text-large-sp;
-    @include pc {
-      font-size: $text-large;
+@mixin check-mark {
+    position: relative;
+    padding-left: 2.6rem;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.5em;
+        left: 0.2rem;
+        width: 1.1rem;
+        height: 0.6rem;
+        border-left: 1.5px solid $color-light-accent;
+        border-bottom: 1.5px solid $color-light-accent;
+        transform: rotate(-45deg);
     }
-  }
 }
 
-
-.headerCopyItem {
-  position: relative;
-  margin-top: 1.5rem;
-  text-align: center;
-  @include pc {
-    font-size: $text-large;
-    text-align: center;
-  }
-  & + p {
-    margin-top: 1.5rem;
-  }
+@mixin outline-number {
+    font-family: $font-display;
+    font-weight: 400;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px $color-light-accent;
 }
 
-.message {
-  margin-top: 3rem;
-  padding:1rem;
-  p + p {
-    margin-top: 1rem;
-  }
-  @include pc {
-    margin-top: 6rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border:none;
-    padding: 0;
-     & > p {
-       width: 100%;
-       max-width: 850px;
-       margin-top: 2rem;
-     }
-  }
-  img {
-    margin-bottom: 1rem;
+.photoImage {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block {
+    margin-top: 7.2rem;
     @include pc {
-      max-width: 850px;
+        margin-top: 9.6rem;
     }
-  }
-  p > span {
-    display: inline-block;
-    font-weight: bold;
-    margin-top: 1rem;
-    font-size: 1.15em;
+}
+
+.centerText {
+    max-width: 76rem;
+    margin: 0 auto;
+    line-height: 1.95;
+    color: $color-light-text-muted;
+    p + p {
+        margin-top: 0.8rem;
+    }
     @include pc {
-      display: block;
+        font-size: 1.6rem;
+        text-align: center;
+        text-wrap: balance;
     }
-  }
-  p > span:nth-of-type(2){
-    margin-bottom: 1rem;
-  }
-}
-
-.detail{
-  & > dt{
-    font-size: 1.15em;
-    margin-bottom: 1.5rem;
-  }
-  & > dd + dt {
-    margin-top: 3rem;
-  }
-  & + .detail {
-    margin-top: 5rem;
-  }
-}
-
-.messageText {
-  color:$color-sub-light;
-  font-size: 1.2em;
-  margin-bottom: 0.75rem;
-  margin-top: 3rem;
-  padding-bottom: 0.75rem;
-  @include pc {
-    font-size: 1.4em;
-  }
-}
-
-.description{
-  margin-top: 5rem;
-  & > h3 {
-    color:$color-sub-light;
-    font-size: 1.2em;
-    margin-bottom: 0.75rem;
-    //padding-bottom: 0.75rem;
-    //border-bottom: solid thin;
-  }
-  .descriptionContent p + p {
-    margin-top: 2rem;
-  }
-  .descriptionContent > img {
-    margin-top: 1rem;
-  }
-  @include pc{
-    margin-top: 7rem;
-    .descriptionContent{
-      display: flex;
-      gap: 2rem;
-      justify-content: space-between;
-      margin-top: 1rem;
-      align-items: flex-start;
-    }
-    & > h3 {
-      font-size: 1.4em;
-    }
-    .descriptionContent > img {
-      width: 55%;
-      order:2;
-      object-fit: cover;
-      height: 100%;
-      margin: 0;
-    }
-    .descriptionTextArea {
-      width: calc(50% - 3rem);
-      order:1;
-    }
-  }
-}
-
-.contentImg {
-  margin-top: 2rem;
-  width: 100%;
-  object-fit: cover;
-  object-position:center right;
-  height: auto;
-  @include pc {
-    height: 430px;
-  }
 }
 
 .note {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 2rem;
-  gap: 0.5rem;
-  @include pc {
-    flex-direction: row;
-    gap: 2rem;
-  }
-  h3 {
-    color:$color-sub-light;
-    font-size: 1.2em;
-  }
-}
-
-.feature,.owner {
-  dt {
-    margin-bottom: 0.5rem;
-    font-size: 1em;
-    @include pc {
-      font-size: 1.25em;
-    }
-  }
-  img {
     margin-top: 2rem;
-    width: 100%;
-  }
-
+    font-size: 1.3rem;
+    color: $color-light-text-muted;
 }
 
-.owner {
-  p + p {
-    margin-top: 2rem;
-  }
-  img{
-    margin-top: 2rem;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: 0 23%;
+.textLink {
+    color: $color-light-accent;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    overflow-wrap: anywhere;
+}
+
+.pending {
+    padding: 0.1rem 0.6rem;
+    border: 1px dashed rgba($color-light-accent, 0.6);
+    background-color: rgba($color-sub, 0.18);
+    color: $color-light-text-muted;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+}
+
+// ---------- Header ----------
+.heroCatch {
+    font-family: $font-mincho;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    word-break: keep-all;
+    overflow-wrap: anywhere;
     @include pc {
-      height: 430px;
+        font-size: 3.6rem;
+        letter-spacing: 0.08em;
     }
-  }
 }
 
-.staffVoice {
-  display: flex;
-  gap: 2rem;
-  flex-direction: column;
-  dt {
-    margin-bottom: 0.5rem;
+.heroSub {
+    margin-top: 1.6rem;
+    font-family: $font-mincho;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    color: $color-sub;
+    word-break: auto-phrase;
+    text-wrap: balance;
     @include pc {
-      font-size: 1.25em;
+        margin-top: 2rem;
+        font-size: 2.2rem;
     }
-  }
-  dd + dt {
-    margin-top: 1.5rem;
-  } 
-  @include pc {
-    flex-direction: row;
+}
 
-    img {
-      width: 50%;
+// ---------- Intro ----------
+.intro {
+    @include container($width-narrow);
+    padding-top: 4rem;
+    @include pc {
+        padding-top: 5.6rem;
     }
-  }
 }
 
-
-.descriptionInner {
-  & > dd + dt {
-    margin-top: 1.5rem;
-  }
-  & > .icon {
-    margin-right: 0.5rem;
-  }
-  .withIcon {
-    margin-top: 0.5rem;
-  }
+.introText {
+    line-height: 2;
+    color: $color-light-text-muted;
+    @include pc {
+        font-size: 1.6rem;
+        text-align: center;
+        text-wrap: balance;
+    }
 }
 
-.descriptionInnerHeading {
-  font-size: 1.4rem;
-  margin-top: 1.5rem;
-  position: relative;
-  padding-left: 1.2em;
-  &::before{
-    content: '■';
-    color: $color-main;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
-
-.icon {
-  color: #fff;
-  background-color: #c0a47f;
-  font-weight: bold;
-  padding: 0.25rem 0.75rem;
-  border-radius: 50px;
-}
-
-.comment {
-  color:$color-sub-light;
-  font-weight: bold;
-}
-
-.btn {
-  margin-top: 1.5rem;
-  @include pc {
-    width:420px;
+.introEntry {
+    max-width: 64rem;
     margin: 4rem auto 0;
-  }
-}
-
-.checkedList {
-  margin-top: 0.5em;
-  &  > li {
-    font-weight: bold;
-    position: relative;
-    padding-left: 2rem;
-    &::before{
-      content: '';
-      position: absolute;
-      top: 6px;
-      left: 0;
-      width: 12px;
-      height: 7px;
-      border-left: 3px solid $color-sub-light;
-      border-bottom: 3px solid $color-sub-light;
-      transform: rotate(-45deg);
+    @include pc {
+        margin-top: 5.6rem;
     }
-  }
-  & > li + li {
-    margin-top: 0.25rem;
-  }
-  p + & {
-    margin-top: 1rem;
-  }
-  @include pc {
-    & > li + li {
-      margin-top: 0.5rem;
+}
+
+// ---------- Entry ----------
+.entry {
+    padding: 3.2rem 2rem;
+    border: 1px solid $color-sub-strong;
+    background:
+        radial-gradient(120% 120% at 50% 0%, rgba($color-sub, 0.2), rgba($color-sub, 0) 60%),
+        $color-light-panel;
+    text-align: center;
+    @include pc {
+        padding: 4.8rem 4rem;
     }
-  }
 }
 
-.itemList {
-  margin-top: 0.5rem;
-  li{
-    padding-left: 1em;
+.entryLabel {
+    font-family: $font-mincho;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.1em;
+    @include pc {
+        font-size: 2.4rem;
+    }
+}
+
+.entryButton {
+    max-width: 44rem;
+    margin: 2.4rem auto 0;
+}
+
+.entryNote {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 1.9;
+    color: $color-light-text-muted;
+    word-break: auto-phrase;
+}
+
+.telLink {
+    font-family: $font-display;
+    font-size: 1.3em;
+    letter-spacing: 0.06em;
+    color: $color-light-accent;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    white-space: nowrap;
+}
+
+.telInline {
+    color: $color-light-accent;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    white-space: nowrap;
+}
+
+.visitEntry,
+.inviteEntry {
+    max-width: 72rem;
+    margin: 4.8rem auto 0;
+    @include pc {
+        margin-top: 6.4rem;
+    }
+}
+
+// ---------- Text & Photo ----------
+.split {
+    display: grid;
+    gap: 3.2rem;
+    @include desktop {
+        grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+        align-items: start;
+        gap: 6.4rem;
+    }
+}
+
+.splitReverse {
+    @include desktop {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    }
+}
+
+.splitBody > * + * {
+    margin-top: 3.2rem;
+}
+
+.splitPhoto {
     position: relative;
-  }
-  & > li::before{
-    content: '・';
-    color: $color-main;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-  & > li + li {
-    margin-top: 0.25rem;
-  }
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba($color-sub, 0.35);
+        pointer-events: none;
+    }
+    @include desktop {
+        position: sticky;
+        top: 12rem;
+        order: 2;
+        aspect-ratio: 4 / 5;
+        .splitReverse & {
+            order: 0;
+        }
+    }
 }
 
-.star {
-  position: relative;
-  color: $color-sub-light;
+// ---------- Our Work ----------
+.pointList {
+    display: grid;
+    gap: 1.2rem;
+    padding: 2.4rem;
+    border: 1px solid $color-light-line-sub;
+    background-color: rgba($color-sub, 0.14);
+    li {
+        @include check-mark;
+        font-family: $font-mincho;
+        font-size: 1.7rem;
+        font-weight: 600;
+        line-height: 1.6;
+        letter-spacing: 0.06em;
+    }
+    @include pc {
+        padding: 3.2rem;
+        li {
+            font-size: 1.9rem;
+        }
+    }
 }
 
-.recruitDetail {
-  div  {
+// ---------- Features ----------
+.features {
+    display: grid;
+    gap: 2rem;
+    @include desktop {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 3.2rem;
+    }
+}
+
+.feature {
+    padding: 3.2rem 2.4rem;
+    border-top: 2px solid $color-sub-strong;
+    background-color: $color-light-panel;
+    @include pc {
+        padding: 4rem 3.2rem;
+    }
+}
+
+.featureNum {
+    @include outline-number;
+    display: block;
+    font-size: 3.6rem;
+}
+
+.featureTitle {
+    margin-top: 1.6rem;
+    font-family: $font-mincho;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    @include pc {
+        font-size: 2.3rem;
+    }
+}
+
+.featureText {
+    margin-top: 1.6rem;
+    line-height: 1.95;
+    color: $color-light-text-muted;
+    p + p {
+        margin-top: 1rem;
+    }
+}
+
+.checkList {
+    display: grid;
+    gap: 0.8rem;
+    margin-top: 2rem;
+    text-wrap: pretty;
+    li {
+        @include check-mark;
+        line-height: 1.7;
+        word-break: auto-phrase;
+    }
+}
+
+.terms {
+    display: grid;
+    gap: 1.2rem;
+    margin-top: 2rem;
+    text-wrap: pretty;
+    & > div {
+        display: grid;
+        grid-template-columns: 5.6rem minmax(0, 1fr);
+        align-items: baseline;
+        gap: 1.6rem;
+    }
+    dt {
+        padding: 0.2rem 0;
+        border: 1px solid $color-light-line-sub;
+        font-size: 1.3rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-align: center;
+        color: $color-light-accent;
+    }
+    dd {
+        line-height: 1.8;
+        color: $color-light-text-muted;
+        word-break: auto-phrase;
+    }
+}
+
+// ---------- Vision ----------
+.visionLead {
+    font-family: $font-mincho;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.9;
+    letter-spacing: 0.06em;
+    @include pc {
+        font-size: 2.2rem;
+    }
+}
+
+.pillars {
+    display: grid;
+    gap: 1.2rem;
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.6rem 1rem;
+        border: 1px solid $color-sub-strong;
+        background-color: rgba($color-sub, 0.16);
+        font-family: $font-mincho;
+        font-size: 1.9rem;
+        font-weight: 600;
+        letter-spacing: 0.08em;
+        color: $color-light-accent;
+        white-space: nowrap;
+    }
+    @media only screen and (min-width: 560px) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        li {
+            font-size: 1.7rem;
+        }
+    }
+    @include pc {
+        display: flex;
+        justify-content: center;
+        gap: 0;
+        li {
+            width: 18rem;
+            aspect-ratio: 1;
+            padding: 0;
+            border-radius: 50%;
+        }
+        li + li {
+            margin-left: -2rem;
+        }
+    }
+}
+
+// ---------- Career Path ----------
+.path {
+    margin: 4.8rem 0 0;
+    padding: 3.2rem 2rem;
+    border: 1px solid $color-light-line-sub;
+    @include pc {
+        margin-top: 6.4rem;
+        padding: 4.8rem 4rem;
+    }
+}
+
+.pathTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    margin-bottom: 3.2rem;
+    font-family: $font-mincho;
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: $color-light-accent;
+    &::before,
+    &::after {
+        content: '';
+        width: 3.2rem;
+        height: 1px;
+        background-color: $color-sub-strong;
+    }
+    @include pc {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+    }
+}
+
+.pathSteps {
+    display: grid;
+    gap: 3.2rem;
+    @include desktop {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        align-items: center;
+        gap: 4rem;
+    }
+}
+
+.pathStep,
+.pathGoals li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 6.4rem;
+    padding: 1.2rem 1.6rem;
+    border: 1px solid $color-light-line-sub;
+    font-family: $font-mincho;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    text-align: center;
+    word-break: auto-phrase;
+}
+
+.pathStep {
+    position: relative;
+    background-color: $color-light-panel;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -2.2rem;
+        width: 1rem;
+        height: 1rem;
+        border-right: 1px solid $color-sub-strong;
+        border-bottom: 1px solid $color-sub-strong;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    &:nth-child(2) {
+        background-color: rgba($color-sub, 0.16);
+    }
+    &:nth-child(3) {
+        border-color: $color-sub-strong;
+        background-color: rgba($color-sub, 0.32);
+    }
+    @include desktop {
+        min-height: 8.8rem;
+        &::after {
+            top: 50%;
+            right: -2.7rem;
+            bottom: auto;
+            left: auto;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+
+.pathGoals ul {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+    li {
+        border-color: $color-sub-strong;
+        background-color: $color-sub;
+        color: $color-text-on-sub;
+    }
+    @include desktop {
+        grid-template-columns: minmax(0, 1fr);
+        li {
+            min-height: 0;
+        }
+    }
+}
+
+.evaluations {
+    display: grid;
+    gap: 1.6rem;
+    @include desktop {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2.4rem;
+    }
+}
+
+.evaluation {
+    position: relative;
+    padding: 3.2rem 2.4rem 2.8rem;
+    border: 1px solid $color-light-line;
+    background-color: $color-light-panel;
+    &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 2.4rem;
+        width: 4rem;
+        height: 2px;
+        background-color: $color-sub-strong;
+    }
+    h4 {
+        font-family: $font-mincho;
+        font-size: 1.9rem;
+        font-weight: 600;
+        line-height: 1.6;
+        letter-spacing: 0.04em;
+        color: $color-light-accent;
+    }
+    p {
+        margin-top: 1.2rem;
+        font-size: 1.45rem;
+        line-height: 1.9;
+        color: $color-light-text-muted;
+    }
+    @include pc {
+        padding: 3.6rem 3.2rem 3.2rem;
+        &::before {
+            left: 3.2rem;
+        }
+    }
+}
+
+// ---------- Support ----------
+.tracks {
+    display: grid;
+    gap: 4rem;
+    margin-top: 4.8rem;
+    @include pc {
+        gap: 6.4rem;
+        margin-top: 6.4rem;
+    }
+}
+
+.track {
+    border: 1px solid $color-light-line;
+    background-color: $color-light-panel;
+}
+
+.trackHead {
+    padding: 2.8rem 2.4rem 2.4rem;
+    border-bottom: 1px solid $color-light-line-sub;
+    background: linear-gradient(90deg, rgba($color-sub, 0.22), rgba($color-sub, 0) 70%);
+    @include pc {
+        padding: 4rem 5.6rem 3.2rem;
+    }
+}
+
+.trackTarget {
+    display: inline-block;
+    padding: 0.4rem 1.4rem;
+    border: 1px solid $color-sub-strong;
+    border-radius: 999px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: $color-light-accent;
+}
+
+.trackTitle {
+    margin-top: 1.4rem;
+    font-family: $font-mincho;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    @include pc {
+        font-size: 3rem;
+    }
+}
+
+.trackBody {
+    padding: 2.8rem 2.4rem 3.2rem;
+    @include pc {
+        padding: 4rem 5.6rem 5.6rem;
+    }
+}
+
+.checkHeading {
+    position: relative;
+    margin: 4.8rem 0 2rem;
+    padding-left: 3.4rem;
+    font-family: $font-mincho;
+    font-size: 1.9rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0.25em;
+        left: 0;
+        width: 2.4rem;
+        height: 2.4rem;
+        border-radius: 50%;
+        background-color: $color-light-accent;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: calc(0.25em + 0.75rem);
+        left: 0.7rem;
+        width: 1rem;
+        height: 0.55rem;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        transform: rotate(-45deg);
+    }
+    @include pc {
+        margin-top: 5.6rem;
+        font-size: 2rem;
+    }
+}
+
+.stepTable {
+    width: 100%;
+    line-height: 1.8;
+    word-break: auto-phrase;
+    text-wrap: pretty;
+    thead th {
+        padding: 0 0 1.2rem;
+        border-bottom: 1px solid $color-light-line-sub;
+        font-size: 1.3rem;
+        letter-spacing: 0.06em;
+        text-align: left;
+        color: $color-light-accent;
+    }
+    thead th + th {
+        padding-left: 2.4rem;
+    }
+    tbody tr {
+        border-bottom: 1px solid $color-light-line;
+    }
+    tbody th {
+        width: 11rem;
+        padding: 2rem 0;
+        vertical-align: middle;
+        text-align: left;
+    }
+    tbody td {
+        padding: 2rem 0 2rem 2.4rem;
+        vertical-align: middle;
+    }
+    tbody td:last-child {
+        width: 34%;
+    }
+}
+
+.stepBadge {
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    background-color: $color-light-accent;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: #fff;
+    white-space: nowrap;
+}
+
+@include sp {
+    .stepTable {
+        thead {
+            display: none;
+        }
+        tbody,
+        tr,
+        tbody th,
+        tbody td,
+        tbody td:last-child {
+            display: block;
+            width: auto;
+        }
+        tbody tr {
+            padding: 2rem 0;
+            &:first-child {
+                border-top: 1px solid $color-light-line;
+            }
+        }
+        tbody th {
+            padding: 0 0 1.2rem;
+        }
+        tbody td {
+            padding: 0;
+            &::before {
+                content: attr(data-label);
+                display: block;
+                font-size: 1.2rem;
+                color: $color-light-accent;
+            }
+            & + td {
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.training {
+    border-top: 1px solid $color-light-line;
+    text-wrap: pretty;
+    & > div {
+        display: grid;
+        gap: 0.4rem;
+        padding: 1.6rem 0;
+        border-bottom: 1px solid $color-light-line;
+        @include pc {
+            grid-template-columns: 11rem minmax(0, 1fr);
+            gap: 2.4rem;
+            padding: 2rem 0;
+        }
+    }
+    dt {
+        font-size: 1.4rem;
+        letter-spacing: 0.06em;
+        color: $color-light-accent;
+        @include pc {
+            font-size: 1.5rem;
+        }
+    }
+    dd {
+        line-height: 1.8;
+    }
+}
+
+.trackLead {
+    display: grid;
+    gap: 2.4rem;
+    @include desktop {
+        grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        align-items: start;
+        gap: 4.8rem;
+    }
+}
+
+.trackPhoto {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.trackPoints {
+    display: grid;
+    gap: 2.8rem;
+    margin-top: 4rem;
+    li {
+        padding-top: 2.4rem;
+        border-top: 1px solid $color-light-line-sub;
+    }
+    .checkHeading {
+        margin: 0 0 1.2rem;
+        font-size: 1.8rem;
+    }
+    p {
+        font-size: 1.45rem;
+        line-height: 1.9;
+        color: $color-light-text-muted;
+    }
+    p + p {
+        margin-top: 0.8rem;
+    }
+    @include desktop {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 3.2rem;
+        margin-top: 5.6rem;
+    }
+}
+
+// ---------- Staff ----------
+.staffList {
+    display: grid;
+    gap: 2.4rem;
+    margin-top: 4.8rem;
+    @include desktop {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-top: 6.4rem;
+    }
+}
+
+.staffCard {
+    display: grid;
+    align-content: start;
+    border: 1px solid $color-light-line;
+    background-color: $color-light-panel;
+    @media only screen and (min-width: 600px) and (max-width: ($desktop - 1px)) {
+        grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+    }
+}
+
+.staffPhoto {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    @media only screen and (min-width: 600px) and (max-width: ($desktop - 1px)) {
+        aspect-ratio: auto;
+        min-height: 24rem;
+    }
+}
+
+.staffBody {
+    padding: 2.4rem;
+    @include pc {
+        padding: 2.8rem;
+    }
+}
+
+.staffRole {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    color: $color-light-accent;
+}
+
+.staffName {
+    margin-top: 0.4rem;
+    font-family: $font-mincho;
+    font-size: 2.4rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.staffSkill {
+    margin-top: 1.6rem;
+    padding: 1.2rem 1.4rem;
+    border-left: 2px solid $color-sub-strong;
+    background-color: rgba($color-sub, 0.16);
+    dt {
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+        color: $color-light-accent;
+    }
+    dd {
+        margin-top: 0.2rem;
+        font-size: 1.4rem;
+        line-height: 1.7;
+        word-break: auto-phrase;
+        text-wrap: pretty;
+    }
+}
+
+.staffComment {
+    margin-top: 1.6rem;
+    font-size: 1.45rem;
+    line-height: 1.9;
+    color: $color-light-text-muted;
+}
+
+.atmosphere {
+    margin-top: 4.8rem;
+    padding: 3.2rem 2.4rem;
+    border: 1px solid $color-light-line-sub;
+    p {
+        margin-top: 1.6rem;
+        line-height: 1.95;
+        color: $color-light-text-muted;
+    }
+    @include pc {
+        margin-top: 6.4rem;
+        padding: 4rem 5.6rem;
+        text-align: center;
+        p {
+            font-size: 1.6rem;
+            text-wrap: balance;
+        }
+    }
+}
+
+.atmosphereTitle {
+    font-family: $font-mincho;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: $color-light-accent;
+    @include pc {
+        font-size: 2.4rem;
+    }
+}
+
+// ---------- Message ----------
+.message {
+    display: grid;
+    gap: 3.2rem;
+    @include desktop {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+        align-items: start;
+        gap: 6.4rem;
+    }
+}
+
+.messagePhoto {
+    position: relative;
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border: 1px solid rgba($color-sub, 0.35);
+        pointer-events: none;
+    }
+    @include desktop {
+        position: sticky;
+        top: 12rem;
+        aspect-ratio: 4 / 5;
+    }
+}
+
+.messageBody {
+    line-height: 2;
+    color: $color-light-text-muted;
+    p + p {
+        margin-top: 1.6rem;
+    }
+    @include pc {
+        font-size: 1.6rem;
+        line-height: 2.1;
+    }
+}
+
+.messageLead {
+    margin-bottom: 2.8rem;
+    font-family: $font-mincho;
+    font-size: min(2.2rem, 5vw);
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.04em;
+    color: $color-light-accent;
+    @include pc {
+        font-size: 2.8rem;
+        letter-spacing: 0.08em;
+    }
+}
+
+.messageBody .signature {
+    margin-top: 3.2rem;
+    font-family: $font-mincho;
+    font-size: 1.6rem;
+    letter-spacing: 0.08em;
+    text-align: right;
+    color: $color-light-text;
+    @include pc {
+        font-size: 1.8rem;
+    }
+}
+
+// ---------- Requirements ----------
+.jobIndex {
     display: flex;
     flex-wrap: wrap;
-  }
-  div + div {
-    margin-top: 1rem;
-    padding-top: 1rem;
-    border-top: dotted thin;
-  }
-  dt {
-    width: 10rem;
-    margin-right: 1rem;
-  }
-  dd {
-    width: calc(100% - 11rem);
-    & > p + p {
-      margin-top: 1rem;
-    }
-  }
-  .comment {
-    margin-top: 1rem;
-  }
-  @include pc {
-    div + div {
-        margin-top: 1.25rem;
-        padding-top: 1.25rem;
-    }
-    }
-}
-.large {
-  dt {
-    width: 11rem;
-    margin-right: 2rem;
-    @include pc {
-      width: 14rem;
-    }
-  }
-  dd {
-    width: calc(100% - 16rem);
-  }
-}
-
-.companyDetail {
-  & > div + div {
-    margin-top: 1rem;
-  }
-  dt {
-    position: relative;
-    padding-left: 1.5rem;
-  }
-  dt::before{
-    content: '■';
-    color: $color-main;
-    position: absolute;
-    left: 0;
-    top: 0;
-  }
-}
-
-.ctaBox {
-  border:solid thin;
-  padding: 1rem;
-  & > dt {
-    font-size: 1.4em;
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  & > .btn {
-    margin: 3rem 0 0;
-  }
-  & > .tel {
-    border-top: solid thin;
-    margin-top: 2.5rem;
-    padding-top: 2.5rem;
+    justify-content: center;
+    gap: 0.8rem 1.2rem;
+    margin-bottom: 4.8rem;
     a {
-      text-decoration: underline;
-      font-size: 1.3em;
-      margin: 0.5rem 0;
-      display: inline-block;
-      font-weight: bold;
+        display: inline-flex;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem 2rem;
+        border: 1px solid $color-light-line-sub;
+        border-radius: 999px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        letter-spacing: 0.06em;
+        color: $color-light-text;
+        transition: border-color 0.3s, color 0.3s;
+        &::after {
+            content: '';
+            width: 0.5rem;
+            height: 0.5rem;
+            border-right: 1px solid currentColor;
+            border-bottom: 1px solid currentColor;
+            transform: translateY(-0.15rem) rotate(45deg);
+        }
+        @include hover {
+            border-color: $color-light-accent;
+            color: $color-light-accent;
+        }
     }
-  }
-  @include pc {
-    max-width: 850px;
-    margin: auto;
-    padding: 2rem;
+    @include pc {
+        margin-bottom: 6.4rem;
+    }
+}
+
+.jobIndexNum {
+    font-family: $font-display;
+    font-weight: 400;
+    color: $color-light-accent;
+}
+
+.jobs {
+    display: grid;
+    gap: 4.8rem;
+    @include pc {
+        gap: 7.2rem;
+    }
+}
+
+.job {
+    padding: 3.2rem 2rem;
+    border: 1px solid $color-light-line;
+    background-color: $color-light-panel;
+    @include pc {
+        padding: 4.8rem 5.6rem;
+    }
+}
+
+.jobTitle {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    margin-bottom: 2.8rem;
+    font-family: $font-mincho;
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+    @include pc {
+        margin-bottom: 3.6rem;
+        font-size: 2.6rem;
+    }
+}
+
+.jobNum {
+    @include outline-number;
+    flex-shrink: 0;
+    font-size: 4rem;
+    @include pc {
+        font-size: 4.8rem;
+    }
+}
+
+.infoTable {
+    width: 100%;
+    line-height: 1.85;
+    word-break: auto-phrase;
+    thead th {
+        padding: 0 0 1.2rem;
+        border-bottom: 1px solid $color-light-line-sub;
+        font-size: 1.3rem;
+        letter-spacing: 0.08em;
+        text-align: left;
+        color: $color-light-accent;
+    }
+    thead th + th {
+        padding-left: 2.4rem;
+    }
+    tbody tr {
+        border-bottom: 1px solid $color-light-line;
+    }
+    tbody th {
+        width: 12rem;
+        padding: 1.8rem 0;
+        vertical-align: top;
+        text-align: left;
+    }
+    tbody td {
+        padding: 1.8rem 0 1.8rem 2.4rem;
+        color: $color-light-text-muted;
+        overflow-wrap: anywhere;
+        text-wrap: pretty;
+    }
+    @include sp {
+        thead {
+            display: none;
+        }
+        tbody,
+        tr,
+        tbody th,
+        tbody td {
+            display: block;
+            width: auto;
+        }
+        tbody tr {
+            padding: 1.6rem 0;
+            &:first-child {
+                border-top: 1px solid $color-light-line;
+            }
+        }
+        tbody th {
+            padding: 0 0 0.4rem;
+            font-size: 1.3rem;
+            color: $color-light-accent;
+        }
+        tbody td {
+            padding: 0;
+        }
+    }
+}
+
+.valueList {
+    li {
+        position: relative;
+        padding-left: 1.4rem;
+        &::before {
+            content: '';
+            position: absolute;
+            top: calc(0.925em - 0.25rem);
+            left: 0;
+            width: 0.5rem;
+            height: 0.5rem;
+            border-radius: 50%;
+            background-color: $color-sub-strong;
+        }
+    }
+    li + li {
+        margin-top: 0.2rem;
+    }
+}
+
+.salary {
+    margin-top: 4rem;
+    padding: 2.8rem 1.6rem;
+    border: 1px solid $color-sub-strong;
+    background: radial-gradient(120% 120% at 50% 0%, rgba($color-sub, 0.2), rgba($color-sub, 0) 60%), $color-light-panel;
+    @include pc {
+        margin-top: 5.6rem;
+        padding: 4rem 4.8rem;
+    }
+}
+
+.salaryTitle {
+    font-family: $font-mincho;
+    font-size: 1.7rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
     text-align: center;
-    .btn{
-      width: 420px;
-      margin:3rem auto 0;
+    @include pc {
+        font-size: 2.2rem;
     }
-  }
 }
 
-
-.ctaBoxWrapper {
-  margin-top: 2rem;
-  @include pc {
-    margin-top: 3.5rem;
-  }
+.salaryCondition {
+    margin-top: 0.8rem;
+    font-size: 1.35rem;
+    line-height: 1.7;
+    text-align: center;
+    color: $color-light-text-muted;
+    word-break: auto-phrase;
 }
 
-.spNone{
-  display: none;
-  @include pc{
+.salaryTable {
+    width: 100%;
+    margin-top: 2.4rem;
+    thead th {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $color-light-line-sub;
+        font-size: 1.2rem;
+        letter-spacing: 0.08em;
+        text-align: left;
+        color: $color-light-accent;
+        &:last-child {
+            text-align: right;
+        }
+    }
+    tbody tr {
+        border-bottom: 1px solid $color-light-line;
+    }
+    tbody th {
+        padding: 1.4rem 1.6rem 1.4rem 0;
+        font-weight: 400;
+        line-height: 1.6;
+        text-align: left;
+        color: $color-light-text-muted;
+        text-wrap: pretty;
+    }
+    tbody td {
+        padding: 1.4rem 0;
+        font-family: $font-mincho;
+        font-size: 1.7rem;
+        font-variant-numeric: tabular-nums;
+        text-align: right;
+        white-space: nowrap;
+    }
+    .salaryTotal {
+        border-top: 1px solid $color-sub-strong;
+        border-bottom: 0;
+        th {
+            font-weight: 700;
+            color: $color-light-text;
+        }
+        td {
+            font-size: 2.4rem;
+            font-weight: 600;
+            color: $color-light-accent;
+            @include pc {
+                font-size: 2.8rem;
+            }
+        }
+    }
+}
+
+.salaryNote {
+    margin-top: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: $color-light-text-muted;
+}
+
+// ---------- Visit ----------
+.visitSteps {
+    display: grid;
+    gap: 2.4rem;
+    @include pc {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include wide {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 2.8rem;
+    }
+}
+
+.visitStep {
+    position: relative;
+    padding: 2.8rem 2.4rem;
+    border: 1px solid $color-light-line;
+    background-color: $color-light-panel;
+    &:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        bottom: -1.75rem;
+        left: 50%;
+        width: 0.9rem;
+        height: 0.9rem;
+        border-right: 1px solid $color-sub-strong;
+        border-bottom: 1px solid $color-sub-strong;
+        transform: translateX(-50%) rotate(45deg);
+    }
+    @include pc {
+        &:not(:last-child)::after {
+            content: none;
+        }
+    }
+    @include wide {
+        &:not(:last-child)::after {
+            content: '';
+            top: 50%;
+            right: -1.9rem;
+            bottom: auto;
+            left: auto;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+
+.visitNum {
+    @include outline-number;
     display: block;
-  }
-}
-.pcNone{
-  display: block;
-  @include pc{
-    display: none;
-  }
+    font-size: 3.2rem;
 }
 
-.voice {
-  font-weight: bold;
-  margin-bottom: 1rem;
-  @include pc{
-    font-size: 1.4em;
-    margin-bottom: 1.5rem;
-  }
+.visitTitle {
+    margin-top: 1.4rem;
+    font-family: $font-mincho;
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0.06em;
 }
 
-.lightLink {
-  color: $color-main;
-  text-decoration: underline;
+.visitText {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: $color-light-text-muted;
+}
+
+.visitOutro {
+    margin-top: 4.8rem;
+    @include pc {
+        margin-top: 6.4rem;
+    }
+}
+
+// ---------- Entry Section ----------
+.inviteLead {
+    margin-bottom: 2.8rem;
+    font-family: $font-mincho;
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    text-align: center;
+    word-break: auto-phrase;
+    text-wrap: balance;
+    @include pc {
+        margin-bottom: 4rem;
+        font-size: 2.8rem;
+    }
+}
+
+.reasonList {
+    display: grid;
+    gap: 1rem;
+    margin: 2.8rem 0;
+    padding: 2.4rem;
+    border: 1px solid $color-light-line-sub;
+    background-color: rgba($color-sub, 0.14);
+    li {
+        @include check-mark;
+        font-weight: 700;
+        line-height: 1.7;
+    }
+    @include pc {
+        margin: 3.6rem 0;
+        padding: 3.2rem 4rem;
+        li {
+            font-size: 1.6rem;
+        }
+    }
+}
+
+.phone {
+    margin-top: 2.8rem;
+    padding-top: 2.4rem;
+    border-top: 1px solid $color-light-line;
+}
+
+.phoneTitle {
+    font-weight: 700;
+    color: $color-light-text;
+}
+
+.phoneNumber {
+    margin-top: 0.8rem;
+    color: $color-light-text;
+    .telLink {
+        font-size: 1.6em;
+    }
 }

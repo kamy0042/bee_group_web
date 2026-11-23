@@ -1,511 +1,686 @@
+import { ReactNode } from "react";
 import Head from "next/head";
 import MainLayout from "../../components/template/MainLayout";
-import styles from "../../styles/Recruit.module.scss";
+import PageHeader from "../../components/PageHeader";
+import InPageNav from "../../components/InPageNav";
+import SectionHeading from "../../components/SectionHeading";
+import Photo from "../../components/Photo";
+import FaqList from "../../components/FaqList";
+import LinkButton from "../../components/LinkButton";
 import { CtaButton } from "../../components/CtaButton";
+import {
+  ASSISTANT_SUPPORT,
+  ATMOSPHERE,
+  CAREER_INTRO,
+  CAREER_PATH_GOALS,
+  CAREER_PATH_STEPS,
+  COMPANY_ROWS,
+  ENTRY_FORM_URL,
+  EVALUATIONS,
+  FEATURES,
+  HERO_TEXT,
+  INFO_TABLE_HEAD,
+  INVITATION,
+  InfoRow,
+  Job,
+  JOBS,
+  OWNER_MESSAGE,
+  OWNER_SIGNATURE,
+  RECRUIT_DESCRIPTION,
+  RECRUIT_FAQ,
+  RECRUIT_TITLE,
+  SalaryExample,
+  STAFF,
+  STAFF_INTRO,
+  STYLIST_SUPPORT,
+  SUPPORT_INTRO,
+  VISION,
+  VISIT,
+  WORK,
+} from "../../data/recruit.data";
 import { SHOP_INFO } from "../../public/static";
-import { SALON_NAME } from "../../constants";
+import pageStyles from "../../styles/Page.module.scss";
+import styles from "../../styles/Recruit.module.scss";
 
-const jobPageURL = "https://work.beauty.hotpepper.jp/WC00004323/WS0000011338/";
+const JOB_POSTINGS: Record<string, { title: string; datePosted: string; minValue: number; maxValue: number; id: string }> = {
+  "job-stylist": { title: "スタイリスト", datePosted: "2026-06-15", minValue: 230000, maxValue: 300000, id: "0001" },
+  "job-assistant": { title: "アシスタント", datePosted: "2026-11-23", minValue: 220000, maxValue: 230000, id: "0002" },
+};
 
-const CtaBox = ({ isExtend }: { isExtend?: boolean }) => (
-  <dl className={styles.ctaBox}>
-    <dt>
-      少しでも興味があれば、
-      <br className={styles.pcNone} />
-      ご連絡ください！
-    </dt>
-    <dd>
-      <p>
-        実際のお店を見たい、一度話だけでも聞きたいという方。
-        <br className={styles.spNone} />
-        「見学を希望したい」とお伝えください。担当が30分ほどサロン内をご紹介します。
-        <br className={styles.spNone} />
-        質問などがあれば遠慮なくどうぞ。日時や内容など折り返しご連絡します。
-      </p>
-    </dd>
-    <dd className={styles.btn}>
-      <CtaButton text={<>応募する・<wbr />見学する・<wbr />問い合わせする</>} link={jobPageURL} />
-    </dd>
-    {isExtend ? (
-      <dd className={styles.tel}>
-        <p>お急ぎの方、事情がある方はお電話でも対応しております</p>
-        <p>
-          <a
-            className={styles.lightLink}
-            href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}
-          >
-            {SHOP_INFO.TEL}
-          </a>
-          （Bee dandy）
-          <br className={styles.pcNone} />
-          担当：松井までご連絡ください。
-        </p>
-      </dd>
-    ) : null}
-  </dl>
+const toJobPosting = (job: Job) => {
+  const posting = JOB_POSTINGS[job.id];
+  return {
+    "@context": "https://schema.org/",
+    "@type": "JobPosting",
+    datePosted: posting.datePosted,
+    validThrough: "2033-12-31",
+    title: posting.title,
+    employmentType: "FULL_TIME",
+    description: `<p>${HERO_TEXT}</p><ul>${job.rows.map((row) => `<li>${row.term}：${row.value}</li>`).join("")}</ul>`,
+    jobLocation: {
+      "@type": "Place",
+      address: {
+        "@type": "PostalAddress",
+        addressCountry: "JP",
+        postalCode: "105-0004",
+        addressRegion: "東京都",
+        addressLocality: "港区",
+        streetAddress: "新橋５丁目８−３ 代市ビル B1",
+      },
+    },
+    baseSalary: {
+      "@type": "MonetaryAmount",
+      currency: "JPY",
+      value: {
+        "@type": "QuantitativeValue",
+        minValue: posting.minValue,
+        maxValue: posting.maxValue,
+        unitText: "MONTH",
+      },
+    },
+    hiringOrganization: {
+      "@type": "Organization",
+      name: "Bee Group",
+      sameAs: "https://beegroup.tokyo/",
+      logo: "https://beegroup.tokyo/img/logo.jpg",
+    },
+    identifier: {
+      "@type": "PropertyValue",
+      name: "Bee Group",
+      value: posting.id,
+    },
+  };
+};
+
+const num = (i: number) => String(i + 1).padStart(2, "0");
+
+const Pending = ({ text }: { text: string }) =>
+  text.startsWith("【要確認") ? <span className={styles.pending}>{text}</span> : text;
+
+const TelLink = ({ inline }: { inline?: boolean }) => (
+  <a className={inline ? styles.telInline : styles.telLink} href={`tel:${SHOP_INFO.TEL_NO_HYPHEN}`}>
+    {SHOP_INFO.TEL}
+  </a>
 );
 
-const description = `<p>Bee dandyは、新橋・汐留・虎ノ門エリアで働くビジネスマンを中心に支持されているメンズ専門サロンです。
-経営者、管理職、医療従事者、士業、メディア関係者など、第一線で活躍するお客様が多く来店されます。</p>
-
-<p>私たちの仕事は、ただ髪を切ることではありません。
-お客様の仕事やライフスタイルに合わせてスタイルを提案し、自信を持って毎日を過ごせる状態をつくること。
-一人ひとりのお客様と向き合いながら、美容師としても人としても成長できる環境があります。</p>
-
-<p>【募集要項】</p>
-・職種：スタイリスト
-・雇用形態：正社員
-・勤務地：東京都港区新橋5-8-3 代市ビルB1
-・応募資格：美容師免許取得者
-・勤務時間：実働8時間（シフト制）
-・休日：変形労働時間制。日曜日定期は第一、第三日曜日
-・試用期間：3〜6ヶ月
-
-<p>【給与システム】</p>
-・基本給：23万円〜30万円
-・技術歩合：技術売上50万円超過分 × 10％
-・指名料還元：50〜100％（社内規定による）
-・店販歩合：店販売上 × 10％
-・役職手当：最大6万円
-・通勤手当：最大1.5万円
-・昇給：あり
-
-<p>【給与実績】入社2年目スタイリスト</p>
-※月技術売上100万円・指名数85名・店販売上5万円の場合
-・基本給：230,000円
-・技術＋店販歩合：55,000円
-・指名料（100％の場合）：85,000円
-・各種手当：55,000円
-・総支給額：425,000円
-
-<p>【Bee dandyで働く3つの特徴】</p>
-①集客は会社が担当：毎月40名以上の新規と70名以上のフリー顧客が安定来店。SNS投稿やチラシ配り、営業ノルマもありません。
-②マンツーマン施術：掛け持ち施術は原則なし。平均客単価は8,600円以上。
-③将来の独立や経営も学べる：技術だけでなく、カウンセリング・リピートづくり・マーケティング・集客・店舗運営まで学べます。`;
-
-const scheme = {
-  "@context": "https://schema.org/",
-  "@type": "JobPosting",
-  datePosted: "2026-06-15",
-  validThrough: "2033-12-31",
-  title: "スタイリスト",
-  employmentType: "FULL_TIME",
-  description: `${description}`,
-  jobLocation: {
-    "@type": "Place",
-    address: {
-      "@type": "PostalAddress",
-      addressCountry: "JP",
-      postalCode: "105-0004",
-      addressRegion: "東京都",
-      addressLocality: "港区",
-      streetAddress: "新橋５丁目８−３ 代市ビル B1",
-    },
-  },
-  baseSalary: {
-    "@type": "MonetaryAmount",
-    currency: "JPY",
-    value: {
-      "@type": "QuantitativeValue",
-      minValue: "230000",
-      maxValue: "300000",
-      unitText: "MONTH",
-    },
-  },
-  hiringOrganization: {
-    "@type": "Organization",
-    name: "Bee Group",
-    sameAs: "https://beegroup.tokyo/",
-    logo: "https://beegroup.tokyo/img/logo.jpg",
-  },
-  identifier: {
-    "@type": "PropertyValue",
-    name: "Bee Group",
-    value: "0001",
-  },
+const withTelLink = (text: string) => {
+  const index = text.indexOf(SHOP_INFO.TEL);
+  if (index === -1) return text;
+  return (
+    <>
+      {text.slice(0, index)}
+      <TelLink inline />
+      {text.slice(index + SHOP_INFO.TEL.length)}
+    </>
+  );
 };
+
+const EntryCta = ({ children }: { children?: ReactNode }) => (
+  <div className={styles.entry}>
+    <p className={styles.entryLabel}>応募・見学・お問い合わせ</p>
+    <div className={styles.entryButton}>
+      <CtaButton
+        text={
+          <>
+            応募する・<wbr />
+            見学する・<wbr />
+            問い合わせる
+          </>
+        }
+        link={ENTRY_FORM_URL}
+      />
+    </div>
+    {children && <div className={styles.entryNote}>{children}</div>}
+  </div>
+);
+
+const InfoValue = ({ row }: { row: InfoRow }) => {
+  if (row.list) {
+    return (
+      <ul className={styles.valueList}>
+        {row.value.split(/\s*\/\s*/).map((item) => (
+          <li key={item}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+  if (row.href) {
+    return (
+      <a className={styles.textLink} href={row.href}>
+        {row.value}
+      </a>
+    );
+  }
+  return row.value;
+};
+
+const InfoTable = ({ rows }: { rows: InfoRow[] }) => (
+  <table className={styles.infoTable}>
+    <thead>
+      <tr>
+        {INFO_TABLE_HEAD.map((label) => (
+          <th key={label} scope="col">
+            {label}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {rows.map((row) => (
+        <tr key={row.term}>
+          <th scope="row">{row.term}</th>
+          <td>
+            <InfoValue row={row} />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+);
+
+const SalaryBox = ({ salary }: { salary: SalaryExample }) => (
+  <div className={styles.salary}>
+    <h4 className={styles.salaryTitle}>{salary.title}</h4>
+    <p className={styles.salaryCondition}>{salary.condition}</p>
+    <table className={styles.salaryTable}>
+      <thead>
+        <tr>
+          {salary.head.map((label) => (
+            <th key={label} scope="col">
+              {label}
+            </th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+        {salary.rows.map((row) => (
+          <tr key={row.term} className={row.total ? styles.salaryTotal : undefined}>
+            <th scope="row">{row.term}</th>
+            <td>{row.value}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+    <p className={styles.salaryNote}>{salary.note}</p>
+  </div>
+);
 
 const Recruit = () => (
   <>
     <Head>
-      <title>{`スタイリスト募集【2名限定】 | ${SALON_NAME}`}</title>
-      <meta
-        name="description"
-        content="新橋・汐留のビジネスマンに支持されるメンズ専門サロン Bee dandy では、マンツーマン施術 × 高単価で働けるスタイリストを2名限定で募集しています"
-      />
+      <title>{RECRUIT_TITLE}</title>
+      <meta name="description" content={RECRUIT_DESCRIPTION} />
       <link rel="icon" href="/favicon.ico" />
       <script
         key="json-ld"
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(scheme) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(JOBS.map(toJobPosting)) }}
       />
     </Head>
+
     <MainLayout isLight>
-      <div className={styles.contents}>
-        <section>
-          <h1 className={styles.heading}>スタイリスト募集<br className={styles.pcNone}/>【2名限定】</h1>
-          <div className={styles.headerCopy}>
-            <p className={`${styles.headerCopyItem}`}>
-              マンツーマン施術 × 高単価
-            </p>
-            <p className={styles.star}>
-              新橋・汐留のビジネスマンに支持される<br className={styles.pcNone}/>メンズ専門サロン
-            </p>
-          </div>
-        </section>
-        <div className={styles.message}>
-          <img src="/img/recruit/staffs.jpg" alt="スタッフ集合写真" />
-          <p>
-            Bee dandyは、新橋・汐留・虎ノ門エリアで働くビジネスマンを中心に支持されているメンズ専門サロンです。
-          </p>
-          <p>
-            経営者、管理職、医療従事者、士業、メディア関係者など、第一線で活躍するお客様が多く来店されます。
-          </p>
-          <p>
-            私たちの仕事は、ただ髪を切ることではありません。
-          </p>
-          <p>
-            お客様の仕事やライフスタイルに合わせてスタイルを提案し、自信を持って毎日を過ごせる状態をつくること。
-          </p>
+      <PageHeader
+        en="RECRUIT"
+        ja="美容師・アシスタント募集"
+        image={{ src: "/img/recruit/staffs.jpg", width: 1500, height: 843, position: "50% 30%" }}
+      >
+        <p className={styles.heroCatch}>
+          出会うお客様が変われば、
+          <wbr />
+          美容師の未来も変わる。
+        </p>
+        <p className={styles.heroSub}>Bee dandyは、スタイリストとアシスタントを募集しています。</p>
+      </PageHeader>
+      <InPageNav
+        items={[
+          { id: "features", label: "FEATURES" },
+          { id: "career", label: "CAREER PATH" },
+          { id: "support", label: "SUPPORT" },
+          { id: "staff", label: "STAFF" },
+          { id: "message", label: "MESSAGE" },
+          { id: "requirements", label: "REQUIREMENTS" },
+          { id: "faq", label: "FAQ" },
+        ]}
+      />
+      <div className={styles.intro}>
+        <p className={styles.introText}>{HERO_TEXT}</p>
+        <div className={styles.introEntry}>
+          <EntryCta>
+            <p>話を聞くだけでも大丈夫です。お電話でも受け付けています。</p>
             <p>
-            一人ひとりのお客様と向き合いながら、美容師としても人としても成長できる環境があります。
-          </p>
-        </div>
-        <div className={styles.section}>
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>募集要項</h2>
-            <dl
-              className={`${styles.descriptionInner}, ${styles.recruitDetail}`}
-            >
-              <div>
-                <dt>職種</dt>
-                <dd>スタイリスト</dd>
-              </div>
-              <div>
-                <dt>雇用形態</dt>
-                <dd>正社員</dd>
-              </div>
-              <div>
-                <dt>勤務地</dt>
-                <dd>東京都港区新橋5-8-3 代市ビルB1</dd>
-              </div>
-              <div>
-                <dt>応募資格</dt>
-                <dd>美容師免許取得者</dd>
-              </div>
-              <div>
-                <dt>勤務時間</dt>
-                <dd>実働8時間（シフト制）</dd>
-              </div>
-              <div>
-                <dt>休日</dt>
-                <dd>変形労働時間制。日曜定休は第一、第三日曜日</dd>
-              </div>
-              <div>
-                <dt>試用期間</dt>
-                <dd>3〜6ヶ月</dd>
-              </div>
-            </dl>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>給与システム</h2>
-            <dl
-              className={`${styles.descriptionInner}, ${styles.recruitDetail}`}
-            >
-              <div>
-                <dt>基本給</dt>
-                <dd>23万円〜30万円</dd>
-              </div>
-              <div>
-                <dt>技術歩合</dt>
-                <dd>技術売上50万円超過分 × 10％</dd>
-              </div>
-              <div>
-                <dt>指名料還元</dt>
-                <dd>50〜100％（社内規定による）</dd>
-              </div>
-              <div>
-                <dt>店販歩合</dt>
-                <dd>店販売上 × 10％</dd>
-              </div>
-              <div>
-                <dt>役職手当</dt>
-                <dd>最大6万円</dd>
-              </div>
-              <div>
-                <dt>通勤手当</dt>
-                <dd>最大1.5万円</dd>
-              </div>
-              <div>
-                <dt>昇給</dt>
-                <dd>あり</dd>
-              </div>  
-            </dl>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>給与実績</h2>
-              <p>入社2年目スタイリスト</p>
-              <p style={{marginBottom:'2rem'}}>※月技術売上100万円・指名数85名・店販売上5万円の場合</p>
-              <dl className={`${styles.descriptionInner}, ${styles.recruitDetail} ${styles.large}`}>
-                <div>
-                  <dt>基本給</dt><dd>230,000円</dd>
-                </div>
-                <div>
-                  <dt>技術＋店販歩合</dt><dd>55,000円</dd></div>
-                <div>
-                  <dt>指名料(100％の場合)</dt><dd>85,000円</dd></div>
-                <div>
-                  <dt>各種手当</dt><dd>55,000円</dd></div>
-                <div>
-                  <dt>総支給額</dt><dd><strong>425,000円</strong></dd>
-                </div>
-              </dl>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>勤務条件</h2>
-            <dl
-              className={`${styles.descriptionInner}, ${styles.recruitDetail} ${styles.large}`}
-            >
-              <div>
-                <dt>年間休日</dt>
-                <dd>106日</dd>
-              </div>
-              <div>
-                <dt>月間休日</dt>
-                <dd>月9日（2月・12月は8日）</dd>
-              </div>
-              <div>
-                <dt>日曜定休</dt>
-                <dd>毎月2回</dd>
-              </div>
-              <div>
-                <dt>休憩</dt>
-                <dd>60分（外出可）</dd>
-              </div>
-              <div>
-                <dt>残業</dt>
-                <dd>月平均5時間程度</dd>
-              </div>
-              <div>
-                <dt>副業・Wワーク</dt>
-                <dd>可能</dd>
-              </div>
-            </dl>
-            <div className={styles.note}>
-              <h3>シフト例</h3>
-              <div style={{display:'flex',gap:'2rem'}}>
-                <p><span style={{fontWeight:'bold'}}>早番：</span>9:45〜18:45</p>
-                <p>/</p>
-                <p><span style={{fontWeight:'bold'}}>遅番：</span>12:45〜21:45</p>
-              </div>
-            </div> 
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>福利厚生</h2>
-            <dl
-              className={`${styles.descriptionInner}, ${styles.recruitDetail} ${styles.large}`}
-            >
-              <div>
-                <dt>社会保険</dt>
-                <dd>健康保険・厚生年金・雇用保険・労災保険</dd>
-              </div>
-              <div>
-                <dt>健康診断</dt>
-                <dd>あり</dd>
-              </div>
-              <div>
-                <dt>引越補助</dt>
-                <dd>上限10万円</dd>
-              </div>
-              <div>
-                <dt>結婚祝い金</dt>
-                <dd>あり</dd>
-              </div>
-              <div>
-                <dt>出産祝い金</dt>
-                <dd>あり</dd>
-              </div>
-              <div>
-                <dt>副業・Wワーク</dt>
-                <dd>可能</dd>
-              </div>
-            </dl>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>Bee dandyで働く3つの特徴</h2>
-            <div className={styles.feature}>
-              <div className={styles.feature_text}>
-                <dl className={styles.descriptionInner}>
-                  <dt>① 集客は会社が担当</dt>
-                  <dd>
-                    毎月40名以上の新規と70名以上のフリー顧客が安定して来店しています。現在は予約枠が常に埋まっている状態のため、入社直後からすぐにお客様をお任せできます。また、SNS投稿の強制やチラシ配り、営業ノルマもありません。無駄な業務にストレスを感じることなく、目の前のお客様に集中できる環境です。
-                  </dd>
-                  <dt>② マンツーマン施術</dt>
-                  <dd>
-                    掛け持ち施術は原則ありません。一人ひとりのお客様にしっかり向き合いながら施術できます。平均客単価は8,600円以上。安売りや回転数ではなく、技術と提案力で選ばれるサロンです。
-                  </dd>
-                  <dt>③ 将来の独立や経営も学べる</dt>
-                  <dd>
-                    技術だけでなく、カウンセリング、リピートづくり、マーケティング、集客、店舗運営まで学ぶことができます。将来自分のお店を持ちたい方にも役立つ環境です。
-                  </dd>
-                </dl>
-              </div>
-              <img className={styles.contentImg} src="/img/recruit/staff_1.jpg" alt="施術風景" />
-            </div>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>Bee dandyのお客様</h2>
-            <div className={styles.descriptionContent}>
-              <div className={styles.descriptionTextArea}>
-                <p>
-                  Bee dandyのお客様は、新橋・汐留・虎ノ門エリアで働くビジネスマンが中心です。
-                </p>
-                <p>そのため、</p>
-                <ul className={styles.checkedList}>
-                  <li>信頼される印象づくり</li>
-                  <li>ビジネスシーンに合わせた提案</li>
-                  <li>毎朝のセットが楽になる設計</li>
-                </ul>
-                <p>など、一歩踏み込んだ提案が求められます。</p>
-                <p>
-                  流れ作業ではなく、お客様との信頼関係を築いていく。それがBee dandyのスタイルです。
-                </p>
-                <p>
-                  また、多様な業界で活躍するお客様との出会いは、美容師としてだけでなく、一人の人間としての視野も広げてくれます。
-                </p>
-              </div>
-              <img src="/img/recruit/bee_image.jpg" alt="カット例" />
-            </div>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>教育制度</h2>
-            <p style={{marginBottom:'2rem'}}>
-              Bee dandyでは技術だけではなく、「選ばれる美容師」になるための力を身につけることができます。
+              <TelLink />
+              （担当：松井）
             </p>
-            <div>
-              <dl className={`${styles.descriptionInner}, ${styles.recruitDetail}`} >
-                <div>
-                <dt>技術</dt>
-                <dd>メンズカット・メンズパーマ・カラー・ヘッドスパ</dd>
-                </div>
-                <div>
-                <dt>接客</dt>
-                <dd>カウンセリング・提案力・リピートづくり</dd>
-                </div>
-                <div>
-                <dt>集客</dt>
-                <dd>マーケティング・ブランディング</dd>
-                </div>
-                <div>
-                <dt>経営</dt>
-                <dd>店舗運営・売上管理・独立支援</dd>
-                </div>
-              </dl>
-              <img className={styles.contentImg} src="/img/recruit/staff_cut_01.jpg" alt="カット風景" />
-            </div>
-
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>スタッフの声</h2>
-            <div className={styles.staffVoice}>
-              <div className={styles.staffVoice_text}>
-                <dl className={styles.descriptionInner}>
-                  <dt>スタイリスト</dt>
-                  <dd>
-                    以前のサロンより残業時間が大幅に減りました。それでも収入は増え、お客様との時間を大切にできています。美容師としてのやりがいを実感しています。
-                  </dd>
-                  <dt>脱毛スタッフ</dt>
-                  <dd>
-                    仕事と子育ての両立にとても理解があります。助け合う文化があり、安心して働ける職場です。
-                  </dd>
-                </dl>
-              </div>
-              <img src="/img/recruit/staff_cut_02.jpg" alt="カット中のスタッフ" />
-            </div>
-          </section>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>オーナーメッセージ</h2>
-            <div className={styles.owner}>
-              <div className={styles.owner_text}>
-                <p>私は美容師という仕事が好きです。</p>
-                <p>
-                  だからこそ、美容師が長時間労働や人間関係のストレスで疲弊する業界のままであってほしくありません。
-                </p>
-                <p>
-                  Bee dandyでは、お客様に最高のサービスを提供するために、まず働くスタッフが心身ともに健康であることを大切にしています。毎月2回の日曜定休、連続休暇、時間外ミーティングの廃止も、その考えから生まれました。
-                </p>
-                <p>
-                  一方で、働きやすいだけのサロンを目指しているわけではありません。技術を磨き、お客様から信頼され、しっかり評価される美容師になってほしい。そして将来独立したい方には、私が学んできた集客や経営の知識も伝えていきたいと思っています。
-                </p>
-                <p>
-                  地方から東京へ挑戦したい方も歓迎します。まずは見学だけでも構いません。希望者には私が実際にヘアカットを行う「ヘアカット体験」も実施しています。ぜひ一度、サロンの雰囲気を体感してください。
-                </p>
-                <p style={{ textAlign: "right" }}>
-                  株式会社 Bee Group
-                  <br />
-                  代表 松井祐太
-                </p>
-              </div>
-              <img
-                src="/img/recruit/owner_message.jpg"
-                alt="笑顔の松井オーナー"
-              />
-            </div>
-          </section>
-
-          <div className={styles.ctaBoxWrapper}>
-            <CtaBox isExtend />
-          </div>
-
-          <section className={styles.description}>
-            <h2 className={styles.subHeading}>会社情報</h2>
-            <dl className={`${styles.descriptionInner}, ${styles.recruitDetail}`}>
-              <div>
-                <dt>会社名</dt>
-                <dd>株式会社Bee Group</dd>
-              </div>
-              <div>
-                <dt>会社所在地</dt>
-                <dd>〒105-0004 東京都港区新橋 5－8－3 代市ビル B１F</dd>
-              </div>
-              <div>
-                <dt>設立年月日</dt>
-                <dd>2021年4月</dd>
-              </div>
-              <div>
-                <dt>店舗数</dt>
-                <dd>1店舗</dd>
-              </div>
-              <div>
-                <dt>ホームページ</dt>
-                <dd>
-                  <a
-                    className={styles.lightLink}
-                    href="https://beegroup.tokyo/"
-                  >
-                    https://beegroup.tokyo/
-                  </a>
-                </dd>
-              </div>
-            </dl>
-          </section>
-
- 
-
-          <p style={{ marginTop: "20px", textAlign: "right" }}>
-            ２０２６年６月現在
-          </p>
+          </EntryCta>
         </div>
       </div>
+
+      <section id="work" className={pageStyles.section}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="OUR WORK" lead="Bee dandyの仕事とお客様" />
+          <div className={styles.split}>
+            <div className={styles.splitPhoto}>
+              <Photo
+                src="/img/recruit/staff_1.jpg"
+                width={1700}
+                height={1133}
+                position="30% 50%"
+                alt="ビジネスマンのお客様を担当するスタッフ"
+                className={styles.photoImage}
+              />
+            </div>
+            <div className={styles.splitBody}>
+              <div className={pageStyles.text}>
+                {WORK.intro.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+              </div>
+              <ul className={styles.pointList}>
+                {WORK.points.map((point) => (
+                  <li key={point}>{point}</li>
+                ))}
+              </ul>
+              <div className={pageStyles.text}>
+                {WORK.outro.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="FEATURES" lead="Bee dandyで働く4つの特徴" />
+          <ol className={styles.features}>
+            {FEATURES.map((feature, i) => (
+              <li key={feature.title} className={styles.feature}>
+                <span className={styles.featureNum} aria-hidden="true">
+                  {num(i)}
+                </span>
+                <h3 className={styles.featureTitle}>{feature.title}</h3>
+                {feature.text && (
+                  <div className={styles.featureText}>
+                    {feature.text.map((text) => (
+                      <p key={text}>{text}</p>
+                    ))}
+                  </div>
+                )}
+                {feature.list && (
+                  <ul className={styles.checkList}>
+                    {feature.list.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                )}
+                {feature.terms && (
+                  <dl className={styles.terms}>
+                    {feature.terms.map((term) => (
+                      <div key={term.term}>
+                        <dt>{term.term}</dt>
+                        <dd>{term.description}</dd>
+                      </div>
+                    ))}
+                  </dl>
+                )}
+                {feature.footer && (
+                  <div className={styles.featureText}>
+                    {feature.footer.map((text) => (
+                      <p key={text}>{text}</p>
+                    ))}
+                  </div>
+                )}
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section id="vision" className={pageStyles.section}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="VISION" lead="Bee dandyが目指す美容師像" />
+          <div className={`${styles.split} ${styles.splitReverse}`}>
+            <div className={styles.splitPhoto}>
+              <Photo
+                src="/img/recruit/staff_cut_01.jpg"
+                width={1700}
+                height={1133}
+                position="45% 40%"
+                alt="カットを担当するスタイリスト"
+                className={styles.photoImage}
+              />
+            </div>
+            <div className={styles.splitBody}>
+              <p className={styles.visionLead}>{VISION.lead}</p>
+              <div className={pageStyles.text}>
+                <p>{VISION.intro}</p>
+              </div>
+              <ul className={styles.pillars}>
+                {VISION.pillars.map((pillar) => (
+                  <li key={pillar}>{pillar}</li>
+                ))}
+              </ul>
+              <div className={pageStyles.text}>
+                {VISION.outro.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="career" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="CAREER PATH" lead="キャリアパス｜成長と評価の仕組み" />
+          <div className={styles.centerText}>
+            {CAREER_INTRO.map((text) => (
+              <p key={text}>{text}</p>
+            ))}
+          </div>
+          <figure className={styles.path}>
+            <figcaption className={styles.pathTitle}>キャリアパス</figcaption>
+            <ol className={styles.pathSteps}>
+              {CAREER_PATH_STEPS.map((step) => (
+                <li key={step} className={styles.pathStep}>
+                  {step}
+                </li>
+              ))}
+              <li className={styles.pathGoals}>
+                <ul>
+                  {CAREER_PATH_GOALS.map((goal) => (
+                    <li key={goal}>{goal}</li>
+                  ))}
+                </ul>
+              </li>
+            </ol>
+          </figure>
+          <div className={styles.block}>
+            <h3 className={pageStyles.subHeading}>成長を収入につなげる評価制度</h3>
+            <ul className={styles.evaluations}>
+              {EVALUATIONS.map((item) => (
+                <li key={item.title} className={styles.evaluation}>
+                  <h4>{item.title}</h4>
+                  {item.text.map((text) => (
+                    <p key={text}>{text}</p>
+                  ))}
+                </li>
+              ))}
+            </ul>
+            <p className={styles.note}>※各制度の適用条件は、当社規定によります。</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="support" className={pageStyles.section}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="SUPPORT" lead="経験に合わせた成長サポート" />
+          <div className={styles.centerText}>
+            {SUPPORT_INTRO.map((text) => (
+              <p key={text}>{text}</p>
+            ))}
+          </div>
+          <div className={styles.tracks}>
+            <article id="debut" className={styles.track}>
+              <header className={styles.trackHead}>
+                <p className={styles.trackTarget}>{ASSISTANT_SUPPORT.target}</p>
+                <h3 className={styles.trackTitle}>{ASSISTANT_SUPPORT.title}</h3>
+              </header>
+              <div className={styles.trackBody}>
+                <div className={pageStyles.text}>
+                  {ASSISTANT_SUPPORT.text.map((text) => (
+                    <p key={text}>{text}</p>
+                  ))}
+                </div>
+                <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.stepsTitle}</h4>
+                <table className={styles.stepTable}>
+                  <thead>
+                    <tr>
+                      {ASSISTANT_SUPPORT.stepsHead.map((label) => (
+                        <th key={label} scope="col">
+                          {label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {ASSISTANT_SUPPORT.steps.map((step) => (
+                      <tr key={step.step}>
+                        <th scope="row">
+                          <span className={styles.stepBadge}>{step.step}</span>
+                        </th>
+                        <td data-label={ASSISTANT_SUPPORT.stepsHead[1]}>
+                          <Pending text={step.content} />
+                        </td>
+                        <td data-label={ASSISTANT_SUPPORT.stepsHead[2]}>
+                          <Pending text={step.period} />
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+                <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.trainingTitle}</h4>
+                <dl className={styles.training}>
+                  {ASSISTANT_SUPPORT.training.map((item) => (
+                    <div key={item.term}>
+                      <dt>{item.term}</dt>
+                      <dd>
+                        <Pending text={item.description} />
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            </article>
+
+            <article className={styles.track}>
+              <header className={styles.trackHead}>
+                <p className={styles.trackTarget}>{STYLIST_SUPPORT.target}</p>
+                <h3 className={styles.trackTitle}>{STYLIST_SUPPORT.title}</h3>
+              </header>
+              <div className={styles.trackBody}>
+                <div className={styles.trackLead}>
+                  <div className={pageStyles.text}>
+                    {STYLIST_SUPPORT.text.map((text) => (
+                      <p key={text}>{text}</p>
+                    ))}
+                  </div>
+                  <div className={styles.trackPhoto}>
+                    <Photo
+                      src="/img/recruit/staff_cut_01.jpg"
+                      width={1700}
+                      height={1133}
+                      position="40% 40%"
+                      alt="カットを担当するスタイリスト"
+                      className={styles.photoImage}
+                    />
+                  </div>
+                </div>
+                <ul className={styles.trackPoints}>
+                  {STYLIST_SUPPORT.points.map((point) => (
+                    <li key={point.title}>
+                      <h4 className={styles.checkHeading}>{point.title}</h4>
+                      {point.text.map((text) => (
+                        <p key={text}>{text}</p>
+                      ))}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="staff" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="STAFF" lead="一緒に働くスタッフの紹介" />
+          <div className={styles.centerText}>
+            {STAFF_INTRO.map((text) => (
+              <p key={text}>{text}</p>
+            ))}
+          </div>
+          <ul className={styles.staffList}>
+            {STAFF.map((member) => (
+              <li key={member.name} className={styles.staffCard}>
+                <div className={styles.staffPhoto}>
+                  <Photo {...member.photo} alt={`${member.role} ${member.name}`} className={styles.photoImage} />
+                </div>
+                <div className={styles.staffBody}>
+                  <p className={styles.staffRole}>{member.role}</p>
+                  <h3 className={styles.staffName}>{member.name}</h3>
+                  <dl className={styles.staffSkill}>
+                    <dt>得意な施術</dt>
+                    <dd>{member.specialty}</dd>
+                  </dl>
+                  <p className={styles.staffComment}>{member.comment}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.atmosphere}>
+            <h3 className={styles.atmosphereTitle}>{ATMOSPHERE.title}</h3>
+            <p>{ATMOSPHERE.text}</p>
+          </div>
+          <div className={pageStyles.actions}>
+            <LinkButton href="/hairstyle#stylist">スタッフ紹介を見る</LinkButton>
+          </div>
+        </div>
+      </section>
+
+      <section id="message" className={pageStyles.section}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="MESSAGE" lead="Bee dandyのこれから｜オーナーメッセージ" />
+          <div className={styles.message}>
+            <div className={styles.messagePhoto}>
+              <Photo
+                src="/img/recruit/owner_message.jpg"
+                width={980}
+                height={653}
+                position="60% 40%"
+                alt="株式会社 Bee Group 代表 松井祐太"
+                className={styles.photoImage}
+              />
+            </div>
+            <div className={styles.messageBody}>
+              {OWNER_MESSAGE.map((text, i) => (
+                <p key={text} className={i === 0 ? styles.messageLead : undefined}>
+                  {text}
+                </p>
+              ))}
+              <p className={styles.signature}>{OWNER_SIGNATURE}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="requirements" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.narrow}>
+          <SectionHeading en="REQUIREMENTS" lead="募集要項" />
+          <ul className={styles.jobIndex}>
+            {JOBS.map((job, i) => (
+              <li key={job.id}>
+                <a href={`#${job.id}`}>
+                  <span className={styles.jobIndexNum}>{num(i)}</span>
+                  {job.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className={styles.jobs}>
+            {JOBS.map((job, i) => (
+              <article key={job.id} id={job.id} className={styles.job}>
+                <h3 className={styles.jobTitle}>
+                  <span className={styles.jobNum} aria-hidden="true">
+                    {num(i)}
+                  </span>
+                  {job.title}
+                </h3>
+                <InfoTable rows={job.rows} />
+                {job.salary && <SalaryBox salary={job.salary} />}
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="visit" className={pageStyles.section}>
+        <div className={pageStyles.container}>
+          <SectionHeading en="FLOW" lead="まずはサロン見学から" />
+          <div className={styles.centerText}>
+            <p>{VISIT.intro}</p>
+          </div>
+          <div className={styles.block}>
+            <h3 className={pageStyles.subHeading}>{VISIT.flowTitle}</h3>
+            <ol className={styles.visitSteps}>
+              {VISIT.steps.map((step, i) => (
+                <li key={step.title} className={styles.visitStep}>
+                  <span className={styles.visitNum} aria-hidden="true">
+                    {num(i)}
+                  </span>
+                  <h4 className={styles.visitTitle}>{step.title}</h4>
+                  {step.text.map((text) => (
+                    <p key={text} className={styles.visitText}>
+                      {withTelLink(text)}
+                    </p>
+                  ))}
+                </li>
+              ))}
+            </ol>
+          </div>
+          <div className={`${styles.centerText} ${styles.visitOutro}`}>
+            <p>{VISIT.outro}</p>
+          </div>
+          <div className={styles.visitEntry}>
+            <EntryCta />
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.narrow}>
+          <SectionHeading en="FAQ" lead="よくある質問" />
+          <FaqList items={RECRUIT_FAQ} />
+        </div>
+      </section>
+
+      <section id="entry" className={pageStyles.section}>
+        <div className={pageStyles.narrow}>
+          <SectionHeading en="ENTRY" lead="サロン見学・応募のご案内" />
+          <p className={styles.inviteLead}>{INVITATION.lead}</p>
+          <div className={pageStyles.text}>
+            <p>{INVITATION.intro}</p>
+          </div>
+          <ul className={styles.reasonList}>
+            {INVITATION.reasons.map((reason) => (
+              <li key={reason}>{reason}</li>
+            ))}
+          </ul>
+          <div className={pageStyles.text}>
+            <p>{INVITATION.outro}</p>
+          </div>
+          <div className={styles.inviteEntry}>
+            <EntryCta>
+              <div className={styles.phone}>
+                <p className={styles.phoneTitle}>お電話でのお問合せも受け付けています。</p>
+                <p className={styles.phoneNumber}>
+                  <TelLink />
+                  （Bee dandy）担当：松井
+                </p>
+                <p>お急ぎの方や、個別に相談したいことがある方は、お電話でお気軽にご連絡ください。</p>
+              </div>
+            </EntryCta>
+          </div>
+        </div>
+      </section>
+
+      <section id="company" className={`${pageStyles.section} ${pageStyles.sectionAlt}`}>
+        <div className={pageStyles.narrow}>
+          <SectionHeading en="COMPANY" lead="会社情報" />
+          <InfoTable rows={COMPANY_ROWS} />
+        </div>
+      </section>
     </MainLayout>
   </>
 );

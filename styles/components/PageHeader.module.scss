@@ -8,6 +8,7 @@
     min-height: 26rem;
     padding: 6rem 0;
     overflow: hidden;
+    color: $color-text;
     @include pc {
         min-height: 40rem;
         padding: 8rem 0;

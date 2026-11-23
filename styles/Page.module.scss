@@ -8,7 +8,7 @@
 }
 
 .sectionAlt {
-    background-color: $color-main-deep;
+    background-color: var(--theme-bg-alt, #{$color-main-deep});
 }
 
 .container {
@@ -21,7 +21,7 @@
 
 .text {
     line-height: 1.95;
-    color: $color-text-muted;
+    color: var(--theme-text-muted, #{$color-text-muted});
     p + p {
         margin-top: 1.6rem;
     }
@@ -34,7 +34,7 @@
 .notes {
     font-size: 1.3rem;
     line-height: 1.8;
-    color: $color-text-muted;
+    color: var(--theme-text-muted, #{$color-text-muted});
     p + p {
         margin-top: 0.4rem;
     }
@@ -70,7 +70,7 @@
         flex-shrink: 0;
         width: 2.4rem;
         height: 1px;
-        background-color: $color-sub;
+        background-color: var(--theme-ornament, #{$color-sub});
     }
     @include pc {
         margin-bottom: 3.6rem;
