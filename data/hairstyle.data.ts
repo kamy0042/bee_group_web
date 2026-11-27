@@ -57,7 +57,7 @@ export const HAIR_MENUS: HairMenu[] = [
       title: "人気のメンズパーマ",
       items: ["ニュアンスパーマ", "フェザーパーマ", "デザインカール", "ソフトツイストスパイラル", "曲がるストレート"],
     },
-    photo: { src: "/img/model/model-5.jpg", width: 1722, height: 1369, position: "75% 15%" },
+    photo: { src: "/img/model/model-5.jpg", width: 1495, height: 1125, position: "70% 0%" },
     alt: "メンズパーマのスタイル例",
   },
   {
