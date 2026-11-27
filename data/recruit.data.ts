@@ -148,17 +148,21 @@ export const ASSISTANT_SUPPORT = {
   stepsTitle: "入社からデビューまでの流れ",
   stepsHead: ["ステップ", "習得する技術・内容", "期間の目安"],
   steps: [
-    { step: "STEP 1", content: "【要確認：最初に担当する業務・基礎技術】", period: "【要確認】" },
-    { step: "STEP 2", content: "【要確認：次の段階で学ぶ技術】", period: "【要確認】" },
-    { step: "STEP 3", content: "【要確認：カット・パーマなどの実践練習と評価基準】", period: "【要確認】" },
-    { step: "STEP 4", content: "スタイリストデビュー", period: "【要確認：実績に基づくデビューまでの目安】" },
+    { step: "STEP 1", content: "接客・シャンプーなどの基本技術", period: "〜6か月" },
+    { step: "STEP 2", content: "カラー・パーマ補助・ヘッドスパ", period: "6か月〜1年" },
+    { step: "STEP 3", content: "メンズカット・スタイリング・モデル練習", period: "1〜2年" },
+    { step: "STEP 4", content: "技術・接客チェック、スタイリストデビュー", period: "2〜3年" },
   ],
+  stepsNote:
+    "※習得期間はあくまで目安です。個人の経験や技術習得の進捗に応じて、一人ひとりに合わせて進めていきます。",
   trainingTitle: "練習と育成の体制",
   training: [
-    { term: "練習時間", description: "【要確認：業務時間内の練習時間・頻度】" },
-    { term: "指導体制", description: "【要確認：担当する先輩・オーナーの関わり方】" },
-    { term: "練習環境", description: "【要確認：ウィッグ・モデルなど】" },
+    { term: "練習時間", description: "技術習得のための練習時間を業務時間内に確保" },
+    { term: "指導体制", description: "経験豊富な先輩スタイリストが指導" },
+    { term: "練習環境", description: "ウィッグ・モデル練習などを活用" },
   ] as Term[],
+  trainingNote:
+    "※清掃や備品管理など、サロン運営に必要な業務はスタッフ全員で協力して行います。一人に負担が偏ることなく、互いに助け合いながらサロンを運営しています。",
 };
 
 export const STYLIST_SUPPORT = {
@@ -296,7 +300,7 @@ export const JOBS: Job[] = [
       { term: "勤務時間", value: "実働8時間(シフト制)。早番 9:45〜18:45 / 遅番 12:45〜21:45" },
       { term: "休日", value: "変形労働時間制。日曜定休は第1・第3日曜。月9日(2月・12月は8日)、年間休日106日" },
       { term: "休憩・残業", value: "休憩60分(外出可)。残業は月平均5時間程度" },
-      { term: "試用期間", value: "3〜6ヶ月" },
+      { term: "試用期間", value: "3〜6か月" },
       { term: "基本給", value: "23万円〜30万円" },
       {
         term: "歩合・手当",
@@ -314,7 +318,7 @@ export const JOBS: Job[] = [
       rows: [
         { term: "基本給", value: "250,000円" },
         { term: "技術歩合+店販歩合", value: "75,000円" },
-        { term: "指名料(100%還元の場合)", value: "106,050円" },
+        { term: "指名料", value: "106,050円" },
         { term: "総支給額", value: "431,050円", total: true },
       ],
       note: "※給与は売上・指名実績等により変動します。通勤手当は別途支給します。",
@@ -331,7 +335,7 @@ export const JOBS: Job[] = [
       { term: "勤務時間", value: "実働8時間(シフト制)。早番 9:45〜18:45 / 遅番 12:45〜21:45" },
       { term: "休日", value: "1か月単位の変形労働時間制。第1・第3日曜定休。月10日、年間休日120日" },
       { term: "休憩・残業", value: "休憩60分(外出可)。残業は月平均5時間程度" },
-      { term: "試用期間", value: "3〜6ヶ月" },
+      { term: "試用期間", value: "3〜6か月" },
       { term: "基本給", value: "22万円〜23万円（技術習得・評価に応じて昇給）" },
       { term: "歩合・手当", value: "店販歩合:店販売上の10% / 通勤手当:最大1.5万円", list: true },
       { term: "昇給", value: "あり" },

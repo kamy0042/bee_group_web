@@ -5,6 +5,7 @@ import PageHeader from "../../components/PageHeader";
 import InPageNav from "../../components/InPageNav";
 import SectionHeading from "../../components/SectionHeading";
 import Photo from "../../components/Photo";
+import ZoomableImage from "../../components/ZoomableImage";
 import FaqList from "../../components/FaqList";
 import LinkButton from "../../components/LinkButton";
 import { CtaButton } from "../../components/CtaButton";
@@ -384,6 +385,14 @@ const Recruit = () => (
               <p key={text}>{text}</p>
             ))}
           </div>
+          <div className={styles.careerChart}>
+            <ZoomableImage
+              src="/img/recruit/Bee_dandy_career.png"
+              width={1752}
+              height={897}
+              alt="Bee dandyのキャリアパス。アシスタント、ジュニアスタイリスト、スタイリスト、トップスタイリストと段階的にステップアップし、その先は技術専門職（テクニカルディレクター）またはマネジメント職（店長・幹部候補）を選べます。"
+            />
+          </div>
           {/* <figure className={styles.path}>
             <figcaption className={styles.pathTitle}>キャリアパス</figcaption>
             <ol className={styles.pathSteps}>
@@ -438,7 +447,7 @@ const Recruit = () => (
                     <p key={text}>{text}</p>
                   ))}
                 </div>
-                {/* <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.stepsTitle}</h4>
+                <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.stepsTitle}</h4>
                 <table className={styles.stepTable}>
                   <thead>
                     <tr>
@@ -455,27 +464,23 @@ const Recruit = () => (
                         <th scope="row">
                           <span className={styles.stepBadge}>{step.step}</span>
                         </th>
-                        <td data-label={ASSISTANT_SUPPORT.stepsHead[1]}>
-                          <Pending text={step.content} />
-                        </td>
-                        <td data-label={ASSISTANT_SUPPORT.stepsHead[2]}>
-                          <Pending text={step.period} />
-                        </td>
+                        <td data-label={ASSISTANT_SUPPORT.stepsHead[1]}>{step.content}</td>
+                        <td data-label={ASSISTANT_SUPPORT.stepsHead[2]}>{step.period}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
+                <p className={styles.note}>{ASSISTANT_SUPPORT.stepsNote}</p>
                 <h4 className={styles.checkHeading}>{ASSISTANT_SUPPORT.trainingTitle}</h4>
                 <dl className={styles.training}>
                   {ASSISTANT_SUPPORT.training.map((item) => (
                     <div key={item.term}>
                       <dt>{item.term}</dt>
-                      <dd>
-                        <Pending text={item.description} />
-                      </dd>
+                      <dd>{item.description}</dd>
                     </div>
                   ))}
-                </dl> */}
+                </dl>
+                <p className={styles.note}>{ASSISTANT_SUPPORT.trainingNote}</p>
               </div>
             </article>
 
