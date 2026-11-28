@@ -1,0 +1,60 @@
+@use '../common' as *;
+
+.heading {
+    margin-bottom: 4rem;
+    text-align: center;
+    @include pc {
+        margin-bottom: 6.4rem;
+    }
+}
+
+.en {
+    font-family: $font-display;
+    font-size: 3.2rem;
+    font-weight: 400;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    &::after {
+        content: '';
+        display: block;
+        width: 4rem;
+        height: 1px;
+        margin: 1.8rem auto 0;
+        background-color: var(--theme-ornament, #{$color-sub});
+    }
+    @include pc {
+        font-size: 5rem;
+    }
+}
+
+.lead {
+    margin-top: 2.4rem;
+    font-family: $font-mincho;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.7;
+    letter-spacing: 0.08em;
+    color: var(--theme-accent, #{$color-sub});
+    word-break: auto-phrase;
+    @include pc {
+        font-size: 2.8rem;
+    }
+}
+
+.sub {
+    margin-top: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    color: var(--theme-text-muted, #{$color-text-muted});
+    @include pc {
+        font-size: 1.7rem;
+    }
+}
+
+.left {
+    text-align: left;
+    .en::after {
+        margin-left: 0;
+    }
+}

@@ -8,6 +8,9 @@
 .image {
   object-fit: cover;
   width: 100%;
+  @include pc {
+    height: 180px;
+  }
 }
 
 .title {

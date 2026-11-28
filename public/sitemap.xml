@@ -1,24 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
-<!--  created with free sitemap generation system www.sitemapxml.jp  -->
 <url>
   <loc>https://beegroup.tokyo/</loc>
 </url>
 <url>
-  <loc>https://beegroup.tokyo/menu</loc>
+  <loc>https://beegroup.tokyo/hairstyle</loc>
 </url>
 <url>
-  <loc>https://beegroup.tokyo/salon</loc>
+  <loc>https://beegroup.tokyo/scalp-ink</loc>
 </url>
 <url>
-  <loc>https://beegroup.tokyo/staff</loc>
+  <loc>https://beegroup.tokyo/waxing</loc>
 </url>
 <url>
   <loc>https://beegroup.tokyo/faq</loc>
 </url>
 <url>
-  <loc>https://beegroup.tokyo/waxing</loc>
+  <loc>https://beegroup.tokyo/voice</loc>
+</url>
+<url>
+  <loc>https://beegroup.tokyo/blog</loc>
+</url>
+<url>
+  <loc>https://beegroup.tokyo/recruit</loc>
 </url>
 
 </urlset>

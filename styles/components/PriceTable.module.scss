@@ -1,0 +1,194 @@
+@use '../common' as *;
+
+.block {
+    padding: 3.2rem 2rem;
+    border: 1px solid $color-line;
+    background-color: rgba(255, 255, 255, 0.02);
+    @include pc {
+        padding: 4.8rem 5.6rem;
+    }
+}
+
+.head {
+    text-align: center;
+}
+
+.title {
+    font-family: $font-mincho;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    @include pc {
+        font-size: 2.6rem;
+    }
+}
+
+.subtitle {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    color: $color-sub;
+    letter-spacing: 0.06em;
+    @include pc {
+        font-size: 1.4rem;
+    }
+}
+
+.description {
+    max-width: 72rem;
+    margin: 2rem auto 0;
+    color: $color-text-muted;
+    line-height: 1.9;
+    p + p {
+        margin-top: 0.8rem;
+    }
+}
+
+.notes {
+    max-width: 72rem;
+    margin: 1.2rem auto 0;
+    font-size: 1.3rem;
+    color: $color-sub;
+}
+
+.photo {
+    max-width: 40rem;
+    margin: 2.4rem auto 0;
+    @include pc {
+        margin-top: 3.2rem;
+    }
+}
+
+.photoImage {
+    display: block;
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    margin-top: 2.4rem;
+    border-collapse: collapse;
+    word-break: auto-phrase;
+    th {
+        font-weight: 700;
+        text-align: left;
+    }
+    .price,
+    .member {
+        font-family: $font-mincho;
+        font-variant-numeric: tabular-nums;
+    }
+    td.member {
+        color: $color-sub;
+        font-weight: 700;
+    }
+    .name {
+        white-space: pre-line;
+    }
+}
+
+.details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem 1.2rem;
+    margin-top: 0.6rem;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: $color-text-muted;
+}
+
+@include sp {
+    .table {
+        thead {
+            display: none;
+        }
+        tbody,
+        tr,
+        th,
+        td {
+            display: block;
+        }
+        tr {
+            padding: 1.8rem 0;
+            border-bottom: 1px solid $color-line;
+            &:first-child {
+                border-top: 1px solid $color-line;
+            }
+        }
+        .nameCell {
+            padding-bottom: 0.8rem;
+            font-size: 1.6rem;
+        }
+        td {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 1.6rem;
+            padding: 0.3rem 0;
+            &::before {
+                content: attr(data-label);
+                flex-shrink: 0;
+                font-family: inherit;
+                font-size: 1.2rem;
+                font-weight: 500;
+                color: $color-sub;
+            }
+        }
+        td.price,
+        td.member {
+            font-size: 1.7rem;
+        }
+        td.text {
+            text-align: right;
+        }
+    }
+}
+
+@include pc {
+    .table {
+        margin-top: 3.2rem;
+        thead th {
+            padding: 0 0 1.4rem;
+            border-bottom: 1px solid $color-line-sub;
+            font-size: 1.3rem;
+            color: $color-sub;
+            letter-spacing: 0.06em;
+            white-space: nowrap;
+        }
+        thead th + th {
+            padding-left: 2rem;
+        }
+        tbody tr {
+            border-bottom: 1px solid $color-line;
+        }
+        .nameCell {
+            padding: 2rem 2rem 2rem 0;
+            font-size: 1.6rem;
+            vertical-align: middle;
+        }
+        td {
+            padding: 2rem 0 2rem 2rem;
+            vertical-align: middle;
+        }
+        .price,
+        .member {
+            width: 18%;
+            text-align: right;
+        }
+        td.price,
+        td.member {
+            font-size: 1.8rem;
+        }
+        .text {
+            width: 18%;
+        }
+    }
+
+    .noHead {
+        tbody tr:first-child {
+            border-top: 1px solid $color-line;
+        }
+        .text {
+            width: 60%;
+        }
+    }
+}

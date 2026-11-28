@@ -1,8 +1,9 @@
 import { notFound } from "next/navigation";
-import styles from "../../../styles/Waxing.module.scss";
+import styles from "../../../styles/Blog.module.scss";
 import { getList } from "../../../libs/microcms";
 import ArticleList from "../../../components/blog/ArticleList/ArticleList";
 import Pagination from "../../../components/blog/Pagination";
+import LinkButton from "../../../components/LinkButton";
 import { LIMIT, SALON_NAME } from "../../../constants";
 
 
@@ -31,9 +32,12 @@ export default async function Page ({ params }: Props){
   
   return (
     <div>
-      <h2 className={styles.heading}>Blog</h2>
+      <h1 className={styles.heading}>Blog</h1>
       <ArticleList articles={list.contents} />
       <Pagination totalCount={list.totalCount} current={current} />
+      <div className={styles.voiceLink}>
+        <LinkButton href="/voice">お客様の声を見る</LinkButton>
+      </div>
     </div>
   );
 } 

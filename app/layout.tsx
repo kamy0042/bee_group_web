@@ -17,7 +17,7 @@ export default function RootLayout({
       <GoogleAnalytics />
     </Suspense>
       <body style={{ margin: 0 }}>
-          <MainLayout >
+          <MainLayout contained>
               {children}
           </MainLayout>
       </body>

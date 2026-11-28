@@ -1,115 +1,148 @@
-@import 'common.scss';
+@use 'common' as *;
 
+.footer {
+    background-color: $color-main-deep;
+    border-top: 1px solid $color-line;
+}
 
 .map {
     position: relative;
-    padding-bottom: 75%;
-    height: 0;
+    height: 26rem;
     overflow: hidden;
-    opacity: 0.95;
     & > iframe {
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100% !important;
-        height: 100% !important;
-        border:0;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        filter: grayscale(1) contrast(1.05);
+        opacity: 0.9;
+    }
+    @include pc {
+        height: 36rem;
     }
 }
 
-.info {
-    padding:$padding-container-sp;
-    text-align: center;
-}
-
-.openInfo {
-    margin-top:2rem;
-    dt {
-        font-weight: 400;
+.inner {
+    @include container;
+    padding-top: 5.6rem;
+    padding-bottom: 5.6rem;
+    display: grid;
+    gap: 4.8rem;
+    @include pc {
+        grid-template-columns: 1fr 1fr;
+        gap: 6rem;
+        padding-top: 8rem;
+        padding-bottom: 8rem;
     }
 }
 
-.holiday{
-    margin-top:1rem;
+.logo img {
+    display: block;
+    width: 20rem;
+    height: auto;
 }
 
 .address {
-    margin-top: 0.5rem;
+    margin-top: 2.4rem;
+    letter-spacing: 0.04em;
 }
 
-.link {
-    margin: 0.25rem 0 2rem;
-    & > a {
-        display: block;
+.info {
+    margin-top: 2.4rem;
+    font-size: 1.4rem;
+    color: $color-text-muted;
+    line-height: 1.8;
+    & > div {
+        display: grid;
+        grid-template-columns: 6.4rem 1fr;
+        gap: 1.2rem;
     }
-    & > a + a{
-        margin-top: 0.25rem;
+    & > div + div {
+        margin-top: 1.2rem;
+    }
+    dt {
+        color: $color-sub;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+    }
+    a {
+        color: $color-text;
+        letter-spacing: 0.04em;
     }
 }
 
-.btn{
-    margin: 2rem 0;
+.comment {
+    font-size: 1.2rem;
 }
 
-.btm{
-    background-color: $color-sub;
-    font-size: $text-smaller-sp;
-    text-align: center;
-    padding: 0.25rem;
+.nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 2.4rem;
+    border-top: 1px solid $color-line;
+    li {
+        border-bottom: 1px solid $color-line;
+    }
+    a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 1.4rem 0;
+        transition: color 0.3s;
+        @include hover {
+            color: $color-sub;
+        }
+    }
+}
+
+.navEn {
+    font-family: $font-display;
+    font-size: 1.7rem;
+    letter-spacing: 0.06em;
+}
+
+.navJa {
+    font-size: 1.1rem;
+    color: $color-text-muted;
+    letter-spacing: 0.08em;
+}
+
+.actions {
+    margin-top: 3.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2.4rem;
 }
 
 .sns {
-    margin-top: 2rem;
-    & > a {
-        display: inline-block;
-    }
-    & > a + a {
-        margin-left: 2rem;
-    }
-}
-
-.comment{
-    font-size: 12px;
-}
-
-.spNone{
-    display: none;
-}
-.pcNone{
-    display: block;
-}
-
-
-
-@include pc {
-    .openInfo{
-        flex-wrap: wrap;
-    }
-    .map{
-        padding-bottom:22%;
-    }
-    .btm{
-        font-size: $text-small;
-        padding: 0.75rem;
-    }
-    .info{
-        width:$width-container;
-        margin: auto;
-        padding: 5rem 0;
-    }
-    .btn{
-        width: 20rem;
-        margin: 3rem auto 0;
-        & > a{
-            font-size: $text-medium;
+    display: flex;
+    gap: 1.6rem;
+    a {
+        display: block;
+        transition: opacity 0.3s;
+        @include hover {
+            opacity: 0.7;
         }
     }
-    .spNone{
-        display: inline-block;
-        margin:0 1rem;
-    }
-    .pcNone{
-        display: none;
-    }
+}
 
+.reserve {
+    flex: 1;
+    max-width: 26rem;
+    padding: 1.3rem 2rem;
+    font-size: 1.5rem;
+}
+
+.copyright {
+    padding: 1.2rem $gutter-sp;
+    background-color: $color-sub;
+    color: $color-text-on-sub;
+    font-size: $text-smaller-sp;
+    text-align: center;
+    letter-spacing: 0.06em;
+    @include pc {
+        font-size: $text-small;
+    }
 }

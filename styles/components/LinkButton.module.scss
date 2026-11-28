@@ -1,0 +1,77 @@
+@use '../common' as *;
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.primary,
+.outline {
+    min-width: min(100%, 28rem);
+    padding: 1.4rem 3.2rem;
+    border-radius: 999px;
+    font-size: 1.5rem;
+    &::after {
+        content: '';
+        flex-shrink: 0;
+        width: 0.7rem;
+        height: 0.7rem;
+        border-top: 1.5px solid currentColor;
+        border-right: 1.5px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.3s $ease-out;
+    }
+    @include hover {
+        &::after {
+            transform: translateX(0.3rem) rotate(45deg);
+        }
+    }
+}
+
+.primary {
+    background-color: $color-sub;
+    color: $color-text-on-sub;
+    @include hover {
+        background-color: var(--theme-hover-bg, #fff);
+        color: var(--theme-hover-text, #{$color-main});
+    }
+}
+
+.outline {
+    border: 1px solid var(--theme-outline, rgba(255, 255, 255, 0.55));
+    color: var(--theme-text, #{$color-text});
+    @include hover {
+        background-color: var(--theme-hover-bg, #fff);
+        border-color: var(--theme-hover-bg, #fff);
+        color: var(--theme-hover-text, #{$color-main});
+    }
+}
+
+.text {
+    position: relative;
+    padding-bottom: 0.4rem;
+    color: var(--theme-accent, #{$color-sub});
+    font-size: 1.5rem;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 1px;
+        background-color: currentColor;
+        transform-origin: right;
+        transition: transform 0.35s $ease-out;
+    }
+    @include hover {
+        &::after {
+            transform: scaleX(0);
+        }
+    }
+}

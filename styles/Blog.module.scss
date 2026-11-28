@@ -1,0 +1,25 @@
+@use 'common' as *;
+
+.heading {
+    font-family: $font-display;
+    font-size: 3.6rem;
+    font-weight: 400;
+    letter-spacing: 0.16em;
+    text-align: center;
+    &::after {
+        content: '';
+        display: block;
+        width: 4rem;
+        height: 1px;
+        margin: 1.8rem auto 0;
+        background-color: $color-sub;
+    }
+    @include pc {
+        font-size: 5.6rem;
+    }
+}
+
+.voiceLink {
+    margin-top: 4.8rem;
+    text-align: center;
+}

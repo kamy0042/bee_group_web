@@ -1,580 +1,573 @@
-@import 'common.scss';
+@use 'common' as *;
 
-
-.mv {
-   height: 70vh;
-   min-height: 460px;
-   background-image: url('../public/img/bee_top_image-min.jpg');
-   background-size:cover;
-   position: relative;
-   border-top: solid 1px $color-sub;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   flex-direction: column;
-   &::before{
-       content: '';
-       width: 100%;
-       height: 100%;
-       position: absolute;
-       top: 0;
-       left: 0;
-       background-color: $color-main;
-       opacity: 0.35;
-       z-index: 0;
-   }
-   &_noWebp {
-    background-image: url('../public/img/bee_top_image-min.jpg');
-   }
-   &_webp {
-        background-image: url('../public/img/webp/bee_top_image-min.webp');
-   }
-}
-
-.mv_text {
-    z-index: 10;
-    text-align: center;
-    font-size: 2rem;
-    position: relative;
-    margin-bottom:2rem ;
-    font-weight: bold;
-}
-
-.mv_logo {
-    width: 80vw;
-    height: auto;
-    z-index: 10;
-    position: relative;
-    &_text{
-        z-index: 10;
-        position: relative;
-        margin-bottom: 0.5rem;
-    }
-    &_sub {
-        font-size: $text-medium-sp;
-        color:#fff;
-        z-index: 10;
-    }
-}
-
-
-.section {
-    &+&{
-        margin-top: 4rem;
-    }
-}
-
-.contents{
-    margin-top: 3rem;
-}
-
-.heading {
-    font-size: $text-largest-sp;
-    font-family: $font-mincho;
-    text-align: center;
-}
-
-.lead {
-    text-align: center;
-    font-family: $font-mincho;
-    margin-top: 0.25rem;
-    font-weight: 700;
-}
-
-.br {
-    display: inline-block;
-}
-
-.pcNone {
+.spOnly {
     @include pc {
         display: none;
     }
 }
 
-.news {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 1rem;
-    border: solid thin;
-    dt {
-        font-size: 20px;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        font-family: $font-mincho;
-    }
-    li + li {
-        margin-top: 1rem;
-        padding-top: 1rem;
-        border-top: dotted thin;
-    }
-    li span {
-        min-width: 8rem;
-        display: block;
-        @include pc {
-            display: inline-block;
-            margin-right: 1rem;
-        }
-    }
-    li a{
-        text-decoration: underline;
-        &::after{
-            content: '';
-            border-top: solid 0.5rem transparent;
-            border-bottom: solid 0.5rem transparent;
-            border-left: solid 0.5rem #fff;
-            display: inline-block;
-            margin-left: 0.75rem;
-        }
-    }
-}
-
-.concept_text {
-    margin-top: 2rem;
-    &+& {
-        margin-top: 1rem;;
-    }
-}
-
-.merit {
-    margin-top: 5rem;
+// ---------- Hero ----------
+.hero {
     position: relative;
-    &::before{
-        content: '';
-        width: 100%;
-        height: 20rem;
-        display: block;
-    }
-    &::after{
-        content: '';
-        width: 75%;
-        height: 4px;
-        background-color: $color-sub;
-        position: absolute;
-        top: calc(20rem - 4px);
-        left: 0;
-        z-index: 10;
-    }
-    &_title{
-        font-size: $text-medium-sp;
-        font-family: $font-mincho;
-        margin-top: 1.5rem;
-        display: inline-block;
-        padding-bottom: 2rem;
-        margin-bottom: 2rem;
-        position: relative;
-        width: 100%;
-        &::after{
-            content: '';
-            width:4rem;
-            height: 1px;
-            background-color: #fff;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            position: absolute;
-        }
-    }
-    &_num{
-        font-size:4.75rem;
-        font-family: $font-mincho;
-        color: $color-sub;
-        position: absolute;
-        top: -3.75rem;
-        left: 50%;
-        font-weight: 500;
-        transform: translateX(-50%);
-    }
-    &_link{
-        text-align: right;
-        margin-top: 25px;
-        > a{
-            background-color: #fff;
-            padding: 10px;
-            padding-right: 2.5rem;
-            font-weight: 700;
-            font-size: 16px;
-            position: relative;
-            color: $color-main;
-            border-radius: 999px;
-            &::before{
-                content: '';
-                position: absolute;
-                border-left:solid 10px ;
-                border-top:solid 7px transparent;
-                border-bottom:solid 7px transparent;
-                right: 0.5rem;
-                top: 50%;
-                transform: translateY(-50%);
-            }
-        }
-    }
-    &_01::before{
-        background: url('../public/img/webp/bee_room_image-min.webp') no-repeat center 90% / cover;
-    }
-    &_01_noWebp::before{
-        background: url('../public/img/bee_room_image-min.jpg') no-repeat center 90% / cover;
-    }
-    &_02::before{
-        background: url('../public/img/webp/bee_style-min.webp') no-repeat center 0 / cover;
-    }
-    &_02_noWebp::before{
-        background: url('../public/img/bee_style-min.jpg') no-repeat center 0 / cover;
-    }
-    &_03::before{
-        background: url('../public/img/webp/bee_man-min.webp') no-repeat center 0 / cover;
-    }
-    &_03_noWebp::before{
-        background: url('../public/img/bee_man-min.jpg') no-repeat center 0 / cover;
-    }
-    &_04::before{
-        background: url('../public/img/webp/bee_headspa-min.webp') no-repeat center / cover;
-    }
-    &_04_noWebp::before{
-        background: url('../public/img/bee_headspa-min.jpg') no-repeat center / cover;
-    }
-    &_05::before{
-        background: url('../public/img/img_man_02.JPG') no-repeat center 100% / cover;
-    }
-    &_05_noWebp::before{
-        background: url('../public/img/img_man_02.JPG') no-repeat center 100% / cover;
-    }
-}
-
-.info{
-    margin-top: 3rem;
-    & > li + li {
-        margin-top: 4rem;
-    }
-}
-
-.linkBox {
+    isolation: isolate;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
-    &::before{
-        content:'';
-        width:100%;
-        height: 18rem;
-        display: block;
-        border-bottom: solid 2px $color-sub;
-        margin-bottom: 1rem;
-    }
-    &_menu::before{
-        background: url('../public/img/webp/bee_menu-min.webp') no-repeat center / cover;
-    }
-    &_menu_noWebp::before{
-        background: url('../public/img/bee_menu-min.jpg') no-repeat center / cover;
-    }
-    &_salon::before{
-        background: url('../public/img/webp/bee_top_image-min.webp') no-repeat center / cover;
-    }
-    &_salon_noWebp::before{
-        background: url('../public/img/bee_top_image-min.jpg') no-repeat center / cover;
-    }
-    &_staff::before{
-        background: url('../public/img/staff/2306_matsui_1.jpg') no-repeat center 30% / cover;
-    }
-    &_staff_noWebp::before{
-        background: url('../public/img/staff/2306_matsui_1.jpg') no-repeat center 30% / cover;
-    }
-    &_faq::before{
-        background: url('../public/img/webp/bee_image_1-min.webp') no-repeat center 70% / cover;
-    }
-    &_faq_noWebp::before{
-        background: url('../public/img/bee_image_1-min.jpg') no-repeat center 70% / cover;
-    }
-    &_waxing::before{
-        background: url('../public/img/webp/bee_removal-min.webp') no-repeat center 70% / cover;
-    }
-    &_waxing_noWebp::before{
-        background: url('../public/img/bee_removal-min.jpg') no-repeat center 70% / cover;
-    }
-    &_blog::before{
-        background: url('../public/img/webp/bee_business-min.webp') no-repeat center 70% / cover;
-    }
-    &_blog_noWebp::before{
-        background: url('../public/img/bee_business-min.jpg') no-repeat center 70% / cover;
-    }
-
-    &_text{
-        display: flex;
-        align-items: center;
-        flex-wrap: wrap;
-        width: calc(60% - 10px);
-        margin-right: 10px;
-    }
-    &_subText {
-        font-size: 12px;
-        width: 100%;
-    }
-    &_title{
-        font-family: $font-mincho;
-        font-size: $text-larger-sp;
-        font-weight: bold;
-        margin-right: 1rem;
-    }
-    &_jpTitle{
-        font-family: $font-mincho;
-        font-size: $text-larger-sp;
-        font-weight: bold;
-        margin-right: 1rem;
-    }
-    &_link{
-        width:40%;
-        border-radius: 999px;
-        border:solid thin;
-        text-align: center;
-        position: relative;
-        font-weight: bold;
-        &::after{
-            content:'';
-            border-top: solid 6px transparent;
-            border-bottom: solid 6px transparent;
-            border-left: solid 6px;
-            position: absolute;
-            right: 1.0rem;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        & > a {
-            display: block;
-            padding-top: 0.5rem;
-            padding-bottom: 0.5rem;
-            font-size: 14px;
-        }
+    justify-content: center;
+    // ファーストビューの下端にお知らせの上端がのぞく高さ
+    min-height: calc(90vh - #{$header-height-sp});
+    min-height: calc(90svh - #{$header-height-sp});
+    padding: 8rem 0 12rem;
+    overflow: hidden;
+    text-align: center;
+    @include wide {
+        min-height: calc(90vh - #{$header-height-pc});
+        min-height: calc(90svh - #{$header-height-pc});
     }
 }
 
-.movie {
-    margin: 20px 0 0 0;
-    text-align: center;
-    position: relative;
-    height: 0;
-    padding: 30px 0 56.25%;
-    overflow: hidden;
-    @include pc {
-        padding: 0;
-        height: 315px;
+.heroBg {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba($color-main, 0.42) 0%,
+            rgba($color-main, 0.55) 55%,
+            $color-main 100%
+        );
     }
-    iframe {
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: heroZoom 14s $ease-out both;
+}
+
+@keyframes heroZoom {
+    from {
+        scale: 1.08;
+    }
+    to {
+        scale: 1;
+    }
+}
+
+.heroInner {
+    @include container;
+}
+
+.heroCopy {
+    font-family: $font-mincho;
+    font-size: 2.4rem;
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0.14em;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    @include pc {
+        font-size: 3.6rem;
+    }
+}
+
+.heroTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+    margin-top: 4.8rem;
+    font-weight: 400;
+    @include pc {
+        margin-top: 6.4rem;
+    }
+}
+
+.heroCategory {
+    font-size: 1.4rem;
+    letter-spacing: 0.4em;
+    color: $color-sub;
+    @include pc {
+        font-size: 1.6rem;
+    }
+}
+
+.heroLogo {
+    width: min(72vw, 32rem);
+    height: auto;
+    @include pc {
+        width: 40rem;
+    }
+}
+
+.heroKana {
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    color: $color-text-muted;
+}
+
+.scroll {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 1px;
+    height: 7.2rem;
+    overflow: hidden;
+    background-color: rgba($color-sub, 0.3);
+    &::after {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
-        @include pc {
-            position: relative;
-            width: 570px;
+        height: 40%;
+        background-color: $color-sub;
+        animation: scrollLine 2.4s $ease-out infinite;
+    }
+}
+
+@keyframes scrollLine {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(260%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .heroImage,
+    .scroll::after {
+        animation: none;
+    }
+}
+
+// ---------- News ----------
+.newsWrap {
+    @include container;
+    margin-top: 4rem;
+}
+
+.news {
+    padding: 2rem 2rem 1.2rem;
+    border: 1px solid $color-line;
+    dt {
+        font-family: $font-display;
+        font-size: 2rem;
+        font-weight: 400;
+        letter-spacing: 0.12em;
+        color: $color-sub;
+    }
+    li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.2rem;
+        padding: 1.2rem 0;
+        & + li {
+            border-top: 1px dotted $color-line;
+        }
+    }
+    @include pc {
+        display: flex;
+        gap: 4rem;
+        padding: 2.4rem 3.2rem;
+        dt {
+            flex-shrink: 0;
+            width: 10rem;
+            padding-top: 0.8rem;
+        }
+        dd {
+            flex: 1;
+        }
+        li {
+            flex-direction: row;
+            gap: 2.4rem;
+            padding: 0.8rem 0;
         }
     }
 }
 
+.newsDate {
+    min-width: 9rem;
+    font-family: $font-mincho;
+    color: $color-text-muted;
+}
 
-@include pc {
-    .mv{
-        border-top-width: 3px;
-        height: 70vh;
-        min-height: 500px;
-        padding-bottom: 6rem;
-        background-position: 0 25%;
-        &_text{
-            font-size: 3.2rem;
-            margin-bottom: 5rem;
-        }
-        &_logo_text{
-            font-size: 2.5rem;
-        }
-        &_logo{
-            width: 35%;
-        }
-    }
-
-    .contents{
-        width: 85vw;
-        max-width: 1500px;
-        margin: 4rem auto 0;
-    }
-
-    .section {
-        &+&{
-            margin-top: 7rem;
-        }
-    }
-
-    .section  + .information {
-        margin-top: 14rem;
-    }
-
-    .heading{
-        font-size: $text-largest;
-    }
-
-    .lead{
-        font-size: $text-medium;
-    }
-
-    .news {
-        display: flex;
-        padding: 1.5rem;
-        margin: 2rem auto 4rem;
-
-        dt{
-            line-height: 1;
-            width: 10rem;
-        }
-        dd{
-            width: calc(100% - 10rem);
-            font-size: 16px;
-        }
-    }
-
-    .concept {
-        padding: 0 0 3rem;
-        br:nth-child(1){
-            display: none;
-        }
-        &_text{
-            width: 80rem;
-            margin:4rem auto 0;
-            line-height: 2.2;
-        }
-    }
-
-    .merit{
-        margin-top: 6rem;
+// ---------- Concept ----------
+.concept {
+    display: grid;
+    gap: 4rem;
+    @include pc {
+        grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
         align-items: center;
+        gap: 7.2rem;
+    }
+}
+
+.conceptPhoto {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    margin-right: 1.6rem;
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 1.6rem -1.6rem -1.6rem 1.6rem;
+        border: 1px solid $color-line-sub;
+    }
+    @include pc {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+.conceptImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conceptText {
+    @include pc {
+        p + p {
+            margin-top: 2rem;
+        }
+    }
+}
+
+// ---------- Our Salon ----------
+.merits {
+    display: grid;
+    gap: 7.2rem;
+    @include pc {
+        gap: 11.2rem;
+    }
+}
+
+.merit {
+    display: grid;
+    gap: 2.8rem;
+    @include pc {
+        grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 6.4rem;
+        &:nth-child(even) .meritVisual {
+            order: 2;
+        }
+    }
+}
+
+.meritVisual {
+    position: relative;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    @include pc {
+        aspect-ratio: 4 / 3;
+    }
+}
+
+.meritImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 1.2s $ease-out;
+    .merit:hover & {
+        scale: 1.04;
+    }
+}
+
+.meritNum {
+    display: block;
+    font-family: $font-display;
+    font-size: 5.6rem;
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: transparent;
+    -webkit-text-stroke: 1px $color-sub;
+    @include pc {
+        font-size: 7.2rem;
+    }
+}
+
+.meritTitle {
+    margin-top: 1.6rem;
+    font-family: $font-mincho;
+    font-size: 2.1rem;
+    font-weight: 600;
+    line-height: 1.6;
+    letter-spacing: 0.06em;
+    @include pc {
+        margin-top: 2rem;
+        font-size: 2.6rem;
+    }
+}
+
+.meritText {
+    margin-top: 1.6rem;
+    line-height: 1.95;
+    color: $color-text-muted;
+    p + p {
+        margin-top: 1.2rem;
+    }
+    @include pc {
+        margin-top: 2rem;
+        font-size: 1.55rem;
+        line-height: 2.05;
+    }
+}
+
+.meritLink {
+    margin-top: 2.4rem;
+}
+
+// ---------- Location ----------
+.location {
+    display: grid;
+    gap: 3.2rem;
+    @include pc {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        gap: 6.4rem;
+    }
+}
+
+.locationPhoto {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+    @include pc {
+        aspect-ratio: 4 / 5;
+    }
+}
+
+.locationImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.locationTitle {
+    font-family: $font-mincho;
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    @include pc {
+        font-size: 2.6rem;
+    }
+}
+
+.address {
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    a {
+        color: $color-sub;
+        text-decoration: underline;
+        text-underline-offset: 0.3em;
+        @include hover {
+            text-decoration: none;
+        }
+    }
+    @include pc {
+        font-size: 1.8rem;
+    }
+}
+
+.access {
+    margin-top: 1.2rem;
+    line-height: 1.9;
+    color: $color-text-muted;
+}
+
+.parking {
+    margin-top: 0.8rem;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: $color-text-muted;
+}
+
+.hours {
+    margin-top: 2.8rem;
+    border-top: 1px solid $color-line;
+    & > div {
+        display: grid;
+        grid-template-columns: 7.2rem minmax(0, 1fr);
+        gap: 1.6rem;
+        padding: 1.6rem 0;
+        border-bottom: 1px solid $color-line;
+    }
+    dt {
+        color: $color-sub;
+    }
+    dd p + p {
+        margin-top: 0.4rem;
+    }
+    @include pc {
+        & > div {
+            grid-template-columns: 9.6rem minmax(0, 1fr);
+        }
+    }
+}
+
+.locationReserve {
+    margin-top: 3.2rem;
+    min-width: 24rem;
+    padding: 1.4rem 3.2rem;
+    font-size: 1.5rem;
+    @include sp {
         display: flex;
-        &+&{
-            margin-top: 9rem;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+// ---------- Information ----------
+.message {
+    display: grid;
+    gap: 3.2rem;
+    max-width: 100rem;
+    margin: 0 auto;
+    @include pc {
+        grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+        align-items: center;
+        gap: 5.6rem;
+    }
+}
+
+.messagePhoto {
+    aspect-ratio: 3 / 2;
+    overflow: hidden;
+}
+
+.messageImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.messageBody {
+    font-family: $font-mincho;
+    font-size: 1.6rem;
+    line-height: 2.1;
+    letter-spacing: 0.04em;
+    p + p {
+        margin-top: 1.6rem;
+    }
+    .signature {
+        margin-top: 2.4rem;
+        text-align: right;
+        font-size: 1.4rem;
+        letter-spacing: 0.12em;
+        color: $color-sub;
+    }
+    @include pc {
+        font-size: 1.8rem;
+    }
+}
+
+.cards {
+    display: grid;
+    gap: 2.4rem;
+    margin-top: 8rem;
+    @media only screen and (min-width: 600px) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    @include pc {
+        gap: 3.2rem 2.4rem;
+        margin-top: 10.4rem;
+    }
+    @include desktop {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: $color-panel;
+    border: 1px solid $color-line;
+    transition: border-color 0.3s, transform 0.4s $ease-out;
+    @include hover {
+        border-color: $color-line-sub;
+        transform: translateY(-4px);
+        .cardImage {
+            scale: 1.05;
         }
-        &::after{
-            content: none;
-        }
-        &::before{
-            width: 55%;
-            height: 500px;
-        }
-        &_textArea{
-            width: 45%;
-            padding:2rem 4rem 4rem;
-            background-color: $color-main;
-            transform: translateX(-6rem);
-            position: relative;
-            top: -2rem;
-            &::before{
-                content: '';
-                width: 6px;
-                height: calc(100% - 5rem);
-                background-color: $color-sub;
-                position: absolute;
-                top: 5rem;
-                left: -6px;
-            }
-            &::after{
-                content: '';
-                height: 6px;
-                width: calc(70% - 5rem);
-                background-color: $color-sub;
-                position: absolute;
-                left: -6px;
-                bottom: -6px;
-            }
-        }
-        &_title {
-            font-size: $text-larger;
-            white-space: pre-wrap;
-            margin-bottom: 3rem;
-            padding-bottom: 3rem;
-            &::after{
-                left: 3rem;
-            }
-        }
-        &_num{
-            left: 6.5rem;
-            font-size: 55px;
-            top: -5rem;
-        }
-        &_01,
-        &_01_noWebp{
-            &::before{
-                background-position: 65%;
-            }
-        }
-        &_02,
-        &_02_noWebp,
-        &_04,
-        &_04_noWebp{
-            flex-direction: row-reverse;
-            right: -5rem;
-            .merit_textArea{
-                transform: translateX(6rem);
-                &::before{
-                    left: auto;
-                    right: -6px;
-                }
-                &::after{
-                    left: auto;
-                    right: -6px;
-                }
-            }
-        }
-        &_01,
-        &_01_noWebp,
-        &_03,
-        &_03_noWebp,
-        &_05,
-        &_05_noWebp {
-            left: -5rem;
+        .cardMore::after {
+            transform: translateX(0.4rem) rotate(45deg);
         }
     }
+}
 
-    .information{
-        width:1200px;
-        margin:auto;
+.cardVisual {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.cardImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale 0.8s $ease-out;
+}
+
+.cardBody {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 2.4rem 2.4rem 2.8rem;
+}
+
+.cardTitle {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.4rem 1.2rem;
+    font-weight: 400;
+}
+
+.cardEn {
+    font-family: $font-display;
+    font-size: 2.4rem;
+    letter-spacing: 0.06em;
+}
+
+.cardJa {
+    font-size: 1.2rem;
+    letter-spacing: 0.1em;
+    color: $color-sub;
+}
+
+.cardText {
+    flex: 1;
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 1.85;
+    color: $color-text-muted;
+    word-break: auto-phrase;
+}
+
+.cardMore {
+    align-self: flex-end;
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    font-family: $font-display;
+    font-size: 1.4rem;
+    letter-spacing: 0.12em;
+    color: $color-sub;
+    &::after {
+        content: '';
+        width: 0.6rem;
+        height: 0.6rem;
+        border-top: 1px solid currentColor;
+        border-right: 1px solid currentColor;
+        transform: rotate(45deg);
+        transition: transform 0.3s $ease-out;
     }
-
-    .info{
-        margin-top: 5rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        flex-wrap: wrap;
-        & > li + li {
-            margin-top: 0;
-        }
-        & > li {
-            width: 45%;
-        }
-        & > li:nth-of-type(n+3){
-            margin-top: 8rem;
-        }
-    }
-
-    .linkBox{
-        &::before{
-            height: 250px;
-        }
-        &_title{
-            font-size: 4rem;
-        }
-        &_jpTitle {
-            font-size: 3.5rem;
-        }
-        &_link{
-            transition: .3s;
-            font-size: $text-medium;
-            &:hover{
-                background-color: $color-sub;
-                color: #fff;
-                border: none;
-            }
-            & > a {
-                display: block;
-                padding-top: 1rem;
-                padding-bottom: 1rem;
-            }
-        }
-    }
-
 }
